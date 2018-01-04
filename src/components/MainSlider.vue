@@ -5,6 +5,8 @@
 </template>
 
 <script>
+  //import '../styles/index.scss'
+
   export default {
     name: 'MainSlider',
     data: function () {

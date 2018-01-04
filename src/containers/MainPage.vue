@@ -3,13 +3,7 @@
     <InformationWidget :info="information" />
     <section class="second-container">
       <div class="nure-video">
-        <iframe width="800px"
-                height="650px"
-                src="https://www.youtube.com/embed/-eLh6fxxneE"
-                frameborder="0"
-                gesture="media"
-                allow="encrypted-media"
-                allowfullscreen></iframe>
+        <youtube video-id="hT_nvWreIhg"></youtube>
         <div class="description">
           <p>Video description...</p>
         </div>
@@ -22,12 +16,17 @@
 <script>
   import BlogWidget from '../components/BlogWidget';
   import InformationWidget from '../components/InformationWidget';
+  import Vue from 'vue'
+  import VueYouTubeEmbed from 'vue-youtube-embed'
+
   import firstImg from '../../img/first.jpg';
   import secondImg from '../../img/second.jpg';
   import thirdImg from '../../img/third.jpg';
 
+  Vue.use(VueYouTubeEmbed);
+
   export default {
-    components: { BlogWidget, InformationWidget },
+    components: { BlogWidget, InformationWidget, VueYouTubeEmbed },
     name: 'MainPage',
     data: function () {
       return {
