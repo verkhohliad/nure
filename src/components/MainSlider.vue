@@ -1,16 +1,28 @@
 <template>
-  <div>
-    <h1>Slider</h1>
+  <div class="slider">
+    <v-carousel interval="8000">
+      <v-carousel-item v-for="(item,i) in items" v-bind:src="item.src" :key="i"></v-carousel-item>
+    </v-carousel>
   </div>
 </template>
 
 <script>
-  //import '../styles/index.scss'
-
   export default {
     name: 'MainSlider',
     data: function () {
-      return {}
+      return {
+        items: [
+          {
+            src: '../../img/first.jpg'
+          },
+          {
+            src: '../../img/second.jpg'
+          },
+          {
+            src: '../../img/third.jpg'
+          }
+        ]
+      }
     }
   }
 </script>
@@ -29,6 +41,14 @@
   li {
     display: inline-block;
     margin: 0 10px;
+  }
+
+  .slider {
+    display: flex;
+    height: 450px;
+    width: 85%;
+    margin: 0 auto;
+    flex-direction: column;
   }
 
 </style>

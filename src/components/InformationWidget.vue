@@ -29,17 +29,18 @@
   .item-container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     flex-direction: row;
     margin: 0 auto;
   }
 
   .item {
-    margin: 25px;
-    width: 30%;
+    margin: 4%;
+    width: 25%;
   }
 
   .item img {
-    width: 400px;
+    width: 300px;
   }
 
 </style>

@@ -1,23 +1,23 @@
 <template>
-  <header>
-    <div class="flex-container">
-      <div class="logo">
-        <h1>NURE INFO</h1>
+    <header>
+      <div class="flex-container">
+        <div class="logo">
+          <h1>NURE INFO</h1>
+        </div>
+        <div class="signing">
+          <a href="">Вход</a>
+          <a href="">Регистрация</a>
+        </div>
       </div>
-      <div class="signing">
-        <a href="">Вход</a>
-        <a href="">Регистрация</a>
-      </div>
-    </div>
-    <MainSlider />
-    <nav>
-      <ul class="nav-list">
-        <li class="nav-item" v-for="item in navBar.items" v-on:click="onClick">
-          <router-link :to="item.url">{{ item.label }}</router-link>
-        </li>
-      </ul>
-    </nav>
-  </header>
+      <MainSlider />
+      <nav>
+        <ul class="nav-list">
+          <li class="nav-item" v-for="item in navBar.items" v-on:click="onClick">
+            <router-link :to="item.url">{{ item.label }}</router-link>
+          </li>
+        </ul>
+      </nav>
+    </header>
 </template>
 
 <script>
@@ -92,7 +92,7 @@
 
   .flex-container {
     display: flex;
-    padding: 25px;
+    padding: 12px;
   }
 
   .logo {

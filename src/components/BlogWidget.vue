@@ -54,13 +54,13 @@
   .blog-news h2 {
     display: block;
     background: #05384d;
-    height: 35px;
     color: #fff;
     margin: 0;
     padding: 10px;
   }
 
   .blog-news .post {
+    margin-top: 15px;
     display: flex;
     width: 100%;
   }

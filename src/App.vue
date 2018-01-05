@@ -1,15 +1,20 @@
 <template>
-  <div id="app">
-    <Header />
-    <router-view />
-  </div>
+  <v-app id="app">
+    <Header/>
+    <router-view/>
+  </v-app>
 </template>
 
 <script>
+  import VueYouTubeEmbed from 'vue-youtube-embed'
+  import Vue from 'vue'
   import Header from './containers/Header';
 
+  import('../node_modules/vuetify/dist/vuetify.min.css');
+
+  Vue.use(VueYouTubeEmbed);
   export default {
-    components: { Header },
+    components: {Header, VueYouTubeEmbed},
     name: 'app'
   }
 </script>

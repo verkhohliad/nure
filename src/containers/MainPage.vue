@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <InformationWidget :info="information" />
+    <InformationWidget :info="information"/>
     <section class="second-container">
       <div class="nure-video">
         <youtube video-id="hT_nvWreIhg"></youtube>
@@ -8,7 +8,7 @@
           <p>Video description...</p>
         </div>
       </div>
-      <BlogWidget :info="blogNews" />
+      <BlogWidget :info="blogNews"/>
     </section>
   </div>
 </template>
@@ -16,17 +16,15 @@
 <script>
   import BlogWidget from '../components/BlogWidget';
   import InformationWidget from '../components/InformationWidget';
-  import Vue from 'vue'
-  import VueYouTubeEmbed from 'vue-youtube-embed'
+
 
   import firstImg from '../../img/first.jpg';
   import secondImg from '../../img/second.jpg';
   import thirdImg from '../../img/third.jpg';
 
-  Vue.use(VueYouTubeEmbed);
 
   export default {
-    components: { BlogWidget, InformationWidget, VueYouTubeEmbed },
+    components: {BlogWidget, InformationWidget},
     name: 'MainPage',
     data: function () {
       return {
@@ -96,8 +94,8 @@
   }
 
   .container {
-    background-color: #f8f1e1;
-    padding: 50px 5%;
+
+    /*padding: 50px 5%;*/
   }
 
   .second-container {
