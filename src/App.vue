@@ -2,6 +2,7 @@
   <v-app id="app">
     <Header/>
     <router-view/>
+    <Footer />
   </v-app>
 </template>
 
@@ -9,12 +10,13 @@
   import VueYouTubeEmbed from 'vue-youtube-embed'
   import Vue from 'vue'
   import Header from './containers/Header';
+  import Footer from './containers/Footer';
 
   import('../node_modules/vuetify/dist/vuetify.min.css');
 
   Vue.use(VueYouTubeEmbed);
   export default {
-    components: {Header, VueYouTubeEmbed},
+    components: {Header, VueYouTubeEmbed, Footer},
     name: 'app'
   }
 </script>

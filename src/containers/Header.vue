@@ -2,11 +2,16 @@
     <header>
       <div class="flex-container">
         <div class="logo">
+          <img :src="navBar.logo" alt="">
           <h1>NURE INFO</h1>
         </div>
         <div class="signing">
-          <a href="">Вход</a>
-          <a href="">Регистрация</a>
+          <div>
+            <v-btn flat dark>Вход</v-btn>
+          </div>
+          <div>
+            <v-btn flat dark>Регистрация</v-btn>
+          </div>
         </div>
       </div>
       <MainSlider />
@@ -22,6 +27,7 @@
 
 <script>
   import MainSlider from '../components/MainSlider';
+  import nureLogo from '../../img/nure-logo.png';
 
   export default {
     components: { MainSlider },
@@ -29,6 +35,7 @@
     data: function () {
       return {
         navBar: {
+          logo: nureLogo,
           items: [
             {
               id: 1,
@@ -93,11 +100,14 @@
   .flex-container {
     display: flex;
     padding: 12px;
+    width: 85%;
+    margin: 0 auto;
   }
 
   .logo {
     display: flex;
-    width: 25%;
+    width: 20%;
+    justify-content: center;
   }
 
   .logo h1 {
@@ -106,9 +116,14 @@
     color: #fff;
   }
 
+  .logo img {
+    width: 70px;
+    height: 50px;
+  }
+
   .signing {
     display: flex;
-    width: 75%;
+    width: 80%;
     justify-content: flex-end;
   }
 
