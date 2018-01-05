@@ -12,7 +12,7 @@
       <MainSlider />
       <nav>
         <ul class="nav-list">
-          <li class="nav-item" v-for="item in navBar.items" v-on:click="onClick">
+          <li class="nav-item" v-for="item in navBar.items" v-on:click="$_Header_onClick" :key="item.id">
             <router-link :to="item.url">{{ item.label }}</router-link>
           </li>
         </ul>
@@ -74,7 +74,7 @@
 
     },
     methods: {
-      onClick: ev => {
+      $_Header_onClick: ev => {
       }
     }
   }

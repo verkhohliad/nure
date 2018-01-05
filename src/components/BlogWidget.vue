@@ -1,7 +1,7 @@
 <template>
   <div class="blog-news">
     <h2>Новое в блоге</h2>
-    <div class="post" v-for="item in items">
+    <div class="post" v-for="item in items" :key="item.id">
       <div class="date">
         <h4>{{ item.date }}</h4>
       </div>
