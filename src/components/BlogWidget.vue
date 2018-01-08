@@ -18,10 +18,10 @@
     props: {
       info: Array
     },
-    data: function () {
+    data() {
       return {}
     },
-    created: function () {
+    created() {
       this.items = this.info;
     }
   }

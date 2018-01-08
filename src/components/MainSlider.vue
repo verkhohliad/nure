@@ -1,7 +1,7 @@
 <template>
   <div class="slider">
     <v-carousel interval="8000">
-      <v-carousel-item v-for="(item,i) in items" v-bind:src="item.src" :key="i"></v-carousel-item>
+      <v-carousel-item v-for="(item, i) in items" v-bind:src="item.src" :key="i"></v-carousel-item>
     </v-carousel>
   </div>
 </template>
@@ -9,7 +9,7 @@
 <script>
   export default {
     name: 'MainSlider',
-    data: function () {
+    data() {
       return {
         items: [
           {

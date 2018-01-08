@@ -22,7 +22,7 @@
           :id="tab"
         >
           <v-card flat>
-            <v-card-text>
+            <v-card-text class="information-tab">
               <b-table striped hover :items="items"></b-table>
             </v-card-text>
           </v-card>

@@ -8,16 +8,15 @@
     </ul>
     <div>&copy; {{ new Date().getFullYear() }}</div>
   </v-footer>
-  </div>
 </template>
 
 <script>
   export default {
     name: 'Footer',
-    data: function () {
+    data() {
       return {}
     },
-    created: function () {
+    created() {
 
     },
     methods: {}
