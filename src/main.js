@@ -3,9 +3,9 @@ import Vuetify from 'vuetify'
 import BootstrapVue from 'bootstrap-vue'
 
 import VueYouTubeEmbed from 'vue-youtube-embed'
-import App from './App';
+import App from './App'
 import router from './router'
-import store from './stores/configureStore';
+import store from './stores/configureStore'
 
 
 Vue.use(BootstrapVue);

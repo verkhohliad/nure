@@ -7,19 +7,24 @@
 </template>
 
 <script>
+  import firstImg from '../../img/first.jpg';
+  import secondImg from '../../img/second.jpg';
+  import thirdImg from '../../img/third.jpg';
+
+
   export default {
     name: 'MainSlider',
     data() {
       return {
         items: [
           {
-            src: '../../img/first.jpg'
+            src: firstImg
           },
           {
-            src: '../../img/second.jpg'
+            src: secondImg
           },
           {
-            src: '../../img/third.jpg'
+            src: thirdImg
           }
         ]
       }
