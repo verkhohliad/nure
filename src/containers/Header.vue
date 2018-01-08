@@ -17,7 +17,7 @@
       <MainSlider />
       <nav>
         <ul class="nav-list">
-          <li class="nav-item" v-for="item in navBar.items" v-on:click="$_Header_onClick" :key="item.id">
+          <li class="nav-item" v-for="item in navBar.items" :key="item.id">
             <router-link :to="item.url">
               <v-btn flat dark>{{ item.label }}</v-btn>
             </router-link>
