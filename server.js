@@ -9,8 +9,8 @@ const app = express();
 //
 // settings
 //
-//app.set('trust proxy', true);
-//app.set('trust proxy', 'loopback');
+app.set('trust proxy', true);
+app.set('trust proxy', 'loopback');
 app.set('port', process.env.PORT || 8082);
 
 app.use(morgan(function (tokens, req, res) {
@@ -23,9 +23,7 @@ app.use(morgan(function (tokens, req, res) {
   ].join(' | ')
 }));
 
-//const secret = 'keyboard cat';
 
-//app.use(cookieParser(secret));
 
 
 app.use('/', express.static('dist'));
