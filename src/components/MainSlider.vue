@@ -1,7 +1,7 @@
 <template>
   <div class="slider">
     <v-carousel interval="8000">
-      <v-carousel-item v-for="(item, i) in items" v-bind:src="item.src" :key="i"></v-carousel-item>
+      <v-carousel-item v-for="(item,i) in items" v-bind:src="item.src" :key="i"></v-carousel-item>
     </v-carousel>
   </div>
 </template>
@@ -14,7 +14,7 @@
 
   export default {
     name: 'MainSlider',
-    data() {
+    data: function () {
       return {
         items: [
           {
@@ -30,7 +30,7 @@
       }
     }
   }
-</script>
+</script> 
 
 <style scoped>
   h1, h2 {
@@ -43,14 +43,16 @@
     padding: 0;
   }
 
+
   li {
     display: inline-block;
     margin: 0 10px;
   }
 
+
   .slider {
     display: flex;
-    height: 450px;
+    height: 350px;
     width: 85%;
     margin: 0 auto;
     flex-direction: column;

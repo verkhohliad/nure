@@ -2,8 +2,10 @@
     <header>
       <div class="flex-container">
         <div class="logo">
+          <a href="/">
           <img :src="navBar.logo" alt="">
           <h1>NURE INFO</h1>
+        </a>
         </div>
         <div class="signing">
           <div>
@@ -113,14 +115,18 @@
   }
 
   .logo h1 {
-    display: flex;
+    font-weight: bold;
+    font-size: 26px;
+    display: inline-flex;
     margin: 0;
     color: #fff;
   }
 
+ 
   .logo img {
     width: 70px;
     height: 50px;
+    display: inline-flex;
   }
 
   .signing {
@@ -135,6 +141,7 @@
   }
 
   .nav-list {
+   background: #032735;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -142,11 +149,12 @@
 
   .nav-list .nav-item {
     display: inline-block;
-    margin: 25px;
+    margin: 10px;
   }
 
   .nav-list .nav-item a {
     display: inline-block;
   }
+
 
 </style>
