@@ -67,7 +67,7 @@
         ]
       }
     },
-    created: function () {
+    created() {
 
     },
     methods: {}
