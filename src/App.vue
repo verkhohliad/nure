@@ -2,21 +2,18 @@
   <v-app id="app">
     <Header/>
     <router-view/>
-    <Footer />
+    <Footer/>
   </v-app>
 </template>
 
 <script>
-  import VueYouTubeEmbed from 'vue-youtube-embed'
-  import Vue from 'vue'
-  import Header from './containers/Header';
-  import Footer from './containers/Footer';
+  import Header from './containers/Header'
+  import Footer from './containers/Footer'
 
-  import('../node_modules/vuetify/dist/vuetify.min.css');
+  import './styles/index.scss'
 
-  Vue.use(VueYouTubeEmbed);
   export default {
-    components: {Header, VueYouTubeEmbed, Footer},
+    components: { Header, Footer },
     name: 'app'
   }
 </script>
