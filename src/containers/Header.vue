@@ -18,7 +18,9 @@
       <nav>
         <ul class="nav-list">
           <li class="nav-item" v-for="item in navBar.items" v-on:click="$_Header_onClick" :key="item.id">
-            <router-link :to="item.url">{{ item.label }}</router-link>
+            <router-link :to="item.url">
+              <v-btn flat dark>{{ item.label }}</v-btn>
+            </router-link>
           </li>
         </ul>
       </nav>
@@ -32,7 +34,7 @@
   export default {
     components: { MainSlider },
     name: 'Header',
-    data: function () {
+    data() {
       return {
         navBar: {
           logo: nureLogo,
@@ -77,7 +79,7 @@
         }
       }
     },
-    created: function () {
+    created() {
 
     },
     methods: {
