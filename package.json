@@ -5,7 +5,7 @@
   "author": "nure team",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config --watch-poll build/webpack.dev.conf.js",
+    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js --watch-poll",
     "start": "npm run dev",
     "unit": "jest --config test/unit/jest.conf.js --coverage",
     "e2e": "node test/e2e/runner.js",
@@ -14,6 +14,8 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "bootstrap": "^4.0.0-beta.2",
+    "bootstrap-vue": "^1.4.0",
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.1",

@@ -24,9 +24,9 @@
 
 
   export default {
-    components: {BlogWidget, InformationWidget},
+    components: { BlogWidget, InformationWidget },
     name: 'MainPage',
-    data: function () {
+    data() {
       return {
         information: [
           {
