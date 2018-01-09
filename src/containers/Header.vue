@@ -9,10 +9,10 @@
         </div>
         <div class="signing">
           <div>
-            <v-btn flat dark>Вход</v-btn>
+            <v-btn flat dark>Вхід</v-btn>
           </div>
           <div>
-            <v-btn flat dark>Регистрация</v-btn>
+            <v-btn flat dark>Реєстрація</v-btn>
           </div>
         </div>
       </div>
@@ -43,19 +43,19 @@
           items: [
             {
               id: 1,
-              label: 'Главная',
+              label: 'Головна',
               value: 'MainPage',
               url: '/'
             },
             {
               id: 2,
-              label: 'Специальности',
+              label: 'Спеціальності',
               value: 'SpecialitiesPage',
               url: '/specialities'
             },
             {
               id: 3,
-              label: 'Поступление',
+              label: 'Вступ',
               value: 'AdmissionPage',
               url: '/admission'
             },
@@ -67,13 +67,13 @@
             },
             {
               id: 5,
-              label: 'Результаты экзаменов',
+              label: 'Результати іспитів',
               value: 'ExamsPage',
               url: '/exams'
             },
             {
               id: 6,
-              label: 'Контакты',
+              label: 'Контакти',
               value: 'ContactPage',
               url: '/contact'
             }
@@ -122,7 +122,7 @@
     color: #fff;
   }
 
- 
+
   .logo img {
     width: 70px;
     height: 50px;
