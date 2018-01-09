@@ -7,10 +7,9 @@
 </template>
 
 <script>
-  import firstImg from '../../img/first.jpg';
-  import secondImg from '../../img/second.jpg';
-  import thirdImg from '../../img/third.jpg';
-
+  import nureImg from '../../img/nure2.jpg';
+  import sliderTwo from '../../img/slider-2.jpg';
+  import sliderThree from '../../img/slider-3.jpg';
 
   export default {
     name: 'MainSlider',
@@ -18,19 +17,19 @@
       return {
         items: [
           {
-            src: firstImg
+            src: nureImg
           },
           {
-            src: secondImg
+            src: sliderTwo
           },
           {
-            src: thirdImg
+            src: sliderThree
           }
         ]
       }
     }
   }
-</script> 
+</script>
 
 <style scoped>
   h1, h2 {
@@ -43,16 +42,14 @@
     padding: 0;
   }
 
-
   li {
     display: inline-block;
     margin: 0 10px;
   }
 
-
   .slider {
     display: flex;
-    height: 350px;
+    height: 400px;
     width: 85%;
     margin: 0 auto;
     flex-direction: column;
