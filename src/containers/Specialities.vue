@@ -23,7 +23,23 @@
         >
           <v-card flat>
             <v-card-text class="information-tab">
-              <b-table striped hover :items="items"></b-table>
+              <v-data-table
+                v-bind:headers="specialities.headers"
+                :items="specialities.items"
+                hide-actions
+                class="elevation-1"
+              >
+                <template slot="items" slot-scope="props">
+                  <td>{{ props.item.name }}</td>
+                  <td class="text-xs-right">{{ props.item.specialty }}</td>
+                  <td class="text-xs-right">{{ props.item.specialization }}</td>
+                  <td class="text-xs-right">{{ props.item.marks }}</td>
+                  <td class="text-xs-right">{{ props.item.minMark }}</td>
+                  <td class="text-xs-right">{{ props.item.volume }}</td>
+                  <td class="text-xs-right">{{ props.item.period }}</td>
+                  <td class="text-xs-right">{{ props.item.cost }}</td>
+                </template>
+              </v-data-table>
             </v-card-text>
           </v-card>
         </v-tabs-content>
@@ -33,7 +49,9 @@
 </template>
 
 <script>
-  const items = [
+  import { mapGetters } from 'vuex';
+
+  const test = [
     {
       ГАЛУЗЬ_ЗНАНЬ: '05. Соціальні та поведінкові науки',
       СПЕЦІАЛЬНІСТЬ: '051. Економіка',
@@ -117,19 +135,30 @@
   ]
 
   export default {
-    components: { },
+    components: {},
     name: 'Specialities',
     data() {
       const tabs = ['Бакалавр (на 1-й курс)', 'Магістр', 'Друга вища освіта'];
+
       return {
         tabs,
         active: null,
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        items
       }
     },
-    methods: {
-    }
+    beforeCreate() {
+      this.$store.dispatch('fetchData');
+    },
+    created() {
+      console.log(this.specialities);
+    },
+    computed: {
+      ...mapGetters({
+        specialities: 'getSpecialities'
+      })
+
+    },
+    methods: {}
   }
 </script>
 
