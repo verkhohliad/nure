@@ -1,0 +1,125 @@
+<template>
+  <div class="admission">
+    <v-navigation-drawer permanent light class="sidebar">
+      <v-toolbar flat>
+        <v-list>
+          <v-list-tile>
+            <v-list-tile-title class="title">
+              Меню
+            </v-list-tile-title>
+          </v-list-tile>
+        </v-list>
+      </v-toolbar>
+      <v-divider></v-divider>
+      <v-list dense class="pt-0">
+        <v-list-tile v-for="item in items" :key="item.title" @click="displayComponent(item)">
+          <v-list-tile-action>
+            <v-icon>fa-thermometer-empty</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-content>
+            <v-list-tile-title>{{ item.name }}</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+    </v-navigation-drawer>
+    <div class="content">
+      <h1 class="head" v-if="!active">Все до вступу</h1>
+      <div id="elem">
+
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+  import {mapGetters} from 'vuex';
+  import components from '../components/admission/index';
+  import Vue from 'vue'
+
+  export default {
+    name: 'Admission',
+    data() {
+      const items = [{
+        id: 1,
+        name: 'Спеціальності, за якими проводиться прийом на 1 курс до ХНУРЕ',
+        value: 'specialities',
+        content: 'test'
+      },
+        {id: 2, name: 'Приймальна комісія', value: 'selectionCommitee', content: 'test'},
+        {id: 3, name: 'Правила прийому', value: 'admissionRules', content: 'test'},
+        {id: 4, name: 'Порядок подання документів', content: 'test'},
+        {id: 5, name: 'Робота зі школярами', content: 'test'},
+        {id: 6, name: 'Робота з технікумами', content: 'test'},
+        {id: 7, name: 'Центр довузівської підготовки', content: 'test'},
+        {id: 8, name: 'Заходи', content: 'test'},
+        {id: 9, name: 'Для іноземних громадян', content: 'test'},
+        {id: 10, name: 'Для майбутніх магістрів', content: 'test'},
+        {id: 11, name: 'Друга вища освіта', content: 'test'}
+      ];
+
+
+      return {
+        items,
+        componentToDisplay: null,
+        components,
+        active: null,
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      }
+    },
+    beforeCreate() {
+
+    },
+    created() {
+
+    },
+    computed: {},
+    methods: {
+      displayComponent(data) {
+        if (this.componentToDisplay) {
+          this.componentToDisplay = new Vue({
+            el: '#elem',
+            ...this.components[data.value]
+          });
+          console.log(this.componentToDisplay)
+        }
+        else {
+          this.componentToDisplay = new Vue({
+            el: '#elem',
+            ...this.components[data.value]
+          });
+        }
+
+      },
+    }
+  }
+</script>
+
+<style scoped>
+  #elem {
+    display: flex;
+  }
+
+  .admission {
+    display: flex;
+    height: 100%;
+  }
+
+  .sidebar {
+    display: flex;
+    height: auto !important;
+    flex-direction: column;
+    width: 25% !important;
+  }
+
+  .content {
+    min-height: 800px;
+    width: 75%;
+  }
+
+  .content .head {
+    display: flex;
+    width: 100%;
+  }
+
+
+</style>
