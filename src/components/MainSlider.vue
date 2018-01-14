@@ -7,9 +7,9 @@
 </template>
 
 <script>
-  import nureImg from '../../img/nure2.jpg';
-  import sliderTwo from '../../img/slider-2.jpg';
-  import sliderThree from '../../img/slider-3.jpg';
+  import nureImg from '../../img/first.jpg';
+  import sliderTwo from '../../img/second.jpg';
+  import sliderThree from '../../img/third.jpg';
 
   export default {
     name: 'MainSlider',

@@ -2,10 +2,9 @@
     <header>
       <div class="flex-container">
         <div class="logo">
-          <a href="/">
           <img :src="navBar.logo" alt="">
-          <h1>NURE INFO</h1>
-        </a>
+          <h5>Офіційна сторінка приймальної комісії
+            Харьківського Національного Університету Радіоелектроніки</h5>
         </div>
         <div class="signing">
           <div>
@@ -110,21 +109,17 @@
 
   .logo {
     display: flex;
-    width: 20%;
     justify-content: center;
   }
 
-  .logo h1 {
+  .logo h5 {
     font-weight: bold;
-    font-size: 26px;
     display: inline-flex;
-    margin: 0;
+    margin: 10px 0;
     color: #fff;
   }
 
-
   .logo img {
-    width: 70px;
     height: 50px;
     display: inline-flex;
   }

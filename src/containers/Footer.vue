@@ -57,6 +57,27 @@
     },
     methods: {}
   }
+
+  /*
+   <div class="footer_menu">
+   <div class="footer-item">
+   <i class="material-icons">place</i>
+   <a href="place">61166, Харків, пр.Науки, 14</a>
+   <div>кім. 146</div>
+   </div>
+
+   <div class="footer-item">
+   <i class="material-icons">mail_outline</i>
+   <a href="mailto:">abitur@nure.ua</a>
+   </div>
+
+
+   <div class="footer-item">
+   <i class="material-icons">phone</i>
+   <a href="tel:0577021720">(057) 702-17-20</a>
+   </div>
+   </div>
+   */
 </script>
 
 <style scoped>
