@@ -50,7 +50,7 @@
   .slider {
     display: flex;
     height: 400px;
-    width: 85%;
+    width: 90%;
     margin: 0 auto;
     flex-direction: column;
   }

@@ -32,9 +32,10 @@
 </template>
 
 <script>
-  import {mapGetters} from 'vuex';
+  import { mapGetters } from 'vuex';
   import components from '../components/admission/index';
   import Vue from 'vue'
+
 
   export default {
     name: 'Admission',
@@ -45,25 +46,24 @@
         value: 'specialities',
         content: 'test'
       },
-        {id: 2, name: 'Приймальна комісія', value: 'selectionCommitee', content: 'test'},
-        {id: 3, name: 'Правила прийому', value: 'admissionRules', content: 'test'},
-        {id: 4, name: 'Порядок подання документів', content: 'test'},
-        {id: 5, name: 'Робота зі школярами', content: 'test'},
-        {id: 6, name: 'Робота з технікумами', content: 'test'},
-        {id: 7, name: 'Центр довузівської підготовки', content: 'test'},
-        {id: 8, name: 'Заходи', content: 'test'},
-        {id: 9, name: 'Для іноземних громадян', content: 'test'},
-        {id: 10, name: 'Для майбутніх магістрів', content: 'test'},
-        {id: 11, name: 'Друга вища освіта', content: 'test'}
+        { id: 2, name: 'Приймальна комісія', value: 'selectionCommitee', content: 'test' },
+        { id: 3, name: 'Правила прийому', value: 'admissionRules', content: 'test' },
+        { id: 4, name: 'Порядок подання документів', content: 'test' },
+        { id: 5, name: 'Робота зі школярами', content: 'test' },
+        { id: 6, name: 'Робота з технікумами', content: 'test' },
+        { id: 7, name: 'Центр довузівської підготовки', content: 'test' },
+        { id: 8, name: 'Заходи', content: 'test' },
+        { id: 9, name: 'Для іноземних громадян', content: 'test' },
+        { id: 10, name: 'Для майбутніх магістрів', content: 'test' },
+        { id: 11, name: 'Друга вища освіта', content: 'test' }
       ];
-
 
       return {
         items,
         componentToDisplay: null,
         components,
         active: null,
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
       }
     },
     beforeCreate() {
@@ -77,7 +77,7 @@
       displayComponent(data) {
         if (this.componentToDisplay) {
           this.componentToDisplay = new Vue({
-            el: '#elem',
+            el: this.componentToDisplay.el,
             ...this.components[data.value]
           });
           console.log(this.componentToDisplay)
@@ -87,9 +87,10 @@
             el: '#elem',
             ...this.components[data.value]
           });
+          console.log(this.componentToDisplay)
         }
 
-      },
+      }
     }
   }
 </script>
@@ -101,25 +102,33 @@
 
   .admission {
     display: flex;
+    flex-direction: row;
+    width: 100%;
     height: 100%;
+    max-height: 100%;
+    max-width:100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
   }
 
   .sidebar {
     display: flex;
-    height: auto !important;
+    flex: 0 0 auto;
     flex-direction: column;
-    width: 25% !important;
   }
 
   .content {
-    min-height: 800px;
     width: 75%;
+    min-height: 100%;
+    flex: 1 1 100%;
+    overflow: hidden;
+    padding: 2%;
   }
 
   .content .head {
     display: flex;
     width: 100%;
   }
-
 
 </style>

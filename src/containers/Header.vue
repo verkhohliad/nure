@@ -1,31 +1,48 @@
 <template>
-    <header>
-      <div class="flex-container">
-        <div class="logo">
-          <img :src="navBar.logo" alt="">
-          <h5>Офіційна сторінка приймальної комісії
-            Харьківського Національного Університету Радіоелектроніки</h5>
+  <header>
+    <v-toolbar class="header-toolbar">
+      <v-toolbar-title v-text="title"></v-toolbar-title>
+      <div class="signing">
+        <div>
+          <v-btn flat dark>Вхід</v-btn>
         </div>
-        <div class="signing">
-          <div>
-            <v-btn flat dark>Вхід</v-btn>
-          </div>
-          <div>
-            <v-btn flat dark>Реєстрація</v-btn>
-          </div>
+        <div>
+          <v-btn flat dark>Реєстрація</v-btn>
         </div>
       </div>
-      <MainSlider />
-      <nav>
-        <ul class="nav-list">
-          <li class="nav-item" v-for="item in navBar.items" :key="item.id">
-            <router-link :to="item.url">
-              <v-btn flat dark>{{ item.label }}</v-btn>
-            </router-link>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    </v-toolbar>
+    <v-content>
+      <section>
+        <v-parallax src="../../img/bg2.jpeg" height="600">
+          <v-layout
+            column
+            align-center
+            justify-center
+            class="white--text"
+          >
+            <div class="white--text mb-2 display-1 text-xs-center header-bar">
+              <div class="logo">
+                <img :src="navBar.logo" alt="">
+                <h3 class="name">Офіційна сторінка приймальної комісії
+                  Харьківського Національного Університету Радіоелектроніки</h3>
+              </div>
+            </div>
+          </v-layout>
+        </v-parallax>
+      </section>
+    </v-content>
+
+    <!--<MainSlider />-->
+    <nav>
+      <ul class="nav-list">
+        <li class="nav-item" v-for="item in navBar.items" :key="item.id">
+          <router-link :to="item.url">
+            <v-btn flat dark>{{ item.label }}</v-btn>
+          </router-link>
+        </li>
+      </ul>
+    </nav>
+  </header>
 </template>
 
 <script>
@@ -95,16 +112,35 @@
     background: #05384d;
   }
 
+  .header-toolbar {
+    background: #032735;
+  }
+
   a {
     text-decoration: none;
     color: #fff;
   }
 
+  .header-bar {
+    background-color: rgba(0, 0, 0, 0.65);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    padding: 2%;
+    width: 60%;
+  }
+
+  .header-bar .name {
+
+  }
+
   .flex-container {
     display: flex;
     padding: 12px;
-    width: 85%;
+    width: 100%;
     margin: 0 auto;
+    height: 400px;
+    background: url('../../img/bg.jpeg')
   }
 
   .logo {
@@ -136,7 +172,7 @@
   }
 
   .nav-list {
-   background: #032735;
+    background: #032735;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -150,6 +186,5 @@
   .nav-list .nav-item a {
     display: inline-block;
   }
-
 
 </style>
