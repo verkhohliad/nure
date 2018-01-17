@@ -7,7 +7,7 @@
         <div>
           <p>{{ item.description }}</p>
           <p class="continued">...</p>
-          <v-btn class="read-more-button" dark>{{item.button}}</v-btn>
+          <v-btn class="read-more-button" dark>Читати більше...</v-btn>
         </div>
       </div>
     </div>
@@ -48,8 +48,7 @@
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
-    margin: 0 auto;
-    border-bottom: 2px solid #e1e1e1;
+    /*margin: 0 auto;*/
     padding: 2%;
   }
 
@@ -65,7 +64,7 @@
     overflow: hidden;
     margin: 10px 4%;
     width: 25%;
-    border: 1px solid #e1e1e1;
+    /*border: 1px solid #e1e1e1;*/
     padding-bottom: 1%;
   }
 
@@ -77,7 +76,7 @@
     height: 20px;
     font-size: 17px;
     padding-bottom: 10%;
-    border-bottom: 2px solid #e1e1e1;
+    border-bottom: 2px solid #ededed;
   }
 
   .item .read-more-button {

@@ -2,6 +2,11 @@
   <header>
     <v-toolbar class="header-toolbar">
       <v-toolbar-title v-text="title"></v-toolbar-title>
+      <div class="languages">
+        <div class="language-item">RU</div>
+        <div class="language-item">UA</div>
+        <div class="language-item">EN</div>
+      </div>
       <div class="signing">
         <div>
           <v-btn flat dark>Вхід</v-btn>
@@ -108,83 +113,6 @@
 </script>
 
 <style scoped>
-  header {
-    background: #05384d;
-  }
 
-  .header-toolbar {
-    background: #032735;
-  }
-
-  a {
-    text-decoration: none;
-    color: #fff;
-  }
-
-  .header-bar {
-    background-color: rgba(0, 0, 0, 0.65);
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    padding: 2%;
-    width: 60%;
-  }
-
-  .header-bar .name {
-
-  }
-
-  .flex-container {
-    display: flex;
-    padding: 12px;
-    width: 100%;
-    margin: 0 auto;
-    height: 400px;
-    background: url('../../img/bg.jpeg')
-  }
-
-  .logo {
-    display: flex;
-    justify-content: center;
-  }
-
-  .logo h5 {
-    font-weight: bold;
-    display: inline-flex;
-    margin: 10px 0;
-    color: #fff;
-  }
-
-  .logo img {
-    height: 50px;
-    display: inline-flex;
-  }
-
-  .signing {
-    display: flex;
-    width: 80%;
-    justify-content: flex-end;
-  }
-
-  .signing a {
-    display: inline-block;
-    margin: 15px;
-  }
-
-  .nav-list {
-    background: #032735;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .nav-list .nav-item {
-    display: inline-block;
-    margin: 10px;
-  }
-
-  .nav-list .nav-item a {
-    display: inline-block;
-  }
 
 </style>

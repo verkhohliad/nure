@@ -1,17 +1,17 @@
 <template>
   <div class="blog-news">
-    <!--<h3>Новини</h3>-->
-    <!--<div class="post" v-for="item in items" :key="item.id">-->
-      <!--<div class="date">-->
-        <!--<time>{{ item.date }}</time>-->
-        <!--<h4><a href="#">{{ item.title }}</a></h4>-->
-      <!--</div>-->
+    <h3>Новини</h3>
+    <div class="post" v-for="item in items" :key="item.id">
+      <div class="date">
+        <time>{{ item.date }}</time>
+        <h4><a href="#">{{ item.title }}</a></h4>
+      </div>
 
-      <!--<div class="description">-->
+      <div class="description">
 
-        <!--<p> {{ item.description }} </p>-->
-      <!--</div>-->
-    <!--</div>-->
+        <p> {{ item.description }} </p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -72,8 +72,12 @@
 
   .blog-news h3 {
     display: block;
-    background: #05384d;
-    color: #fff;
+    color: #000;
+    background: #ededed;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border-bottom: 2px solid #ededed;
     margin: 0;
     padding: 10px;
 

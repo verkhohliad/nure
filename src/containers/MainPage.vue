@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <div class="left-wrap">
     <section class="greeting">
       <h1 class="black--text mb-2 display-1 text-xs-center">
         Шановні Абітурієнти!</h1>
@@ -39,11 +40,12 @@
       </div>
     </section>
     <InformationWidget :info="information" />
-    <section class="news">
-      <h1 class="black--text mb-2 display-1 text-xs-center">
-        Останні новини</h1>
-      <BlogWidget :info="blogNews" />
-    </section>
+    </div>
+    <div class="right-wrap">
+      <section class="news">
+        <BlogWidget :info="blogNews" />
+      </section>
+    </div>
   </div>
 </template>
 
@@ -56,6 +58,7 @@
   import thirdImg from '../../img/third.jpg';
   import fourthImg from '../../img/fourth.jpg';
   import fifthImg from '../../img/fifth.jpg';
+  import sixthImg from '../../img/6th.jpg';
 
   export default {
     components: { BlogWidget, InformationWidget },
@@ -67,38 +70,38 @@
             id: 1,
             img: firstImg,
             title: 'Питання і відповіді про контрактну форму навчання в ХНУРЕ',
-            description: 'Зарахування до лав студентів вищого навчального закладу - завжди хвилюючий процес, під час якого навіть самі впевнені. ',
-            button: 'Читати більше...'
+            description: 'Зарахування до лав студентів вищого навчального закладу - завжди хвилюючий процес, під час якого навіть самі впевнені. '
           },
           {
             id: 2,
             img: secondImg,
             title: 'Розклад вступних іспитів в ХНУРЕ 2017',
-            description: 'Розклад вступних іспитів ХНУРЕ і додаткових вступних випробувань для вступу',
-            button: 'Читати більше...'
+            description: 'Розклад вступних іспитів ХНУРЕ і додаткових вступних випробувань для вступу'
           },
           {
             id: 3,
             img: thirdImg,
             title: 'Правила i порядок подачі документів в ХНУРЕ',
-            description: 'Реєстрація електронних кабінетів вступників та завантаження додатків до документів.',
-            button: 'Читати більше...'
+            description: 'Реєстрація електронних кабінетів вступників та завантаження додатків до документів.'
           },
           {
             id: 4,
             img: fourthImg,
             title: 'Правила прийому до ХНУРЕ у 2017 році',
-            description: 'А ти знаєш, що: 1. Якщо ти іногородній, то маєш право на отримання місця в гуртожитку на період вступної кампанії. 2. Якщо у тебе повну середню загальну освіту, ти можеш: подати до 9 заяв на 4 спеціальності в своєму електронному кабінеті або особисто в Консультаційному центрі Приймальної комісії ХНУРЕ з 12 до 26 липня 2017 р вказавши пріоритети свого вибору',
-            button: 'Читати більше...'
+            description: 'А ти знаєш, що: 1. Якщо ти іногородній, то маєш право на отримання місця в гуртожитку на період вступної кампанії. 2. Якщо у тебе повну середню загальну освіту, ти можеш: подати до 9 заяв на 4 спеціальності в своєму електронному кабінеті або особисто в Консультаційному центрі Приймальної комісії ХНУРЕ з 12 до 26 липня 2017 р вказавши пріоритети свого вибору'
           },
           {
             id: 5,
             img: fifthImg,
             title: 'Спеціальності і спеціалізації для надходження на 1 курс в ХНУРЕ',
-            description: '',
-            button: 'Читати більше...'
+            description: ''
+          },
+          {
+            id: 6,
+            img: sixthImg,
+            title: 'Перелік пільг при вступі до ВНЗ, пільги ХНУРЕ і бланки для пільг',
+            description: ''
           }
-
         ],
         blogNews: [
           {
@@ -130,68 +133,6 @@
 </script>
 
 <style scoped>
-  .greeting {
-    padding: 2%;
-    border-bottom: 2px solid #e1e1e1;
-  }
 
-  .subheading {
-    margin-top: 1%;
-    font-size: 18px !important;
-  }
-
-  .item img {
-    margin-bottom: 10px;
-  }
-
-  h1, h2 {
-    font-weight: normal;
-  }
-
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-
-  li {
-    display: inline-block;
-    margin: 0 10px;
-  }
-
-  a {
-    color: #42b983;
-  }
-
-  body {
-    font-family: CenGot;
-  }
-
-  .container {
-    max-width: 90%;
-    /*padding: 50px 5%;*/
-  }
-
-  .news {
-    display: flex;
-    margin-top: 35px;
-    flex-wrap: wrap;
-  }
-
-  .nure-video {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .item p {
-    overflow: hidden;
-    max-height: 50px;
-  }
-
-  .nure-video .description p {
-    margin-top: 20px;
-    text-align: start;
-    font-size: 22px;
-    display: inline-flex;
-  }
 
 </style>

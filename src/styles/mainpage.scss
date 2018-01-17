@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  max-width: 90%;
+  background: #fff;
+  margin: 1% auto;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+
+  .left-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    .greeting {
+      padding: 2%;
+      border-bottom: 2px solid #ededed;
+
+      .subheading {
+        margin-top: 1%;
+        font-size: 18px !important;
+      }
+    }
+  }
+
+  .right-wrap {
+    display: flex;
+    width: 35%;
+    .news {
+      display: flex;
+      margin-top: 35px;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+
+
+.item {
+  p {
+    overflow: hidden;
+    max-height: 50px;
+  }
+  img {
+    margin-bottom: 10px;
+  }
+}
