@@ -82,20 +82,12 @@
     computed: {},
     methods: {
       displayComponent(data) {
-        console.log(data.value)
-        if (this.componentToDisplay) {
-          this.componentToDisplay = data.value;
-        }
-        else {
-          this.componentToDisplay = data.value;
-        }
-
+        this.componentToDisplay = data.value;
       }
     }
   }
 </script>
 
 <style scoped>
-
 
 </style>
