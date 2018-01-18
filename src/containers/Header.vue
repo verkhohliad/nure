@@ -1,7 +1,6 @@
 <template>
   <header>
     <v-toolbar class="header-toolbar">
-      <v-toolbar-title v-text="title"></v-toolbar-title>
       <div class="languages">
         <div class="language-item">RU</div>
         <div class="language-item">UA</div>
@@ -9,10 +8,10 @@
       </div>
       <div class="signing">
         <div>
-          <v-btn flat dark>Вхід</v-btn>
+          <v-btn flat dark @click="signInActive=true">Вхід</v-btn>
         </div>
         <div>
-          <v-btn flat dark>Реєстрація</v-btn>
+          <v-btn flat dark @click="signUpActive=true">Реєстрація</v-btn>
         </div>
       </div>
     </v-toolbar>
@@ -47,15 +46,19 @@
         </li>
       </ul>
     </nav>
+    <SignIn @closeModal="signInActive = false" :show="signInActive" />
+    <SignUp @closeModal="signUpActive = false" :show="signUpActive" />
   </header>
 </template>
 
 <script>
   import MainSlider from '../components/MainSlider';
   import nureLogo from '../../img/nure-logo.png';
+  import SignIn from '../components/signing/SignIn';
+  import SignUp from '../components/signing/SignUp';
 
   export default {
-    components: { MainSlider },
+    components: { MainSlider, SignIn, SignUp },
     name: 'Header',
     data() {
       return {
@@ -99,20 +102,19 @@
               url: '/contact'
             }
           ]
-        }
+        },
+        signInActive: false,
+        signUpActive: false
       }
     },
     created() {
 
     },
     methods: {
-      $_Header_onClick: ev => {
-      }
     }
   }
 </script>
 
 <style scoped>
-
 
 </style>

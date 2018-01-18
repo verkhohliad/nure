@@ -35,7 +35,7 @@ export const getSpecialities = async () => {
         specialization: 'Прикладна математика (ІТМ)',
         marks: 'У - 0.3; М - 0.3; ІМ/ІУ - 0.3; А - 0.1;',
         minMark: 164.75,
-        volume: '3 р. 10 м.',
+        volume: 25,
         period: '3 р. 10 м.',
         cost: '10900 грн.'
       },
@@ -46,7 +46,7 @@ export const getSpecialities = async () => {
         specialization: 'Прикладна математика (ІТМ)',
         marks: 'У - 0.3; М - 0.3; ІМ/ІУ - 0.3; А - 0.1;',
         minMark: 164.75,
-        volume: '3 р. 10 м.',
+        volume: 25,
         period: '3 р. 10 м.',
         cost: '10900 грн.'
       },
@@ -57,7 +57,7 @@ export const getSpecialities = async () => {
         specialization: 'Прикладна математика (ІТМ)',
         marks: 'У - 0.3; М - 0.3; ІМ/ІУ - 0.3; А - 0.1;',
         minMark: 164.75,
-        volume: '3 р. 10 м.',
+        volume: 25,
         period: '3 р. 10 м.',
         cost: '10900 грн.'
       },
@@ -68,7 +68,7 @@ export const getSpecialities = async () => {
         specialization: 'Прикладна математика (ІТМ)',
         marks: 'У - 0.3; М - 0.3; ІМ/ІУ - 0.3; А - 0.1;',
         minMark: 164.75,
-        volume: '3 р. 10 м.',
+        volume: 25,
         period: '3 р. 10 м.',
         cost: '10900 грн.'
       },
@@ -79,7 +79,7 @@ export const getSpecialities = async () => {
         specialization: 'Прикладна математика (ІТМ)',
         marks: 'У - 0.3; М - 0.3; ІМ/ІУ - 0.3; А - 0.1;',
         minMark: 164.75,
-        volume: '3 р. 10 м.',
+        volume: 25,
         period: '3 р. 10 м.',
         cost: '10900 грн.'
       },
@@ -90,7 +90,7 @@ export const getSpecialities = async () => {
         specialization: 'Прикладна математика (ІТМ)',
         marks: 'У - 0.3; М - 0.3; ІМ/ІУ - 0.3; А - 0.1;',
         minMark: 164.75,
-        volume: '3 р. 10 м.',
+        volume: 25,
         period: '3 р. 10 м.',
         cost: '10900 грн.'
       },
@@ -101,7 +101,7 @@ export const getSpecialities = async () => {
         specialization: 'Прикладна математика (ІТМ)',
         marks: 'У - 0.3; М - 0.3; ІМ/ІУ - 0.3; А - 0.1;',
         minMark: 164.75,
-        volume: '3 р. 10 м.',
+        volume: 25,
         period: '3 р. 10 м.',
         cost: '10900 грн.'
       },
@@ -112,7 +112,7 @@ export const getSpecialities = async () => {
         specialization: 'Прикладна математика (ІТМ)',
         marks: 'У - 0.3; М - 0.3; ІМ/ІУ - 0.3; А - 0.1;',
         minMark: 164.75,
-        volume: '3 р. 10 м.',
+        volume: 25,
         period: '3 р. 10 м.',
         cost: '10900 грн.'
       },

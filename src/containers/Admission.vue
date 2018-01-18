@@ -1,18 +1,22 @@
 <template>
   <div class="admission">
-    <v-navigation-drawer permanent light class="sidebar">
+    <v-navigation-drawer permanent light class="sidebar" v-bind:class="{sidebarHide: !showSideBar}">
       <v-toolbar flat>
         <v-list>
-          <v-list-tile>
+          <v-list-tile class="sidebar-heading">
             <v-list-tile-title class="title">
               Меню
             </v-list-tile-title>
           </v-list-tile>
         </v-list>
+        <v-toolbar-side-icon @click="showSideBar=!showSideBar"></v-toolbar-side-icon>
       </v-toolbar>
       <v-divider></v-divider>
       <v-list dense class="pt-0">
-        <v-list-tile v-for="item in items" :key="item.title" @click="displayComponent(item)">
+        <v-list-tile v-for="item in items"
+                     :key="item.title"
+                     @click="displayComponent(item)"
+                     v-bind:class="{active: item.value === componentToDisplay}">
           <v-list-tile-action>
             <v-icon>fa-thermometer-empty</v-icon>
           </v-list-tile-action>
@@ -22,11 +26,11 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
+    <div class="show-button" v-if="!showSideBar">
+      <v-toolbar-side-icon @click="showSideBar=!showSideBar"></v-toolbar-side-icon>
+    </div>
     <div class="content">
-      <h1 class="head" v-if="!active">Все до вступу</h1>
-      <div id="elem">
-
-      </div>
+      <component :is="componentToDisplay" />
     </div>
   </div>
 </template>
@@ -34,19 +38,21 @@
 <script>
   import { mapGetters } from 'vuex';
   import components from '../components/admission/index';
-  import Vue from 'vue'
-
+  import Vue from 'vue';
+  import AdmissionRules from '../components/admission/AdmissionRules';
+  import SelectionCommittee from '../components/admission/SelectionCommittee';
+  import Specialities from '../components/admission/Specialties';
 
   export default {
+    components: { AdmissionRules, SelectionCommittee, Specialities },
     name: 'Admission',
     data() {
       const items = [{
         id: 1,
         name: 'Спеціальності, за якими проводиться прийом на 1 курс до ХНУРЕ',
-        value: 'specialities',
-        content: 'test'
+        value: 'specialities'
       },
-        { id: 2, name: 'Приймальна комісія', value: 'selectionCommitee', content: 'test' },
+        { id: 2, name: 'Приймальна комісія', value: 'selectionCommittee', content: 'test' },
         { id: 3, name: 'Правила прийому', value: 'admissionRules', content: 'test' },
         { id: 4, name: 'Порядок подання документів', content: 'test' },
         { id: 5, name: 'Робота зі школярами', content: 'test' },
@@ -60,7 +66,8 @@
 
       return {
         items,
-        componentToDisplay: null,
+        showSideBar: true,
+        componentToDisplay: 'specialities',
         components,
         active: null,
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
@@ -75,19 +82,12 @@
     computed: {},
     methods: {
       displayComponent(data) {
+        console.log(data.value)
         if (this.componentToDisplay) {
-          this.componentToDisplay = new Vue({
-            el: this.componentToDisplay.el,
-            ...this.components[data.value]
-          });
-          console.log(this.componentToDisplay)
+          this.componentToDisplay = data.value;
         }
         else {
-          this.componentToDisplay = new Vue({
-            el: '#elem',
-            ...this.components[data.value]
-          });
-          console.log(this.componentToDisplay)
+          this.componentToDisplay = data.value;
         }
 
       }
@@ -96,39 +96,6 @@
 </script>
 
 <style scoped>
-  #elem {
-    display: flex;
-  }
 
-  .admission {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
-    max-height: 100%;
-    max-width:100%;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-  }
-
-  .sidebar {
-    display: flex;
-    flex: 0 0 auto;
-    flex-direction: column;
-  }
-
-  .content {
-    width: 75%;
-    min-height: 100%;
-    flex: 1 1 100%;
-    overflow: hidden;
-    padding: 2%;
-  }
-
-  .content .head {
-    display: flex;
-    width: 100%;
-  }
 
 </style>

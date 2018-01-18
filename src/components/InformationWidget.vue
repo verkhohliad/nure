@@ -32,56 +32,6 @@
 </script>
 
 <style scoped>
-  .item-content {
-    padding: 2%;
-  }
 
-  .item h4 {
-    font-size: 19px;
-    margin-top: 15px;
-    height: 50px;
-    max-height: 50px;
-  }
-
-  .item-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: row;
-    /*margin: 0 auto;*/
-    padding: 2%;
-  }
-
-  .item p {
-    font-size: 17px;
-    height: 50px;
-    max-height: 50px;
-    overflow: hidden;
-    margin: 0;
-  }
-
-  .item {
-    overflow: hidden;
-    margin: 10px 4%;
-    width: 25%;
-    /*border: 1px solid #e1e1e1;*/
-    padding-bottom: 1%;
-  }
-
-  .item img {
-    width: 100%;
-  }
-
-  .item .continued {
-    height: 20px;
-    font-size: 17px;
-    padding-bottom: 10%;
-    border-bottom: 2px solid #ededed;
-  }
-
-  .item .read-more-button {
-    margin-top: 5%;
-    background-color: #032735 !important;
-  }
 
 </style>

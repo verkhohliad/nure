@@ -11,7 +11,7 @@
   .left-wrap {
     display: flex;
     flex-direction: column;
-    width: 65%;
+    width: 70%;
     .greeting {
       padding: 2%;
       border-bottom: 2px solid #ededed;
@@ -21,27 +21,127 @@
         font-size: 18px !important;
       }
     }
+
+    .item-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      flex-direction: row;
+      /*margin: 0 auto;*/
+      padding: 2%;
+
+      .item {
+        overflow: hidden;
+        margin: 10px 4%;
+        width: 25%;
+        /*border: 1px solid #e1e1e1;*/
+        padding-bottom: 1%;
+
+        p {
+          font-size: 17px;
+          height: 50px;
+          margin: 0;
+          overflow: hidden;
+          max-height: 50px;
+        }
+        img {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+
+        .item-content {
+          padding: 2%;
+
+          h4 {
+            font-size: 19px;
+            margin-top: 15px;
+            height: 50px;
+            max-height: 50px;
+          }
+
+          .continued {
+            height: 20px;
+            font-size: 17px;
+            padding-bottom: 10%;
+            border-bottom: 2px solid #ededed;
+          }
+
+          .read-more-button {
+            margin-top: 5%;
+            background-color: #032735 !important;
+          }
+        }
+      }
+    }
   }
 
   .right-wrap {
     display: flex;
-    width: 35%;
+    width: 30%;
     .news {
+      border-left: 1px solid #eaeaea;
       display: flex;
       margin-top: 35px;
       flex-wrap: wrap;
+
+      .blog-news {
+        margin-left: 10px;
+
+        h3 {
+          display: block;
+          color: #fff;
+          background: #05384d !important;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          border-radius: 5px;
+          border-bottom: 2px solid #ededed;
+          margin: 0;
+          padding: 10px;
+        }
+
+        .post {
+          display: flex;
+          flex-direction: column;
+
+          h4 {
+            width: 80%;
+            font-size: 16px;
+            padding-top: 11px;
+            font-weight: bold;
+            a {
+              color: #05384d;
+              text-decoration: none;
+            }
+
+            a:hover {
+              text-decoration: underline;
+              color: #032735;
+            }
+          }
+
+          .date {
+            padding: 7px 7px 7px 0px;
+            display: flex;
+
+            time {
+              font-size: 20px;
+              background: #f4f4f4;
+              padding: 7px;
+              margin: 0px 16px 0px 0px;
+              width: 30%;
+            }
+          }
+
+          .description {
+            text-align: start;
+            display: inline-flex;
+            margin-left: 30%;
+          }
+        }
+      }
     }
   }
 }
 
 
 
-.item {
-  p {
-    overflow: hidden;
-    max-height: 50px;
-  }
-  img {
-    margin-bottom: 10px;
-  }
-}

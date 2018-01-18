@@ -1,3 +1,37 @@
-.information-tab {
-  overflow: auto;
+.specialities {
+  .title {
+    margin: 2%;
+  }
+  .information-tab {
+    overflow: auto;
+  }
+  .specialities-toolbar {
+    border-bottom: 1px solid #384d62;
+  }
+  .specialities-tabs {
+    height: 70px;
+    div {
+      overflow: hidden;
+    }
+  }
+  .tabs__items {
+    .datatable {
+      tr {
+        th, td {
+          font-size: 15px;
+          text-align: center !important;
+          vertical-align: middle;
+          padding: 15px;
+        }
+      }
+    }
+  }
+  .specialities-content {
+    background: #fff;
+  }
+
+}
+
+.blue-background {
+  background: #05384d !important;
 }

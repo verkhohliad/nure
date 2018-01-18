@@ -1,9 +1,17 @@
 <template>
   <div class="specialities">
-    <h1>СПЕЦІАЛЬНОСТІ ТА СПЕЦІАЛІЗАЦІЇ ДЛЯ ВСТУПУ ДО ХНУРЕ</h1>
-
-    <v-tabs v-model="active">
-      <v-tabs-bar class="cyan" dark>
+    <v-tabs fixed centered>
+      <v-toolbar extended class="blue-background specialities-toolbar" dark>
+        <v-spacer></v-spacer>
+        <v-btn icon>
+          <v-icon>search</v-icon>
+        </v-btn>
+        <v-btn icon>
+          <v-icon>more_vert</v-icon>
+        </v-btn>
+        <v-toolbar-title slot="extension" class="display-2 title">СПЕЦІАЛЬНОСТІ ТА СПЕЦІАЛІЗАЦІЇ ДЛЯ ВСТУПУ ДО ХНУРЕ</v-toolbar-title>
+      </v-toolbar>
+      <v-tabs-bar class="cyan specialities-tabs blue-background specialities-tabs" dark>
         <v-tabs-item
           v-for="tab in tabs"
           :key="tab"
@@ -45,6 +53,36 @@
         </v-tabs-content>
       </v-tabs-items>
     </v-tabs>
+    <div class="specialities-content">
+      <h5>Умовні позначення:</h5>
+      <ul>
+        <li>У - Українська мова та література;</li>
+        <li>М - Математика;</li>
+        <li>Ф - Фізика;</li>
+        <li>А - Астрономія;</li>
+        <li>Х - Хімія;</li>
+        <li>IМ - Іноземна мова;</li>
+        <li>ІУ - Історія України;</li>
+        <li>A - Атестат про середню освіту;</li>
+        <li>П - Пiдкурси ХНУРЕ.</li>
+      </ul>
+      <h1>ФОРМИ І ТЕРМІНИ НАВЧАННЯ:</h1>
+      <div>
+        <h5>Денна</h5>
+        <ul>
+          <li>4 роки - бакалавр;</li>
+          <li>1,5 або 2 роки - магістр.</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Заочна</h5>
+        <ul>
+          <li>5 роки - бакалавр;</li>
+          <li>1,5 або 2 роки - магістр з використанням технологій дистанційного навчання.</li>
+        </ul>
+      </div>
+
+    </div>
   </div>
 </template>
 
