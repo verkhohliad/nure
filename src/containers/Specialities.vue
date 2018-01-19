@@ -9,8 +9,12 @@
         <v-btn icon>
           <v-icon>more_vert</v-icon>
         </v-btn>
+<<<<<<< Updated upstream
         <v-toolbar-title slot="extension" class="display-0 title">СПЕЦІАЛЬНОСТІ ТА СПЕЦІАЛІЗАЦІЇ ДЛЯ ВСТУПУ ДО ХНУРЕ
         </v-toolbar-title>
+=======
+        <v-toolbar-title slot="extension" class="display-2 title">СПЕЦІАЛЬНОСdddghthtТІ ТА СПЕЦІАЛІЗАЦІЇ ДЛЯ ВСТУПУ ДО ХНУРЕ</v-toolbar-title>
+>>>>>>> Stashed changes
       </v-toolbar>
       <v-tabs-bar class="cyan specialities-tabs blue-background specialities-tabs" dark>
         <v-tabs-item
