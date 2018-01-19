@@ -17,7 +17,7 @@
     </v-toolbar>
     <v-content>
       <section>
-        <v-parallax src="../../img/bg2.jpeg" height="600">
+        <v-parallax src="../../img/test1.jpg" height="500">
           <v-layout
             column
             align-center
@@ -27,8 +27,8 @@
             <div class="white--text mb-2 display-1 text-xs-center header-bar">
               <div class="logo">
                 <img :src="navBar.logo" alt="">
-                <h3 class="name">Офіційна сторінка приймальної комісії
-                  Харьківського Національного Університету Радіоелектроніки</h3>
+                <h4 class="name">Офіційна сторінка приймальної комісії
+                  Харьківського Національного Університету Радіоелектроніки</h4>
               </div>
             </div>
           </v-layout>
