@@ -3,7 +3,9 @@ header {
 }
 
 .header-toolbar {
-  background: #032735 !important;
+  background: rgba(3,39,53, 0.85) !important;
+  z-index: 1;
+  position: absolute;
   .toolbar__content {
     .signing {
       display: flex;
@@ -33,17 +35,17 @@ header {
 }
 
 .header-bar {
-  background-color: rgba(0, 0, 0, 0.65);
+  background-color: rgba(0, 0, 0, 0.75);
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
   padding: 2%;
   width: 60%;
-  margin-top: 500px;
+  margin-top: 410px;
   .logo {
     display: flex;
     justify-content: center;
-    h3 {
+    .name {
       display: inline-flex;
       color: #fff;
       margin: 0;
@@ -61,13 +63,11 @@ header {
   list-style-type: none;
   margin: 0;
   padding: 0;
-}
-
-.nav-list .nav-item {
-  display: inline-block;
-  margin: 10px;
-}
-
-.nav-list .nav-item a {
-  display: inline-block;
+  .nav-item {
+    display: inline-block;
+    margin: 10px;
+    a {
+      display: inline-block;
+    }
+  }
 }

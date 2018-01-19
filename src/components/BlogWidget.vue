@@ -1,6 +1,6 @@
 <template>
   <div class="blog-news">
-    <h3>Новини</h3>
+    <h4 class="title">Новини</h4>
     <div class="post" v-for="item in items" :key="item.id">
       <div class="date">
         <time>{{ item.date }}</time>

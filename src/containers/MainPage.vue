@@ -2,8 +2,8 @@
   <div class="container">
     <div class="left-wrap">
     <section class="greeting">
-      <h1 class="black--text mb-2 display-1 text-xs-center">
-        Шановні Абітурієнти!</h1>
+      <h2 class="black--text mb-2 display-0 text-xs-center">
+        Шановні Абітурієнти!</h2>
       <div class="subheading mb-3 text-xs-center">
         Вітаємо Вас на інформаційному порталі Харківського національного університету радіоелектроніки. Тут Ви зможете знайти найактуальнішу і повну інформацію щодо вступної кампанії 2017 ВНЗ ХНУРЕ.
         <br>
