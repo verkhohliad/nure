@@ -1,36 +1,40 @@
 <template>
   <v-app id="app">
-    <Header/>
-    <router-view/>
-    <Footer/>
+    <div v-if="loading">
+      <MainLoadingComponent />
+    </div>
+      <Header />
+      <router-view />
+      <Footer />
   </v-app>
 </template>
 
 <script>
   import Header from './containers/Header'
   import Footer from './containers/Footer'
+  import MainLoadingComponent from './components/MainLoadingComponent'
 
   import './styles/index.scss'
 
   export default {
-    components: { Header, Footer },
-    name: 'app'
+    components: { Header, Footer, MainLoadingComponent },
+    name: 'app',
+    data() {
+      return {
+        loading: true
+      }
+    },
+    beforeCreate() {
+
+    },
+    created() {
+      setTimeout(() => {
+        this.loading = false;
+      }, 1500)
+    },
   }
 </script>
 
 <style>
-  html, head, body {
-    margin: 0;
-    padding: 0;
-  }
 
-  #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin: 0;
-    /*maybe 80% width here*/
-  }
 </style>
