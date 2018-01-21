@@ -28,8 +28,11 @@ app.use(morgan(function (tokens, req, res) {
 
 app.use('/', express.static('dist'));
 
+app.use('/uploads', express.static('/server/uploads'));
 
-var server = http.createServer(app);
+app.use('/api/', require('./server/routes'));
+
+const server = http.createServer(app);
 
 server.listen(app.get('port'), function () {
   console.log('Server listening on port ' + server.address().port);

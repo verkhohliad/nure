@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Vuetify from 'vuetify'
 import BootstrapVue from 'bootstrap-vue'
+import axios from 'axios'
+
 import VueYouTubeEmbed from 'vue-youtube-embed'
 import * as VueGoogleMaps from 'vue2-google-maps'
 
@@ -19,6 +21,8 @@ Vue.use(VueGoogleMaps, {
   },
 });
 Vue.config.productionTip = false;
+
+window.axios = axios
 
 new Vue({
   el: '#app',
