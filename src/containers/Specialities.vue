@@ -57,7 +57,45 @@
                           <div v-if="tab==='1 курс'">
                             <v-data-table
                               v-bind:headers="specialities.headers"
-                              :items="specialities.items"
+                              :items="specialities.items.bachelor.firstCourse"
+                              hide-actions
+                              class="elevation-1"
+                            >
+                              <template slot="items" slot-scope="props">
+                                <td>{{ props.item.cipher }}</td>
+                                <td class="text-xs-right">{{ props.item.specialty }}</td>
+                                <td class="text-xs-right">{{ props.item.specialization }}</td>
+                                <td class="text-xs-right">{{ props.item.marks }}</td>
+                                <td class="text-xs-right">{{ props.item.minMark }}</td>
+                                <td class="text-xs-right">{{ props.item.volume }}</td>
+                                <td class="text-xs-right">{{ props.item.period }}</td>
+                                <td class="text-xs-right">{{ props.item.cost }}</td>
+                              </template>
+                            </v-data-table>
+                          </div>
+                          <div v-if="tab==='2 курс'">
+                            <v-data-table
+                              v-bind:headers="specialities.headers"
+                              :items="specialities.items.bachelor.secondCourse"
+                              hide-actions
+                              class="elevation-1"
+                            >
+                              <template slot="items" slot-scope="props">
+                                <td>{{ props.item.cipher }}</td>
+                                <td class="text-xs-right">{{ props.item.specialty }}</td>
+                                <td class="text-xs-right">{{ props.item.specialization }}</td>
+                                <td class="text-xs-right">{{ props.item.marks }}</td>
+                                <td class="text-xs-right">{{ props.item.minMark }}</td>
+                                <td class="text-xs-right">{{ props.item.volume }}</td>
+                                <td class="text-xs-right">{{ props.item.period }}</td>
+                                <td class="text-xs-right">{{ props.item.cost }}</td>
+                              </template>
+                            </v-data-table>
+                          </div>
+                          <div v-if="tab==='3 курс'">
+                            <v-data-table
+                              v-bind:headers="specialities.headers"
+                              :items="specialities.items.bachelor.thirdCourse"
                               hide-actions
                               class="elevation-1"
                             >
@@ -80,7 +118,23 @@
                 </v-tabs>
               </div>
               <div v-else>
-                <h4>table for master</h4>
+                  <v-data-table
+                    v-bind:headers="specialities.headers"
+                    :items="specialities.items.master.items"
+                    hide-actions
+                    class="elevation-1"
+                  >
+                    <template slot="items" slot-scope="props">
+                      <td>{{ props.item.cipher }}</td>
+                      <td class="text-xs-right">{{ props.item.specialty }}</td>
+                      <td class="text-xs-right">{{ props.item.specialization }}</td>
+                      <td class="text-xs-right">{{ props.item.marks }}</td>
+                      <td class="text-xs-right">{{ props.item.minMark }}</td>
+                      <td class="text-xs-right">{{ props.item.volume }}</td>
+                      <td class="text-xs-right">{{ props.item.period }}</td>
+                      <td class="text-xs-right">{{ props.item.cost }}</td>
+                    </template>
+                  </v-data-table>
               </div>
             </v-card-text>
           </v-card>
