@@ -2,15 +2,16 @@
   <div class="specialities">
     <v-tabs fixed centered>
       <v-toolbar extended class="blue-background specialities-toolbar" dark>
-        <v-spacer></v-spacer>
-        <v-btn icon>
-          <v-icon>search</v-icon>
-        </v-btn>
-        <v-btn icon>
-          <v-icon>more_vert</v-icon>
-        </v-btn>
-        <v-toolbar-title slot="extension" class="display-0 title">СПЕЦІАЛЬНОСТІ ТА СПЕЦІАЛІЗАЦІЇ ДЛЯ ВСТУПУ ДО ХНУРЕ
+        <v-toolbar-title class="display-0 title">СПЕЦІАЛЬНОСТІ ТА СПЕЦІАЛІЗАЦІЇ ДЛЯ ВСТУПУ ДО ХНУРЕ
         </v-toolbar-title>
+        <div class="toolbar-buttons">
+          <v-btn icon>
+            <v-icon>search</v-icon>
+          </v-btn>
+          <v-btn icon>
+            <v-icon>more_vert</v-icon>
+          </v-btn>
+        </div>
       </v-toolbar>
       <v-tabs-bar class="cyan specialities-tabs blue-background specialities-tabs" dark>
         <v-tabs-item
@@ -114,23 +115,23 @@
                 </v-tabs>
               </div>
               <div v-else>
-                  <v-data-table
-                    v-bind:headers="specialities.headers.normal"
-                    :items="specialities.items.master.items"
-                    hide-actions
-                    class="elevation-1"
-                  >
-                    <template slot="items" slot-scope="props">
-                      <td>{{ props.item.cipher }}</td>
-                      <td class="text-xs-right">{{ props.item.specialty }}</td>
-                      <td class="text-xs-right">{{ props.item.specialization }}</td>
-                      <td class="text-xs-right">{{ props.item.marks }}</td>
-                      <td class="text-xs-right">{{ props.item.minMark }}</td>
-                      <td class="text-xs-right">{{ props.item.volume }}</td>
-                      <td class="text-xs-right">{{ props.item.period }}</td>
-                      <td class="text-xs-right">{{ props.item.cost }}</td>
-                    </template>
-                  </v-data-table>
+                <v-data-table
+                  v-bind:headers="specialities.headers.normal"
+                  :items="specialities.items.master.items"
+                  hide-actions
+                  class="elevation-1"
+                >
+                  <template slot="items" slot-scope="props">
+                    <td>{{ props.item.cipher }}</td>
+                    <td class="text-xs-right">{{ props.item.specialty }}</td>
+                    <td class="text-xs-right">{{ props.item.specialization }}</td>
+                    <td class="text-xs-right">{{ props.item.marks }}</td>
+                    <td class="text-xs-right">{{ props.item.minMark }}</td>
+                    <td class="text-xs-right">{{ props.item.volume }}</td>
+                    <td class="text-xs-right">{{ props.item.period }}</td>
+                    <td class="text-xs-right">{{ props.item.cost }}</td>
+                  </template>
+                </v-data-table>
               </div>
             </v-card-text>
           </v-card>
@@ -171,7 +172,7 @@
 </template>
 
 <script>
-  import {mapGetters} from 'vuex'
+  import { mapGetters } from 'vuex'
 
   export default {
     components: {},
@@ -184,7 +185,7 @@
         tabs,
         childTabs,
         active: null,
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
       }
     },
     beforeCreate() {
@@ -207,6 +208,14 @@
   .information-tab {
     padding: 0;
   }
+  .title {
+    margin-top: 80px;
+  }
 
+  .toolbar-buttons {
+    margin-left: 50%;
+    min-width: 10%;
+    margin-top: 80px;
+  }
 
 </style>
