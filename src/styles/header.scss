@@ -7,6 +7,7 @@ header {
   z-index: 1;
   position: absolute;
   .toolbar__content {
+
     .signing {
       display: flex;
       width: 70%;
@@ -41,7 +42,7 @@ header {
   border-radius: 10px;
   padding: 2%;
   width: 60%;
-  margin-top: 410px;
+  margin-top: 200px;
   .logo {
     display: flex;
     justify-content: center;
@@ -70,4 +71,83 @@ header {
       display: inline-block;
     }
   }
+}
+
+
+
+
+
+@media (max-width: 1030px) {
+.nav-list {
+  .nav-item {
+        display: list-item;
+    margin: 0px;
+    a {
+      display: inline-block;
+    }
+  }
+}
+.header-toolbar {
+
+  .toolbar__content {
+    .languages {
+      .language-item {
+        width: 21%;
+      }
+    }
+  }
+
+}
+}
+
+@media  (max-width: 600px){
+  .header-toolbar{
+  .toolbar__content{
+.languages {
+      .language-item {
+        width: 27%;
+      }
+    }
+  }
+}
+}
+
+
+@media (max-width: 480px){
+
+    .header-bar {
+      .logo{
+        display: inline-block;
+        .name{
+              font-size: 15px;
+        }
+      }
+}
+    .header-toolbar{
+  .toolbar__content{
+.languages {
+      .language-item {
+        width: 35%;
+      }
+    }
+  }
+}
+}
+
+@media (max-width: 420px){
+
+
+    .header-toolbar{
+  .toolbar__content{
+    height: 0px;
+    .signing {
+      display: -webkit-inline-box;
+      width: 70%;
+      justify-content: flex-end;
+    }
+.languages {
+      display:none;
+    }
+  }
+}
 }

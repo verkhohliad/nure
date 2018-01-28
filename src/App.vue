@@ -3,9 +3,9 @@
     <div v-if="loading">
       <MainLoadingComponent />
     </div>
-      <Header />
-      <router-view />
-      <Footer />
+    <Header />
+    <router-view />
+    <Footer />
   </v-app>
 </template>
 

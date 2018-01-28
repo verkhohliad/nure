@@ -1,21 +1,37 @@
 .specialities {
-  .title {
-    margin: 2%;
+  .specialities-toolbar {
+    border-bottom: 1px solid #384d62;
+    width: 100%;
+
+    .toolbar__content {
+      justify-content: center;
+    }
+
+    .toolbar-title {
+
+    }
+
+    .toolbar-buttons {
+
+    }
   }
+
   .information-tab {
     overflow: auto;
   }
-  .specialities-toolbar {
-    border-bottom: 1px solid #384d62;
-  }
+
   .specialities-tabs {
     height: 70px;
     div {
       overflow: hidden;
     }
   }
+
   .tabs__items {
     .datatable {
+      width: 94%;
+      margin: auto;
+
       tr {
         th, td {
           text-align: center !important;
@@ -34,4 +50,20 @@
 
 .blue-background {
   background: #05384d !important;
+}
+
+.specialities-content {
+
+	padding: 10px;
+text-align: left;
+	h1{
+			text-align: center;
+		}
+
+
+	h5{
+		font-weight: bold;
+		}
+
+
 }

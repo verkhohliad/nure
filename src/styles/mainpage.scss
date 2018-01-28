@@ -34,11 +34,10 @@
         overflow: hidden;
         margin: 10px 4%;
         width: 25%;
-        /*border: 1px solid #e1e1e1;*/
         padding-bottom: 1%;
 
         p {
-          font-size: 17px;
+          font-size: 13px;
           height: 50px;
           margin: 0;
           overflow: hidden;
@@ -53,15 +52,15 @@
           padding: 2%;
 
           h4 {
-            font-size: 19px;
+          	font-weight: bold;
+            font-size: 15px;
             margin-top: 15px;
             height: 50px;
-            max-height: 50px;
           }
 
           .continued {
             height: 20px;
-            font-size: 17px;
+            font-size: 13px;
             padding-bottom: 10%;
             border-bottom: 2px solid #ededed;
           }
@@ -145,3 +144,254 @@
 
 
 
+@media (max-width: 1260px)
+{
+
+.container {
+	.left-wrap {
+
+    .item-container {
+
+      .item {
+       width: 100%;
+
+        .item-content {
+
+          h4 {
+            font-size: 15px;
+            margin-top: 15px;
+            height: 50px;
+          }
+
+          .continued {
+            padding-bottom: 5%;
+          }
+	.btn__content{
+    font-size: 12px;
+          		
+          	}
+          .read-more-button {
+          	font-size:8px;
+          }
+        }
+      }
+    }
+  }
+  .right-wrap {
+    .news {
+      .blog-news {
+        margin-left: 10px;
+        .post {
+          .date {
+            time {
+            	   margin: 0px ; 
+                  font-size: 13px;
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
+
+}
+
+
+
+
+@media screen and (max-width: 900px){
+.container {
+  .left-wrap {
+       .greeting {
+
+      .subheading {
+        margin-top: 1%;
+        font-size: 13px !important;
+      }
+    }
+
+.item-container {
+      .item {
+        .item-content {
+
+          h4 {
+              font-size: 15px;
+     margin-top: 0px; 
+     height: 100%; 
+          }
+          .continued {
+            padding-bottom: 5%;
+          }
+	.btn__content{
+		font-size: 8px;		
+          	}
+          .read-more-button {
+          	font-size:8px;
+          }     
+      }
+}
+}
+}
+  .right-wrap {
+    .news {
+      .blog-news {
+        .post {
+          h4{
+            width:100%;
+                font-size: 14px;
+    padding-top: 11px;
+    font-weight: bold;
+          }
+
+          .date {
+            padding-top:10px;
+            display:block;
+            time {
+             height: 10%;
+            }
+          }
+            .description {
+            text-align: start;
+            display: inline-flex;
+            margin-left: 0%;
+          }
+        }
+      }
+    }
+  }
+}
+}
+
+
+@media screen and (max-width: 600px){
+.container {
+  .right-wrap {
+    .news {
+      .blog-news {
+        .post {
+          h4{
+            width:100%;
+                font-size: 14px;
+    padding-top: 11px;
+    font-weight: bold;
+          }
+
+          .date {
+            time {
+            display: table-footer-group;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+}
+
+@media screen and (max-width: 440px){
+.container {
+	.left-wrap {
+
+.item-container {
+      .item {
+        .item-content {
+
+	.btn__content{
+		font-size: 8px;
+		padding:0px;
+          		
+          	}
+          .read-more-button {
+          	font-size:8px;
+          }
+        
+      }
+}
+}
+}
+  .right-wrap {
+    .news {
+      .blog-news {
+        margin-left: 5px;
+        .title{
+              padding: 1px;
+    font-size: 10px!important;
+        }
+        .post {
+          h4{
+            width:100%;
+                font-size: 7px;
+    padding-top: 11px;
+    font-weight: bold;
+          }
+
+          .date {
+                padding: 5px 10px;
+            h4{
+              a{
+                font-size:10px;
+              }
+            }
+            time {
+              font-size:10px;
+            display: table-footer-group;
+            }
+          }
+            .description {
+            p{
+              font-size: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+}
+
+@media screen and (max-width: 340px){
+.container {
+
+  .left-wrap {
+    .greeting {
+
+      .subheading {
+        font-size: 13px !important;
+      }
+    }
+  }
+  .right-wrap {
+    .news {
+      .blog-news {
+        margin-left: 5px;
+        .title{
+   display: inline-flex;
+             padding: 5px;
+        }
+        .post {
+          
+          .date {
+                padding: 5px 10px;
+            h4{  
+              padding-top:0px;
+              a{
+                font-size:7px;
+              }
+            }
+            time {
+              font-size:10px;
+            display: table-footer-group;
+            }
+          }
+            .description {
+            p{
+              font-size: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+}

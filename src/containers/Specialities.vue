@@ -1,17 +1,22 @@
 <template>
   <div class="specialities">
     <v-tabs fixed centered>
-      <v-toolbar extended class="blue-background specialities-toolbar" dark>
-        <v-spacer></v-spacer>
-        <v-btn icon>
-          <v-icon>search</v-icon>
-        </v-btn>
-        <v-btn icon>
-          <v-icon>more_vert</v-icon>
-        </v-btn>
-        <v-toolbar-title slot="extension" class="display-0 title">СПЕЦІАЛЬНОСТІ ТА СПЕЦІАЛІЗАЦІЇ ДЛЯ ВСТУПУ ДО ХНУРЕ
+
+      <v-toolbar class="blue-background specialities-toolbar" dark>
+        <v-toolbar-title class="toolbar-title">
+            СПЕЦІАЛЬНОСТІ ТА СПЕЦІАЛІЗАЦІЇ ДЛЯ ВСТУПУ ДО ХНУРЕ
         </v-toolbar-title>
+
+        <span class="toolbar-buttons">
+            <v-btn icon>
+              <v-icon>search</v-icon>
+            </v-btn>
+            <v-btn icon>
+              <v-icon>more_vert</v-icon>
+            </v-btn>
+          </span>
       </v-toolbar>
+
       <v-tabs-bar class="cyan specialities-tabs blue-background specialities-tabs" dark>
         <v-tabs-item
           v-for="tab in tabs"
@@ -111,6 +116,7 @@
                       </v-card>
                     </v-tabs-content>
                   </v-tabs-items>
+
                 </v-tabs>
               </div>
               <div v-else>
@@ -136,7 +142,9 @@
           </v-card>
         </v-tabs-content>
       </v-tabs-items>
+
     </v-tabs>
+
     <div class="specialities-content">
       <h5>Умовні позначення:</h5>
       <ul>
@@ -166,24 +174,67 @@
         </ul>
       </div>
 
+           <div>
+        <h5>Контрактна форма навчання:</h5>
+        <ul>
+          <li>Можлива для всіх спеціальностей на будь-якої спеціалізації.</li>
+        </ul>
+          </div>
+
+        <div>
+        <h5>Друга вища освіта:</h5>
+        <ul>
+          <li>В університеті ХНУРЕ можливо отримати другу вищу освіту в Центрі післядипломної освіти (кімната 283, т. 702-18-05) на контракті з двох або трирічним терміном навчання.</li>
+
+        </ul>
+       </div>
+
+
+       <div>
+        <h5>Для вступу на навчання із скороченим терміном підготовки для отримання ступеня бакалавра приймаються особи, які отримали навчально-кваліфікаційний рівень молодшого спеціаліста:</h5>
+        <ul>
+          <li>1-й (скорочений термін навчання);</li>
+          <li>2-й курс з терміном навчання 3 роки;</li>
+          <li>  3-1 курс з терміном навчання 2 роки.</li>
+         </ul>
+      </div>
+
+
+       <div>
+        <h5>Студенти ХНУРЕ мають можливість:</h5>
+        <ol>
+          <li> Навчатися на військовій кафедрі;</li>
+<li> Отримати європейський диплом за програмою подвійного дипломування;</li>
+<li> Брати участь в міжнародних стажуваннях і обмінах;</li>
+<li> Проживати в гуртожитку;</li>
+<li> Брати участь в студентських і спортивних клубах;</li>
+<li> Отримувати практичні навички в українських і міжнародних компаніях.</li>
+        </ol>
+      </div>
+
+
     </div>
+
   </div>
 </template>
 
 <script>
-  import {mapGetters} from 'vuex'
+  import { mapGetters } from 'vuex'
 
   export default {
-    components: {},
+    components: { },
     name: 'Specialities',
     data() {
       const tabs = ['Бакалавр', 'Магістр'];
       const childTabs = ['1 курс', '2 курс', '3 курс'];
-
       return {
         tabs,
         childTabs,
         active: null,
+        pagination: {
+          descending: true,
+          rowsPerPage: 10
+        },
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
       }
     },
@@ -197,7 +248,6 @@
       ...mapGetters({
         specialities: 'getSpecialities'
       })
-
     },
     methods: {}
   }
@@ -207,6 +257,4 @@
   .information-tab {
     padding: 0;
   }
-
-
 </style>
