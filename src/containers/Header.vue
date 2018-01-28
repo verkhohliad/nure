@@ -17,7 +17,7 @@
     </v-toolbar>
     <v-content>
       <section>
-        <v-parallax src="../../img/test1.jpg" height="500">
+        <v-parallax :src="navBar.parallaxImg" height="500">
           <v-layout
             column
             align-center
@@ -54,6 +54,7 @@
 <script>
   import MainSlider from '../components/MainSlider';
   import nureLogo from '../../img/nure-logo.png';
+  import parallaxImg from '../../img/test1.jpg';
   import SignIn from '../components/signing/SignIn';
   import SignUp from '../components/signing/SignUp';
 
@@ -64,6 +65,7 @@
       return {
         navBar: {
           logo: nureLogo,
+          parallaxImg,
           items: [
             {
               id: 1,

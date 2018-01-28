@@ -40,6 +40,7 @@
       </div>
     </section>
     <InformationWidget :info="information" />
+      <youtube video-id="2KSQnjAq7f4"></youtube>
     </div>
     <div class="right-wrap">
       <section class="news">
