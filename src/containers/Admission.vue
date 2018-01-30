@@ -5,7 +5,7 @@
         <v-list>
           <v-list-tile class="sidebar-heading">
             <v-list-tile-title class="title">
-              Меню
+              Вступ
             </v-list-tile-title>
           </v-list-tile>
         </v-list>
@@ -18,7 +18,7 @@
                      @click="displayComponent(item)"
                      v-bind:class="{active: item.value === componentToDisplay}">
           <v-list-tile-action>
-            <v-icon>fa-thermometer-empty</v-icon>
+           <v-icon>fa-graduation-cap</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
             <v-list-tile-title>{{ item.name }}</v-list-tile-title>
@@ -42,9 +42,12 @@
   import AdmissionRules from '../components/admission/AdmissionRules';
   import SelectionCommittee from '../components/admission/SelectionCommittee';
   import Specialities from '../components/admission/Specialties';
+  import DocumentsSubmission from '../components/admission/DocumentsSubmission';
+  import SchoolWork from '../components/admission/SchoolWork';
+  import ColledgeWork from '../components/admission/ColledgeWork';
 
   export default {
-    components: { AdmissionRules, SelectionCommittee, Specialities },
+    components: { AdmissionRules, SelectionCommittee, Specialities, DocumentsSubmission, SchoolWork, ColledgeWork },
     name: 'Admission',
     data() {
       const items = [{
@@ -52,16 +55,16 @@
         name: 'Спеціальності, за якими проводиться прийом на 1 курс до ХНУРЕ',
         value: 'specialities'
       },
-        { id: 2, name: 'Приймальна комісія', value: 'selectionCommittee', content: 'test' },
-        { id: 3, name: 'Правила прийому', value: 'admissionRules', content: 'test' },
-        { id: 4, name: 'Порядок подання документів', content: 'test' },
-        { id: 5, name: 'Робота зі школярами', content: 'test' },
-        { id: 6, name: 'Робота з технікумами', content: 'test' },
-        { id: 7, name: 'Центр довузівської підготовки', content: 'test' },
-        { id: 8, name: 'Заходи', content: 'test' },
-        { id: 9, name: 'Для іноземних громадян', content: 'test' },
-        { id: 10, name: 'Для майбутніх магістрів', content: 'test' },
-        { id: 11, name: 'Друга вища освіта', content: 'test' }
+        { id: 2, name: 'Приймальна комісія', value: 'selectionCommittee' },
+        { id: 3, name: 'Правила прийому', value: 'admissionRules' },
+        { id: 4, name: 'Порядок подання документів', value: 'documentsSubmission' },
+        { id: 5, name: 'Робота зі школярами', value: 'schoolWork' },
+        { id: 6, name: 'Робота з технікумами', value: 'colledgeWork' },
+        { id: 7, name: 'Центр довузівської підготовки' },
+        { id: 8, name: 'Заходи' },
+        { id: 9, name: 'Для іноземних громадян' },
+        { id: 10, name: 'Для майбутніх магістрів' },
+        { id: 11, name: 'Друга вища освіта' }
       ];
 
       return {

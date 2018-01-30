@@ -120,23 +120,23 @@
                 </v-tabs>
               </div>
               <div v-else>
-                  <v-data-table
-                    v-bind:headers="specialities.headers.normal"
-                    :items="specialities.items.master.items"
-                    hide-actions
-                    class="elevation-1"
-                  >
-                    <template slot="items" slot-scope="props">
-                      <td>{{ props.item.cipher }}</td>
-                      <td class="text-xs-right">{{ props.item.specialty }}</td>
-                      <td class="text-xs-right">{{ props.item.specialization }}</td>
-                      <td class="text-xs-right">{{ props.item.marks }}</td>
-                      <td class="text-xs-right">{{ props.item.minMark }}</td>
-                      <td class="text-xs-right">{{ props.item.volume }}</td>
-                      <td class="text-xs-right">{{ props.item.period }}</td>
-                      <td class="text-xs-right">{{ props.item.cost }}</td>
-                    </template>
-                  </v-data-table>
+                <v-data-table
+                  v-bind:headers="specialities.headers.normal"
+                  :items="specialities.items.master.items"
+                  hide-actions
+                  class="elevation-1"
+                >
+                  <template slot="items" slot-scope="props">
+                    <td>{{ props.item.cipher }}</td>
+                    <td class="text-xs-right">{{ props.item.specialty }}</td>
+                    <td class="text-xs-right">{{ props.item.specialization }}</td>
+                    <td class="text-xs-right">{{ props.item.marks }}</td>
+                    <td class="text-xs-right">{{ props.item.minMark }}</td>
+                    <td class="text-xs-right">{{ props.item.volume }}</td>
+                    <td class="text-xs-right">{{ props.item.period }}</td>
+                    <td class="text-xs-right">{{ props.item.cost }}</td>
+                  </template>
+                </v-data-table>
               </div>
             </v-card-text>
           </v-card>
@@ -222,7 +222,7 @@
   import { mapGetters } from 'vuex'
 
   export default {
-    components: { },
+    components: {},
     name: 'Specialities',
     data() {
       const tabs = ['Бакалавр', 'Магістр'];
@@ -257,4 +257,14 @@
   .information-tab {
     padding: 0;
   }
+  .title {
+    margin-top: 80px;
+  }
+
+  .toolbar-buttons {
+    margin-left: 50%;
+    min-width: 10%;
+    margin-top: 80px;
+  }
+
 </style>
