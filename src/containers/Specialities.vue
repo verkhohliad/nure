@@ -257,14 +257,4 @@
   .information-tab {
     padding: 0;
   }
-  .title {
-    margin-top: 80px;
-  }
-
-  .toolbar-buttons {
-    margin-left: 50%;
-    min-width: 10%;
-    margin-top: 80px;
-  }
-
 </style>

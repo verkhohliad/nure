@@ -95,8 +95,6 @@
   }
 
   .signup-close {
-    margin-left: 25%;
-    /*add breakpoints*/
 
   }
 
