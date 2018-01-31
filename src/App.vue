@@ -30,7 +30,7 @@
     created() {
       setTimeout(() => {
         this.loading = false;
-      }, 500)
+      }, 500);
     },
   }
 </script>

@@ -2,8 +2,11 @@ import { getSpecialities } from '../../api/specialities';
 
 const specialitiesModule = {
   state: {
-    headers: [],
-    items: []
+    headers: {},
+    items: {
+      bachelor: {},
+      master: {}
+    }
   },
   mutations: {
     setData(state, data) {
@@ -17,9 +20,7 @@ const specialitiesModule = {
     },
   },
   getters: {
-    getData: (state) => {
-      return state;
-    }
+    getData: state => state
   }
 };
 
