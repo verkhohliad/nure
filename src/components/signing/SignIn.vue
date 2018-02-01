@@ -55,11 +55,10 @@
 
 <style scoped>
   .login-enter {
-    margin-left: 45%;
+    margin-left: 40%;
   }
 
   .login-close {
-    margin-left: 30%;
     /*add breakpoints*/
 
   }
