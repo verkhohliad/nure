@@ -2,9 +2,9 @@
   <header>
     <v-toolbar class="header-toolbar">
       <div class="languages">
-        <div class="language-item">RU</div>
-        <div class="language-item">UA</div>
-        <div class="language-item">EN</div>
+        <!--<div class="language-item">RU</div>-->
+        <!--<div class="language-item">UA</div>-->
+        <!--<div class="language-item">EN</div>-->
       </div>
       <div class="signing">
         <div>
