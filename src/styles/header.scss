@@ -7,15 +7,20 @@ header {
   z-index: 1;
   position: absolute;
   .toolbar__content {
+.layout{
+        width: 80%;
+      }
 
     .signing {
       display: flex;
-      width: 70%;
+      width: 20%;
       justify-content: flex-end;
       a {
         display: inline-block;
         margin: 15px;
       }
+
+
     }
     .languages {
       display: flex;
@@ -36,24 +41,27 @@ header {
 }
 
 .header-bar {
-  background-color: rgba(0, 0, 0, 0.75);
+  /*background-color: rgba(0, 0, 0, 0.75);
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
-  padding: 2%;
-  width: 60%;
-  margin-top: 200px;
+ */
   .logo {
     display: flex;
     justify-content: center;
     .name {
-      display: inline-flex;
-      color: #fff;
-      margin: 0;
+      margin: 23px 0px 0px 5px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    color: #fff;
+
+    font-size: 18px;
     }
     img {
       height: 50px;
       display: inline-flex;
+      margin-top: 12px; 
     }
 
   }
@@ -72,8 +80,30 @@ header {
     }
   }
 }
+.specialities {
+  .specialities-tabs{
+.tabs__wrapper 
+{
+  
+  
+  .tabs__slider
+  { .yellow{
+        width: 15%;
+    left: 732px;
+  }
+}
 
+  .tabs__li {
+     .tabs__item
+    {
+      margin-left:60%;
+    position: relative;
 
+  }
+
+}}
+}
+  }
 
 
 
