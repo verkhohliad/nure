@@ -1,10 +1,11 @@
 <template>
-  <div>
-    <h2>Спеціальності, за якими проводиться прийом на 1 курс до ХНУРЕ</h2>
+  <section>
+    <h1 class="title">Спеціальності, за якими проводиться прийом на 1 курс до ХНУРЕ</h1>
     <div class="specialities-img">
       <img :src="nureSpecialities" alt="">
     </div>
-  </div>
+    <a class="pdf-save-link" href=""><v-icon>fa-file-pdf-o</v-icon> зберегти цю сторінку в PDF</a>
+  </section>
 </template>
 
 <script>
