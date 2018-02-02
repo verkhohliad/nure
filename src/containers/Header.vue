@@ -1,11 +1,22 @@
 <template>
   <header>
     <v-toolbar class="header-toolbar">
-      <div class="languages">
-        <!--<div class="language-item">RU</div>-->
-        <!--<div class="language-item">UA</div>-->
-        <!--<div class="language-item">EN</div>-->
+    <!--<div class="languages">
+        <div class="language-item">RU</div>
+        <div class="language-item">UA</div>
+        <div class="language-item">EN</div>
       </div>
+    -->
+      <v-layout
+          >
+            <div class="white--text mb-2 display-1 text-xs-center header-bar">
+              <div class="logo">
+                <img :src="navBar.logo" alt="">
+                <h4 class="name">Cторінка приймальної комісії
+                  Харьківського Національного Університету Радіоелектроніки</h4>
+              </div>
+            </div>
+          </v-layout>
       <div class="signing">
         <div>
           <v-btn flat dark @click="signInActive=true">Вхід</v-btn>
@@ -18,20 +29,7 @@
     <v-content>
       <section>
         <v-parallax :src="navBar.parallaxImg" height="500">
-          <v-layout
-            column
-            align-center
-            justify-center
-            class="white--text"
-          >
-            <div class="white--text mb-2 display-1 text-xs-center header-bar">
-              <div class="logo">
-                <img :src="navBar.logo" alt="">
-                <h4 class="name">Офіційна сторінка приймальної комісії
-                  Харьківського Національного Університету Радіоелектроніки</h4>
-              </div>
-            </div>
-          </v-layout>
+
         </v-parallax>
       </section>
     </v-content>
@@ -86,19 +84,25 @@
               url: '/admission'
             },
             {
-              id: 4,
+              id: 5,
+              label: 'Олімпіада',
+              value: 'OlympiadPage',
+              url: '/olympiad'
+            },
+            {
+              id: 5,
               label: 'Блог',
               value: 'BlogPage',
               url: '/blog'
             },
             {
-              id: 5,
+              id: 6,
               label: 'Результати іспитів',
               value: 'ExamsPage',
               url: '/exams'
             },
             {
-              id: 6,
+              id: 7,
               label: 'Контакти',
               value: 'ContactPage',
               url: '/contact'

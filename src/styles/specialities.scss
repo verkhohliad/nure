@@ -25,11 +25,18 @@
     div {
       overflow: hidden;
     }
+
+    .tabs__li {
+      flex: 0 1 100%;
+      .tabs__item {
+        margin-left: 0 !important;
+      }
+    }
   }
 
   .tabs__items {
     .datatable {
-      width: 94%;
+      width: 95%;
       margin: auto;
 
       tr {
@@ -44,6 +51,7 @@
   }
   .specialities-content {
     background: #fff;
+    padding: 2% 5%;
   }
 
 }
@@ -56,14 +64,12 @@
 
   padding: 10px;
   text-align: left;
-  h1{
+  h1 {
     text-align: center;
   }
 
-
-  h5{
+  h5 {
     font-weight: bold;
   }
-
 
 }

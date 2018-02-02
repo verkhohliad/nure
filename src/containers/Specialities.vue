@@ -61,7 +61,7 @@
                         <v-card-text class="information-tab">
                           <div v-if="tab==='Денна форма навчання'">
                             <v-data-table
-                              v-bind:headers="specialities.headers.normal"
+                              v-bind:headers="specialities.headers.bachelor.daily"
                               :items="specialities.items.bachelor.daily"
                               hide-actions
                               class="elevation-1"
@@ -80,7 +80,7 @@
                           </div>
                           <div v-if="tab==='Заочна форма навчання'">
                             <v-data-table
-                              v-bind:headers="specialities.headers.short"
+                              v-bind:headers="specialities.headers.bachelor.extramural"
                               :items="specialities.items.bachelor.extramural"
                               hide-actions
                               class="elevation-1"
@@ -89,7 +89,6 @@
                                 <td>{{ props.item.cipher }}</td>
                                 <td class="text-xs-right">{{ props.item.specialty }}</td>
                                 <td class="text-xs-right">{{ props.item.specialization }}</td>
-                                <td class="text-xs-right">{{ props.item.marks }}</td>
                                 <td class="text-xs-right">{{ props.item.volume }}</td>
                                 <td class="text-xs-right">{{ props.item.cost }}</td>
                               </template>
@@ -126,7 +125,7 @@
                         <v-card-text class="information-tab">
                           <div v-if="tab==='Денна форма навчання'">
                             <v-data-table
-                              v-bind:headers="specialities.headers.short"
+                              v-bind:headers="specialities.headers.master.headers"
                               :items="specialities.items.master.daily"
                               hide-actions
                               class="elevation-1"
@@ -135,7 +134,6 @@
                                 <td>{{ props.item.cipher }}</td>
                                 <td class="text-xs-right">{{ props.item.specialty }}</td>
                                 <td class="text-xs-right">{{ props.item.specialization }}</td>
-                                <td class="text-xs-right">{{ props.item.marks }}</td>
                                 <td class="text-xs-right">{{ props.item.volume }}</td>
                                 <td class="text-xs-right">{{ props.item.cost }}</td>
                               </template>
@@ -143,7 +141,7 @@
                           </div>
                           <div v-if="tab==='Заочна форма навчання'">
                             <v-data-table
-                              v-bind:headers="specialities.headers.short"
+                              v-bind:headers="specialities.headers.master.headers"
                               :items="specialities.items.master.extramural"
                               hide-actions
                               class="elevation-1"
@@ -152,7 +150,6 @@
                                 <td>{{ props.item.cipher }}</td>
                                 <td class="text-xs-right">{{ props.item.specialty }}</td>
                                 <td class="text-xs-right">{{ props.item.specialization }}</td>
-                                <td class="text-xs-right">{{ props.item.marks }}</td>
                                 <td class="text-xs-right">{{ props.item.volume }}</td>
                                 <td class="text-xs-right">{{ props.item.cost }}</td>
                               </template>

@@ -1,13 +1,12 @@
 <template>
   <div class="container">
-    <h1>Blog</h1>
+    <h1>Сторінка буде активна з 1 березня.</h1>
   </div>
 </template>
 
 <script>
-
   export default {
-    name: 'Blog',
+    name: 'Olympiad',
     data() {
       return {}
     },
@@ -20,5 +19,8 @@
 </script>
 
 <style scoped>
-
+  .container {
+    height: 250px;
+    text-align: center;
+  }
 </style>
