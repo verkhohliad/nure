@@ -1,22 +1,23 @@
-.contact-content {
+.container {
+  .contact-content {
+    width: 100%;
+    padding: 2%;
+    text-align: left;
 
-	padding: 10px;
-text-align: left;
-	h1{
-			text-align: center;
-		}
+    h1 {
+      text-align: center;
+    }
 
+    h5 {
+      font-weight: bold;
+    }
 
-	h5{
-		font-weight: bold;
-		}
-div {
-
-	margin: 0 auto;
-	width: 20%;
-	li{
-		list-style: none;
-	}
-}
-		
+    div {
+      margin: 0 auto;
+      width: 20%;
+      li {
+        list-style: none;
+      }
+    }
+  }
 }
