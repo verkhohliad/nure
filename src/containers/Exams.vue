@@ -1,5 +1,7 @@
 <template>
-  <h1>Exams results</h1>
+  <div class="container">
+    <h1>Результати екзаменів.</h1>
+  </div>
 </template>
 
 <script>

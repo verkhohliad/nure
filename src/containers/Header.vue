@@ -29,7 +29,7 @@
     <v-content>
       <section>
         <v-parallax :src="navBar.parallaxImg" height="500">
-          
+
         </v-parallax>
       </section>
     </v-content>
@@ -84,19 +84,25 @@
               url: '/admission'
             },
             {
-              id: 4,
+              id: 5,
+              label: 'Олімпіада',
+              value: 'OlympiadPage',
+              url: '/olympiad'
+            },
+            {
+              id: 5,
               label: 'Блог',
               value: 'BlogPage',
               url: '/blog'
             },
             {
-              id: 5,
+              id: 6,
               label: 'Результати іспитів',
               value: 'ExamsPage',
               url: '/exams'
             },
             {
-              id: 6,
+              id: 7,
               label: 'Контакти',
               value: 'ContactPage',
               url: '/contact'

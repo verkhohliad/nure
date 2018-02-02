@@ -3,13 +3,15 @@ header {
 }
 
 .header-toolbar {
-  background: rgba(3,39,53, 0.85) !important;
+  background: rgba(3, 39, 53, 0.85) !important;
   z-index: 1;
   position: absolute;
   .toolbar__content {
-.layout{
-        width: 80%;
-      }
+    width: 95%;
+    margin: 0 auto;
+    .layout {
+      width: 80%;
+    }
 
     .signing {
       display: flex;
@@ -19,7 +21,6 @@ header {
         display: inline-block;
         margin: 15px;
       }
-
 
     }
     .languages {
@@ -51,17 +52,17 @@ header {
     justify-content: center;
     .name {
       margin: 23px 0px 0px 5px;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    color: #fff;
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      color: #fff;
 
-    font-size: 18px;
+      font-size: 18px;
     }
     img {
       height: 50px;
       display: inline-flex;
-      margin-top: 12px; 
+      margin-top: 12px;
     }
 
   }
@@ -80,104 +81,76 @@ header {
     }
   }
 }
-.specialities {
-  .specialities-tabs{
-.tabs__wrapper 
-{
-  
-  
-  .tabs__slider
-  { .yellow{
-        width: 15%;
-    left: 732px;
-  }
-}
-
-  .tabs__li {
-     .tabs__item
-    {
-      margin-left:60%;
-    position: relative;
-
-  }
-
-}}
-}
-  }
-
-
 
 @media (max-width: 1030px) {
-.nav-list {
-  .nav-item {
-        display: list-item;
-    margin: 0px;
-    a {
-      display: inline-block;
-    }
-  }
-}
-.header-toolbar {
-
-  .toolbar__content {
-    .languages {
-      .language-item {
-        width: 21%;
-      }
-    }
-  }
-
-}
-}
-
-@media  (max-width: 600px){
-  .header-toolbar{
-  .toolbar__content{
-.languages {
-      .language-item {
-        width: 27%;
-      }
-    }
-  }
-}
-}
-
-
-@media (max-width: 480px){
-
-    .header-bar {
-      .logo{
+  .nav-list {
+    .nav-item {
+      display: list-item;
+      margin: 0;
+      a {
         display: inline-block;
-        .name{
-              font-size: 15px;
+      }
+    }
+  }
+  .header-toolbar {
+
+    .toolbar__content {
+      .languages {
+        .language-item {
+          width: 21%;
         }
       }
+    }
+
+  }
 }
-    .header-toolbar{
-  .toolbar__content{
-.languages {
-      .language-item {
-        width: 35%;
+
+@media (max-width: 600px) {
+  .header-toolbar {
+    .toolbar__content {
+      .languages {
+        .language-item {
+          width: 27%;
+        }
       }
     }
   }
 }
-}
 
-@media (max-width: 420px){
+@media (max-width: 480px) {
 
-
-    .header-toolbar{
-  .toolbar__content{
-    height: 0px;
-    .signing {
-      display: -webkit-inline-box;
-      width: 70%;
-      justify-content: flex-end;
+  .header-bar {
+    .logo {
+      display: inline-block;
+      .name {
+        font-size: 15px;
+      }
     }
-.languages {
-      display:none;
+  }
+  .header-toolbar {
+    .toolbar__content {
+      .languages {
+        .language-item {
+          width: 35%;
+        }
+      }
     }
   }
 }
+
+@media (max-width: 420px) {
+
+  .header-toolbar {
+    .toolbar__content {
+      height: 0px;
+      .signing {
+        display: -webkit-inline-box;
+        width: 70%;
+        justify-content: flex-end;
+      }
+      .languages {
+        display: none;
+      }
+    }
+  }
 }
