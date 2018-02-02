@@ -82,6 +82,7 @@
   }
 
   .right-wrap {
+   margin-top: -30px;
     display: flex;
     width: 30%;
     .news {
@@ -234,6 +235,22 @@
           }
         }
       }
+<<<<<<< HEAD
+}
+}
+}
+  .right-wrap {
+
+    .news {
+      .blog-news {
+        .post {
+          h4{
+            width:100%;
+                font-size: 14px;
+    padding-top: 11px;
+    font-weight: bold;
+          }
+=======
     }
     .right-wrap {
       .news {
@@ -245,6 +262,7 @@
               padding-top: 11px;
               font-weight: bold;
             }
+>>>>>>> 5376878cdbaea562c7254bdab1f1fc2914e4f864
 
             .date {
               padding-top: 10px;
