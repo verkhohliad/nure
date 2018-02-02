@@ -24,6 +24,7 @@
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.1",
     "vue": "^2.5.2",
+    "vue-i18n": "^7.4.2",
     "vue-perfect-scrollbar": "^0.1.0",
     "vue-router": "^3.0.1",
     "vue-youtube-embed": "^2.1.3",
