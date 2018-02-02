@@ -89,7 +89,6 @@
                                 <td>{{ props.item.cipher }}</td>
                                 <td class="text-xs-right">{{ props.item.specialty }}</td>
                                 <td class="text-xs-right">{{ props.item.specialization }}</td>
-                                <td class="text-xs-right">{{ props.item.marks }}</td>
                                 <td class="text-xs-right">{{ props.item.volume }}</td>
                                 <td class="text-xs-right">{{ props.item.cost }}</td>
                               </template>
