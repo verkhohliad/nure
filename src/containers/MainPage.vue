@@ -166,8 +166,7 @@
       }
     },
     created: function () {
-      this.$lang.setLang('rus');
-      console.log('test', this.$lang.messages.default.hello_world);
+
     },
     methods: {}
   }
