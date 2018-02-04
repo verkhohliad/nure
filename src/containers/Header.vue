@@ -1,22 +1,22 @@
 <template>
   <header>
     <v-toolbar class="header-toolbar">
-    <!--<div class="languages">
-        <div class="language-item">RU</div>
-        <div class="language-item">UA</div>
-        <div class="language-item">EN</div>
-      </div>
-    -->
+      <!--<div class="languages">
+          <div class="language-item">RU</div>
+          <div class="language-item">UA</div>
+          <div class="language-item">EN</div>
+        </div>
+      -->
       <v-layout
-          >
-            <div class="white--text mb-2 display-1 text-xs-center header-bar">
-              <div class="logo">
-                <img :src="navBar.logo" alt="">
-                <h4 class="name">Cторінка приймальної комісії
-                  Харьківського Національного Університету Радіоелектроніки</h4>
-              </div>
-            </div>
-          </v-layout>
+      >
+        <div class="white--text mb-2 display-1 text-xs-center header-bar">
+          <div class="logo">
+            <img :src="navBar.logo" alt="">
+            <h4 class="name">Cторінка приймальної комісії
+              Харківського національного університету радіоелектроніки</h4>
+          </div>
+        </div>
+      </v-layout>
       <div class="signing">
         <div>
           <v-btn flat dark @click="signInActive=true">Вхід</v-btn>
@@ -35,17 +35,17 @@
     </v-content>
 
     <!--<MainSlider />-->
-    <nav>
-      <ul class="nav-list">
-        <li class="nav-item" v-for="item in navBar.items" :key="item.id">
-          <router-link :to="item.url">
-            <v-btn flat dark>{{ item.label }}</v-btn>
-          </router-link>
-        </li>
-      </ul>
-    </nav>
-    <SignIn @closeModal="signInActive = false" :show="signInActive" />
-    <SignUp @closeModal="signUpActive = false" :show="signUpActive" />
+      <nav>
+        <ul class="nav-list">
+          <li class="nav-item" v-for="item in navBar.items" :key="item.id">
+            <router-link :to="item.url">
+              <v-btn flat dark>{{ item.label }}</v-btn>
+            </router-link>
+          </li>
+        </ul>
+      </nav>
+    <SignIn @closeModal="signInActive = false" :show="signInActive"/>
+    <SignUp @closeModal="signUpActive = false" :show="signUpActive"/>
   </header>
 </template>
 
@@ -57,7 +57,7 @@
   import SignUp from '../components/signing/SignUp';
 
   export default {
-    components: { MainSlider, SignIn, SignUp },
+    components: {MainSlider, SignIn, SignUp},
     name: 'Header',
     data() {
       return {
@@ -116,8 +116,7 @@
     created() {
 
     },
-    methods: {
-    }
+    methods: {}
   }
 </script>
 

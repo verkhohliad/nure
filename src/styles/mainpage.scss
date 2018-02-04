@@ -11,7 +11,7 @@
   .left-wrap {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    //width: 70%;
     .greeting {
       padding: 2%;
       border-bottom: 2px solid #ededed;
@@ -27,6 +27,7 @@
       iframe {
         width: 90%;
       }
+      margin: 2% 0;
     }
 
     .item-container {
@@ -84,7 +85,7 @@
   .right-wrap {
    margin-top: -30px;
     display: flex;
-    width: 30%;
+    //width: 30%;
     .news {
       border-left: 1px solid #eaeaea;
       display: flex;
