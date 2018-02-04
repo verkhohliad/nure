@@ -1,5 +1,5 @@
 .main-footer {
-  height: 350px;
+  height: auto;
   max-height: 400px;
   background: #05384d !important;
   color: #fff;
@@ -7,8 +7,7 @@
 
   .main-footer__layout {
     padding: 0 5%;
-    margin: 2% auto;
-    height: 320px;
+    margin: 0 auto;
 
     .footer_menu {
       font-size: 15px;
@@ -38,23 +37,16 @@
           font-size: 14px;
           display: flex;
           padding: 6px;
-          i {
-            width: 40px;
-            display: flex;
-            justify-content: center;
-            &:hover {
-
-            }
-          }
           a {
-            display: flex;
             color: #fff;
-            width: 70%;
-            max-width: 70%;
-            justify-content: start;
-          }
-          .material-icons {
-            color: #fff;
+            i {
+              width: 40px;
+              text-decoration: none;
+            }
+            .footer-contacts__text {
+              width: 70%;
+              max-width: 70%;
+            }
           }
         }
       }
@@ -63,15 +55,14 @@
         height: 100%;
         display: flex;
         flex-direction: column;
-        padding: 5%;
+        padding: 25px 5%;
 
         .row {
+          display: block;
           width: 100%;
           text-align: left;
-          height: 50px;
           a {
             color: #fff;
-            cursor: pointer;
           }
 
           .responsible {
@@ -83,7 +74,6 @@
 
     .footer-map {
       //width: 60%
-      background: #2c3e50;
       margin: 5%;
     }
 

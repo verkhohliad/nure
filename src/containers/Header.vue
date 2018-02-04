@@ -84,7 +84,7 @@
               url: '/admission'
             },
             {
-              id: 5,
+              id: 4,
               label: 'Олімпіада',
               value: 'OlympiadPage',
               url: '/olympiad'

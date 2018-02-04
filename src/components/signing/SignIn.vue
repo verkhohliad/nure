@@ -40,9 +40,6 @@
         password: ''
       }
     },
-    created() {
-      console.log(this)
-    },
     methods: {
       close() {
         this.email = '';
