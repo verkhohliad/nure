@@ -7,6 +7,7 @@ header {
   z-index: 1;
   position: absolute;
   .toolbar__content {
+    height: 100% !important;
     width: 95%;
     margin: 0 auto;
     .layout {
@@ -73,15 +74,25 @@ header {
   margin: 0;
   padding: 0;
   .nav-item {
-    display: inline-block;
+     display: inline-block;
     margin: 10px;
     a {
+
       display: inline-block;
+    
     }
   }
 }
 
 @media (max-width: 1030px) {
+  .header-bar{
+      .logo{
+     .name{
+      display: none;
+    }
+  }
+  }
+
   .nav-list {
     .nav-item {
       display: list-item;
@@ -105,6 +116,16 @@ header {
 }
 
 @media (max-width: 600px) {
+  .nav-list {
+    .nav-item {
+       
+        .btn
+       {
+      font-size: 17px;
+      }
+      }
+    }
+  
   .header-toolbar {
     .toolbar__content {
       .languages {
@@ -117,6 +138,15 @@ header {
 }
 
 @media (max-width: 480px) {
+ .nav-list {
+    .nav-item {
+       
+        .btn
+       {
+      font-size: 13px;
+      }
+      }
+    }
 
   .header-bar {
     .logo {
@@ -139,17 +169,43 @@ header {
 
 @media (max-width: 420px) {
 
+
+
   .header-toolbar {
+    .header-bar{
+      .logo{
+        img{
+          height: 35px;
+        }
+      }
+    }
     .toolbar__content {
       height: 0px;
       .signing {
         display: -webkit-inline-box;
         width: 70%;
         justify-content: flex-end;
+        .btn{
+              padding: 0px;
+    font-size: 12px;
+    margin: 0px;
+        }
       }
       .languages {
         display: none;
       }
     }
   }
-}
+  .nav-list {
+    .nav-item {
+     display: inline-flex;
+      .btn{
+        font-size: 12px;
+        margin: 0;
+        padding: 0;
+      }
+     }
+    }
+  }
+
+

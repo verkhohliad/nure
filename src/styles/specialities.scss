@@ -7,13 +7,6 @@
       justify-content: center;
     }
 
-    .toolbar-title {
-
-    }
-
-    .toolbar-buttons {
-
-    }
   }
 
   .information-tab {
@@ -49,14 +42,25 @@
       }
     }
   }
+  .specialities-content {
+    background: #fff;
+    padding: 2% 5%;
+
+  .info_specialities {
+      margin: 0 auto;
+      width: 35%;
+    }
+  }
+
+}
 
 .blue-background {
   background: #05384d !important;
 }
 
 .specialities-content {
-  background: #fff;
-  padding: 2% 5%;
+
+  padding: 10px;
   text-align: left;
 
   h1 {
@@ -69,3 +73,30 @@
   }
 
 }
+
+
+
+    @media screen and (max-width: 900px) {
+
+      .specialities{
+   .specialities-content {
+
+   h1 {
+        margin-bottom: 25px;
+font-size: 25px;
+    }
+.info_specialities{
+  width: 100%;
+
+    h5 {
+font-size: 15px;
+    }
+  .info_text {
+    font-size: 13px;
+
+  }
+   }
+  }
+}
+  }
+
