@@ -73,9 +73,6 @@
         password: ''
       }
     },
-    created() {
-
-    },
     methods: {
       close() {
         this.name = '';

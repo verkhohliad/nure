@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>Результати екзаменів.</h1>
+    <h1>Результати іспитів.</h1>
   </div>
 </template>
 
