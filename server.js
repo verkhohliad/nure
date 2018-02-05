@@ -24,13 +24,11 @@ app.use(morgan(function (tokens, req, res) {
 }));
 
 
-
-
 app.use('/', express.static('dist'));
 
 app.use('/uploads', express.static('/server/uploads'));
 
-app.use('/api/', require('./server/routes'));
+app.use('/api/', require('./server/api'));
 
 const server = http.createServer(app);
 
