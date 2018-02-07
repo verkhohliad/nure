@@ -1,16 +1,16 @@
 import { MongoClient } from 'mongodb'
-import { mongoUrl } from '../config/constants'
+import { mongoUrl, databaseName } from '../config/constants'
 
 let db
 
 export function connectToDb() {
   return new Promise((resolve, reject) => {
-    MongoClient.connect(mongoUrl, (err, database) => {
+    MongoClient.connect(mongoUrl, (err, client) => {
       if (err) {
         return reject(err)
       }
-      resolve(database)
-      db = database
+      resolve(client)
+      db = client.db(databaseName);
       return db;
     })
   })

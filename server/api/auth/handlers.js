@@ -1,4 +1,4 @@
-const User = require('../../db/users');
+import User from '../../db/users';
 const bcrypt = require('bcrypt');
 const { saltRounds, jwtSecret } = require('../../config/constants');
 const jwt = require('jsonwebtoken');
@@ -37,6 +37,7 @@ const updateUserInfo = async (req, res, next) => {
 };
 
 const register = async (req, res, next) => {
+  console.log(req.body);
   const { user } = req.body;
 
   let foundUser = await User.findOne({
@@ -44,15 +45,18 @@ const register = async (req, res, next) => {
   })
 
   if (foundUser === null) {
-    let hash = await bcrypt.hash(user.password, saltRounds)
+    let hash = await bcrypt.hash(user.password, saltRounds);
+    const token = jwt.sign({ email: user.email }, jwtSecret);
+
     let newUser = await User.insert({
       email: user.email,
-      password: hash
+      password: hash,
+      token
     })
 
     res.json({
       success: true,
-      token: jwt.sign({ email: user.email }, jwtSecret)
+      token
     })
   } else {
     res.json({
