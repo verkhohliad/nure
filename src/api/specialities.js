@@ -362,7 +362,7 @@ export const getSpecialities = async () => {
         ],
 
 
-        /////////////////////////////////////////////////////////////////
+    
         daily: [
           {
             value: false,
@@ -436,11 +436,72 @@ export const getSpecialities = async () => {
             cost: '14900 грн'
           },
 
+     
+
+          {
+            value: false,
+            cipher: '121',
+            field_of_knowledge: '12. Інформаційні технології',
+            faculty: 'КН',
+            specialty: 'Інженерія програмного забезпечення',
+            specialization: 'Інформатика',
+            volume: 54,
+            period: '1 р. 5 м.',
+            cost: '14900 грн'
+          },
+
+          {
+            value: false,
+            cipher: '121',
+            field_of_knowledge: '12. Інформаційні технології',
+            faculty: 'КН',
+            specialty: 'Інженерія програмного забезпечення',
+            specialization: 'Соціальна інформатика',
+            volume: 15,
+            period: '1 р. 5 м.',
+            cost: '12900 грн'
+          },
+
+              {
+            value: false,
+            cipher: '121',
+            field_of_knowledge: '12. Інформаційні технології',
+            faculty: 'КН',
+            specialty: 'Інженерія програмного забезпечення',
+            specialization: 'Інформаційно-комунікаційні технології',
+            volume: 30,
+            period: '1 р. 10 м.',
+            cost: '12900 грн'
+          },
+
+    {
+            value: false,
+            cipher: '121',
+            field_of_knowledge: '12. Інформаційні технології',
+            faculty: 'КН',
+            specialty: 'Інженерія програмного забезпечення',
+            specialization: 'Інформаційні управляючі системи та технології',
+            volume: 24,
+            period: '1 р. 5 м.',
+            cost: '14900 грн'
+          },
+
+    {
+            value: false,
+            cipher: '121',
+            field_of_knowledge: '12. Інформаційні технології',
+            faculty: 'КН',
+            specialty: 'Інженерія програмного забезпечення',
+            specialization: 'Інформаційні технології проектування',
+            volume: 29,
+            period: '1 р. 5 м.',
+            cost: '14900 грн'
+          },
 
 
           {
             value: false,
-            cipher: '122',
+            cipher: '121',
             field_of_knowledge: '12. Інформаційні технології',
             faculty: 'КН',
             specialty: 'Комп`ютерні науки',
@@ -455,55 +516,12 @@ export const getSpecialities = async () => {
             field_of_knowledge: '12. Інформаційні технології',
             faculty: 'ІТМ',
             specialty: 'Комп`ютерні науки',
-            specialization: 'Інформатика',
-            volume: 54,
-            period: '1 р. 5 м.',
-            cost: '14900 грн.'
-          },
-          {
-            value: false,
-            cipher: '122',
-            field_of_knowledge: '12. Інформаційні технології',
-            faculty: 'ІТМ',
-            specialty: 'Комп`ютерні науки',
-            specialization: 'Соціальна інформатика ',
-            volume: 15,
+            specialization: ' Консолідована інформація',
+            volume: 20,
             period: '1 р. 5 м.',
             cost: '12900 грн.'
           },
-          {
-            value: false,
-            cipher: '122',
-            field_of_knowledge: '12. Інформаційні технології',
-            faculty: 'ІРТЗІ',
-            specialty: 'Комп`ютерні науки',
-            specialization: 'Інформаційно-комунікаційні технології',
-            volume: 30,
-            period: '1 р. 5 м. , 1 р. 10 м.',
-            cost: '12900 грн.'
-          },
-          {
-            value: false,
-            cipher: '122',
-            field_of_knowledge: '12. Інформаційні технології',
-            faculty: 'КН',
-            specialty: 'Комп`ютерні науки',
-            specialization: 'Інформаційні управляючі системи та технології ',
-            volume: 24,
-            period: '1 р. 5 м.',
-            cost: '14900 грн.'
-          },
-          {
-            value: false,
-            cipher: '122',
-            field_of_knowledge: '12. Інформаційні технології',
-            faculty: 'КН',
-            specialty: 'Комп`ютерні науки',
-            specialization: 'Інформаційні технології проектування',
-            volume: 29,
-            period: '1 р. 5 м.',
-            cost: '14900 грн.'
-          },
+    
           {
             value: false,
             cipher: '122',
@@ -613,8 +631,8 @@ export const getSpecialities = async () => {
           {
             value: false,
             cipher: '125',
-            field_of_knowledge: '',
-            faculty: '',
+            field_of_knowledge: '12. Інформаційні технології',
+            faculty: 'КІУ',
             specialty: 'Кібербезпека',
             specialization: 'Безпека інформаційних і комунікаційних систем',
             volume: 52,
@@ -624,87 +642,75 @@ export const getSpecialities = async () => {
           {
             value: false,
             cipher: '125',
-            field_of_knowledge: '',
-            faculty: '',
+            field_of_knowledge: '12. Інформаційні технології',
+            faculty: 'КІУ',
             specialty: 'Кібербезпека',
-            specialization: 'Системи технічного захисту інформації',
-            volume: 75,
+            specialization: 'Безпека державних інформаційних ресурсів',
+            volume: 23,
             period: '1 р. 5 м.; 1 р. 10 м.',
             cost: '12900 грн.'
           },
           {
             value: false,
-            cipher: '126',
-            field_of_knowledge: '',
-            faculty: '',
-            specialty: 'Інформаційні системи та технології',
-            specialization: 'Інформаційні системи та технології',
+            cipher: '125',
+            field_of_knowledge: '12. Інформаційні технології',
+            faculty: 'КІУ',
+            specialty: 'Кібербезпека',
+            specialization: 'Адміністративний менеджмент у сфері захисту інформації',
             volume: 40,
-            period: '1 р. 5 м.',
-            cost: '14900 грн.'
-          },
-          {
+            period: '1 р. 5 м.; 1 р. 10 м.',
+            cost: '11900 грн.'
+          },      {
             value: false,
-            cipher: '126',
-            field_of_knowledge: '',
-            faculty: '',
-            specialty: 'Інформаційні системи та технології',
-            specialization: 'Інформаційні технологіїї інтернету речей',
+            cipher: '151',
+            field_of_knowledge: '12. Інформаційні технології',
+            faculty: 'КІУ',
+            specialty: 'Кібербезпека',
+            specialization: 'Комп’ютеризовані системи управління та автоматика',
             volume: 50,
             period: '1 р. 5 м.',
-            cost: '14900 грн.'
-          },
-          {
-            value: false,
-            cipher: '126',
-            field_of_knowledge: '',
-            faculty: '',
-            specialty: 'Інформаційні системи та технології',
-            specialization: 'Інформаційні системи в медицині',
-            volume: 15,
-            period: '1 р. 5 м.',
-            cost: '14900 грн.'
-          },
-          {
-            value: false,
-            cipher: '151',
-            field_of_knowledge: '',
-            faculty: '',
-            specialty: 'Автоматизація та комп’ютерно-інтегровані технології',
-            specialization: 'Автоматизація та комп’ютерно-інтегровані технології',
-            volume: 230,
-            period: '1 р. 5 м.',
             cost: '12900 грн.'
-          },
-          {
+          },      {
             value: false,
             cipher: '151',
-            field_of_knowledge: '',
-            faculty: '',
-            specialty: 'Автоматизація та комп’ютерно-інтегровані технології',
-            specialization: 'Автоматизація та комп’ютерно-інтегровані ресурсозберігаючі техноогії. Альтернативна енергетика',
-            volume: 60,
-            period: '1 р. 5 м.',
-            cost: '12900 грн.'
-          },
-          {
-            value: false,
-            cipher: '151',
-            field_of_knowledge: '',
-            faculty: '',
-            specialty: 'Автоматизація та комп’ютерно-інтегровані технології',
-            specialization: 'Системна інженерія',
+            field_of_knowledge: '12. Інформаційні технології',
+            faculty: 'КІУ',
+            specialty: 'Кібербезпека',
+            specialization: 'Комп’ютеризовані та робототехнічні системи',
             volume: 45,
             period: '1 р. 5 м.',
             cost: '12900 грн.'
           },
           {
             value: false,
+            cipher: '151',
+            field_of_knowledge: '12. Інформаційні технології',
+            faculty: 'АКТ',
+            specialty: 'Автоматизація та комп’ютерно-інтегровані технології',
+            specialization: 'Автоматизоване управління технологічними процесами',
+            volume: 55,
+            period: '1 р. 5 м.',
+            cost: '12900 грн.'
+          },
+          {
+            value: false,
+            cipher: '151',
+            field_of_knowledge: '15. Автоматизація та приладобудування',
+            faculty: 'АКТ',
+            specialty: 'Автоматизація та комп’ютерно-інтегровані технології',
+            specialization: 'Комп’ютерно-інтегровані технологічні процеси и Виробництва',
+            volume: 55,
+            period: '1 р. 5 м.',
+            cost: '12900 грн.'
+          },
+
+          {
+            value: false,
             cipher: '152',
-            field_of_knowledge: '',
-            faculty: '',
+            field_of_knowledge: '15. Автоматизація та приладобудування',
+            faculty: 'ІК',
             specialty: 'Метрологія та інформаційно-вимірювальна техніка',
-            specialization: 'Оптотехніка',
+            specialization: 'Метрологія та вимірювальна техніка',
             volume: 20,
             period: '1 р. 5 м.; 1 р. 10 м.',
             cost: '11900 грн.'
@@ -712,41 +718,88 @@ export const getSpecialities = async () => {
           {
             value: false,
             cipher: '152',
-            field_of_knowledge: '',
-            faculty: '',
+            field_of_knowledge: '15. Автоматизація та приладобудування',
+            faculty: 'ІК',
             specialty: 'Метрологія та інформаційно-вимірювальна техніка',
-            specialization: 'Технічна експертиза',
+            specialization: 'Метрологічне забезпечення випробувань та якості продукції ',
+            volume: 20,
+            period: '1 р. 5 м.; 1 р. 10 м.',
+            cost: '11900 грн.'
+          },
+
+          {
+            value: false,
+            cipher: '152',
+            field_of_knowledge: '15. Автоматизація та приладобудування',
+            faculty: 'ІК',
+            specialty: 'Метрологія та інформаційно-вимірювальна техніка',
+            specialization: 'Якість,стандартизація та сертифікація',
             volume: 15,
+            period: '1 р. 5 м.; 1 р. 10 м.',
+            cost: '11900 грн.'
+          },
+
+          {
+            value: false,
+            cipher: '153',
+            field_of_knowledge: '15. Автоматизація та приладобудування',
+            faculty: 'ЕЛБІ',
+            specialty: 'Метрологія та інформаційно-вимірювальна техніка',
+            specialization: 'Фотоніка та оптоінформатика ',
+            volume: 30,
             period: '1 р. 5 м.; 1 р. 10 м.',
             cost: '11900 грн.'
           },
           {
             value: false,
             cipher: '153',
-            field_of_knowledge: '',
-            faculty: '',
+            field_of_knowledge: '15. Автоматизація та приладобудування',
+            faculty: 'ЕЛБІ',
             specialty: 'Мікро- та наносистемна техніка',
-            specialization: 'Мікро- та наноелектроніка',
+            specialization: 'Мікро- та наноелектроннні прилади і пристрої ',
             volume: 36,
             period: '1 р. 5 м.',
             cost: '11900 грн.'
           },
           {
             value: false,
-            cipher: '163',
-            field_of_knowledge: '',
-            faculty: '',
-            specialty: 'Біомедична інженерія',
-            specialization: 'Біомедична інженерія',
-            volume: 110,
-            period: '1 р. 5 м.; 1 р. 10 м.',
-            cost: '12900 грн.'
+            cipher: '153',
+            field_of_knowledge: '15. Автоматизація та приладобудування',
+            faculty: 'ЕЛБІ',
+            specialty: 'Мікро- та наносистемна техніка',
+            specialization: 'Лазерна і оптоелектронна техніка ',
+            volume: 10,
+            period: '1 р. 5 м.',
+            cost: '11900 грн.'
           },
           {
             value: false,
+            cipher: '163',
+            field_of_knowledge: '16. Хімічна та біоінженерія',
+            faculty: 'ЕЛБІ',
+            specialty: 'Біомедична інженерія',
+            specialization: 'Біомедична інженерія ',
+            volume: 70,
+            period: '1 р. 5 м.',
+            cost: '12900 грн.'
+          },
+               {
+            value: false,
+            cipher: '163',
+            field_of_knowledge: '16. Хімічна та біоінженерія',
+            faculty: 'ЕЛБІ',
+            specialty: 'Біомедична інженерія',
+            specialization: 'Інформаційні технології в біомедицині ',
+            volume: 20,
+            period: '1 р. 5 м.',
+            cost: '12900 грн.'
+          },
+
+          {
+            value: false,
             cipher: '171',
-            field_of_knowledge: '',
-            faculty: '',
+            field_of_knowledge: '17. Електроніка та телекомунікації',
+            faculty: 'ІРТЗІ',
             specialty: 'Електроніка',
             specialization: 'Системи, технології і комп\'ютерні засоби мультімедіа',
             volume: 36,
@@ -756,19 +809,30 @@ export const getSpecialities = async () => {
           {
             value: false,
             cipher: '171',
-            field_of_knowledge: '',
-            faculty: '',
+            field_of_knowledge: '17. Електроніка та телекомунікації',
+            faculty: 'ЕЛБІ',
             specialty: 'Електроніка',
             specialization: 'Електронні пристрої та системи',
             volume: 60,
             period: '1 р. 5 м.',
             cost: '11900 грн.'
           },
+              {
+            value: false,
+            cipher: '171',
+            field_of_knowledge: '17. Електроніка та телекомунікації',
+            faculty: 'ІРТЗІ',
+            specialty: 'Електроніка',
+            specialization: 'Інфокомунікаційна інженерія',
+            volume: 22,
+            period: '1 р. 5 м. ; 1 р. 10 м.',
+            cost: '11900 грн.'
+          },
           {
             value: false,
             cipher: '172',
-            field_of_knowledge: '',
-            faculty: '',
+            field_of_knowledge: '17. Електроніка та телекомунікації',
+            faculty: 'ІРТЗІ',
             specialty: 'Телекомунікації та радіотехніка',
             specialization: 'Радіотехніка',
             volume: 84,
@@ -778,8 +842,8 @@ export const getSpecialities = async () => {
           {
             value: false,
             cipher: '172',
-            field_of_knowledge: '',
-            faculty: '',
+            field_of_knowledge: '17. Електроніка та телекомунікації',
+            faculty: 'ІРТЗІ',
             specialty: 'Телекомунікації та радіотехніка',
             specialization: 'Інженерія відновлюваних джерел енергії',
             volume: 23,
@@ -789,41 +853,74 @@ export const getSpecialities = async () => {
           {
             value: false,
             cipher: '172',
-            field_of_knowledge: '',
-            faculty: '',
+            field_of_knowledge: '17. Електроніка та телекомунікації',
+            faculty: 'ІРТЗІ',
             specialty: 'Телекомунікації та радіотехніка',
-            specialization: 'Інтелектуальні технології засобів радіоелектроніки',
-            volume: 100,
+            specialization: 'Апаратура радіозв’язку, радіомовлення і телебачення',
+            volume: 45,
             period: '1 р. 5 м.',
             cost: '11900 грн.'
           },
           {
             value: false,
             cipher: '172',
-            field_of_knowledge: '',
-            faculty: '',
+            field_of_knowledge: '17. Електроніка та телекомунікації',
+            faculty: 'ІРТЗІ',
             specialty: 'Телекомунікації та радіотехніка',
-            specialization: 'Радіоелектронні засоби вбудованих систем',
-            volume: 82,
+            specialization: 'Радіоелектронні апарати та засоби',
+            volume: 62,
             period: '1 р. 5 м.',
             cost: '11900 грн.'
           },
           {
             value: false,
             cipher: '172',
-            field_of_knowledge: '',
-            faculty: '',
+            field_of_knowledge: '17. Електроніка та телекомунікації',
+            faculty: 'ІРТЗІ',
             specialty: 'Телекомунікації та радіотехніка',
-            specialization: 'Телекомунікації',
-            volume: 100,
+            specialization: 'Радіоелектронні пристрої,системи та комплекси',
+            volume: 23,
+            period: '1 р. 5 м.',
+            cost: '11900 грн.'
+          },
+          {
+            value: false,
+            cipher: '172',
+            field_of_knowledge: '17. Електроніка та телекомунікації',
+            faculty: 'ІК',
+            specialty: 'Телекомунікації та радіотехніка',
+            specialization: 'Телекомунікаційні системи та мережі',
+            volume: 80,
             period: '1 р. 5 м.; 1 р. 10 м.',
             cost: '12900 грн.'
           },
           {
             value: false,
             cipher: '172',
-            field_of_knowledge: '',
-            faculty: '',
+            field_of_knowledge: '17. Електроніка та телекомунікації',
+            faculty: 'АКТ',
+            specialty: 'Телекомунікації та радіотехніка',
+            specialization: 'Інтелектуальні технології мікросистемної радіоелектронної техніки',
+            volume: 91,
+            period: '1 р. 5 м.; ',
+            cost: '11900 грн.'
+          },
+          {
+            value: false,
+            cipher: '172',
+            field_of_knowledge: '17. Електроніка та телекомунікації',
+            faculty: 'ІК',
+            specialty: 'Телекомунікації та радіотехніка',
+            specialization: 'Інформаційні мережі звязку',
+            volume: 28,
+            period: '1 р. 5 м.; 1 р. 10 м.',
+            cost: '12900 грн.'
+          },
+          {
+            value: false,
+            cipher: '172',
+            field_of_knowledge: '17. Електроніка та телекомунікації',
+            faculty: 'ІРТЗІ',
             specialty: 'Телекомунікації та радіотехніка',
             specialization: 'Інфокомунікаційна інженерія',
             volume: 30,
@@ -833,8 +930,8 @@ export const getSpecialities = async () => {
           {
             value: false,
             cipher: '172',
-            field_of_knowledge: '',
-            faculty: '',
+            field_of_knowledge: '17. Електроніка та телекомунікації',
+            faculty: 'ІК',
             specialty: 'Телекомунікації та радіотехніка',
             specialization: 'Інформаційно-мережна інженерія',
             volume: 40,
@@ -843,26 +940,37 @@ export const getSpecialities = async () => {
           },
           {
             value: false,
-            cipher: '173',
-            field_of_knowledge: '',
-            faculty: '',
-            specialty: 'Авіоніка',
-            specialization: 'Вбудовані системи авіоніки',
-            volume: 100,
+            cipher: '186',
+            field_of_knowledge: '18. Видавництво та технології',
+            faculty: 'КН',
+            specialty: 'Видавництво та поліграфія',
+            specialization: 'Технологія друкованих видань (КН)',
+            volume: 8,
             period: '1 р. 5 м.',
-            cost: '11900 грн.'
+            cost: '12900 грн.'
           },
           {
             value: false,
             cipher: '186',
-            field_of_knowledge: '',
-            faculty: '',
+            field_of_knowledge: '18. Видавництво та технології',
+            faculty: 'КН',
             specialty: 'Видавництво та поліграфія',
-            specialization: 'Видавничо-поліграфічна справа',
-            volume: 55,
-            period: '1 р. 5 м.; 1 р. 10 м.',
+            specialization: 'технології електронних мультімедійних видань (КН)',
+            volume: 18 ,
+            period: '1 р. 5 м. ; 1 р. 10 м.',
             cost: '12900 грн.'
-          }
+          },
+          {
+            value: false,
+            cipher: '186',
+            field_of_knowledge: '18. Видавництво та технології',
+            faculty: 'КН',
+            specialty: 'Видавництво та поліграфія',
+            specialization: 'Комп’ютерні технології та системи Видавничо-поліграфічих Виробництв (кн) (КН)',
+            volume: 15,
+            period: '1 р. 5 м. ; 1 р. 10 м.',
+            cost: '12900 грн.'
+          },
         ]
       },
       bachelor: {
@@ -1418,6 +1526,89 @@ export const getSpecialities = async () => {
             cost: '9900 грн.'
           }
         ],
+        SecondEducation :
+        [
+
+        {
+            value: false,
+            cipher: '121',
+            field_of_knowledge: '12. Інформаційні технології',
+            faculty: 'КН',
+            specialty: 'Інженерія програмного забезпечення',
+            specialization: 'Інженерія програмного забезпечення',
+            volume: 25,
+            period: '1 р. 10 м.',
+            cost: '11900 грн.'
+        },
+
+            {
+            value: false,
+            cipher: '122',
+            field_of_knowledge: '12. Інформаційні технології',
+            faculty: 'КН',
+            specialty: 'Комп`ютерні науки',
+            specialization: 'Системи штучного інтелекту',
+            volume: 2,
+            period: '1 р. 10 м.',
+            cost: '11900 грн.'
+          },
+          {
+            value: false,
+            cipher: '125',
+            field_of_knowledge: '12. Інформаційні технології',
+            faculty: 'КІУ',
+            specialty: 'Кібербезпека',
+            specialization: 'Безпека інформаційних і комунікаційних систем',
+            volume: 5,
+            period: '1 р. 10 м.',
+            cost: '11900 грн.'
+          },
+          {
+            value: false,
+            cipher: '125',
+            field_of_knowledge: '12. Інформаційні технології',
+            faculty: 'КІУ',
+            specialty: 'Кібербезпека',
+            specialization: 'Безпека державних Інформаційних ресурсів',
+            volume: 5,
+            period: '1 р. 10 м.',
+            cost: '11900 грн.'
+          },
+          {
+            value: false,
+            cipher: '163',
+            field_of_knowledge: '16. Хімічна та біоінженерія',
+            faculty: 'ЕЛБІ',
+            specialty: 'Біомедична інженерія',
+            specialization: 'Біомедична інженерія',
+            volume: 10,
+            period: '1 р. 10 м.',
+            cost: '11900 грн.'
+          },
+
+          {
+            value: false,
+            cipher: '172',
+            field_of_knowledge: '17. Електроніка та телекомунікації',
+            faculty: 'ІК',
+            specialty: 'Телекомунікації та радіотехніка',
+            specialization: 'Телекомунікаційні системи та мережі',
+            volume: 1,
+            period: ' 1 р. 10 м.',
+            cost: '11900 грн.'
+          },
+          {
+            value: false,
+            cipher: '172',
+            field_of_knowledge: '17. Електроніка та телекомунікації',
+            faculty: 'ІК',
+            specialty: 'Телекомунікації та радіотехніка',
+            specialization: 'Інформаційні мережі звязку',
+            volume: 10,
+            period: ' 1 р. 10 м.',
+            cost: '11900 грн.'
+          },
+        ]
         // secondCourse: [
         //   {
         //     value: false,
