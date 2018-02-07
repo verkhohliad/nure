@@ -246,7 +246,6 @@
 
 <script>
   import {mapGetters} from 'vuex'
-
   export default {
     components: {},
     name: 'Specialities',
@@ -284,3 +283,4 @@
     padding: 0;
   }
 </style>
+

@@ -18,13 +18,13 @@
               <li>
                 <a href="mailto:abitur@nure.ua" class="footer-link">
                   <i class="material-icons">mail_outline</i>
-                  <span>abitur@nure.ua</span>
+                  <span class="footer-contacts__text">abitur@nure.ua</span>
                 </a>
               </li>
               <li>
                 <a class="footer-link" href="tel:+38(057)702-17-20">
                   <i class="material-icons">phone</i>
-                  <span>+38 (057) 702-17-20</span>
+                  <span class="footer-contacts__text">+38 (057) 702-17-20</span>
                 </a>
               </li>
             </ul>
