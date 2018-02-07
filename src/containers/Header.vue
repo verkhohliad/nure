@@ -1,14 +1,7 @@
 <template>
   <header>
     <v-toolbar class="header-toolbar">
-      <!--<div class="languages">
-          <div class="language-item">RU</div>
-          <div class="language-item">UA</div>
-          <div class="language-item">EN</div>
-        </div>
-      -->
-      <v-layout
-      >
+      <v-layout>
         <div class="white--text mb-2 display-1 text-xs-center header-bar">
           <div class="logo">
             <img :src="navBar.logo" alt="">
@@ -27,14 +20,15 @@
       </div>
     </v-toolbar>
     <v-content>
-      <section>
-        <v-parallax :src="navBar.parallaxImg" height="500">
+      <!--<section>-->
+        <!--<v-parallax :src="navBar.parallaxImg" height="500">-->
+      <MainSlider />
 
-        </v-parallax>
-      </section>
+        <!--</v-parallax>-->
+      <!--</section>-->
     </v-content>
 
-    <!--<MainSlider />-->
+
       <nav>
         <ul class="nav-list">
           <li class="nav-item" v-for="item in navBar.items" :key="item.id">
@@ -91,22 +85,22 @@
             },
             {
               id: 5,
-              label: 'Блог',
-              value: 'BlogPage',
-              url: '/blog'
-            },
-            {
-              id: 6,
               label: 'Результати іспитів',
               value: 'ExamsPage',
               url: '/exams'
+            },
+            {
+              id: 6,
+              label: 'Новини',
+              value: 'BlogPage',
+              url: '/blog'
             },
             {
               id: 7,
               label: 'Контакти',
               value: 'ContactPage',
               url: '/contact'
-            }
+            },
           ]
         },
         signInActive: false,

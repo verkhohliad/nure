@@ -1,7 +1,7 @@
 <template>
   <v-container grid-list-md text-xs-center>
     <v-layout row wrap>
-      <v-flex d-flex xs12 sm8 md8 child-flex>
+      <v-flex d-flex xs12 sm9 md9 child-flex>
         <div class="left-wrap">
           <section class="greeting">
             <h2 class="black--text mb-2 display-0 text-xs-center">
@@ -58,12 +58,9 @@
             </div>
           </section>
           <InformationWidget :info="information"/>
-          <div class="nure-video">
-            <youtube video-id="2KSQnjAq7f4"></youtube>
-          </div>
         </div>
       </v-flex>
-      <v-flex d-flex xs12 sm4 md4>
+      <v-flex d-flex xs12 sm3 md3>
         <div class="right-wrap">
           <section class="news">
             <BlogWidget :info="blogNews"/>

@@ -38,35 +38,18 @@
           </div>
         </div>
       </v-flex>
-
-      <v-flex d-flex xs6 sm6 md6 child-flex>
-        <div class="footer-map" v-if="location">
-          <gmap-map class="map-container" :center="{lat:location.lat, lng:location.lng}" :zoom="12">
-            <gmap-marker :position="{lat:location.lat, lng:location.lng}">
-            </gmap-marker>
-          </gmap-map>
-        </div>
-      </v-flex>
     </v-layout>
 
   </v-footer>
 </template>
 
 <script>
-  import { getCoordinates } from '../api/google';
-
   export default {
     name: 'Footer',
     data: function () {
       return {
         location: null
       }
-    },
-    beforeCreate: async function () {
-      const apiGoogleKey = 'AIzaSyBPk8GZiIly7Ww8LThI8N4hu8QZR9qT1Yk';
-      const data = await getCoordinates(apiGoogleKey);
-
-      this.location = data.results[0].geometry.location;
     },
     methods: {}
   }
@@ -94,11 +77,6 @@
 </script>
 
 <style scoped>
-
-  .map-container {
-    width: 100%;
-    height: 250px;
-  }
 
 </style>
 

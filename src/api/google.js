@@ -1,7 +1,9 @@
-export const getCoordinates = async (apiKey) => {
-   return new Promise(resolve => {
-     fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=Харьковский+национальный+университет+радиоэлектроники,+CA&key=${apiKey}`)
-       .then(res => res.json())
-       .then(data => resolve(data));
-   })
+const google = {
+  getCoordinates: async (apiKey) => {
+    let data = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=Харьковский+национальный+университет+радиоэлектроники,+CA&key=${apiKey}`);
+    return await data.json();
+  }
 };
+
+export default google;
+

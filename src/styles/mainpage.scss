@@ -2,7 +2,7 @@
   display: flex;
   max-width: 90%;
   background: #fff;
-  margin: 20px auto !important;
+  margin: 0 auto 15px auto !important;
   box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -21,15 +21,6 @@
         font-size: 18px !important;
         text-align: left !important;
       }
-    }
-
-    .nure-video {
-      position: relative !important;
-      overflow: hidden;
-      iframe {
-        width: 90%;
-      }
-      margin: 25px 0;
     }
 
     .item-container {
@@ -100,12 +91,12 @@
         .title {
           display: block;
           color: #fff;
-          background: #05384d !important;
+          background: rgba(3, 39, 53, 0.85) !important;
           -webkit-border-radius: 5px;
           -moz-border-radius: 5px;
           border-radius: 5px;
           border-bottom: 2px solid #ededed;
-          margin: 0;
+          margin: 0 auto;
           padding: 10px;
         }
 
@@ -134,8 +125,15 @@
             display: flex;
 
             time {
-              font-size: 20px;
-              background: #f4f4f4;
+              font-size: 16px;
+              background: #fff;
+              font-weight: bold;
+              display: flex;
+              align-items: center;
+              border: 1px solid rgba(3, 39, 53, 0.85);
+              -webkit-border-radius: 10px;
+              -moz-border-radius: 10px;
+              border-radius: 10px;
               padding: 7px;
               margin: 0px 16px 0px 0px;
               width: 30%;
