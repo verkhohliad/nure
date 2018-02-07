@@ -1,62 +1,31 @@
-import User from '../../db/users';
-const bcrypt = require('bcrypt');
-const { saltRounds, jwtSecret } = require('../../config/constants');
-const jwt = require('jsonwebtoken');
+import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
+import to from 'await-to-js';
 
-const getUser = async (req, res, next) => {
-  const { email } = req.body;
+import Users from '../../db/users';
+import { SERVER_CONFIG } from '../../config/constants';
 
-  const user = await User.findOne({
-    email
-  }, {
-    password: false
-  })
+export const register = async (req, res, next) => {
+  // const { email, password, name, isAdmin } = req.body;
 
-  res.json({
-    success: true,
-    user
-  })
-};
+  const [err, user] = await to(Users.findOne({ email: req.body.email }));
+  if (err) next(err);
 
-const updateUserInfo = async (req, res, next) => {
-  const { email, userInfo } = req.body;
+  if (!user) {
+    const password = await bcrypt.hash(req.body.password, SERVER_CONFIG.SALT_ROUNDS);
+    const token = jwt.sign({ email: req.body.email }, SERVER_CONFIG.JWT_SECRET);
 
-  const updatedUser = await User.update({
-    email
-  }, {
-    name: userInfo.profile.name,
-    avatar: userInfo.profile.image
-  }, {
-    password: false
-  })
-
-  res.json({
-    success: true,
-    user: updatedUser
-  })
-};
-
-const register = async (req, res, next) => {
-  console.log(req.body);
-  const { user } = req.body;
-
-  let foundUser = await User.findOne({
-    email: user.email
-  })
-
-  if (foundUser === null) {
-    let hash = await bcrypt.hash(user.password, saltRounds);
-    const token = jwt.sign({ email: user.email }, jwtSecret);
-
-    let newUser = await User.insert({
+    const [err, newUser] = await to(User.insert({
       email: user.email,
       password: hash,
       token
-    })
+    }));
+    if (err) next(err);
 
     res.json({
       success: true,
-      token
+      token,
+      newUser
     })
   } else {
     res.json({
@@ -66,7 +35,7 @@ const register = async (req, res, next) => {
   }
 };
 
-const login = async (req, res, next) => {
+export const login = async (req, res, next) => {
   const { user } = req.body;
 
   let foundUser = await User.findOne({
@@ -78,7 +47,7 @@ const login = async (req, res, next) => {
     if (eqPassword) {
       res.json({
         success: true,
-        token: jwt.sign({ email: foundUser.email }, jwtSecret)
+        token: jwt.sign({ email: foundUser.email }, SERVER_CONFIG.JWT_SECRET)
       })
     } else {
       res.json({
@@ -93,8 +62,3 @@ const login = async (req, res, next) => {
     })
   }
 };
-
-exports.getUser = getUser;
-exports.updateUserInfo = updateUserInfo;
-exports.register = register;
-exports.login = login;

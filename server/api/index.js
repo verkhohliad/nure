@@ -1,8 +1,13 @@
-const express = require('express');
+import express from 'express';
+
+import authRouter from './auth/router';
+import usersRouter from './users/router';
+import specialitiesRouter from './specialities/router';
 
 const router = express.Router();
 
-router.use('/specialities/', require('./specialities'));
-router.use('/auth/', require('./auth'));
+router.use('/auth/', authRouter);
+router.use('/users', usersRouter);
+router.use('/specialities/', specialitiesRouter);
 
-module.exports = router;
+export default router;

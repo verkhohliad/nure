@@ -5,9 +5,16 @@ import path from 'path';
 import fs from 'fs';
 import bodyParser from 'body-parser';
 
-import { connectToDb } from "./server/db";
+import { connectToDb } from './db';
+import { error } from './utils';
 
 const app = express();
+
+// TODO: (1) create middlewares for check access and get headers user by token from db.
+// TODO: (2) create normal crud for users
+// TODO: (3) create normal endpoints for auth
+// TODO: with handling good handling errors, check data before db and response message
+// TODO: if haven't success.
 
 //
 // settings
@@ -33,15 +40,15 @@ app.use(morgan(function (tokens, req, res) {
 }));
 */
 
-app.use('/', express.static('dist'));
+app.use('/', express.static('../dist'));
 
-app.use('/uploads', express.static('/server/uploads'));
+app.use('/uploads', express.static('/uploads'));
 
-app.use('/api/', require('./server/api'));
+app.use('/api/', require('./api/'));
 
 const server = http.createServer(app);
 
-server.listen(app.get('port'), function () {
+server.listen(app.get('port'), () => {
   console.log('Server listening on port ' + server.address().port);
 });
 
@@ -50,6 +57,6 @@ connectToDb().then(
     console.log('connected to db successful');
   },
   (err) => {
-    console.error('error: ', err);
+    error(err);
   }
 );
