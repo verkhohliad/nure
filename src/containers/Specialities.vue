@@ -37,7 +37,7 @@
         >
           <v-card flat>
             <v-card-text class="information-tab">
-              <div v-if="tab==='Бакалавр (на 1й курс)'">
+              <div v-if="tab==='Бакалавр'">
                 <v-tabs fixed centered>
                   <v-tabs-bar class="cyan specialities-tabs blue-background specialities-tabs" dark>
                     <v-tabs-item
@@ -101,7 +101,7 @@
 
                 </v-tabs>
               </div>
-              <div v-else>
+              <div v-if="tab==='Магістр'">
                 <v-tabs fixed centered>
                   <v-tabs-bar class="cyan specialities-tabs blue-background specialities-tabs" dark>
                     <v-tabs-item
@@ -132,9 +132,12 @@
                             >
                               <template slot="items" slot-scope="props">
                                 <td>{{ props.item.cipher }}</td>
+                                <td class="text-xs-right">{{ props.item.field_of_knowledge }}</td>
                                 <td class="text-xs-right">{{ props.item.specialty }}</td>
                                 <td class="text-xs-right">{{ props.item.specialization }}</td>
+                                <td class="text-xs-right">{{ props.item.faculty }}</td>
                                 <td class="text-xs-right">{{ props.item.volume }}</td>
+                                <td class="text-xs-right">{{ props.item.period }}</td>
                                 <td class="text-xs-right">{{ props.item.cost }}</td>
                               </template>
                             </v-data-table>
@@ -148,9 +151,12 @@
                             >
                               <template slot="items" slot-scope="props">
                                 <td>{{ props.item.cipher }}</td>
+                                <td class="text-xs-right">{{ props.item.field_of_knowledge }}</td>
                                 <td class="text-xs-right">{{ props.item.specialty }}</td>
                                 <td class="text-xs-right">{{ props.item.specialization }}</td>
+                                <td class="text-xs-right">{{ props.item.faculty }}</td>
                                 <td class="text-xs-right">{{ props.item.volume }}</td>
+                                <td class="text-xs-right">{{ props.item.period }}</td>
                                 <td class="text-xs-right">{{ props.item.cost }}</td>
                               </template>
                             </v-data-table>
@@ -251,7 +257,7 @@
     components: {},
     name: 'Specialities',
     data() {
-      const tabs = ['Бакалавр (на 1й курс)', 'Магістр'];
+      const tabs = ['Бакалавр', 'Магістр', 'Друга вища освіта'];
       const childTabs = ['Денна форма навчання', 'Заочна форма навчання'];
       return {
         tabs,
