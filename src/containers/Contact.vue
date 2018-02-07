@@ -8,6 +8,17 @@
         </div>
         <div class="contacts">
           <h5>Телефон / факс ХНУРЕ:</h5>
+
+          <p class="info">+38 (057) 702-10-13</p>
+        </div>
+        <div class="contacts">
+          <h5>Приймальна ректора ХНУРЕ:</h5>
+          <p class="info">+38 (057) 702-18-07</p> 
+        </div>
+        <div class="contacts">
+          <h5>Приймальна комісія ХНУРЕ:</h5> 
+          <p class="info">+38 (057) 702-17-20</p> 
+
           <p class="info"> +38 (057) 702-10-13</p>
         </div>
         <div class="contacts">
@@ -24,11 +35,19 @@
         </div>
         <div class="contacts">
           <h5>Приймальна проректора з адміністративно-господарської роботи ХНУРЕ:</h5> 
+
+          <p class="info">+38 (057) 702-13-18</p>     
+        </div>
+        <div class="contacts">
+          <h5>Приймальна навчального відділу ХНУРЕ:</h5>  
+          <p class="info">+38 (057) 702-14-92</p>   
+
           <p class="info"> +38 (057) 702-13-18</p>     
         </div>
         <div class="contacts">
           <h5>Приймальна навчального відділу ХНУРЕ:</h5>  
           <p class="info"> +38 (057) 702-14-92</p>   
+
         </div>
         <div class="contacts">
           <h5> Приймальна начальника НДЧ ХНУРЕ:</h5>
@@ -54,6 +73,22 @@
     </div>
   </template>
 
+
+  <script>
+
+    export default {
+      name: 'Contact',
+      data() {
+        return {}
+      },
+      created() {
+
+      },
+      methods: {}
+    }
+  </script>
+
+
   <script>
     export default {
       name: 'Contact',
@@ -66,6 +101,11 @@
     }
   </script>
 
+  <style scoped>
+
+  </style>
+
 
   <style scoped>
   </style>
+

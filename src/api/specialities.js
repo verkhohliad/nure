@@ -603,7 +603,6 @@ export const getSpecialities = async () => {
             period: '4 р. 10 м.',
             cost: '5500 грн.'
           },
-      
     
           {
             value: false,

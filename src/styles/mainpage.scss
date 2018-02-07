@@ -193,8 +193,11 @@
             .date {
               time {
                 margin: 0px;
-                width: 100%;
+
                 font-size: 13px;
+              }
+              h4{
+                    font-size: 14px;
               }
             }
 
@@ -239,20 +242,8 @@
         }
       }
     }
-  }
-}
-  .right-wrap {
+  
 
-    .news {
-      .blog-news {
-        .post {
-          h4 {
-            width: 100%;
-            font-size: 14px;
-            padding-top: 11px;
-            font-weight: bold;
-          }
-        }
         .right-wrap {
           .news {
             .blog-news {
@@ -271,35 +262,44 @@
                 }
               }
                 .description {
-                  text-align: start;
-                  display: inline-flex;
                   margin-left: 0%;
+                  p{
+                    font-size: 12px;
+                  }
                 }
               }
             }
           }
         }
-      }
-    }
-
+  }
+}
     @media screen and (max-width: 600px) {
       .container {
+         .left-wrap {
+      .greeting {
+        .black--text {
+              font-size: 18px;
+        }
+        .subheading {      
+          margin-top: 1%;
+          font-size: 13px !important;
+        }
+      }
+
+    }
         .right-wrap {
           .news {
             .blog-news {
               .post {
                 h4 {
-                  width: 100%;
-                  font-size: 14px;
-                  padding-top: 11px;
-                  font-weight: bold;
+                  font-size: 12px;
                 }
-
                 .date {
-                  time {
-                    display: table-footer-group;
+                  h4{
+                    font-size: 11px;
                   }
-                }
+                  }
+                
               }
             }
           }
@@ -345,20 +345,21 @@
                 }
 
                 .date {
-                  padding: 5px 10px;
+
                   h4 {
                     a {
-                      font-size: 10px;
+                      margin-left: 4px;
+                      font-size: 8px;
                     }
                   }
                   time {
+                    margin-left: 5px;
                     font-size: 10px;
-                    display: table-footer-group;
                   }
                 }
                 .description {
                   p {
-                    font-size: 8px;
+                    display: none;
                   }
                 }
               }
@@ -368,7 +369,7 @@
       }
     }
 
-    @media screen and (max-width: 340px) {
+    @media screen and (max-width: 370px) {
       .container {
 
         .left-wrap {
@@ -394,23 +395,18 @@
                   h4 {
                     padding-top: 0px;
                     a {
-                      font-size: 7px;
+                      margin-left: 0;
                     }
                   }
                   time {
-                    font-size: 10px;
-                    display: table-footer-group;
+                  display: none;
                   }
                 }
-                .description {
-                  p {
-                    font-size: 8px;
-                  }
-                }
+               
               }
             }
           }
         }
       }
     }
-  }
+  
