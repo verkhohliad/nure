@@ -3,8 +3,7 @@
     <v-carousel hide-delimiters interval="80000">
       <v-carousel-item v-for="(item,i) in items" v-bind:src="item.src" :key="i">
         <div class="slider-content">
-          <h1 class="title">{{item.title}}</h1>
-          <p class="description ">{{item.description}}</p>
+          <h1 class="title">{{item.description}}</h1>
         </div>
       </v-carousel-item>
     </v-carousel>
@@ -23,20 +22,15 @@
         items: [
           {
             src: masterImg,
-            title: 'Вступ до ХНУРЕ для навчання в магістратурі',
-            description: 'Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).\n' +
-            '\n'
+            description: 'Вступ до ХНУРЕ для навчання в магістратурі',
           },
           {
             src: schoolImg,
-            title: 'Вступ до ХНУРЕ після 11 класу',
-            description: 'Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).\n' +
-            '\n'
+            description: 'Вступ до ХНУРЕ після 11 класу',
           },
           {
             src: sliderThree,
-            title: '',
-            description: ''
+            description: '',
           }
         ]
       }
@@ -47,15 +41,17 @@
 <style scoped>
   .slider-content {
     position: absolute;
-    top: 250px;
+    top: 45vh;
     background: rgba(1, 1, 1, 0.7);
     width: 100%;
-    height: 150px;
+    line-height: 30vh;
+    height: 30vh;
     z-index: 2;
     color: #fff;
   }
   .slider-content .title {
     margin: 20px 0;
+    font-size: 25px !important;
   }
   .slider-content .description {
     font-size: 16px;
