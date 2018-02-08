@@ -67,5 +67,7 @@ module.exports = {
     'consistent-return': 'off'
     'consistent-return': 'off',
     'max-len': 'off',
+    'consistent-return': 'off',
+    'arrow-body-style': 'off'
   }
 }

@@ -8,13 +8,13 @@ const Users = {
   findOne: (...params) => db.getCollection(COLLECTION_NAMES.USERS).findOne(...params),
   find: params => db.getCollection(COLLECTION_NAMES.USERS).find(...params),
   insert: (item) => {
-    UserSchema.validate(item);
+    //UserSchema.validate(item);
 
-    if (UserSchema.isValid()) {
+    //if (UserSchema.isValid()) {
       return db.getCollection(COLLECTION_NAMES.USERS).insert(item)
-    } else {
-      throw httpError(422, `Request's data not valid ${JSON.stringify(UserSchema.validationErrors())}`);
-    }
+    //} else {
+    //  throw httpError(422, `Request's data not valid ${JSON.stringify(UserSchema.validationErrors())}`);
+    //}
   },
   update: (item, update, params) => {
     UserSchema.validate(update, { modifier: true });

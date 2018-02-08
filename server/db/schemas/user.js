@@ -1,6 +1,6 @@
 import SimpleSchema from 'simpl-schema';
 
-const schema = new SimpleSchema({
+export const UserSchema = new SimpleSchema({
   email: {
     type: String,
     required: true
@@ -23,6 +23,4 @@ const schema = new SimpleSchema({
     defaultValue: false,
     required: true
   }
-}, { requiredByDefault: false });
-
-export default schema.newContext()
+}, { requiredByDefault: false }).newContext();
