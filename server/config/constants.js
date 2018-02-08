@@ -6,7 +6,16 @@ export const SERVER_CONFIG = {
   HOST_URL: 'http://localhost:8082'
 };
 
+export const HEADER_ITEMS = {
+  USER_TOKEN: 'X-User-Token'
+};
+
 export const COLLECTION_NAMES = {
   USERS: 'users',
+
+};
+
+export const ERROR_MESSAGES = {
+  PARAM_IS_REQUIRED: param => `${param} is required`,
 
 };

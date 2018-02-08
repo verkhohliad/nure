@@ -1,10 +1,4 @@
+import jwt from 'jsonwebtoken';
+import { SERVER_CONFIG } from '../config/constants';
 
-export const error = (err) => {
-  let errResult = err;
-
-  if (typeof err === 'object') {
-    errResult = JSON.stringify(err);
-  }
-
-  return new Error(errResult);
-};
+export const generateToken = email => jwt.sign({ email }, SERVER_CONFIG.JWT_SECRET);

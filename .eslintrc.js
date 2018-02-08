@@ -40,9 +40,11 @@ module.exports = {
       ]
     }],
     // allow optionalDependencies
+    /*
     'import/no-extraneous-dependencies': ['error', {
       optionalDependencies: ['test/unit/index.js']
     }],
+    */
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-new': 'off',
@@ -53,6 +55,16 @@ module.exports = {
     'arrow-parens': 'off',
     'no-console': 'off',
     'no-return-await': 'off',
+    'consistent-return': 'off'
+    'comma-dangle': 'off',
+    'no-trailing-space': 'off',
+    'no-console': 'off',
+    'import/no-extraneous-dependencies': 'off',
+    'import/export': 'off',
+    'import/prefer-default-export': 'off',
+    'no-param-reassign': 'off',
+    'no-else-return': 'off',
+    'consistent-return': 'off'
     'consistent-return': 'off',
     'max-len': 'off',
   }

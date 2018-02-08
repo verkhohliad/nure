@@ -1,6 +1,5 @@
 import { MongoClient } from 'mongodb';
 import { SERVER_CONFIG } from '../config/constants';
-import { error } from '../utils';
 
 let db;
 
@@ -17,7 +16,7 @@ export function connectToDb() {
 
 export function getCollection(collection) {
   if (!db) {
-    throw error('connect to database first')
+    throw new Error('connect to database first')
   }
   return db.collection(collection)
 }

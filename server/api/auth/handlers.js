@@ -1,64 +1,55 @@
 import bcrypt from 'bcrypt';
-import jwt from 'jsonwebtoken';
 import to from 'await-to-js';
+import httpError from 'http-errors';
 
 import Users from '../../db/users';
-import { SERVER_CONFIG } from '../../config/constants';
+import { SERVER_CONFIG, ERROR_MESSAGES } from '../../config/constants';
+import { generateToken } from '../../utils';
 
 export const register = async (req, res, next) => {
-  // const { email, password, name, isAdmin } = req.body;
+  const { email, password, name } = req.body;
 
-  const [err, user] = await to(Users.findOne({ email: req.body.email }));
-  if (err) next(err);
-
-  if (!user) {
-    const password = await bcrypt.hash(req.body.password, SERVER_CONFIG.SALT_ROUNDS);
-    const token = jwt.sign({ email: req.body.email }, SERVER_CONFIG.JWT_SECRET);
-
-    const [err, newUser] = await to(User.insert({
-      email: user.email,
-      password: hash,
-      token
-    }));
-    if (err) next(err);
-
-    res.json({
-      success: true,
-      token,
-      newUser
-    })
-  } else {
-    res.json({
-      success: false,
-      message: 'user already exists'
-    })
+  if (!email) {
+    return next(httpError(422, ERROR_MESSAGES.PARAM_IS_REQUIRED('email')))
+  } else if (!password) {
+    return next(httpError(422, ERROR_MESSAGES.PARAM_IS_REQUIRED('password')))
   }
+
+  const [error1, user] = await to(Users.findOne({ email }));
+  if (error1) return next(error1);
+  if (user) {
+    return next(httpError(422, `User with email: ${email} already exist.`));
+  }
+
+  const hash = await bcrypt.hash(password, SERVER_CONFIG.SALT_ROUNDS);
+  const token = generateToken(email);
+
+  const [error2, newUser] = await to(Users.insert({
+    email,
+    password: hash,
+    token,
+    name
+  }, { password: false }));
+  if (error2) { console.log(error2); return next(error2); }
+
+  res.json({
+    success: true,
+    newUser
+  });
 };
 
 export const login = async (req, res, next) => {
-  const { user } = req.body;
+  const { email, password } = req.body;
 
-  let foundUser = await User.findOne({
-    email: user.email
-  })
+  const [error, user] = await to(Users.findOne({ email }, { password: false }));
+  if (error) next(error);
+  if (!user) next(httpError(404, `User with email: ${email} not found.`));
 
-  if (foundUser) {
-    let eqPassword = await bcrypt.compare(user.password, foundUser.password)
-    if (eqPassword) {
-      res.json({
-        success: true,
-        token: jwt.sign({ email: foundUser.email }, SERVER_CONFIG.JWT_SECRET)
-      })
-    } else {
-      res.json({
-        success: false,
-        message: 'not exists'
-      })
-    }
-  } else {
-    res.json({
-      success: false,
-      message: 'not exists'
-    })
-  }
+  const isValidPassword = await bcrypt.compare(password, user.password);
+  if (!isValidPassword) next(httpError(401, 'Wrong password'));
+
+  res.json({
+    success: true,
+    user
+  });
 };
