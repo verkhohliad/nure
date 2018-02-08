@@ -12,33 +12,29 @@
       font-weight: bold;
     }
 
-   .contacts {
-      margin: 0 auto;
-      width: 20%;
+    .contacts {
+
     }
   }
 }
 
-
-
-
-    @media screen and (max-width: 900px) {
-    .container {
-  .contact-content {
-   h1 {
+@media screen and (max-width: 900px) {
+  .container {
+    .contact-content {
+      h1 {
         margin-bottom: 25px;
-font-size: 25px;
-    }
-.contacts{
-  width: 100%;
-
-    h5 {
-font-size: 15px;
-    }
-  .info {
-    font-size: 13px;
-          }
-        }
+        font-size: 25px;
       }
-    } 
- }
+      .contacts {
+        width: 100%;
+
+        h5 {
+          font-size: 15px;
+        }
+        //.info {
+        //  font-size: 13px;
+        //}
+      }
+    }
+  }
+}

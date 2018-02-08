@@ -1,12 +1,12 @@
 <template>
   <v-app id="app">
-    <h1>Сервер на даний час оновлюється. Просимо вибачення за незручності.</h1>
-    <!--<div v-if="loading">-->
-      <!--<MainLoadingComponent />-->
-    <!--</div>-->
-    <!--<Header />-->
-    <!--<router-view />-->
-    <!--<Footer />-->
+    <!--<h1>Сервер на даний час оновлюється. Просимо вибачення за незручності.</h1>-->
+    <div v-if="loading">
+      <MainLoadingComponent />
+    </div>
+    <Header />
+    <router-view />
+    <Footer />
   </v-app>
 </template>
 
@@ -38,7 +38,4 @@
 
 <style>
 
-  h1 {
-    margin-top: 150px;
-  }
 </style>
