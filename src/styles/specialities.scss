@@ -46,7 +46,7 @@
     background: #fff;
     padding: 2% 5%;
 
-  .info_specialities {
+    .info_specialities {
 
     }
   }
@@ -67,32 +67,31 @@
   }
 }
 
-  h5 {
-    font-weight: bold;
-  }
+h5 {
+  font-weight: bold;
+}
 
+@media screen and (max-width: 900px) {
 
-    @media screen and (max-width: 900px) {
+  .specialities {
+    .specialities-content {
 
-      .specialities{
-   .specialities-content {
-
-   h1 {
+      h1 {
         margin-bottom: 25px;
-font-size: 25px;
-    }
-.info_specialities{
-  width: 100%;
+        font-size: 25px;
+      }
+      .info_specialities {
+        width: 100%;
 
-    h5 {
-font-size: 15px;
-    }
-  .info_text {
-    font-size: 13px;
+        h5 {
+          font-size: 15px;
+        }
+        .info_text {
+          font-size: 13px;
 
-  }
-   }
+        }
+      }
+    }
   }
 }
-  }
 

@@ -74,23 +74,23 @@ header {
   margin: 0;
   padding: 0;
   .nav-item {
-     display: inline-block;
+    display: inline-block;
     margin: 10px;
     a {
 
       display: inline-block;
-    
+
     }
   }
 }
 
 @media (max-width: 1030px) {
-  .header-bar{
-      .logo{
-     .name{
-      display: none;
+  .header-bar {
+    .logo {
+      .name {
+        display: none;
+      }
     }
-  }
   }
 
   .nav-list {
@@ -117,14 +117,13 @@ header {
 @media (max-width: 600px) {
   .nav-list {
     .nav-item {
-       
-        .btn
-       {
-      font-size: 17px;
-      }
+
+      .btn {
+        font-size: 17px;
       }
     }
-  
+  }
+
   .header-toolbar {
     .toolbar__content {
       .languages {
@@ -137,15 +136,14 @@ header {
 }
 
 @media (max-width: 480px) {
- .nav-list {
+  .nav-list {
     .nav-item {
-       
-        .btn
-       {
-      font-size: 13px;
-      }
+
+      .btn {
+        font-size: 13px;
       }
     }
+  }
 
   .header-bar {
     .logo {
@@ -168,12 +166,10 @@ header {
 
 @media (max-width: 420px) {
 
-
-
   .header-toolbar {
-    .header-bar{
-      .logo{
-        img{
+    .header-bar {
+      .logo {
+        img {
           height: 35px;
         }
       }
@@ -184,10 +180,10 @@ header {
         display: -webkit-inline-box;
         width: 70%;
         justify-content: flex-end;
-        .btn{
-              padding: 0px;
-    font-size: 12px;
-    margin: 0px;
+        .btn {
+          padding: 0px;
+          font-size: 12px;
+          margin: 0px;
         }
       }
       .languages {
@@ -197,14 +193,14 @@ header {
   }
   .nav-list {
     .nav-item {
-     display: inline-flex;
-      .btn{
+      display: inline-flex;
+      .btn {
         font-size: 12px;
         margin: 0;
         padding: 0;
       }
-     }
     }
   }
+}
 
 

@@ -70,6 +70,7 @@
                                 <td>{{ props.item.cipher }}</td>
                                 <td class="text-xs-right">{{ props.item.specialty }}</td>
                                 <td class="text-xs-right">{{ props.item.specialization }}</td>
+                                <td class="text-xs-right">{{ props.item.faculty }}</td>
                                 <td class="text-xs-right">{{ props.item.marks }}</td>
                                 <td class="text-xs-right">{{ props.item.minMark }}</td>
                                 <td class="text-xs-right">{{ props.item.volume }}</td>
@@ -152,7 +153,6 @@
                             >
                               <template slot="items" slot-scope="props">
                                 <td>{{ props.item.cipher }}</td>
-                                <td class="text-xs-right">{{ props.item.field_of_knowledge }}</td>
                                 <td class="text-xs-right">{{ props.item.specialty }}</td>
                                 <td class="text-xs-right">{{ props.item.specialization }}</td>
                                 <td class="text-xs-right">{{ props.item.faculty }}</td>
@@ -171,7 +171,6 @@
                             >
                               <template slot="items" slot-scope="props">
                                 <td>{{ props.item.cipher }}</td>
-                                <td class="text-xs-right">{{ props.item.field_of_knowledge }}</td>
                                 <td class="text-xs-right">{{ props.item.specialty }}</td>
                                 <td class="text-xs-right">{{ props.item.specialization }}</td>
                                 <td class="text-xs-right">{{ props.item.faculty }}</td>
