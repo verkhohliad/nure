@@ -1,17 +1,17 @@
 import to from 'await-to-js';
 import httpError from 'http-errors';
 
-import Users from '../db/users';
+import { Users } from '../db/collections';
 import { HEADER_ITEMS } from '../config/constants';
 
 export const token = async (req, res, next) => {
-  const userToken = req.headers[HEADER_ITEMS.USER_TOKEN];
+  const userToken = req.get(HEADER_ITEMS.USER_TOKEN);
 
   const [err, user] = await to(Users.findOne({ token: userToken }));
-  if (err) next(err);
+  if (err) return next(err);
 
   if (!user) {
-    next(httpError(401, 'Access denied'));
+    return next(httpError(401, 'Access denied'));
   }
 
   req.user = user;

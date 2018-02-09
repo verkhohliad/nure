@@ -6,15 +6,16 @@ import fs from 'fs';
 import bodyParser from 'body-parser';
 
 import api from './api';
-import { apiErrorHandler } from './middlewares/index';
-import { connectToDb } from './db/index';
+import { apiErrorHandler } from './middlewares';
+import { connectToDb } from './db';
 
 const app = express();
 
-// TODO: create middleware for validation and move validation before api handlers
+// TODO: create middleware for validation and move validation before api handlers (+)
 // TODO: (not all, depend on route)
 
-// TODO: (1) create middlewares for check access and get headers user by token from db.
+// TODO: (1) create middlewares for check access and get headers user by token from db. (+)
+
 // TODO: (2) create normal crud for users
 // TODO: (3) create normal endpoints for auth
 // TODO: with handling good handling errors, check data before db and response message

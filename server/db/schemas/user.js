@@ -1,26 +1,9 @@
-import SimpleSchema from 'simpl-schema';
+import Joi from 'joi';
 
-export const UserSchema = new SimpleSchema({
-  email: {
-    type: String,
-    required: true
-  },
-  password: {
-    type: String,
-    required: true
-  },
-  token: {
-    type: String,
-    required: true
-  },
-  name: {
-    type: String,
-    trim: true,
-    required: true
-  },
-  isAdmin: {
-    type: Boolean,
-    defaultValue: false,
-    required: true
-  }
-}, { requiredByDefault: false }).newContext();
+export const UserSchema = Joi.object().keys({
+  email: Joi.string().email().required(),
+  password: Joi.string().required(),
+  token: Joi.string(),
+  name: Joi.string().min(3).max(30).required(),
+  isAdmin: Joi.boolean().default(false)
+});

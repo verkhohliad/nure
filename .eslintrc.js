@@ -68,6 +68,10 @@ module.exports = {
     'consistent-return': 'off',
     'max-len': 'off',
     'consistent-return': 'off',
-    'arrow-body-style': 'off'
+    'arrow-body-style': 'off',
+    'max-len': 'off',
+    'no-underscore-dangle': 'off',
+    'prefer-const': 'off',
+    'arrow-parens': 'off'
   }
 }

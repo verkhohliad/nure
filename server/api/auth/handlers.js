@@ -2,54 +2,53 @@ import bcrypt from 'bcrypt';
 import to from 'await-to-js';
 import httpError from 'http-errors';
 
-import Users from '../../db/users';
-import { SERVER_CONFIG, ERROR_MESSAGES } from '../../config/constants';
+import { Users } from '../../db/collections';
+import { SERVER_CONFIG } from '../../config/constants';
 import { generateToken } from '../../utils';
 
+// TODO: need to add accept email sending and validation email
 export const register = async (req, res, next) => {
   const { email, password, name } = req.body;
-
-  if (!email) {
-    return next(httpError(422, ERROR_MESSAGES.PARAM_IS_REQUIRED('email')))
-  } else if (!password) {
-    return next(httpError(422, ERROR_MESSAGES.PARAM_IS_REQUIRED('password')))
-  }
 
   const [error1, user] = await to(Users.findOne({ email }));
   if (error1) return next(error1);
   if (user) {
-    return next(httpError(422, `User with email: ${email} already exist.`));
+    return next(httpError(422, 'User with this email already exist.'));
   }
 
-  const hash = await bcrypt.hash(password, SERVER_CONFIG.SALT_ROUNDS);
+  const [error2, hash] = await to(bcrypt.hash(password, SERVER_CONFIG.SALT_ROUNDS));
+  if (error2) return next(error2);
   const token = generateToken(email);
 
-  const [error2, newUser] = await to(Users.insert({
+  const [error3, newUser] = await to(Users.insert({
     email,
     password: hash,
     token,
     name
-  }, { password: false }));
-  if (error2) { console.log(error2); return next(error2); }
+  }));
+  if (error3) return next(error3);
 
   res.json({
     success: true,
-    newUser
+    token,
+    email
   });
 };
 
 export const login = async (req, res, next) => {
   const { email, password } = req.body;
 
-  const [error, user] = await to(Users.findOne({ email }, { password: false }));
-  if (error) next(error);
-  if (!user) next(httpError(404, `User with email: ${email} not found.`));
+  const [error1, user] = await to(Users.findOne({ email }));
+  if (error1) next(error1);
+  if (!user) next(httpError(404, 'User not found.'));
 
-  const isValidPassword = await bcrypt.compare(password, user.password);
-  if (!isValidPassword) next(httpError(401, 'Wrong password'));
+  const [error2, isValidPassword] = await to(bcrypt.compare(password, user.password));
+  if (error2) return next(error2);
+  if (!isValidPassword) return next(httpError(401, 'Wrong password'));
 
   res.json({
     success: true,
-    user
+    token: user.token,
+    email: user.email
   });
 };
