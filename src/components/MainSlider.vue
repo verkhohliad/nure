@@ -22,11 +22,11 @@
         items: [
           {
             src: masterImg,
-            description: 'Вступ до ХНУРЕ для навчання в магістратурі',
+            description: 'Вступ до ХНУРЕ для навчання в магістратурі.',
           },
           {
             src: schoolImg,
-            description: 'Вступ до ХНУРЕ після 11 класу',
+            description: 'Вступ до ХНУРЕ після 11 класу.',
           },
           {
             src: sliderThree,

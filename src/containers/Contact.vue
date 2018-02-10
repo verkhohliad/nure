@@ -101,7 +101,7 @@
           </div>
         </v-card-text>
         <v-card-actions>
-          <v-btn color="primary" flat @click.stop="dialog=false">Close</v-btn>
+          <v-btn color="primary" flat @click.stop="dialog=false">Закрити</v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>

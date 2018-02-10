@@ -1,6 +1,14 @@
 <template>
   <div class="container">
-    <div class="specialities">
+    <div v-if="$route.query.specialty">
+      <Specialty :id="$route.query.specialty"/>
+    </div>
+
+    <div v-if="$route.query.specialization">
+      <Specialization :id="$route.query.specialization"/>
+    </div>
+
+    <div v-if="!$route.query.specialty && !$route.query.specialization" class="specialities">
       <v-tabs fixed centered>
         <v-toolbar class="blue-background specialities-toolbar" dark>
           <v-toolbar-title class="toolbar-title">
@@ -68,8 +76,19 @@
                               >
                                 <template slot="items" slot-scope="props">
                                   <td>{{ props.item.cipher }}</td>
-                                  <td class="text-xs-right">{{ props.item.specialty }}</td>
-                                  <td class="text-xs-right">{{ props.item.specialization }}</td>
+
+                                  <td class="text-xs-right">
+                                  <!--<router-link :to="{path: 'specialities', query: {specialty: props.item.specialty}}">-->
+                                      {{ props.item.specialty }}
+                                  <!--</router-link>-->
+                                  </td>
+
+
+                                  <td class="text-xs-right">
+                                  <!--<router-link :to="{path: 'specialities', query: {specialization: props.item.specialization}}">-->
+                                      {{ props.item.specialization }}
+                                  <!--</router-link>-->
+                                  </td>
                                   <td class="text-xs-right">{{ props.item.marks }}</td>
                                   <td class="text-xs-right">{{ props.item.minMark }}</td>
                                   <td class="text-xs-right">{{ props.item.volume }}</td>
@@ -216,7 +235,8 @@
 
 
         <div>
-          <h5>Для вступу на навчання із скороченим терміном підготовки для отримання ступеня бакалавра приймаються особи,
+          <h5>Для вступу на навчання із скороченим терміном підготовки для отримання ступеня бакалавра приймаються
+            особи,
             які отримали навчально-кваліфікаційний рівень молодшого спеціаліста:</h5>
           <ul>
             <li>1-й (скорочений термін навчання);</li>
@@ -242,7 +262,6 @@
           <youtube video-id="2KSQnjAq7f4"></youtube>
         </div>
       </div>
-
     </div>
   </div>
 
@@ -250,9 +269,11 @@
 
 <script>
   import {mapGetters} from 'vuex'
+  import Specialty from '../components/Specialty'
+  import Specialization from '../components/Specialization'
 
   export default {
-    components: {},
+    components: {Specialty, Specialization},
     name: 'Specialities',
     data() {
       const tabs = ['Бакалавр (на 1й курс)', 'Магістр'];
@@ -261,6 +282,8 @@
         tabs,
         childTabs,
         active: null,
+        activeSpecialty: null,
+        activeSpecialization: null,
         pagination: {
           descending: true,
           rowsPerPage: 10
@@ -279,7 +302,11 @@
         specialities: 'getSpecialities'
       })
     },
-    methods: {}
+    methods: {
+      onInformationDisplay(data) {
+        console.log(data)
+      }
+    }
   }
 </script>
 

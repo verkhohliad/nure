@@ -19,5 +19,12 @@ export default new Router({
     { path: '/blog', component: Blog },
     { path: '/exams', component: Exams },
     { path: '/contact', component: Contact }
-  ]
+  ],
+  // scrollBehavior: function (to, from, savedPosition) {
+  //   if (savedPosition) {
+  //     return savedPosition
+  //   } else {
+  //     return { x: 0, y: 0 }
+  //   }
+  // }
 })
