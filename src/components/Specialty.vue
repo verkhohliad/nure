@@ -1,20 +1,19 @@
 <template>
-  <div class="container">
-    <h1>Blog</h1>
+  <div>
+  test
   </div>
 </template>
 
 <script>
-
   export default {
-    name: 'Blog',
+    name: 'Specialty',
+    props: {
+    },
     data() {
       return {}
     },
     created() {
 
-    },
-    methods: {
     }
   }
 </script>
@@ -22,3 +21,4 @@
 <style scoped>
 
 </style>
+

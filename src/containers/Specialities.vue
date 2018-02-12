@@ -1,13 +1,22 @@
 <template>
-  <div class="specialities">
-    <v-tabs fixed centered>
+  <transition name="slide-fade">
+    <div class="container">
+      <div v-if="$route.query.specialty">
+        <Specialty :id="$route.query.specialty"/>
+      </div>
 
-      <v-toolbar class="blue-background specialities-toolbar" dark>
-        <v-toolbar-title class="toolbar-title">
-          СПЕЦІАЛЬНОСТІ ТА СПЕЦІАЛІЗАЦІЇ ДЛЯ ВСТУПУ ДО ХНУРЕ
-        </v-toolbar-title>
+      <div v-if="$route.query.specialization">
+        <Specialization :id="$route.query.specialization"/>
+      </div>
 
-        <span class="toolbar-buttons">
+      <div v-if="!$route.query.specialty && !$route.query.specialization" class="specialities">
+        <v-tabs fixed centered>
+          <v-toolbar class="blue-background specialities-toolbar" dark>
+            <v-toolbar-title class="toolbar-title">
+              СПЕЦІАЛЬНОСТІ ТА СПЕЦІАЛІЗАЦІЇ ДЛЯ ВСТУПУ ДО ХНУРЕ
+            </v-toolbar-title>
+
+            <span class="toolbar-buttons">
             <v-btn icon>
               <v-icon>search</v-icon>
             </v-btn>
@@ -17,17 +26,17 @@
           </span>
       </v-toolbar>
 
-      <v-tabs-bar class="cyan specialities-tabs blue-background specialities-tabs" dark>
-        <v-tabs-item
-          v-for="tab in tabs"
-          :key="tab"
-          :href="'#' + tab"
-          ripple
-        >
-          {{ tab }}
-        </v-tabs-item>
-        <v-tabs-slider color="yellow"></v-tabs-slider>
-      </v-tabs-bar>
+          <v-tabs-bar class="cyan specialities-tabs blue-background specialities-tabs" dark>
+            <v-tabs-item
+              v-for="tab in tabs"
+              :key="tab"
+              :href="'#' + tab"
+              ripple
+            >
+              {{ tab }}
+            </v-tabs-item>
+            <v-tabs-slider color="yellow"></v-tabs-slider>
+          </v-tabs-bar>
 
       <v-tabs-items>
         <v-tabs-content
@@ -51,54 +60,64 @@
                     <v-tabs-slider color="yellow"></v-tabs-slider>
                   </v-tabs-bar>
 
-                  <v-tabs-items>
-                    <v-tabs-content
-                      v-for="tab in childTabs"
-                      :key="tab"
-                      :id="tab"
-                    >
-                      <v-card flat>
-                        <v-card-text class="information-tab">
-                          <div v-if="tab==='Денна форма навчання'">
-                            <v-data-table
-                              v-bind:headers="specialities.headers.bachelor.daily"
-                              :items="specialities.items.bachelor.daily"
-                              hide-actions
-                              class="elevation-1"
-                            >
-                              <template slot="items" slot-scope="props">
-                                <td>{{ props.item.cipher }}</td>
-                                <td class="text-xs-right">{{ props.item.specialty }}</td>
-                                <td class="text-xs-right">{{ props.item.specialization }}</td>
-                                <td class="text-xs-right">{{ props.item.faculty }}</td>
-                                <td class="text-xs-right">{{ props.item.marks }}</td>
-                                <td class="text-xs-right">{{ props.item.minMark }}</td>
-                                <td class="text-xs-right">{{ props.item.volume }}</td>
-                                <td class="text-xs-right">{{ props.item.period }}</td>
-                                <td class="text-xs-right">{{ props.item.cost }}</td>
-                              </template>
-                            </v-data-table>
-                          </div>
-                          <div v-if="tab==='Заочна форма навчання'">
-                            <v-data-table
-                              v-bind:headers="specialities.headers.bachelor.extramural"
-                              :items="specialities.items.bachelor.extramural"
-                              hide-actions
-                              class="elevation-1"
-                            >
-                              <template slot="items" slot-scope="props">
-                                <td>{{ props.item.cipher }}</td>
-                                <td class="text-xs-right">{{ props.item.specialty }}</td>
-                                <td class="text-xs-right">{{ props.item.specialization }}</td>
-                                <td class="text-xs-right">{{ props.item.volume }}</td>
-                                <td class="text-xs-right">{{ props.item.cost }}</td>
-                              </template>
-                            </v-data-table>
-                          </div>
-                        </v-card-text>
-                      </v-card>
-                    </v-tabs-content>
-                  </v-tabs-items>
+                      <v-tabs-items>
+                        <v-tabs-content
+                          v-for="tab in childTabs"
+                          :key="tab"
+                          :id="tab"
+                        >
+                          <v-card flat>
+                            <v-card-text class="information-tab">
+                              <div v-if="tab==='Денна форма навчання'">
+                                <v-data-table
+                                  v-bind:headers="specialities.headers.bachelor.daily"
+                                  :items="specialities.items.bachelor.daily"
+                                  hide-actions
+                                  class="elevation-1"
+                                >
+                                  <template slot="items" slot-scope="props">
+                                    <td>{{ props.item.cipher }}</td>
+
+                                    <td class="text-xs-right">
+                                      <!--<router-link :to="{path: 'specialities', query: {specialty: props.item.specialty}}">-->
+                                      {{ props.item.specialty }}
+                                      <!--</router-link>-->
+                                    </td>
+
+
+                                    <td class="text-xs-right">
+                                      <!--<router-link :to="{path: 'specialities', query: {specialization: props.item.specialization}}">-->
+                                      {{ props.item.specialization }}
+                                      <!--</router-link>-->
+                                    </td>
+                                    <td class="text-xs-right">{{ props.item.marks }}</td>
+                                    <td class="text-xs-right">{{ props.item.minMark }}</td>
+                                    <td class="text-xs-right">{{ props.item.volume }}</td>
+                                    <td class="text-xs-right">{{ props.item.period }}</td>
+                                    <td class="text-xs-right">{{ props.item.cost }}</td>
+                                  </template>
+                                </v-data-table>
+                              </div>
+                              <div v-if="tab==='Заочна форма навчання'">
+                                <v-data-table
+                                  v-bind:headers="specialities.headers.bachelor.extramural"
+                                  :items="specialities.items.bachelor.extramural"
+                                  hide-actions
+                                  class="elevation-1"
+                                >
+                                  <template slot="items" slot-scope="props">
+                                    <td>{{ props.item.cipher }}</td>
+                                    <td class="text-xs-right">{{ props.item.specialty }}</td>
+                                    <td class="text-xs-right">{{ props.item.specialization }}</td>
+                                    <td class="text-xs-right">{{ props.item.volume }}</td>
+                                    <td class="text-xs-right">{{ props.item.cost }}</td>
+                                  </template>
+                                </v-data-table>
+                              </div>
+                            </v-card-text>
+                          </v-card>
+                        </v-tabs-content>
+                      </v-tabs-items>
 
                 </v-tabs>
               </div>
@@ -263,16 +282,22 @@
         </ol>
       </div>
 
-
+          <div class="nure-video">
+            <youtube video-id="2KSQnjAq7f4"></youtube>
+          </div>
+        </div>
+      </div>
     </div>
-
-  </div>
+  </transition>
 </template>
 
 <script>
   import {mapGetters} from 'vuex'
+  import Specialty from '../components/Specialty'
+  import Specialization from '../components/Specialization'
+
   export default {
-    components: {},
+    components: {Specialty, Specialization},
     name: 'Specialities',
     data() {
       const tabs = ['Бакалавр', 'Магістр', 'Друга вища освіта'];
@@ -299,7 +324,11 @@
         specialities: 'getSpecialities'
       })
     },
-    methods: {}
+    methods: {
+      onInformationDisplay(data) {
+        console.log(data)
+      }
+    }
   }
 </script>
 
@@ -308,4 +337,3 @@
     padding: 0;
   }
 </style>
-

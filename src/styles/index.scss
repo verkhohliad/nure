@@ -1,4 +1,14 @@
 @import './imports';
+
+//transitions
+.slide-fade-enter-active {
+  transition: all .5s ease;
+}
+.slide-fade-enter, .slide-fade-leave-to {
+  transform: translateX(20px);
+  opacity: 0.5;
+}
+
 html, head, body {
   margin: 0;
   padding: 0;
@@ -15,7 +25,7 @@ html, head, body {
 }
 
 .application--wrap {
-  background: #ededed;
+  background: #05384d;
   width: 100%;
   height: 100%;
   max-height: 100%;

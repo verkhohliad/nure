@@ -1,11 +1,11 @@
 header {
-  background: #05384d;
+  //background: #05384d;
 }
 
 .header-toolbar {
   background: rgba(3, 39, 53, 0.85) !important;
   z-index: 1;
-  position: absolute;
+  margin-bottom: 5px;
   .toolbar__content {
     height: 100% !important;
     width: 95%;
@@ -71,11 +71,15 @@ header {
 .nav-list {
   background: #032735;
   list-style-type: none;
-  margin: 0;
+  margin: 0 auto;
+  width: 90%;
   padding: 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
   .nav-item {
     display: inline-block;
-    margin: 10px;
+    margin: 5px;
     a {
 
       display: inline-block;

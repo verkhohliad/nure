@@ -11,6 +11,7 @@
               <v-flex xs12 sm6 md4>
                 <v-text-field v-model="surname"
                               label="Прізвище"
+                              required
                               hint="example of helper text only on focus"></v-text-field>
               </v-flex>
               <v-flex xs12 sm6 md4>

@@ -1,4 +1,16 @@
 .container {
+  .selection-commiitee-way {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    img {
+      width: 80%;
+      height: 450px;
+    }
+  }
+
+
+
   .contact-content {
     width: 100%;
     padding: 2%;
