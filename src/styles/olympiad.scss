@@ -1,0 +1,25 @@
+.olympiad-content {
+  min-height: 100%;
+  overflow: hidden;
+  margin: 1% 3.5%;
+  background: #fff;
+  padding: 2%;
+  font-size: 16px;
+  text-align: left;
+
+  .steps {
+    margin-top: 10px;
+    margin-left: 2%;
+    li {
+      .step {
+        font-size: 18px;
+        font-weight: 600;
+      }
+      ol {
+        margin-left: 3%;
+        margin-bottom: 1.5%;
+      }
+    }
+  }
+}
+

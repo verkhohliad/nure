@@ -24,7 +24,7 @@
               <v-icon>more_vert</v-icon>
             </v-btn>
           </span>
-          </v-toolbar>
+      </v-toolbar>
 
           <v-tabs-bar class="cyan specialities-tabs blue-background specialities-tabs" dark>
             <v-tabs-item
@@ -38,27 +38,27 @@
             <v-tabs-slider color="yellow"></v-tabs-slider>
           </v-tabs-bar>
 
-          <v-tabs-items>
-            <v-tabs-content
-              v-for="tab in tabs"
-              :key="tab"
-              :id="tab"
-            >
-              <v-card flat>
-                <v-card-text class="information-tab">
-                  <div v-if="tab==='Бакалавр (на 1й курс)'">
-                    <v-tabs fixed centered>
-                      <v-tabs-bar class="cyan specialities-tabs blue-background specialities-tabs" dark>
-                        <v-tabs-item
-                          v-for="tab in childTabs"
-                          :key="tab"
-                          :href="'#' + tab"
-                          ripple
-                        >
-                          {{ tab }}
-                        </v-tabs-item>
-                        <v-tabs-slider color="yellow"></v-tabs-slider>
-                      </v-tabs-bar>
+      <v-tabs-items>
+        <v-tabs-content
+          v-for="tab in tabs"
+          :key="tab"
+          :id="tab"
+        >
+          <v-card flat>
+            <v-card-text class="information-tab">
+              <div v-if="tab==='Бакалавр'">
+                <v-tabs fixed centered>
+                  <v-tabs-bar class="cyan specialities-tabs blue-background specialities-tabs" dark>
+                    <v-tabs-item
+                      v-for="tab in childTabs"
+                      :key="tab"
+                      :href="'#' + tab"
+                      ripple
+                    >
+                      {{ tab }}
+                    </v-tabs-item>
+                    <v-tabs-slider color="yellow"></v-tabs-slider>
+                  </v-tabs-bar>
 
                       <v-tabs-items>
                         <v-tabs-content
@@ -119,146 +119,168 @@
                         </v-tabs-content>
                       </v-tabs-items>
 
-                    </v-tabs>
-                  </div>
-                  <div v-else>
-                    <v-tabs fixed centered>
-                      <v-tabs-bar class="cyan specialities-tabs blue-background specialities-tabs" dark>
-                        <v-tabs-item
-                          v-for="tab in childTabs"
-                          :key="tab"
-                          :href="'#' + tab"
-                          ripple
-                        >
-                          {{ tab }}
-                        </v-tabs-item>
-                        <v-tabs-slider color="yellow"></v-tabs-slider>
-                      </v-tabs-bar>
+                </v-tabs>
+              </div>
+              <div v-if="tab==='Друга вища освіта'">
+                <v-data-table
+                  v-bind:headers="specialities.headers.master.headers"
+                  :items="specialities.items.secondEducation"
+                  hide-actions
+                  class="elevation-1"
+                >
+                  <template slot="items" slot-scope="props">
+                    <td>{{ props.item.cipher }}</td>
+                    <td class="text-xs-right">{{ props.item.field_of_knowledge }}</td>
+                    <td class="text-xs-right">{{ props.item.specialty }}</td>
+                    <td class="text-xs-right">{{ props.item.specialization }}</td>
+                    <td class="text-xs-right">{{ props.item.faculty }}</td>
+                    <td class="text-xs-right">{{ props.item.volume }}</td>
+                    <td class="text-xs-right">{{ props.item.period }}</td>
+                    <td class="text-xs-right">{{ props.item.cost }}</td>
+                  </template>
+                </v-data-table>
+              </div>
 
-                      <v-tabs-items>
-                        <v-tabs-content
-                          v-for="tab in childTabs"
-                          :key="tab"
-                          :id="tab"
-                        >
-                          <v-card flat>
-                            <v-card-text class="information-tab">
-                              <div v-if="tab==='Денна форма навчання'">
-                                <v-data-table
-                                  v-bind:headers="specialities.headers.master.headers"
-                                  :items="specialities.items.master.daily"
-                                  hide-actions
-                                  class="elevation-1"
-                                >
-                                  <template slot="items" slot-scope="props">
-                                    <td>{{ props.item.cipher }}</td>
-                                    <td class="text-xs-right">{{ props.item.specialty }}</td>
-                                    <td class="text-xs-right">{{ props.item.specialization }}</td>
-                                    <td class="text-xs-right">{{ props.item.volume }}</td>
-                                    <td class="text-xs-right">{{ props.item.cost }}</td>
-                                  </template>
-                                </v-data-table>
-                              </div>
-                              <div v-if="tab==='Заочна форма навчання'">
-                                <v-data-table
-                                  v-bind:headers="specialities.headers.master.headers"
-                                  :items="specialities.items.master.extramural"
-                                  hide-actions
-                                  class="elevation-1"
-                                >
-                                  <template slot="items" slot-scope="props">
-                                    <td>{{ props.item.cipher }}</td>
-                                    <td class="text-xs-right">{{ props.item.specialty }}</td>
-                                    <td class="text-xs-right">{{ props.item.specialization }}</td>
-                                    <td class="text-xs-right">{{ props.item.volume }}</td>
-                                    <td class="text-xs-right">{{ props.item.cost }}</td>
-                                  </template>
-                                </v-data-table>
-                              </div>
-                            </v-card-text>
-                          </v-card>
-                        </v-tabs-content>
-                      </v-tabs-items>
-                    </v-tabs>
-                  </div>
-                </v-card-text>
-              </v-card>
-            </v-tabs-content>
-          </v-tabs-items>
+              <div v-if="tab==='Магістр'">
+                <v-tabs fixed centered>
+                  <v-tabs-bar class="cyan specialities-tabs blue-background specialities-tabs" dark>
+                    <v-tabs-item
+                      v-for="tab in childTabs"
+                      :key="tab"
+                      :href="'#' + tab"
+                      ripple
+                    >
+                      {{ tab }}
+                    </v-tabs-item>
+                    <v-tabs-slider color="yellow"></v-tabs-slider>
+                  </v-tabs-bar>
 
-        </v-tabs>
+                  <v-tabs-items>
+                    <v-tabs-content
+                      v-for="tab in childTabs"
+                      :key="tab"
+                      :id="tab"
+                    >
+                      <v-card flat>
+                        <v-card-text class="information-tab">
+                          <div v-if="tab==='Денна форма навчання'">
+                            <v-data-table
+                              v-bind:headers="specialities.headers.master.headers"
+                              :items="specialities.items.master.daily"
+                              hide-actions
+                              class="elevation-1"
+                            >
+                              <template slot="items" slot-scope="props">
+                                <td>{{ props.item.cipher }}</td>
+                                <td class="text-xs-right">{{ props.item.specialty }}</td>
+                                <td class="text-xs-right">{{ props.item.specialization }}</td>
+                                <td class="text-xs-right">{{ props.item.faculty }}</td>
+                                <td class="text-xs-right">{{ props.item.volume }}</td>
+                                <td class="text-xs-right">{{ props.item.period }}</td>
+                                <td class="text-xs-right">{{ props.item.cost }}</td>
+                              </template>
+                            </v-data-table>
+                          </div>
+                          <div v-if="tab==='Заочна форма навчання'">
+                            <v-data-table
+                              v-bind:headers="specialities.headers.master.headers"
+                              :items="specialities.items.master.extramural"
+                              hide-actions
+                              class="elevation-1"
+                            >
+                              <template slot="items" slot-scope="props">
+                                <td>{{ props.item.cipher }}</td>
+                                <td class="text-xs-right">{{ props.item.specialty }}</td>
+                                <td class="text-xs-right">{{ props.item.specialization }}</td>
+                                <td class="text-xs-right">{{ props.item.faculty }}</td>
+                                <td class="text-xs-right">{{ props.item.volume }}</td>
+                                <td class="text-xs-right">{{ props.item.period }}</td>
+                                <td class="text-xs-right">{{ props.item.cost }}</td>
+                              </template>
+                            </v-data-table>
+                          </div>
+                        </v-card-text>
+                      </v-card>
+                    </v-tabs-content>
+                  </v-tabs-items>
+                </v-tabs>
+              </div>
+            </v-card-text>
+          </v-card>
+        </v-tabs-content>
+      </v-tabs-items>
 
-        <div class="specialities-content">
-          <h5>Умовні позначення:</h5>
-          <ul>
-            <li>У - Українська мова та література;</li>
-            <li>М - Математика;</li>
-            <li>Ф - Фізика;</li>
-            <li>А - Астрономія;</li>
-            <li>Х - Хімія;</li>
-            <li>IМ - Іноземна мова;</li>
-            <li>ІУ - Історія України;</li>
-            <li>A - Атестат про середню освіту;</li>
-            <li>П - Пiдкурси ХНУРЕ.</li>
-          </ul>
-          <h1>ФОРМИ І ТЕРМІНИ НАВЧАННЯ:</h1>
-          <div>
-            <h5>Денна</h5>
-            <ul>
-              <li>4 роки - бакалавр;</li>
-              <li>1,5 або 2 роки - магістр.</li>
-            </ul>
-          </div>
-          <div>
-            <h5>Заочна</h5>
-            <ul>
-              <li>5 роки - бакалавр;</li>
-              <li>1,5 або 2 роки - магістр з використанням технологій дистанційного навчання.</li>
-            </ul>
-          </div>
+    </v-tabs>
 
-          <div>
-            <h5>Контрактна форма навчання:</h5>
-            <ul>
-              <li>Можлива для всіх спеціальностей на будь-якої спеціалізації.</li>
-            </ul>
-          </div>
+    <div class="specialities-content">
+      <h5>Умовні позначення:</h5>
+      <ul>
+        <li>У - Українська мова та література;</li>
+        <li>М - Математика;</li>
+        <li>Ф - Фізика;</li>
+        <li>А - Астрономія;</li>
+        <li>Х - Хімія;</li>
+        <li>IМ - Іноземна мова;</li>
+        <li>ІУ - Історія України;</li>
+        <li>A - Атестат про середню освіту;</li>
+        <li>П - Пiдкурси ХНУРЕ.</li>
+      </ul>
+      <h1>ФОРМИ І ТЕРМІНИ НАВЧАННЯ:</h1>
+      <div  class="info_specialities" >
+        <h5>Денна</h5>
+        <ul class="info_text">
+          <li>4 роки - бакалавр;</li>
+          <li>1,5 або 2 роки - магістр.</li>
+        </ul>
+      </div>
+      <div  class="info_specialities">
+        <h5>Заочна</h5>
+        <ul class="info_text">
+          <li>5 роки - бакалавр;</li>
+          <li>1,5 або 2 роки - магістр з використанням технологій дистанційного навчання.</li>
+        </ul>
+      </div>
 
-          <div>
-            <h5>Друга вища освіта:</h5>
-            <ul>
-              <li>В університеті ХНУРЕ можливо отримати другу вищу освіту в Центрі післядипломної освіти (кімната 283,
-                т.
-                702-18-05) на контракті з двох або трирічним терміном навчання.
-              </li>
+      <div  class="info_specialities">
+        <h5>Контрактна форма навчання:</h5>
+        <ul class="info_text">
+          <li>Можлива для всіх спеціальностей на будь-якої спеціалізації.</li>
+        </ul>
+      </div>
 
-            </ul>
-          </div>
+      <div class="info_specialities">
+        <h5>Друга вища освіта:</h5>
+        <ul class="info_text">
+          <li>В університеті ХНУРЕ можливо отримати другу вищу освіту в Центрі післядипломної освіти (кімната 283, т.
+            702-18-05) на контракті з двох або трирічним терміном навчання.
+          </li>
 
-
-          <div>
-            <h5>Для вступу на навчання із скороченим терміном підготовки для отримання ступеня бакалавра приймаються
-              особи,
-              які отримали навчально-кваліфікаційний рівень молодшого спеціаліста:</h5>
-            <ul>
-              <li>1-й (скорочений термін навчання);</li>
-              <li>2-й курс з терміном навчання 3 роки;</li>
-              <li> 3-1 курс з терміном навчання 2 роки.</li>
-            </ul>
-          </div>
+        </ul>
+      </div>
 
 
-          <div>
-            <h5>Студенти ХНУРЕ мають можливість:</h5>
-            <ol>
-              <li> Навчатися на військовій кафедрі;</li>
-              <li> Отримати європейський диплом за програмою подвійного дипломування;</li>
-              <li> Брати участь в міжнародних стажуваннях і обмінах;</li>
-              <li> Проживати в гуртожитку;</li>
-              <li> Брати участь в студентських і спортивних клубах;</li>
-              <li> Отримувати практичні навички в українських і міжнародних компаніях.</li>
-            </ol>
-          </div>
+      <div class="info_specialities">
+        <h5>Для вступу на навчання із скороченим терміном підготовки для отримання ступеня бакалавра приймаються особи,
+          які отримали навчально-кваліфікаційний рівень молодшого спеціаліста:</h5>
+        <ul class="info_text">
+          <li>1-й (скорочений термін навчання);</li>
+          <li>2-й курс з терміном навчання 3 роки;</li>
+          <li> 3-1 курс з терміном навчання 2 роки.</li>
+        </ul>
+      </div>
+
+
+      <div class="info_specialities">
+        <h5>Студенти ХНУРЕ мають можливість:</h5>
+        <ol class="info_text">
+          <li> Навчатися на військовій кафедрі;</li>
+          <li> Отримати європейський диплом за програмою подвійного дипломування;</li>
+          <li> Брати участь в міжнародних стажуваннях і обмінах;</li>
+          <li> Проживати в гуртожитку;</li>
+          <li> Брати участь в студентських і спортивних клубах;</li>
+          <li> Отримувати практичні навички в українських і міжнародних компаніях.</li>
+        </ol>
+      </div>
 
           <div class="nure-video">
             <youtube video-id="2KSQnjAq7f4"></youtube>
@@ -278,14 +300,12 @@
     components: {Specialty, Specialization},
     name: 'Specialities',
     data() {
-      const tabs = ['Бакалавр (на 1й курс)', 'Магістр'];
+      const tabs = ['Бакалавр', 'Магістр', 'Друга вища освіта'];
       const childTabs = ['Денна форма навчання', 'Заочна форма навчання'];
       return {
         tabs,
         childTabs,
         active: null,
-        activeSpecialty: null,
-        activeSpecialization: null,
         pagination: {
           descending: true,
           rowsPerPage: 10

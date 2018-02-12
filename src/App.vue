@@ -1,5 +1,6 @@
 <template>
   <v-app id="app">
+    <!--<h1>Сервер на даний час оновлюється. Просимо вибачення за незручності.</h1>-->
     <div v-if="loading">
       <MainLoadingComponent />
     </div>

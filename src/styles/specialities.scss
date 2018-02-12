@@ -7,13 +7,6 @@
       justify-content: center;
     }
 
-    .toolbar-title {
-
-    }
-
-    .toolbar-buttons {
-
-    }
   }
 
   .information-tab {
@@ -49,14 +42,24 @@
       }
     }
   }
+  .specialities-content {
+    background: #fff;
+    padding: 2% 5%;
+
+    .info_specialities {
+
+    }
+  }
+
+}
 
 .blue-background {
   background: #05384d !important;
 }
 
 .specialities-content {
-  background: #fff;
-  padding: 2% 5%;
+
+  padding: 10px;
   text-align: left;
 
   .nure-video {
@@ -73,8 +76,31 @@
   }
 }
 
-  h5 {
-    font-weight: bold;
-  }
-
+h5 {
+  font-weight: bold;
 }
+
+@media screen and (max-width: 900px) {
+
+  .specialities {
+    .specialities-content {
+
+      h1 {
+        margin-bottom: 25px;
+        font-size: 25px;
+      }
+      .info_specialities {
+        width: 100%;
+
+        h5 {
+          font-size: 15px;
+        }
+        .info_text {
+          font-size: 13px;
+
+        }
+      }
+    }
+  }
+}
+
