@@ -1,44 +1,46 @@
 <template>
   <transition name="slide-fade">
-  <div class="container">
-    <div class="admission">
-      <v-navigation-drawer permanent light class="sidebar" v-bind:class="{sidebarHide: !showSideBar}">
-        <v-toolbar flat>
-          <v-list>
-            <v-list-tile class="sidebar-heading">
-              <v-list-tile-title class="title">
-                Вступ
-              </v-list-tile-title>
+    <div class="container">
+      <div class="admission">
+        <v-navigation-drawer permanent light class="sidebar" v-bind:class="{sidebarHide: !showSideBar}">
+          <v-toolbar flat>
+            <v-list>
+              <v-list-tile class="sidebar-heading">
+                <v-list-tile-title class="title">
+                  Вступ
+                </v-list-tile-title>
+              </v-list-tile>
+            </v-list>
+            <v-toolbar-side-icon @click="showSideBar=!showSideBar"></v-toolbar-side-icon>
+          </v-toolbar>
+          <v-divider></v-divider>
+          <v-list dense class="pt-0">
+            <v-list-tile v-for="item in items"
+                         :key="item.title"
+                         @click="displayComponent(item)"
+                         v-bind:class="{active: item.value === componentToDisplay}">
+              <v-list-tile-action>
+                <v-icon>fa-graduation-cap</v-icon>
+              </v-list-tile-action>
+              <v-list-tile-content>
+                <v-list-tile-title>{{ item.name }}</v-list-tile-title>
+              </v-list-tile-content>
             </v-list-tile>
           </v-list>
+        </v-navigation-drawer>
+        <div class="show-button" v-if="!showSideBar">
           <v-toolbar-side-icon @click="showSideBar=!showSideBar"></v-toolbar-side-icon>
-        </v-toolbar>
-        <v-divider></v-divider>
-        <v-list dense class="pt-0">
-          <v-list-tile v-for="item in items"
-                       :key="item.title"
-                       @click="displayComponent(item)"
-                       v-bind:class="{active: item.value === componentToDisplay}">
-            <v-list-tile-action>
-              <v-icon>fa-graduation-cap</v-icon>
-            </v-list-tile-action>
-            <v-list-tile-content>
-              <v-list-tile-title>{{ item.name }}</v-list-tile-title>
-            </v-list-tile-content>
-          </v-list-tile>
-        </v-list>
-      </v-navigation-drawer>
-      <div class="show-button" v-if="!showSideBar">
-        <v-toolbar-side-icon @click="showSideBar=!showSideBar"></v-toolbar-side-icon>
-      </div>
-      <div class="content">
-        <div v-if="!componentToDisplay">
-          <h1>Вступ до університету радіоелектроніки</h1>
         </div>
-        <component :is="componentToDisplay"/>
+        <div class="content">
+          <div v-if="!componentToDisplay">
+            <h1>Вступ до університету радіоелектроніки</h1>
+          </div>
+          <transition name="slide-fade">
+            <component :is="componentToDisplay"/>
+          </transition>
+        </div>
       </div>
     </div>
-  </div>
   </transition>
 </template>
 

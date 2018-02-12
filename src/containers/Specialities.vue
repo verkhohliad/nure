@@ -90,6 +90,7 @@
                                       {{ props.item.specialization }}
                                       <!--</router-link>-->
                                     </td>
+                                    <td class="text-xs-right">{{ props.item.faculty }}</td>
                                     <td class="text-xs-right">{{ props.item.marks }}</td>
                                     <td class="text-xs-right">{{ props.item.minMark }}</td>
                                     <td class="text-xs-right">{{ props.item.volume }}</td>
