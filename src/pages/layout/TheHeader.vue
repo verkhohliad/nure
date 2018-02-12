@@ -14,48 +14,7 @@
           logo: nureLogo,
           parallaxImg,
           items: [
-            {
-              id: 1,
-              label: 'Головна',
-              value: 'MainPage',
-              url: '/'
-            },
-            {
-              id: 2,
-              label: 'Спеціальності',
-              value: 'SpecialitiesPage',
-              url: '/specialities'
-            },
-            {
-              id: 3,
-              label: 'Вступ',
-              value: 'AdmissionPage',
-              url: '/admission'
-            },
-            {
-              id: 4,
-              label: 'Олімпіада',
-              value: 'OlympiadPage',
-              url: '/olympiad'
-            },
-            // {
-            //   id: 5,
-            //   label: 'Результати іспитів',
-            //   value: 'ExamsPage',
-            //   url: '/exams'
-            // },
-            {
-              id: 6,
-              label: 'Новини',
-              value: 'BlogPage',
-              url: '/news'
-            },
-            {
-              id: 7,
-              label: 'Контакти',
-              value: 'ContactPage',
-              url: '/contact'
-            },
+            ,
           ]
         },
       }

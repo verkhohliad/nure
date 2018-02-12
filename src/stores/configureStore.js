@@ -1,23 +1,19 @@
+import Vue from 'vue'
 import Vuex from 'vuex'
 import createLogger from 'vuex/dist/logger'
-import Vue from 'vue'
 
-import mainModule from './main/index'
-import specialitiesModule from './specialities/index'
+import user from './user'
+import specialities from './specialities'
 
 Vue.use(Vuex);
 
 const store = new Vuex.Store({
   plugins: [createLogger()],
   modules: {
-    main: mainModule,
-    specialities: specialitiesModule
+    user,
+    specialities
   },
-  getters: {
-    getSpecialities: (state, getters) => {
-      return state.specialities;
-    }
-  }
+  strict: true
 })
 
 window.store = store;

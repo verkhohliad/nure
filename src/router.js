@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
 import MainPage from './containers/MainPage'
 import Specialities from './containers/Specialities'
 import Admission from './containers/Admission'
@@ -18,7 +19,8 @@ export default new Router({
     { path: '/olympiad', component: Olympiad },
     { path: '/news', component: News },
     // { path: '/exams', component: Exams },
-    { path: '/contact', component: Contact }
+    { path: '/contact', component: Contact },
+    { path: '*', redirect: '/' },
   ],
   // scrollBehavior: function (to, from, savedPosition) {
   //   if (savedPosition) {
