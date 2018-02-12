@@ -22,57 +22,6 @@
         text-align: left !important;
       }
     }
-
-    .item-container {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      flex-direction: row;
-      /*margin: 0 auto;*/
-      padding: 2%;
-
-      .item {
-        overflow: hidden;
-        margin: 10px 4%;
-        width: 25%;
-        padding-bottom: 1%;
-
-        p {
-          font-size: 13px;
-          height: 55px;
-          margin: 0;
-          overflow: hidden;
-          max-height: 60px;
-        }
-        img {
-          width: 100%;
-          margin-bottom: 10px;
-        }
-
-        .item-content {
-          padding: 2%;
-
-          h4 {
-            font-weight: bold;
-            font-size: 15px;
-            margin-top: 15px;
-            height: 50px;
-          }
-
-          .continued {
-            height: 20px;
-            font-size: 13px;
-            padding-bottom: 10%;
-            border-bottom: 2px solid #ededed;
-          }
-
-          .read-more-button {
-            margin-top: 5%;
-            background-color: #032735 !important;
-          }
-        }
-      }
-    }
   }
 
   .right-wrap {
@@ -103,12 +52,23 @@
         .post {
           display: flex;
           flex-direction: column;
+          cursor: pointer;
+          -webkit-transition:  border 0.3s ease;
+          -moz-transition:  border 0.3s ease;
+          -o-transition:  border 0.3s ease;
+          -ms-transition: border 0.3s ease;
+          transition: border 0.3s ease;
+          &:hover {
+            border-top: 2px solid #e7e7e7;
+            border-bottom: 2px solid #e7e7e7;
+          }
 
           h4 {
             width: 80%;
             font-size: 16px;
             padding-top: 11px;
             font-weight: bold;
+            text-align: left;
             a {
               color: #05384d;
               text-decoration: none;
@@ -134,7 +94,7 @@
               -webkit-border-radius: 10px;
               -moz-border-radius: 10px;
               border-radius: 10px;
-              padding: 7px;
+              padding: 5px 1%;
               margin: 0px 16px 0px 0px;
               width: 30%;
             }
@@ -190,8 +150,6 @@
           .post {
             .date {
               time {
-                margin: 0px;
-                width: 100%;
                 font-size: 13px;
               }
             }

@@ -1,4 +1,14 @@
 @import './imports';
+
+//transitions
+.slide-fade-enter-active {
+  transition: all .5s ease;
+}
+.slide-fade-enter, .slide-fade-leave-to {
+  transform: translateX(20px);
+  opacity: 0.5;
+}
+
 html, head, body {
   margin: 0;
   padding: 0;

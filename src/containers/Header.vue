@@ -83,17 +83,17 @@
               value: 'OlympiadPage',
               url: '/olympiad'
             },
-            {
-              id: 5,
-              label: 'Результати іспитів',
-              value: 'ExamsPage',
-              url: '/exams'
-            },
+            // {
+            //   id: 5,
+            //   label: 'Результати іспитів',
+            //   value: 'ExamsPage',
+            //   url: '/exams'
+            // },
             {
               id: 6,
               label: 'Новини',
               value: 'BlogPage',
-              url: '/blog'
+              url: '/news'
             },
             {
               id: 7,

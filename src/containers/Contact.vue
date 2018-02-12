@@ -1,4 +1,5 @@
 <template>
+  <transition name="slide-fade">
   <div class="container">
     <v-flex d-flex xs6 sm6 md6 child-flex>
       <div class="contact-content">
@@ -106,6 +107,7 @@
       </v-card>
     </v-dialog>
   </div>
+  </transition>
 </template>
 
 <script>

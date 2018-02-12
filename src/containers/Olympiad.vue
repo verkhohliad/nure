@@ -1,7 +1,9 @@
 <template>
-  <div class="container">
-    <h1>Сторінка буде активна з 1 березня.</h1>
-  </div>
+  <transition name="slide-fade">
+    <div class="container">
+      <h1>Сторінка буде активна з 1 березня.</h1>
+    </div>
+  </transition>
 </template>
 
 <script>
@@ -13,8 +15,7 @@
     created() {
 
     },
-    methods: {
-    }
+    methods: {}
   }
 </script>
 

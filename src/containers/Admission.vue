@@ -1,4 +1,5 @@
 <template>
+  <transition name="slide-fade">
   <div class="container">
     <div class="admission">
       <v-navigation-drawer permanent light class="sidebar" v-bind:class="{sidebarHide: !showSideBar}">
@@ -38,6 +39,7 @@
       </div>
     </div>
   </div>
+  </transition>
 </template>
 
 <script>
