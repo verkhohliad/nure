@@ -7,9 +7,9 @@
 </template>
 
 <script>
-  import InformationWidget from '../components/InformationWidget'
-  import olympiadImg from '../../img/news/Variant3_olymp.jpg'
-  import opendoorsDayImg from '../../img/news/opendoors-day.jpg'
+  import InformationWidget from '../componentsOLD/InformationWidget'
+  import olympiadImg from '../../../static/img/news/Variant3_olymp.jpg'
+  import opendoorsDayImg from '../../../static/img/news/opendoors-day.jpg'
 
   export default {
     components: { InformationWidget },

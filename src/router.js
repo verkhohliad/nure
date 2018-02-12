@@ -1,12 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import MainPage from '../containers/MainPage'
-import Specialities from '../containers/Specialities'
-import Admission from '../containers/Admission'
-import Olympiad from '../containers/Olympiad'
-import News from '../containers/News'
-import Exams from '../containers/Exams'
-import Contact from '../containers/Contact'
+import MainPage from './containers/MainPage'
+import Specialities from './containers/Specialities'
+import Admission from './containers/Admission'
+import Olympiad from './containers/Olympiad'
+import News from './containers/News'
+import Exams from './containers/Exams'
+import Contact from './containers/Contact'
 
 Vue.use(Router);
 

@@ -11,9 +11,9 @@
 </template>
 
 <script>
-  import masterImg from '../../img/slider-images/first.jpg';
-  import schoolImg from '../../img/slider-images/second.jpg';
-  import sliderThree from '../../img/third.jpg';
+  import masterImg from '../assets/img/slider-images/first.jpg';
+  import schoolImg from '../assets/img/slider-images/second.jpg';
+  import sliderThree from '../assets/img/third.jpg';
 
   export default {
     name: 'MainSlider',

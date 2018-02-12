@@ -1,25 +1,26 @@
 <template>
-  <v-app id="app">
+  <v-app>
     <!--<h1>Сервер на даний час оновлюється. Просимо вибачення за незручності.</h1>-->
     <div v-if="loading">
-      <MainLoadingComponent />
+      <MainLoadingComponent/>
     </div>
-    <Header />
-    <router-view />
-    <Footer />
+
+    <Header/>
+    <router-view/>
+    <Footer/>
   </v-app>
 </template>
 
 <script>
-  import Header from './containers/Header'
-  import Footer from './containers/Footer'
-  import MainLoadingComponent from './components/MainLoadingComponent'
+  import Header from './pages/layout/TheHeader'
+  import Footer from './pages/layout/Footer'
+  import MainLoadingComponent from './componentsOLD/MainLoadingComponent'
 
   import './styles/index.scss'
 
   export default {
     components: { Header, Footer, MainLoadingComponent },
-    name: 'app',
+    name: 'App',
     data() {
       return {
         loading: true

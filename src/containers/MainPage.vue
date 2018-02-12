@@ -64,15 +64,15 @@
 </template>
 
 <script>
-  import BlogWidget from '../components/BlogWidget';
-  import InformationWidget from '../components/InformationWidget';
+  import BlogWidget from '../componentsOLD/BlogWidget';
+  import InformationWidget from '../componentsOLD/InformationWidget';
 
-  import firstImg from '../../img/first.jpg';
-  import secondImg from '../../img/second.jpg';
-  import thirdImg from '../../img/third.jpg';
-  import fourthImg from '../../img/fourth.jpg';
-  import fifthImg from '../../img/fifth.jpg';
-  import sixthImg from '../../img/6th.jpg';
+  import firstImg from '../assets/img/first.jpg';
+  import secondImg from '../assets/img/second.jpg';
+  import thirdImg from '../assets/img/third.jpg';
+  import fourthImg from '../assets/img/fourth.jpg';
+  import fifthImg from '../assets/img/fifth.jpg';
+  import sixthImg from '../assets/img/6th.jpg';
 
   export default {
     components: { BlogWidget, InformationWidget },

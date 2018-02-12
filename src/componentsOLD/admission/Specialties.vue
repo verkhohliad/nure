@@ -9,7 +9,7 @@
 </template>
 
 <script>
-  import nureSpecialities from '../../../img/nure2018spec.jpg';
+  import nureSpecialities from '../../assets/img/nure2018spec.jpg';
 
   export default {
     components: {},

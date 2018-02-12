@@ -294,8 +294,8 @@
 
 <script>
   import {mapGetters} from 'vuex'
-  import Specialty from '../components/Specialty'
-  import Specialization from '../components/Specialization'
+  import Specialty from '../componentsOLD/Specialty'
+  import Specialization from '../componentsOLD/Specialization'
 
   export default {
     components: {Specialty, Specialization},

@@ -46,14 +46,14 @@
 
 <script>
   import {mapGetters} from 'vuex';
-  import components from '../components/admission/index';
+  import components from '../componentsOLD/admission/index';
   import Vue from 'vue';
-  import AdmissionRules from '../components/admission/AdmissionRules';
-  import SelectionCommittee from '../components/admission/SelectionCommittee';
-  import Specialities from '../components/admission/Specialties';
-  import DocumentsSubmission from '../components/admission/DocumentsSubmission';
-  import SchoolWork from '../components/admission/SchoolWork';
-  import ColledgeWork from '../components/admission/ColledgeWork';
+  import AdmissionRules from '../componentsOLD/admission/AdmissionRules';
+  import SelectionCommittee from '../componentsOLD/admission/SelectionCommittee';
+  import Specialities from '../componentsOLD/admission/Specialties';
+  import DocumentsSubmission from '../componentsOLD/admission/DocumentsSubmission';
+  import SchoolWork from '../componentsOLD/admission/SchoolWork';
+  import ColledgeWork from '../componentsOLD/admission/ColledgeWork';
 
   export default {
     components: {AdmissionRules, SelectionCommittee, Specialities, DocumentsSubmission, SchoolWork, ColledgeWork},

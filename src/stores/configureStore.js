@@ -2,8 +2,8 @@ import Vuex from 'vuex'
 import createLogger from 'vuex/dist/logger'
 import Vue from 'vue'
 
-import mainModule from './main'
-import specialitiesModule from './specialities'
+import mainModule from './main/index'
+import specialitiesModule from './specialities/index'
 
 Vue.use(Vuex);
 

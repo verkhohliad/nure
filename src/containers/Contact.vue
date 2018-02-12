@@ -112,7 +112,7 @@
 
 <script>
   import google from '../api/google';
-  import selectionCommiiteeWay from '../../img/selectionCommiiteeWay.jpg';
+  import selectionCommiiteeWay from '../assets/img/selectionCommiiteeWay.jpg';
 
   export default {
     name: 'Contact',
