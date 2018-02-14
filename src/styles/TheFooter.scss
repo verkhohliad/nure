@@ -6,11 +6,11 @@
   color: #fff;
   display: flex;
 
-  .TheFooter__layout {
+  .TheFooter-layout {
     padding: 0 5%;
     margin: 0 auto;
 
-    .layout__menu {
+    .layout-menu {
       font-size: 15px;
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
@@ -23,10 +23,10 @@
       display: -ms-flexbox;
       display: flex;
 
-      .menu_contacts {
+      .menu-contacts {
         border-bottom: 1px solid #fff;
 
-        .contacts__header {
+        .contacts-header {
           padding: 1%;
           border-bottom: 1px solid white;
           margin-top: 10px;
@@ -39,7 +39,7 @@
           display: flex;
           padding: 6px;
 
-          .footer__link {
+          .footer-link {
             color: #fff;
             font-size: 12px;
 
@@ -48,7 +48,7 @@
               text-decoration: none;
             }
 
-            .contacts__text {
+            .contacts-text {
               width: 70%;
               max-width: 70%;
             }
@@ -57,7 +57,7 @@
       }
     }
 
-    .layout__copyright {
+    .layout-copyright {
       height: 100%;
       display: flex;
       flex-direction: column;
@@ -84,21 +84,21 @@
 @media screen and (max-width: 700px) {
   .TheFooter {
 
-    .TheFooter__layout {
+    .TheFooter-layout {
 
-      .layout__menu {
+      .layout-menu {
 
-        .menu_contacts {
+        .menu-contacts {
 
-          .contacts__header {
+          .contacts-header {
             font-size: 13px;
           }
 
           li {
             font-size: 13px;
 
-            .footer__link {
-              .contacts__text {
+            .footer-link {
+              .contacts-text {
                 font-size: 12px;
               }
             }
@@ -106,7 +106,7 @@
         }
       }
 
-      .layout__copyright {
+      .layout-copyright {
 
         .row {
           font-size: 10px;
@@ -127,21 +127,21 @@
 @media screen and (max-width: 400px) {
   .TheFooter {
 
-    .TheFooter__layout {
+    .TheFooter-layout {
 
-      .layout__menu {
+      .layout-menu {
 
-        .menu_contacts {
+        .menu-contacts {
 
-          .contacts__header {
+          .contacts-header {
             font-size: 13px;
           }
 
           li {
             font-size: 13px;
 
-            .footer__link {
-              .contacts__text {
+            .footer-link {
+              .contacts-text {
                 font-size: 8px;
               }
             }

@@ -15,8 +15,8 @@ Vue.use(VueYouTubeEmbed);
 Vue.use(VueGoogleMaps, {
   load: {
     key: GOOGLE.KEY,
-    libraries: 'places'
-  }
+    libraries: 'places',
+  },
 });
 Vue.config.productionTip = false;
 
@@ -25,5 +25,5 @@ new Vue({
   router,
   store,
   template: '<App/>',
-  components: { App }
+  components: { App },
 });

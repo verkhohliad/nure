@@ -7,12 +7,13 @@ export const ROUTES = {
   NEWS: '/news',
   EXAM_RESULTS: '/exam_results',
   CONTACTS: '/contacts',
-  ADMIN: '/admin'
+  ADMIN: '/admin',
+  LOADING: '/loading',
 };
 
 export const SCROLL_BAR_SETTINGS = {
   maxScrollbarLength: 60,
-  wheelPropagation: true
+  wheelPropagation: true,
 };
 
 export const GOOGLE = {
@@ -23,6 +24,6 @@ export const GOOGLE = {
   '%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82+%D1%80%' +
   'D0%B0%D0%B4%D0%B8%D0%BE%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BD%D0' +
   '%B8%D0%BA%D0%B8/@50.0156365,36.2259817,16.75z/data=!4m5!3m4!1s0x0:0x6daed05394f03251' +
-  '!8m2!3d50.0152877!4d36.2278514'
+  '!8m2!3d50.0152877!4d36.2278514',
 };
 

@@ -7,5 +7,5 @@ export const PAGES_NAMES = {
   NEWS: 'Новини',
   EXAM_RESULTS: 'Результати іспитів',
   CONTACTS: 'Контакти',
-  ADMIN: 'Адмін панель'
+  ADMIN: 'Адмін панель',
 };

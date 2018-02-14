@@ -11,10 +11,10 @@ const store = new Vuex.Store({
   plugins: [createLogger()],
   modules: {
     user,
-    specialities
+    specialities,
   },
-  strict: true
-})
+  strict: true,
+});
 
 window.store = store;
 

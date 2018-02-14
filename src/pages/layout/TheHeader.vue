@@ -1,66 +1,68 @@
 <script>
-  import MainSlider from '../../componentsOLD/MainSlider';
-  import nureLogo from '../../assets/img/nure-logo.png';
-  import parallaxImg from '../../assets/img/test1.jpg';
-  import SignIn from '../../componentsOLD/signing/SignIn';
-  import SignUp from '../../componentsOLD/signing/SignUp';
+  import MainSlider from '../../componentsOLD/MainSlider'
+  import logo from '../../assets/img/nure-logo.png'
+  import parallaxImg from '../../assets/img/test1.jpg'
+  import { USER_GETTERS } from '../../common'
 
   export default {
-    components: {MainSlider, SignIn, SignUp},
-    name: 'Header',
+    components: { MainSlider },
+    name: 'TheHeader',
     data() {
       return {
-        navBar: {
-          logo: nureLogo,
-          parallaxImg,
-          items: [
-            ,
-          ]
-        },
+        logo,
+        parallaxImg,
       }
     },
-    created() {
-
+    computed: {
+      items() {
+        return this.$store.getters[USER_GETTERS.GET_USER_SCOPE]
+      },
     },
-    methods: {}
+    created() {
+    },
+    methods: {
+    },
   }
 </script>
 
 <template>
-  <header>
-    <v-toolbar class="header-toolbar">
+  <header class="TheHeader">
+    <v-toolbar class="TheHeader-toolbar">
       <v-layout>
-        <div class="white--text mb-2 display-1 text-xs-center header-bar">
-          <div class="logo">
-            <img :src="navBar.logo" alt="">
-            <h4 class="name">Cторінка приймальної комісії
+        <div class="toolbar-bar white--text mb-2 display-1 text-xs-center">
+          <div class="bar-logo">
+            <img :src="logo" alt="">
+            <h4 class="bar-name">Cторінка приймальної комісії
               Харківського національного університету радіоелектроніки</h4>
           </div>
         </div>
       </v-layout>
-      <div class="signing">
+
+      <div class="toolbar-auth">
         <div>
-          <v-btn flat dark @click="signInActive=true">Вхід</v-btn>
+          <v-btn flat dark @click="">Вхід</v-btn>
         </div>
         <div>
-          <v-btn flat dark @click="signUpActive=true">Реєстрація</v-btn>
+          <v-btn flat dark @click="">Реєстрація</v-btn>
         </div>
       </div>
     </v-toolbar>
-    <v-content>
-      <MainSlider />
+
+    <v-content class="TheHeader-content">
+      <section>
+        <v-parallax class="content-parallaxImg" :src="parallaxImg"></v-parallax>
+      </section>
     </v-content>
 
-
-      <nav>
-        <ul class="nav-list">
-          <li class="nav-item" v-for="item in navBar.items" :key="item.id">
-            <router-link :to="item.url">
-              <v-btn flat dark>{{ item.label }}</v-btn>
-            </router-link>
-          </li>
-        </ul>
-      </nav>
+    <nav class="TheHeader-nav">
+      <ul class="nav-list">
+        <li class="nav-item" v-for="item in items" :key="item.path">
+          <router-link :to="item.path">
+            <v-btn flat dark>{{ item.label }}</v-btn>
+          </router-link>
+        </li>
+      </ul>
+    </nav>
   </header>
 </template>
 

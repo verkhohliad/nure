@@ -1,0 +1,153 @@
+.TheHeader {
+  .TheHeader-toolbar {
+    background: rgba(3, 39, 53, 0.85) !important;
+    z-index: 1;
+    margin-bottom: 5px;
+
+    .toolbar-bar {
+      .bar-logo {
+        display: flex;
+        justify-content: center;
+
+        .bar-name {
+          margin: 23px 0px 0px 5px;
+          display: -webkit-inline-box;
+          display: -ms-inline-flexbox;
+          display: inline-flex;
+          color: #fff;
+
+          font-size: 18px;
+        }
+
+        img {
+          height: 50px;
+          display: inline-flex;
+          margin-top: 12px;
+        }
+      }
+    }
+
+    .toolbar-auth {
+      display: flex;
+      width: 20%;
+      justify-content: flex-end;
+
+      a {
+        display: inline-block;
+        margin: 15px;
+      }
+    }
+  }
+
+  .TheHeader-content {
+    .content-parallaxImg {
+      height: 70vh !important;
+    }
+  }
+
+  .TheHeader-nav {
+    .nav-list {
+      background: #032735;
+      list-style-type: none;
+      margin: 0 auto;
+      width: 90%;
+      padding: 0;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+
+      .nav-item {
+        display: inline-block;
+        margin: 5px;
+
+        a {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+
+
+@media (max-width: 1030px) {
+  .toolbar-bar {
+    .bar-logo {
+      .bar-name {
+        display: none;
+      }
+    }
+  }
+
+  .nav-list {
+    .nav-item {
+      display: list-item;
+      margin: 0;
+      a {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-list {
+    .nav-item {
+      .btn {
+        font-size: 17px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .header-bar {
+    .bar-logo {
+      display: inline-block;
+      .bar-name {
+        font-size: 15px;
+      }
+    }
+  }
+
+  .nav-list {
+    .nav-item {
+      .btn {
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .header-toolbar {
+    .header-bar {
+      .bar-logo {
+        img {
+          height: 35px;
+        }
+      }
+    }
+    .signing {
+      display: -webkit-inline-box;
+      width: 70%;
+      justify-content: flex-end;
+      .btn {
+        padding: 0px;
+        font-size: 12px;
+        margin: 0px;
+      }
+    }
+  }
+
+  .nav-list {
+    .nav-item {
+      display: inline-flex;
+      .btn {
+        font-size: 12px;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+}

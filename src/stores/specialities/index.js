@@ -1,5 +1,7 @@
 import { getSpecialities } from '../../api/specialities';
 
+// todo: while it is peace of shit, but need because of data
+// todo: refactor the whole module after getting data from server
 const specialitiesModule = {
   state: {
     headers: {},

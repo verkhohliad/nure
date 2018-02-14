@@ -3,23 +3,23 @@ import actions from './actions'
 import getters from './getters'
 
 /**
- * information of current user
- * @type {{state: {scope: Array}, mutations: {}, actions: {}, getters: {}}}
+ * information of current user (temporary version)
+ * @type {{state: {scope: Array, isAdmin: boolean}, mutations: {}, actions: {}, getters: {}}}
  */
 const user = {
   state: {
     scope: [],
-    isAdmin: false
+    isAdmin: false,
   },
   mutations: {
-    ...mutations
+    ...mutations,
   },
   actions: {
-    ...actions
+    ...actions,
   },
   getters: {
-    ...getters
-  }
-}
+    ...getters,
+  },
+};
 
 export default user
