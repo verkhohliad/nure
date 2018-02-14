@@ -67,62 +67,16 @@
   import BlogWidget from '../componentsOLD/BlogWidget';
   import InformationWidget from '../componentsOLD/InformationWidget';
 
-  import firstImg from '../assets/img/first.jpg';
-  import secondImg from '../assets/img/second.jpg';
-  import thirdImg from '../assets/img/third.jpg';
-  import fourthImg from '../assets/img/fourth.jpg';
-  import fifthImg from '../assets/img/fifth.jpg';
-  import sixthImg from '../assets/img/6th.jpg';
-
   export default {
     components: { BlogWidget, InformationWidget },
     name: 'MainPage',
     data() {
       return {
-        information: [
-          {
-            id: 1,
-            img: firstImg,
-            title: 'Питання і відповіді про контрактну форму навчання в ХНУРЕ',
-            description: 'Зарахування до лав студентів вищого навчального закладу - завжди хвилюючий процес, під час якого навіть самі впевнені.',
-            value: 'questions'
-          },
-          {
-            id: 2,
-            img: secondImg,
-            title: 'Розклад вступних іспитів в ХНУРЕ 2017',
-            description: 'Розклад вступних іспитів ХНУРЕ і додаткових вступних випробувань для вступу',
-            value: 'exams'
-          },
-          {
-            id: 3,
-            img: thirdImg,
-            title: 'Правила i порядок подачі документів в ХНУРЕ',
-            description: 'Реєстрація електронних кабінетів вступників та завантаження додатків до документів.',
-            value: 'documents'
-          },
-          {
-            id: 4,
-            img: fourthImg,
-            title: 'Правила прийому до ХНУРЕ у 2017 році',
-            description: 'А ти знаєш, що: 1. Якщо ти іногородній, то маєш право на отримання місця в гуртожитку на період вступної кампанії. 2. Якщо у тебе повну середню загальну освіту, ти можеш: подати до 9 заяв на 4 спеціальності в своєму електронному кабінеті або особисто в Консультаційному центрі Приймальної комісії ХНУРЕ з 12 до 26 липня 2017 р вказавши пріоритети свого вибору',
-            value: 'admissionRules'
-          },
-          {
-            id: 5,
-            img: fifthImg,
-            title: 'Спеціальності і спеціалізації для надходження на 1 курс в ХНУРЕ',
-            description: '',
-            value: 'specialities'
-          },
-          {
-            id: 6,
-            img: sixthImg,
-            title: 'Перелік пільг при вступі до ВНЗ, пільги ХНУРЕ і бланки для пільг',
-            description: '',
-            value: 'privileges'
-          }
-        ],
+        information: ,
+
+
+
+
         news: [
           {
             id: 9,

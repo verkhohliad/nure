@@ -51,5 +51,7 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'arrow-body-style': 'off',
     'arrow-parens': 'off',
+    'no-console': 'off',
+    'no-return-await': 'off'
   }
 }
