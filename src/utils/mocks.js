@@ -53,6 +53,18 @@ export const announcementsMock = () => {
   ]
 };
 
+export const newsMock = () => {
+  return []
+};
+
+export const facultiesMock = () => {
+  return []
+};
+
+export const specializationsMock = () => {
+  return []
+};
+
 export const specialitiesMock = () => {
   return {
     headers: {
@@ -103,6 +115,8 @@ export const specialitiesMock = () => {
         ],
       }
     },
+
+
     items: {
       secondEducation:
         [

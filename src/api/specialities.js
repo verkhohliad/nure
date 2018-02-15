@@ -7,15 +7,18 @@ export const getSpecialities = async () => {
   });
 };
 
-export const getSpeciality = async (id) => {
+export const getSpeciality = async id => {
+  if (!id) {
+    console.warn('id not found for get speciality');
+  }
   // axiox.get()
 };
 
-export const createSpeciality = async (speciality) => {
+export const createSpeciality = async speciality => {
   // axios.post()
 };
 
-export const updateSpeciality = async (speciality) => {
+export const updateSpeciality = async speciality => {
   if (!speciality.id) {
     console.warn('id of updated speciality not found');
   }
