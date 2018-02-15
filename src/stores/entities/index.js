@@ -1,14 +1,27 @@
+import { ACTIONS } from '../../common'
+
 import announcements from './announcements'
-import { ENTITIES_ACTIONS, ANNOUNCEMENTS_ACTIONS } from '../../common'
+import faculties from './faculties'
+import news from './news'
+import specialities from './specialities'
+import specializations from './specializations'
 
 const entities = {
   modules: {
     announcements,
+    faculties,
+    news,
+    specialities,
+    specializations,
   },
   actions: {
-    [ENTITIES_ACTIONS.UPLOAD_ALL_ENTITIES]: async state => {
+    [ACTIONS.UPLOAD_ALL_ENTITIES]: async state => {
       // todo: api gets of all entities and commit them to different modules
-      return await state.dispatch(ANNOUNCEMENTS_ACTIONS.UPLOAD_ANNOUNCEMENTS)
+      await state.dispatch(ACTIONS.UPLOAD_ANNOUNCEMENTS);
+      await state.dispatch(ACTIONS.UPLOAD_FACULTIES);
+      await state.dispatch(ACTIONS.UPLOAD_NEWS);
+      await state.dispatch(ACTIONS.UPLOAD_SPECIALITIES);
+      await state.dispatch(ACTIONS.UPLOAD_SPECIALIZATIONS);
     },
   },
 };

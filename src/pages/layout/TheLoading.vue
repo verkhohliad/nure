@@ -1,6 +1,6 @@
 <script>
   import { getUserPages } from '../../utils'
-  import { USER_MUTATIONS, ROUTES } from '../../common'
+  import { MUTATIONS, ROUTES } from '../../common'
   import { addRoutes } from '../../router'
 
   export default {
@@ -21,7 +21,7 @@
         addRoutes([...userPages]);
 
         // while the whole scope is just pages
-        this.$store.commit(USER_MUTATIONS.SET_USER_SCOPE, [...userPages]);
+        this.$store.commit(MUTATIONS.SET_USER_SCOPE, [...userPages]);
       },
       loadEntities() {
         // todo: temporary shit

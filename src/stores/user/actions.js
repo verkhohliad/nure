@@ -1,4 +1,4 @@
-import { USER_ACTIONS } from '../../common'
+import { ACTIONS } from '../../common'
 
 export default {
 

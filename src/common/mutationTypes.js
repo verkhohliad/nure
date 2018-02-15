@@ -1,25 +1,23 @@
 import keyMirror from 'keymirror'
 
-export const USER_MUTATIONS = keyMirror({
+export const MUTATIONS = keyMirror({
+  // USER - current user
   SET_USER_SCOPE: null,
-});
 
-export const ANNOUNCEMENTS_MUTATIONS = keyMirror({
+  // ENTITIES
+
+  // ANNOUNCEMENTS
   SET_ANNOUNCEMENTS: null,
-});
 
-export const NEWS_MUTATIONS = keyMirror({
+  // NEWS
   SET_NEWS: null,
-});
 
-export const FACULTIES_MUTATIONS = keyMirror({
+  // FACULTIES
   SET_FACULTIES: null,
-});
 
-export const SPECIALITIES_MUTATIONS = keyMirror({
+  // SPECIALITIES
   SET_SPECIALITIES: null,
-});
 
-export const SPECIALIZATIONS_MUTATIONS = keyMirror({
+  // SPECIALIZATIONS
   SET_SPECIALIZATIONS: null,
 });

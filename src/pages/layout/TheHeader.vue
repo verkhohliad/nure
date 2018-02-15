@@ -2,7 +2,7 @@
   import MainSlider from '../../componentsOLD/MainSlider'
   import logo from '../../assets/img/nure-logo.png'
   import parallaxImg from '../../assets/img/test1.jpg'
-  import { USER_GETTERS } from '../../common'
+  import { GETTERS } from '../../common'
 
   export default {
     components: { MainSlider },
@@ -15,7 +15,7 @@
     },
     computed: {
       items() {
-        return this.$store.getters[USER_GETTERS.GET_USER_SCOPE]
+        return this.$store.getters[GETTERS.GET_USER_SCOPE]
       },
     },
     created() {

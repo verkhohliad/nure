@@ -1,7 +1,7 @@
-import { SPECIALITIES_GETTERS } from '../../../common'
+import { GETTERS } from '../../../common'
 
 export default {
-  [SPECIALITIES_GETTERS.GET_SPECIALITIES]: state => {
+  [GETTERS.GET_SPECIALITIES]: state => {
     return state;
   },
 }

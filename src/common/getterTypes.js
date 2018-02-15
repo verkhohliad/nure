@@ -1,25 +1,23 @@
 import keyMirror from 'keymirror'
 
-export const USER_GETTERS = keyMirror({
+export const GETTERS = keyMirror({
+  // USER - current user
   GET_USER_SCOPE: null,
-});
 
-export const ANNOUNCEMENTS_GETTERS = keyMirror({
+  // ENTITIES - not need getters from entities now, maybe will need tomorrow
+
+  // ANNOUNCEMENTS
   GET_ANNOUNCEMENTS: null,
-});
 
-export const NEWS_GETTERS = keyMirror({
+  // NEWS
   GET_NEWS: null,
-});
 
-export const FACULTIES_GETTERS = keyMirror({
+  // FACULTIES
   GET_FACULTIES: null,
-});
 
-export const SPECIALITIES_GETTERS = keyMirror({
+  // SPECIALITIES
   GET_SPECIALITIES: null,
-});
 
-export const SPECIALIZATIONS_GETTERS = keyMirror({
+  // SPECIALIZATIONS
   GET_SPECIALIZATIONS: null,
 });

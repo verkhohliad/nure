@@ -1,30 +1,23 @@
 import keyMirror from 'keymirror'
 
-// current user
-export const USER_ACTIONS = {
+export const ACTIONS = keyMirror({
+  // USER - current user
 
-};
-
-export const ENTITIES_ACTIONS = keyMirror({
+  // ENTITIES
   UPLOAD_ALL_ENTITIES: null,
-});
 
-export const ANNOUNCEMENTS_ACTIONS = keyMirror({
+  // ANNOUNCEMENTS
   UPLOAD_ANNOUNCEMENTS: null,
-});
 
-export const NEWS_ACTIONS = keyMirror({
+  // NEWS
   UPLOAD_NEWS: null,
-});
 
-export const FACULTIES_ACTIONS = keyMirror({
+  // FACULTIES
   UPLOAD_FACULTIES: null,
-});
 
-export const SPECIALITIES_ACTIONS = keyMirror({
+  // SPECIALITIES
   UPLOAD_SPECIALITIES: null,
-});
 
-export const SPECIALIZATIONS_ACTIONS = keyMirror({
+  // SPECIALIZATIONS
   UPLOAD_SPECIALIZATIONS: null,
 });

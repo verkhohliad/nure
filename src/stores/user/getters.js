@@ -1,7 +1,7 @@
-import { USER_GETTERS } from '../../common'
+import { GETTERS } from '../../common'
 
 export default {
-  [USER_GETTERS.GET_USER_SCOPE]: (state) => {
+  [GETTERS.GET_USER_SCOPE]: (state) => {
     return state.scope
   },
 }

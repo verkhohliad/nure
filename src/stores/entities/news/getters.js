@@ -1,7 +1,7 @@
-import { NEWS_GETTERS } from '../../../common'
+import { GETTERS } from '../../../common'
 
 export default {
-  [NEWS_GETTERS.GET_NEWS]: state => {
+  [GETTERS.GET_NEWS]: state => {
     return state;
   },
 }
