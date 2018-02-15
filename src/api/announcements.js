@@ -3,7 +3,9 @@ import { announcementsMock } from '../utils/mocks';
 export const getAnnouncements = async () => {
   // todo: this shit while mock
   return await new Promise((resolve, reject) => {
-    setTimeout(announcementsMock, 1000);
+    setTimeout(() => {
+      resolve(announcementsMock())
+    }, 1000);
   });
 };
 

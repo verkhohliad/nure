@@ -1,4 +1,6 @@
 <script>
+  import { mapGetters } from 'vuex'
+
   import MainSlider from '../../componentsOLD/MainSlider'
   import logo from '../../assets/img/nure-logo.png'
   import parallaxImg from '../../assets/img/test1.jpg'
@@ -14,9 +16,9 @@
       }
     },
     computed: {
-      items() {
-        return this.$store.getters[GETTERS.GET_USER_SCOPE]
-      },
+      ...mapGetters({
+        items: GETTERS.GET_USER_SCOPE,
+      }),
     },
     created() {
     },

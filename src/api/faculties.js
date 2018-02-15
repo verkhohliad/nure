@@ -3,7 +3,9 @@ import { facultiesMock } from '../utils/mocks';
 export const getFaculties = async () => {
   // todo: this shit while mock
   return await new Promise((resolve, reject) => {
-    setTimeout(facultiesMock, 1000);
+    setTimeout(() => {
+      resolve(facultiesMock())
+    }, 1000);
   });
 };
 

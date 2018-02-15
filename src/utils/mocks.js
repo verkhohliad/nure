@@ -98,6 +98,9 @@ export const specializationsMock = () => {
   return []
 };
 
+// TODO: refactor it, to do better then piece of shit -
+// separate for faculties, specializations, specialities
+// and move headers to the table component
 export const specialitiesMock = () => {
   return {
     headers: {

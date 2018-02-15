@@ -3,7 +3,9 @@ import { newsMock } from '../utils/mocks';
 export const getAllNews = async () => {
   // todo: this shit while mock
   return await new Promise((resolve, reject) => {
-    setTimeout(newsMock, 1000);
+    setTimeout(() => {
+      resolve(newsMock())
+    }, 1000);
   });
 };
 

@@ -1,6 +1,8 @@
 <script>
+  import { mapGetters, mapActions, mapMutations } from 'vuex'
+
   import { getUserPages } from '../../utils'
-  import { MUTATIONS, ROUTES } from '../../common'
+  import { ACTIONS, MUTATIONS, GETTERS, ROUTES } from '../../common'
   import { addRoutes } from '../../router'
 
   export default {
@@ -9,28 +11,30 @@
       return {
       }
     },
+    computed: {
+      ...mapGetters({
+        currentUserIsAdmin: GETTERS.GET_USER_ADMIN_ACCESS,
+      }),
+    },
     async created() {
-      this.createUserScope();
+      const userPages = getUserPages(this.currentUserIsAdmin);
+      // user scope - pages which user have access
+      this.setUserScope([...userPages]);
+      // set routes by scope of user
+      addRoutes([...userPages]);
 
-      await this.loadEntities();
+      // upload all entities
+      await this.uploadAllEntities();
+
       this.$router.push(ROUTES.MAIN)
     },
     methods: {
-      createUserScope() {
-        const userPages = getUserPages(this.$store.state.user.isAdmin);
-        addRoutes([...userPages]);
-
-        // while the whole scope is just pages
-        this.$store.commit(MUTATIONS.SET_USER_SCOPE, [...userPages]);
-      },
-      loadEntities() {
-        // todo: temporary shit
-        return new Promise((resolve, reject) => {
-          setTimeout(() => {
-            resolve();
-          }, 1000);
-        })
-      },
+      ...mapActions({
+        uploadAllEntities: ACTIONS.UPLOAD_ALL_ENTITIES,
+      }),
+      ...mapMutations({
+        setUserScope: MUTATIONS.SET_USER_SCOPE,
+      }),
     },
   }
 </script>

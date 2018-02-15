@@ -16,7 +16,6 @@ const entities = {
   },
   actions: {
     [ACTIONS.UPLOAD_ALL_ENTITIES]: async state => {
-      // todo: api gets of all entities and commit them to different modules
       await state.dispatch(ACTIONS.UPLOAD_ANNOUNCEMENTS);
       await state.dispatch(ACTIONS.UPLOAD_FACULTIES);
       await state.dispatch(ACTIONS.UPLOAD_NEWS);

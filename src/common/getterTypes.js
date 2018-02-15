@@ -3,6 +3,7 @@ import keyMirror from 'keymirror'
 export const GETTERS = keyMirror({
   // USER - current user
   GET_USER_SCOPE: null,
+  GET_USER_ADMIN_ACCESS: null,
 
   // ENTITIES - not need getters from entities now, maybe will need tomorrow
 

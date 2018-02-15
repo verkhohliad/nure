@@ -12,6 +12,8 @@
       }
     },
     beforeCreate() {
+      // need to restore context from storage
+      // so maybe will need to move it on 'created'
       this.$router.push(ROUTES.LOADING)
     },
     created() {
