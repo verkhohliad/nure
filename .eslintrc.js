@@ -52,6 +52,7 @@ module.exports = {
     'arrow-body-style': 'off',
     'arrow-parens': 'off',
     'no-console': 'off',
-    'no-return-await': 'off'
+    'no-return-await': 'off',
+    'consistent-return': 'off'
   }
 }

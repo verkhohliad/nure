@@ -57,35 +57,25 @@ export const newsMock = () => {
   return [
     {
       id: 9,
-      date: '12 ЛЮТ 2018',
+      date: new Date(2018, 0, 12).getTime(),
       title: 'День відкритих дверей',
       description: 'ХНУРЕ запрошує на День відкритих дверей, який відбудеться 4 березня 2018 року. Початок - о 9-00. Харків, станція метро "Наукова", проспект Науки, 14.',
-      url: {
-        type: 'cors',
-        name: 'news',
-        id: 1,
-      },
+      url: null,
     }, {
       id: 10,
-      date: '10 ЛЮТ 2018',
+      date: new Date(2018, 0, 13).getTime(),
       title: 'Олімпіада',
       description: 'Олімпіада ХНУРЕ буде проводитись з 1 березня.',
-      url: {
-        type: 'cors',
-        name: 'news',
-        id: 2,
-      },
+      url: null,
     }, {
       id: 2,
-      date: '19 ЧЕР 2017',
+      date: new Date(2018, 0, 19).getTime(),
       title: 'Правила отримання стипендії в ХНУРЕ',
       description: 'Що найприємніше в студентському житті? Можна було б сказати, що скільки людей - стільки і відповідей. ' +
       'Для кого-то - придбання знань, навичок, досвіду і професійного мислення...',
-      url: {
-        type: 'no-cors',
-        name: 'http://nure.ua/wp-content/uploads/188-%D0%B2%D1%96%D0%B4-21.03.2017-%D0%9F%D0%BE%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%BD%D1%8F_%D0%B7%D0%BC%D1%96%D0%BD%D0%B8_1045_%D0%9D%D0%B0%D0%BA%D0%B0%D0%B7_%D0%92%D0%A0.pdf',
-        id: null,
-      },
+      url: 'http://nure.ua/wp-content/uploads/188-%D0%B2%D1%96%D0%B4-21.03.2017-' +
+      '%D0%9F%D0%BE%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%BD%D1%8F_%D0%B7%D0%BC%D1%96%D0%BD' +
+      '%D0%B8_1045_%D0%9D%D0%B0%D0%BA%D0%B0%D0%B7_%D0%92%D0%A0.pdf',
     },
   ]
 };
@@ -100,7 +90,7 @@ export const specializationsMock = () => {
 
 // TODO: refactor it, to do better then piece of shit -
 // separate for faculties, specializations, specialities
-// and move headers to the table component
+// and move headers logic to the table component
 export const specialitiesMock = () => {
   return {
     headers: {

@@ -1,10 +1,11 @@
 <script>
+  import MainAnnouncementsWidget from './MainAnnouncementsWidget'
+  import MainNewsWidget from './MainNewsWidget'
 
   export default {
     name: 'TheMain',
-    data() {
-      return {
-      }
+    components: { MainAnnouncementsWidget, MainNewsWidget },
+    computed: {
     },
     methods: {
     },
@@ -60,13 +61,13 @@
               Бажаємо всім Абітурієнтам успішного вступу!
             </div>
           </section>
-          <!--<InformationWidget :info="information"/>-->
+          <MainAnnouncementsWidget/>
         </div>
       </v-flex>
       <v-flex d-flex xs12 sm3 md3>
         <div class="right-wrap">
           <section class="news">
-            <!--<BlogWidget :info="news"/>-->
+            <MainNewsWidget/>
           </section>
         </div>
       </v-flex>
