@@ -1,11 +1,15 @@
 <script>
   import {GOOGLE} from '../../common';
+  import nureLogo from '../../assets/img/nure-logo.png';
+  import ministryLogo from '../../assets/img/ministryEducationLogo2.png';
 
   export default {
     name: 'TheFooter',
     data() {
       return {
         googlePositionLink: GOOGLE.POSITION_LINK,
+        nureLogo,
+        ministryLogo
       }
     },
     methods: {},
@@ -58,9 +62,9 @@
         </v-flex>
 
         <v-flex d-flex xs3 sm3 md3 child-flex>
-          <a class="TheFooter-column-link" target="_blank" href="http://nure.ua/">
+          <a class="TheFooter-column-link" target="_blank" href="https://mon.gov.ua/ua">
             <div class="TheFooter_logo">
-              <img class="TheFooter_logo_image" :src=educationMinistryLogo alt="">
+              <img class="TheFooter_logo_image" :src=ministryLogo alt="">
               <span class="TheFooter_logo_text">Міністерство освіти та науки України</span>
             </div>
           </a>
