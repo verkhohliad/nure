@@ -2,7 +2,7 @@
   .TheHeader-toolbar {
     background: rgba(3, 39, 53, 0.85) !important;
     z-index: 1;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
 
     .toolbar-bar {
       .bar-logo {
@@ -41,7 +41,7 @@
 
   .TheHeader-content {
     .content-parallaxImg {
-      height: 70vh !important;
+      height: 81.5vh !important;
     }
   }
 
@@ -50,7 +50,6 @@
       background: #032735;
       list-style-type: none;
       margin: 0 auto;
-      width: 90%;
       padding: 0;
       -webkit-border-radius: 5px;
       -moz-border-radius: 5px;
