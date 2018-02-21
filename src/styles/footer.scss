@@ -1,85 +1,113 @@
 .main-footer {
   height: auto;
   max-height: 400px;
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  //border-top: 1px solid rgba(255, 255, 255, 0.5);
   background: rgba(3, 39, 53, 0.85) !important;
   color: #fff;
   display: flex;
 
   .main-footer__layout {
-    padding: 0 5%;
-    margin: 0 auto;
 
     .footer-copyright {
+      border-top: 2px solid #05384d;
       height: 100%;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       padding: 25px 5%;
+      width: 100%;
 
-      .row {
-        display: block;
-        width: 53%;
-        text-align: left;
-        margin: 3px auto;
+      .footer-copyright_row {
+        text-align: center;
         font-size: 12px;
         a {
           color: #fff;
         }
 
         .responsible {
-          margin: 0 2%;
+          margin: 0 1%;
         }
       }
     }
 
-    .footer_menu {
-      font-size: 15px;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      display: -webkit-box;
-      display: -ms-flexbox;
+    .footer-content {
       display: flex;
-      //width: 40%;
+      flex-direction: row;
+      width: 100%;
+      padding: 0 5%;
 
-      .footer-contacts {
-        border-bottom: 1px solid #fff;
-
-        .footer-contacts__header {
-          padding: 1%;
-          border-bottom: 1px solid white;
-          margin-top: 10px;
-        }
-        //font-size: 10px;
-        li {
-          width: 100%;
-          list-style: none;
-          font-size: 14px;
+      .footer-column-link {
+        display: flex;
+        color: #fff;
+        .footer_logo {
           display: flex;
-          padding: 6px;
-          a {
-            color: #fff;
-            font-size: 12px;
-            i {
-              width: 40px;
-              text-decoration: none;
-            }
-            .footer-contacts__text {
-              width: 70%;
-              max-width: 70%;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          .footer_logo_image {
+            max-width: 70px;
+            height: 50px;
+          }
+          .footer_logo_text {
+            margin-top: 5px;
+            max-width: 70%;
+          }
+        }
+      }
+
+      .footer_menu {
+        font-size: 15px;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        //width: 40%;
+
+        .footer-contacts {
+
+          .footer-contacts__header {
+            padding: 1%;
+            //border-bottom: 1px solid white;
+            margin-top: 10px;
+          }
+          //font-size: 10px;
+          li {
+            width: 100%;
+            list-style: none;
+            font-size: 14px;
+            display: flex;
+            padding: 6px;
+            justify-content: center;
+            a {
+              color: #fff;
+              font-size: 12px;
+              min-width: 35%;
+              text-align: left;
+              display: flex;
+              align-items: flex-end;
+              i {
+                width: 40px;
+                text-decoration: none;
+                margin-left: 2%;
+                &:hover {
+                  text-decoration: none !important;
+                }
+              }
+              .footer-contacts__text {
+                width: 100%;
+                max-width: 100%;
+                margin-left: 3%;
+              }
             }
           }
         }
       }
-    }
-
-    .footer-map {
-      width: 60%;
-      margin: 5%
     }
 
   }
@@ -99,7 +127,7 @@
           }
 
           .responsible {
-            margin: 0 2%;
+            margin: 0 1%;
           }
         }
       }

@@ -506,9 +506,9 @@ export const getSpecialities = async () => {
 
           {
             value: false,
-            cipher: '121',
+            cipher: '122',
             field_of_knowledge: '12. Інформаційні технології',
-            faculty: 'КН',
+            faculty: 'ІТМ',
             specialty: 'Комп`ютерні науки',
             specialization: 'Інформатика',
             volume: 54,
@@ -518,9 +518,9 @@ export const getSpecialities = async () => {
 
           {
             value: false,
-            cipher: '121',
+            cipher: '122',
             field_of_knowledge: '12. Інформаційні технології',
-            faculty: 'КН',
+            faculty: 'ІТМ',
             specialty: 'Комп`ютерні науки',
             specialization: 'Соціальна інформатика',
             volume: 15,
@@ -530,9 +530,9 @@ export const getSpecialities = async () => {
 
           {
             value: false,
-            cipher: '121',
+            cipher: '122',
             field_of_knowledge: '12. Інформаційні технології',
-            faculty: 'КН',
+            faculty: 'ІРТЗІ',
             specialty: 'Комп`ютерні науки',
             specialization: 'Інформаційно-комунікаційні технології',
             volume: 30,
@@ -542,7 +542,7 @@ export const getSpecialities = async () => {
 
           {
             value: false,
-            cipher: '121',
+            cipher: '122',
             field_of_knowledge: '12. Інформаційні технології',
             faculty: 'КН',
             specialty: 'Комп`ютерні науки',
@@ -554,7 +554,7 @@ export const getSpecialities = async () => {
 
           {
             value: false,
-            cipher: '121',
+            cipher: '122',
             field_of_knowledge: '12. Інформаційні технології',
             faculty: 'КН',
             specialty: 'Комп`ютерні науки',
@@ -567,7 +567,7 @@ export const getSpecialities = async () => {
 
           {
             value: false,
-            cipher: '121',
+            cipher: '122',
             field_of_knowledge: '12. Інформаційні технології',
             faculty: 'КН',
             specialty: 'Комп`ютерні науки',
@@ -719,7 +719,7 @@ export const getSpecialities = async () => {
             value: false,
             cipher: '125',
             field_of_knowledge: '12. Інформаційні технології',
-            faculty: 'КІУ',
+            faculty: 'ІК',
             specialty: 'Кібербезпека',
             specialization: 'Адміністративний менеджмент у сфері захисту інформації',
             volume: 40,
@@ -752,7 +752,7 @@ export const getSpecialities = async () => {
             value: false,
             cipher: '151',
             field_of_knowledge: '15. Автоматизація та приладобудування',
-            faculty: 'КІУ',
+            faculty: 'АКТ',
             specialty: 'Автоматизація та комп’ютерно-інтегровані технології',
             specialization: 'Комп’ютеризовані та робототехнічні системи',
             volume: 45,
@@ -1011,7 +1011,7 @@ export const getSpecialities = async () => {
             field_of_knowledge: '18. Видавництво та технології',
             faculty: 'КН',
             specialty: 'Видавництво та поліграфія',
-            specialization: 'Технологія друкованих видань (КН)',
+            specialization: 'Технологія друкованих видань',
             volume: 8,
             period: '1 р. 5 м.',
             cost: '12900 грн.'
@@ -1022,7 +1022,7 @@ export const getSpecialities = async () => {
             field_of_knowledge: '18. Видавництво та технології',
             faculty: 'КН',
             specialty: 'Видавництво та поліграфія',
-            specialization: 'технології електронних мультімедійних видань (КН)',
+            specialization: 'Технології електронних мультімедійних видань',
             volume: 18,
             period: '1 р. 5 м. ; 1 р. 10 м.',
             cost: '12900 грн.'
@@ -1033,7 +1033,7 @@ export const getSpecialities = async () => {
             field_of_knowledge: '18. Видавництво та технології',
             faculty: 'КН',
             specialty: 'Видавництво та поліграфія',
-            specialization: 'Комп’ютерні технології та системи Видавничо-поліграфічих Виробництв (кн)',
+            specialization: 'Комп’ютерні технології та системи видавничо-поліграфічих виробництв',
             volume: 15,
             period: '1 р. 5 м. ; 1 р. 10 м.',
             cost: '12900 грн.'

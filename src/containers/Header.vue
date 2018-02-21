@@ -20,12 +20,12 @@
       </div>
     </v-toolbar>
     <v-content>
-      <!--<section>-->
-        <!--<v-parallax :src="navBar.parallaxImg" height="500">-->
-      <MainSlider />
+      <section>
+        <v-parallax :src="navBar.parallaxImg" height="530">
+      <!--<MainSlider />-->
 
-        <!--</v-parallax>-->
-      <!--</section>-->
+        </v-parallax>
+      </section>
     </v-content>
 
 
@@ -46,7 +46,7 @@
 <script>
   import MainSlider from '../components/MainSlider';
   import nureLogo from '../../img/nure-logo.png';
-  import parallaxImg from '../../img/test1.jpg';
+  import parallaxImg from '../../img/bg2.jpeg';
   import SignIn from '../components/signing/SignIn';
   import SignUp from '../components/signing/SignUp';
 
