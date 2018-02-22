@@ -5,7 +5,7 @@ export const getAnnouncements = async () => {
   return await new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(announcementsMock())
-    }, 1000);
+    }, 200);
   });
 };
 

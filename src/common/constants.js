@@ -1,3 +1,4 @@
+import keyMirror from 'keymirror'
 
 export const ROUTES = {
   MAIN: '/',
@@ -27,3 +28,11 @@ export const GOOGLE = {
   '!8m2!3d50.0152877!4d36.2278514',
 };
 
+export const TYPES_OF_SPECIALIZATIONS = keyMirror({
+  SECOND_EDUCATION_EXTRAMURAL: null,
+  SECOND_EDUCATION_DAILY: null,
+  MASTER_EXTRAMURAL: null,
+  MASTER_DAILY: null,
+  BACHELOR_EXTRAMURAL: null,
+  BACHELOR_DAILY: null,
+});

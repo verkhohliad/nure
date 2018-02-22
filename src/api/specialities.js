@@ -5,7 +5,7 @@ export const getSpecialities = async () => {
   return await new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(specialitiesMock())
-    }, 1000);
+    }, 200);
   });
 };
 

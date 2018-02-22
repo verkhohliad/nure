@@ -5,7 +5,7 @@ export const getAllNews = async () => {
   return await new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(newsMock())
-    }, 1000);
+    }, 200);
   });
 };
 

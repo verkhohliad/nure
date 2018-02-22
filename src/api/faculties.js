@@ -5,7 +5,7 @@ export const getFaculties = async () => {
   return await new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(facultiesMock())
-    }, 1000);
+    }, 200);
   });
 };
 
