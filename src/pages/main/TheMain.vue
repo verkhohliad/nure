@@ -5,10 +5,8 @@
   export default {
     name: 'TheMain',
     components: { MainAnnouncementsWidget, MainNewsWidget },
-    computed: {
-    },
-    methods: {
-    },
+    computed: {},
+    methods: {},
   }
 </script>
 
@@ -61,7 +59,6 @@
               Бажаємо всім Абітурієнтам успішного вступу!
             </div>
           </section>
-          <MainAnnouncementsWidget/>
         </div>
       </v-flex>
       <v-flex d-flex xs12 sm3 md3>
@@ -70,6 +67,10 @@
             <MainNewsWidget/>
           </section>
         </div>
+      </v-flex>
+
+      <v-flex d-flex xs12 sm12 md12>
+        <MainAnnouncementsWidget/>
       </v-flex>
     </v-layout>
   </v-container>

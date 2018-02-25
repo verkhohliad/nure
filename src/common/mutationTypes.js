@@ -20,4 +20,8 @@ export const MUTATIONS = keyMirror({
 
   // SPECIALIZATIONS
   SET_SPECIALIZATIONS: null,
+
+
+  // MODALS
+  SET_OLYMPIAD_MODAL: null
 });
