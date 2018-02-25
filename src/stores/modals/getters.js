@@ -5,7 +5,6 @@ export default {
     return state;
   },
   [GETTERS.GET_OLYMPIAD_MODAL]: state => {
-    console.log(state);
     return state.olympiadModal;
   },
 }

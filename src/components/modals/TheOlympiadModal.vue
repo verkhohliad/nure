@@ -40,7 +40,7 @@
           ],
           placeOfStudyRules: [
             v => !!v || 'Обов\'язкове поле',
-            v => (v && v.length >= 7) || 'Поле повинно бути не менше 7 символів'
+            v => (v && v.length >= 5) || 'Поле повинно бути не менше 5 символів'
           ]
         }
       }
@@ -109,7 +109,7 @@
     <AlertErrorModal v-on:hideAlertErrorModal="error = false" :show="error" text="Заповніть усі поля."/>
     <v-dialog v-model="olympiadModal" persistent width="80%">
       <v-card>
-        
+
         <v-card-title>
           <span class="headline">Форма для реєстрації на участь в олімпіаді ХНУРЕ</span>
           <div class="inline-1-flex justify-end">

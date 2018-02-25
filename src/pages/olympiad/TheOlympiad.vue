@@ -1,7 +1,7 @@
 <script>
-  import { mapGetters, mapActions, mapMutations } from 'vuex'
+  import { mapActions } from 'vuex'
 
-  import { ACTIONS, MUTATIONS, GETTERS, ROUTES } from '../../common'
+  import { ACTIONS } from '../../common'
 
   import TheOlympiadModal from '../../components/modals/TheOlympiadModal'
 
@@ -22,7 +22,6 @@
 <template>
   <transition name="slide-fade">
     <v-container class="TheOlympiad" grid-list-md text-xs-center>
-      <!--<TheOlympiadModal/>-->
       <v-layout row wrap class="TheOlympiad_content">
         <v-flex d-flex xs12 sm12 md12 child-flex>
           <section>
