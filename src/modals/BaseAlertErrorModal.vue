@@ -1,13 +1,10 @@
 <script>
-  import { mapGetters, mapActions } from 'vuex'
-
-  import { ACTIONS, GETTERS } from '../../common'
-
   export default {
-    name: 'AlertErrorModal',
+    name: 'BaseAlertErrorModal',
     props: {
       show: Boolean,
       text: String,
+      hideAlertErrorModal: Function,
     },
     data() {
       return {}
@@ -19,7 +16,7 @@
   <v-layout row justify-center>
     <v-dialog v-model="show" width="80%">
       <v-card class="pa-4">
-        <v-alert type="error" :value="true" class="error_alert">
+        <v-alert type="error" class="error_alert">
           {{ text }}
         </v-alert>
         <v-btn class="ok_button" @click="$emit('hideAlertErrorModal')">Ok</v-btn>

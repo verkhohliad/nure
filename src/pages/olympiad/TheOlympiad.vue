@@ -3,11 +3,9 @@
 
   import { ACTIONS } from '../../common'
 
-  import TheOlympiadModal from '../../components/modals/TheOlympiadModal'
 
   export default {
     name: 'TheOlympiad',
-    components: { TheOlympiadModal },
     data() {
       return {}
     },
@@ -68,9 +66,6 @@
             </ul>
             <v-btn @click="switchOlympiadModal" class="flex_margin_auto" color="info">Взяти участь в олімпіаді</v-btn>
           </section>
-        </v-flex>
-        <v-flex>
-          <TheOlympiadModal/>
         </v-flex>
       </v-layout>
     </v-container>

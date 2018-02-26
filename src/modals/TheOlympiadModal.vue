@@ -1,16 +1,11 @@
 <script>
   import { mapGetters, mapActions } from 'vuex'
 
-  import { ACTIONS, GETTERS } from '../../common'
-
-  import { validateEmail, validatePhoneNumber, validatePlaceOfStudy,
-    getSelectedSubjects, validateUserName, getValidString } from '../../utils';
-
-  import AlertErrorModal from './AlertErrorModal'
+  import { ACTIONS, GETTERS } from '../common'
+  import * as utils from '../utils'
 
   export default {
     name: 'TheOlympiadModal',
-    components: { AlertErrorModal },
     data() {
       return {
         surname: '',
@@ -24,25 +19,25 @@
           maths: false,
           biology: false,
         },
-        error: false,
+        valid: false,
         rules: {
           userNameRules: [
             v => !!v || 'Обов\'язкове поле',
-            v => (v && v.length >= 3) || 'Поле повинно бути не менше 3х символів'
+            v => utils.validateUserName(v) || 'Поле повинно бути не менше 3х символів',
           ],
           emailRules: [
             v => !!v || 'Обов\'язкове поле',
-            v => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'E-mail повинен бути валідним'
+            v => utils.validateEmail(v) || 'E-mail повинен бути валідним',
           ],
           phoneRules: [
             v => !!v || 'Обов\'язкове поле',
-            v => /^\+380\d{3}\d{2}\d{2}\d{2}$/.test(v) || 'Номер телефону повинен бути валідним'
+            v => utils.validatePhoneNumber(v) || 'Номер телефону повинен бути валідним',
           ],
           placeOfStudyRules: [
             v => !!v || 'Обов\'язкове поле',
-            v => (v && v.length >= 5) || 'Поле повинно бути не менше 5 символів'
-          ]
-        }
+            v => utils.validatePlaceOfStudy(v) || 'Поле повинно бути не менше 5 символів',
+          ],
+        },
       }
     },
     computed: {
@@ -50,7 +45,6 @@
         olympiadModal: GETTERS.GET_OLYMPIAD_MODAL,
       }),
     },
-
     beforeDestroy() {
       this.setInitialState();
     },
@@ -65,32 +59,22 @@
         this.subjects = {
           ukrainian: false,
           maths: false,
-          biology: false
+          biology: false,
         };
-        this.error = false;
+        this.valid = false;
       },
-      validateForm() {
-        if (validateUserName(this.name)
-          && validateUserName(this.surname)
-          && validateUserName(this.patronymic)
-          && validateEmail(this.email)
-          && validatePhoneNumber(this.phone)
-          && validatePlaceOfStudy(this.placeOfStudy)
-          && getSelectedSubjects(this.subjects).length) {
+      submit() {
+        if (this.$refs.form.validate() && utils.getSelectedSubjects(this.subjects).length > 0) {
           const userOlympicData = {
-            name: getValidString(this.name),
-            surname: getValidString(this.surname),
-            patronymic: getValidString(this.patronymic),
-            placeOfStudy: getValidString(this.placeOfStudy),
+            name: utils.getValidString(this.name),
+            surname: utils.getValidString(this.surname),
+            patronymic: utils.getValidString(this.patronymic),
+            placeOfStudy: utils.getValidString(this.placeOfStudy),
             email: this.email.trim(),
             phone: this.phone.trim(),
-            subjects: getSelectedSubjects(this.subjects)
+            subjects: utils.getSelectedSubjects(this.subjects),
           };
           console.log(userOlympicData);
-          this.hideOlympicModal();
-        }
-        else {
-          this.error = true;
         }
       },
       hideOlympicModal() {
@@ -106,7 +90,6 @@
 
 <template>
   <v-layout row justify-center>
-    <AlertErrorModal v-on:hideAlertErrorModal="error = false" :show="error" text="Заповніть усі поля."/>
     <v-dialog v-model="olympiadModal" persistent width="80%">
       <v-card>
 
@@ -117,34 +100,46 @@
           </div>
         </v-card-title>
 
-        <v-card-text>
+        <v-form v-model="valid" ref="form">
           <v-container grid-list-md>
             <v-layout wrap>
               <v-flex xs12 sm6 md4>
-                <v-text-field :rules="rules.userNameRules" v-model="surname" label="Прізвище"
+                <v-text-field :rules="rules.userNameRules"
+                              v-model="surname"
+                              label="Прізвище"
                               required></v-text-field>
               </v-flex>
               <v-flex xs12 sm6 md4>
-                <v-text-field :rules="rules.userNameRules" v-model="name" :value="name" label="Ім'я"
+                <v-text-field :rules="rules.userNameRules"
+                              v-model="name"
+                              label="Ім'я"
                               required></v-text-field>
               </v-flex>
               <v-flex xs12 sm6 md4>
-                <v-text-field :rules="rules.userNameRules" v-model="patronymic" :value="patronymic" label="По-батькові"
+                <v-text-field :rules="rules.userNameRules"
+                              v-model="patronymic"
+                              label="По-батькові"
                               required></v-text-field>
               </v-flex>
               <v-flex xs12>
-                <v-text-field :rules="rules.placeOfStudyRules" v-model="placeOfStudy" :value="placeOfStudy"
-                              label="Назва навчального закладу освіти" required></v-text-field>
+                <v-text-field :rules="rules.placeOfStudyRules"
+                              v-model="placeOfStudy"
+                              label="Назва навчального закладу освіти"
+                              required></v-text-field>
               </v-flex>
               <v-flex xs12>
-                <v-text-field placeholder="+38096......" :rules="rules.phoneRules" v-model="phone" :value="phone"
+                <v-text-field placeholder="+38096......"
+                              :rules="rules.phoneRules"
+                              v-model="phone"
                               label="Номер телефону"
                               prepend-icon="phone"
                               required></v-text-field>
               </v-flex>
               <v-flex xs12>
-                <v-text-field :rules="rules.emailRules" label="Email" prepend-icon="email" v-model="email"
-                              :value="email"
+                <v-text-field :rules="rules.emailRules"
+                              label="Email"
+                              prepend-icon="email"
+                              v-model="email"
                               required></v-text-field>
               </v-flex>
               <v-flex xs12>
@@ -152,11 +147,9 @@
                   <v-subheader>Оберіть предмети для участі в олімпіаді*</v-subheader>
                   <v-list-tile href="javascript:;">
                     <v-list-tile-action>
-                      <v-checkbox
-                        v-model="subjects.ukrainian"
-                        readonly
-                      ></v-checkbox>
+                      <v-checkbox v-model="subjects.ukrainian"></v-checkbox>
                     </v-list-tile-action>
+
                     <v-list-tile-content @click="subjects.ukrainian = !subjects.ukrainian">
                       <v-list-tile-title>Українська мова</v-list-tile-title>
                     </v-list-tile-content>
@@ -165,6 +158,7 @@
                     <v-list-tile-action>
                       <v-checkbox v-model="subjects.maths"></v-checkbox>
                     </v-list-tile-action>
+
                     <v-list-tile-content @click="subjects.maths = !subjects.maths">
                       <v-list-tile-title>Математика</v-list-tile-title>
                     </v-list-tile-content>
@@ -173,6 +167,7 @@
                     <v-list-tile-action>
                       <v-checkbox v-model="subjects.biology"></v-checkbox>
                     </v-list-tile-action>
+
                     <v-list-tile-content @click="subjects.biology = !subjects.biology">
                       <v-list-tile-title>Біологія</v-list-tile-title>
                     </v-list-tile-content>
@@ -181,12 +176,12 @@
               </v-flex>
             </v-layout>
           </v-container>
-        </v-card-text>
+        </v-form>
+
         <v-card-actions>
-          <!--<v-spacer></v-spacer>-->
           <v-layout wrap>
             <v-flex xs12 sm6 md6 style="text-align: right">
-              <v-btn color="success" @click="validateForm">Зареєструватись в олімпіаді</v-btn>
+              <v-btn color="success" :disabled="!valid" @click="submit">Зареєструватись в олімпіаді</v-btn>
             </v-flex>
             <v-flex xs12 sm6 md6 style="text-align: center">
               <v-btn color="error" @click="hideOlympicModal">Закрити</v-btn>

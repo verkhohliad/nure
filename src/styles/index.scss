@@ -15,6 +15,10 @@ html, head, body {
   padding: 0;
 }
 
+*:disabled {
+  cursor: not-allowed !important;
+}
+
 .container {
   display: flex;
   max-width: 90%;
