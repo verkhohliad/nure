@@ -1,9 +1,14 @@
 <script>
+  import MasterTabDailyTable from './MasterTabDailyTable'
+  import MasterTabExtramuralTable from './MasterTabExtramuralTable'
+  import { SPECIALITIES_PAGE } from '../../common'
 
   export default {
     name: 'SpecialitiesMasterTab',
+    components: { MasterTabDailyTable, MasterTabExtramuralTable },
     data() {
       return {
+        childTabs: [SPECIALITIES_PAGE.TABS.DAILY, SPECIALITIES_PAGE.TABS.EXTRAMURAL],
       }
     },
     methods: {
@@ -12,16 +17,13 @@
 </script>
 
 <template>
-  <div>Master</div>
-  <!--
   <v-tabs fixed centered>
     <v-tabs-bar class="cyan specialities-tabs blue-background specialities-tabs" dark>
       <v-tabs-item
         v-for="tab in childTabs"
         :key="tab"
         :href="'#' + tab"
-        ripple
-      >
+        ripple>
         {{ tab }}
       </v-tabs-item>
       <v-tabs-slider color="yellow"></v-tabs-slider>
@@ -32,51 +34,20 @@
         v-for="tab in childTabs"
         :key="tab"
         :id="tab"
-      >
+        lazy>
         <v-card flat>
           <v-card-text class="information-tab">
-            <div v-if="tab==='Денна форма навчання'">
-              <v-data-table
-                v-bind:headers="specialities.headers.master.headers"
-                :items="specialities.items.master.daily"
-                hide-actions
-                class="elevation-1"
-              >
-                <template slot="items" slot-scope="props">
-                  <td>{{ props.item.cipher }}</td>
-                  <td class="text-xs-right">{{ props.item.specialty }}</td>
-                  <td class="text-xs-right">{{ props.item.specialization }}</td>
-                  <td class="text-xs-right">{{ props.item.faculty }}</td>
-                  <td class="text-xs-right">{{ props.item.volume }}</td>
-                  <td class="text-xs-right">{{ props.item.period }}</td>
-                  <td class="text-xs-right">{{ props.item.cost }}</td>
-                </template>
-              </v-data-table>
+            <div v-if="tab === childTabs[0]">
+              <MasterTabDailyTable/>
             </div>
-            <div v-if="tab==='Заочна форма навчання'">
-              <v-data-table
-                v-bind:headers="specialities.headers.master.headers"
-                :items="specialities.items.master.extramural"
-                hide-actions
-                class="elevation-1"
-              >
-                <template slot="items" slot-scope="props">
-                  <td>{{ props.item.cipher }}</td>
-                  <td class="text-xs-right">{{ props.item.specialty }}</td>
-                  <td class="text-xs-right">{{ props.item.specialization }}</td>
-                  <td class="text-xs-right">{{ props.item.faculty }}</td>
-                  <td class="text-xs-right">{{ props.item.volume }}</td>
-                  <td class="text-xs-right">{{ props.item.period }}</td>
-                  <td class="text-xs-right">{{ props.item.cost }}</td>
-                </template>
-              </v-data-table>
+            <div v-if="tab === childTabs[1]">
+              <MasterTabExtramuralTable/>
             </div>
           </v-card-text>
         </v-card>
       </v-tabs-content>
     </v-tabs-items>
   </v-tabs>
-  -->
 </template>
 
 <style scoped>

@@ -1,13 +1,14 @@
 <script>
   import BachelorTabDailyTable from './BachelorTabDailyTable'
   import BachelorTabExtramuralTable from './BachelorTabExtramuralTable'
+  import { SPECIALITIES_PAGE } from '../../common'
 
   export default {
     name: 'SpecialitiesBachelorTab',
     components: { BachelorTabDailyTable, BachelorTabExtramuralTable },
     data() {
       return {
-        childTabs: ['Денна форма навчання', 'Заочна форма навчання'],
+        childTabs: [SPECIALITIES_PAGE.TABS.DAILY, SPECIALITIES_PAGE.TABS.EXTRAMURAL],
       }
     },
     methods: {
@@ -36,10 +37,10 @@
         lazy>
         <v-card flat>
           <v-card-text class="information-tab">
-            <div v-if="tab==='Денна форма навчання'">
+            <div v-if="tab === childTabs[0]">
               <BachelorTabDailyTable/>
             </div>
-            <div v-if="tab==='Заочна форма навчання'">
+            <div v-if="tab === childTabs[1]">
               <BachelorTabExtramuralTable/>
             </div>
           </v-card-text>

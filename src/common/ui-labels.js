@@ -11,6 +11,13 @@ export const PAGES_NAMES = {
 };
 
 export const SPECIALITIES_PAGE = {
+  TABS: {
+    BACHELOR: 'Бакалавр',
+    MASTER: 'Магістр',
+    SECOND_EDUCATION: 'Друга вища освіта',
+    DAILY: 'Денна форма навчання',
+    EXTRAMURAL: 'Заочна форма навчання',
+  },
   TABLE_HEADERS: {
     CIPHER: 'Шифр',
     SPECIALITY: 'Спеціальність',

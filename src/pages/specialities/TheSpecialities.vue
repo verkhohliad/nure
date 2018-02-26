@@ -4,14 +4,16 @@
   import SpecialitiesBachelorTab from './SpecialitiesBachelorTab'
   import SpecialitiesMasterTab from './SpecialitiesMasterTab'
   import SpecialitiesSecondEducationTab from './SpecialitiesSecondEducationTab'
-  import { GETTERS } from '../../common'
+  import { GETTERS, SPECIALITIES_PAGE } from '../../common'
 
   export default {
     name: 'TheSpecialities',
     components: { SpecialitiesBachelorTab, SpecialitiesMasterTab, SpecialitiesSecondEducationTab },
     data() {
       return {
-        tabs: ['Бакалавр', 'Магістр', 'Друга вища освіта'],
+        tabs: [SPECIALITIES_PAGE.TABS.BACHELOR,
+          SPECIALITIES_PAGE.TABS.MASTER,
+          SPECIALITIES_PAGE.TABS.SECOND_EDUCATION],
       }
     },
     computed: {
@@ -31,6 +33,7 @@
           СПЕЦІАЛЬНОСТІ ТА СПЕЦІАЛІЗАЦІЇ ДЛЯ ВСТУПУ ДО ХНУРЕ
         </v-toolbar-title>
 
+        <!--
         <span class="toolbar-buttons">
           <v-btn icon>
             <v-icon>search</v-icon>
@@ -39,6 +42,7 @@
             <v-icon>more_vert</v-icon>
           </v-btn>
         </span>
+        -->
       </v-toolbar>
 
       <v-tabs-bar class="cyan specialities-tabs blue-background specialities-tabs" dark>
@@ -60,13 +64,13 @@
           lazy>
           <v-card flat>
             <v-card-text class="information-tab">
-              <div v-if="tab==='Бакалавр'">
+              <div v-if="tab === tabs[0]">
                 <SpecialitiesBachelorTab/>
               </div>
-              <div v-if="tab==='Друга вища освіта'">
+              <div v-if="tab === tabs[1]">
                 <SpecialitiesMasterTab/>
               </div>
-              <div v-if="tab==='Магістр'">
+              <div v-if="tab === tabs[2]">
                 <SpecialitiesSecondEducationTab/>
               </div>
             </v-card-text>
@@ -121,7 +125,6 @@
         </ul>
       </div>
 
-
       <div class="info_specialities">
         <h5>
           Для вступу на навчання із скороченим терміном підготовки для отримання ступеня бакалавра приймаються особи,
@@ -132,7 +135,6 @@
           <li> 3-1 курс з терміном навчання 2 роки.</li>
         </ul>
       </div>
-
 
       <div class="info_specialities">
         <h5>Студенти ХНУРЕ мають можливість:</h5>

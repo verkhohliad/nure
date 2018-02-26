@@ -1,10 +1,10 @@
 <script>
   import { mapGetters } from 'vuex'
 
-  import { SPECIALITIES_PAGE, GETTERS } from '../../common'
+  import { GETTERS, SPECIALITIES_PAGE } from '../../common'
 
   export default {
-    name: 'SpecialitiesSecondEducationTab',
+    name: 'BachelorTabDailyTable',
     data() {
       return {
         headers: [
@@ -23,7 +23,7 @@
     },
     computed: {
       ...mapGetters({
-        specializations: GETTERS.GET_BACHELOR_DAILY_SPECIALIZATIONS,
+        specializations: GETTERS.GET_MASTER_DAILY_SPECIALIZATIONS,
       }),
     },
     methods: {
