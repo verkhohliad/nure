@@ -1,14 +1,4 @@
-.container {
-  display: flex;
-  max-width: 90%;
-  background: #fff;
-  margin: 0 auto 15px auto !important;
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-
-  .left-wrap {
+ .left-wrap {
     display: flex;
     flex-direction: column;
     //width: 70%;
@@ -109,7 +99,7 @@
       }
     }
   }
-}
+
 
 @media (max-width: 1260px) {
 

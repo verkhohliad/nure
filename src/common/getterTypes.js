@@ -21,4 +21,8 @@ export const GETTERS = keyMirror({
 
   // SPECIALIZATIONS
   GET_SPECIALIZATIONS: null,
+
+  // MODALS
+  GET_MODALS: null,
+  GET_OLYMPIAD_MODAL: null,
 });
