@@ -53,6 +53,7 @@ module.exports = {
     'arrow-parens': 'off',
     'no-console': 'off',
     'no-return-await': 'off',
-    'consistent-return': 'off'
+    'consistent-return': 'off',
+    'max-len': 'off',
   }
 }

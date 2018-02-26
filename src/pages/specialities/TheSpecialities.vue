@@ -8,17 +8,10 @@
 
   export default {
     name: 'TheSpecialities',
-    components: { SpecialitiesBachelorTab, SpecialitiesMasterTab, SpecialitiesSecondEducationTab  },
+    components: { SpecialitiesBachelorTab, SpecialitiesMasterTab, SpecialitiesSecondEducationTab },
     data() {
-      const tabNames = ['Бакалавр', 'Магістр', 'Друга вища освіта'];
       return {
-        tabNames,
-        tabs: {
-          [tabNames[0]]: SpecialitiesBachelorTab,
-          [tabNames[1]]: SpecialitiesMasterTab,
-          [tabNames[2]]: SpecialitiesMasterTab,
-        },
-        // childTabs: ['Денна форма навчання', 'Заочна форма навчання'],
+        tabs: ['Бакалавр', 'Магістр', 'Друга вища освіта'],
       }
     },
     computed: {
@@ -30,7 +23,7 @@
   }
 </script>
 
-<template functional>
+<template>
   <div class="specialities">
     <v-tabs fixed centered>
       <v-toolbar class="blue-background specialities-toolbar" dark>
@@ -39,41 +32,41 @@
         </v-toolbar-title>
 
         <span class="toolbar-buttons">
-            <v-btn icon>
-              <v-icon>search</v-icon>
-            </v-btn>
-            <v-btn icon>
-              <v-icon>more_vert</v-icon>
-            </v-btn>
-          </span>
+          <v-btn icon>
+            <v-icon>search</v-icon>
+          </v-btn>
+          <v-btn icon>
+            <v-icon>more_vert</v-icon>
+          </v-btn>
+        </span>
       </v-toolbar>
 
       <v-tabs-bar class="cyan specialities-tabs blue-background specialities-tabs" dark>
         <v-tabs-item
-          v-for="tabName in tabNames"
-          :key="`${tabName}:bar`"
-          :href="`#${tabName}`"
+          v-for="tab in tabs"
+          :key="tab"
+          :href="'#' + tab"
           ripple>
-          {{ tabName }}
+          {{ tab }}
         </v-tabs-item>
         <v-tabs-slider color="yellow"></v-tabs-slider>
       </v-tabs-bar>
 
       <v-tabs-items>
         <v-tabs-content
-          v-for="tabName in tabNames"
-          :key="`${tabName}:content`"
-          :id="tabName"
+          v-for="tab in tabs"
+          :key="tab"
+          :id="tab"
           lazy>
           <v-card flat>
             <v-card-text class="information-tab">
-              <div v-if="tabName==='Бакалавр'">
+              <div v-if="tab==='Бакалавр'">
                 <SpecialitiesBachelorTab/>
               </div>
-              <div v-if="tabName==='Друга вища освіта'">
+              <div v-if="tab==='Друга вища освіта'">
                 <SpecialitiesMasterTab/>
               </div>
-              <div v-if="tabName==='Магістр'">
+              <div v-if="tab==='Магістр'">
                 <SpecialitiesSecondEducationTab/>
               </div>
             </v-card-text>
@@ -151,10 +144,6 @@
           <li> Брати участь в студентських і спортивних клубах;</li>
           <li> Отримувати практичні навички в українських і міжнародних компаніях.</li>
         </ol>
-      </div>
-
-      <div class="nure-video">
-        <youtube video-id="2KSQnjAq7f4"></youtube>
       </div>
     </div>
   </div>

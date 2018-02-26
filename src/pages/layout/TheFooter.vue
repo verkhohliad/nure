@@ -1,5 +1,5 @@
 <script>
-  import {GOOGLE} from '../../common';
+  import { GOOGLE } from '../../common';
   import nureLogo from '../../assets/img/nure-logo.png';
   import ministryLogo from '../../assets/img/ministryEducationLogo2.png';
 
