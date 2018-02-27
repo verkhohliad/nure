@@ -14,21 +14,21 @@
 </script>
 
 <template>
-  <v-layout class="item-container" row wrap>
-    <v-flex class="item" d-flex xs12 sm4 md4 child-flex
-            v-for="announcement in announcements"
-            :key="announcement.id">
-      <img :src="announcement.img" alt="image">
-      <div class="item-content">
-        <h4>{{ announcement.title }}</h4>
-        <div>
-          <p>{{ announcement.description }}</p>
-          <p class="continued">...</p>
-          <v-btn class="read-more-button" dark>Читати більше...</v-btn>
+  <div class="announcements">
+    <h1 class="section-title white--text mb-4 display-0 text-xs-center">
+      Оголошення</h1>
+    <v-layout class="item-container" row wrap>
+      <div class="item"
+           v-for="announcement in announcements"
+           :key="announcement.id">
+        <img :src="announcement.img" alt="image">
+        <div class="item-content">
+          <h4>{{ announcement.title }}</h4>
         </div>
       </div>
-    </v-flex>
-  </v-layout>
+    </v-layout>
+  </div>
+
 </template>
 
 <style scoped>

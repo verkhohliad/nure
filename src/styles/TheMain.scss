@@ -1,38 +1,30 @@
 .container {
   display: flex;
-  max-width: 90%;
+  flex-wrap: wrap;
+  max-width: 100%;
   background: #fff;
-  margin: 0 auto 15px auto !important;
+  padding: 0 !important;
   box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
 
-  .left-wrap {
-    display: flex;
-    flex-direction: column;
-    //width: 70%;
+
     .greeting {
-      padding: 2%;
-      border-bottom: 2px solid #ededed;
+      padding: 60px 10%;
       .subheading {
-        text-align: left;
         margin-top: 1%;
         font-size: 18px !important;
         text-align: left !important;
       }
     }
-  }
 
-  .right-wrap {
-   margin-top: -30px;
-    display: flex;
-    //width: 30%;
     .news {
-      border-left: 1px solid #eaeaea;
       display: flex;
-      margin-top: 35px;
       flex-wrap: wrap;
+      background: rgb(245,247,249);
+      width: 100%;
+      padding: 65px 10%;
 
       .blog-news {
         margin-left: 10px;
@@ -108,7 +100,6 @@
         }
       }
     }
-  }
 }
 
 @media (max-width: 1260px) {

@@ -18,8 +18,8 @@
 </script>
 
 <template>
-  <div class="blog-news">
-    <h4 class="title">Новини</h4>
+  <section class="blog-news">
+    <h1 class="section-title black--text mb-4 display-0 text-xs-center">Новини</h1>
     <div class="post"
          v-for="item in news"
          :key="item.id">
@@ -32,7 +32,7 @@
         <p> {{ item.description }} </p>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <style scoped>

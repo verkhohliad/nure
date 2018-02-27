@@ -2,7 +2,7 @@ import uuid from 'uuid'
 
 import { TYPES_OF_SPECIALIZATIONS } from '../common'
 import firstImg from '../assets/img/first.jpg'
-import secondImg from '../assets/img/second.jpg'
+import secondImg from '../assets/img/exams.jpg'
 import thirdImg from '../assets/img/third.jpg'
 import fourthImg from '../assets/img/fourth.jpg'
 import fifthImg from '../assets/img/fifth.jpg'
