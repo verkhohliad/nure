@@ -23,5 +23,5 @@ export const MUTATIONS = keyMirror({
 
 
   // MODALS
-  SET_OLYMPIAD_MODAL: null
+  SET_OLYMPIAD_MODAL: null,
 });
