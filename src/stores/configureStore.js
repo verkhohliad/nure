@@ -4,6 +4,7 @@ import createLogger from 'vuex/dist/logger'
 
 import user from './user'
 import entities from './entities'
+import modals from './modals'
 
 Vue.use(Vuex);
 
@@ -12,6 +13,7 @@ const store = new Vuex.Store({
   modules: {
     user,
     entities,
+    modals,
   },
   strict: true,
 });

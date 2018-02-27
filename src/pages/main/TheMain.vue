@@ -11,6 +11,10 @@
 </script>
 
 <template>
+  <transition
+    name="custom-classes-transition"
+    enter-active-class="animated fadeInLeftBig"
+    leave-active-class="animated fadeOutRightBig">
   <v-container class="TheMain" grid-list-md text-xs-center>
     <section class="greeting">
       <h1 class="section-title black--text mb-4 display-0 text-xs-center">
@@ -61,6 +65,7 @@
       <MainNewsWidget/>
     </section>
   </v-container>
+  </transition>
 </template>
 
 <style scoped>

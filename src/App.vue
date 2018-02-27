@@ -2,10 +2,11 @@
   import './styles/index.scss'
   import TheHeader from './pages/layout/TheHeader'
   import TheFooter from './pages/layout/TheFooter'
+  import TheModals from './modals/TheModals'
   import { ROUTES } from './common'
 
   export default {
-    components: { TheHeader, TheFooter },
+    components: { TheHeader, TheFooter, TheModals },
     name: 'App',
     data() {
       return {
@@ -48,6 +49,8 @@
     <TheHeader/>
     <router-view/>
     <TheFooter/>
+
+    <TheModals/>
   </v-app>
 </template>
 
