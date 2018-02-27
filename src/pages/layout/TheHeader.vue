@@ -74,11 +74,11 @@
   .transformed {
     background: rgb(47, 48, 48);
     padding: 5px 10%;
-    z-index: 10;
   }
 
   .TheHeader {
     font-family: "Century Gothic";
+    z-index: 5;
   }
 
   .scroll-down-icon {
@@ -95,6 +95,7 @@
   }
 
   nav {
+    z-index: 10;
     transition: all 0.6s ease;
     display: flex;
     flex-direction: row;
