@@ -14,6 +14,7 @@ export const token = async (req, res, next) => {
     return next(httpError(401, 'Access denied'));
   }
 
+  // eslint-disable-next-line
   req.user = user;
   next();
 };

@@ -1,5 +1,6 @@
 import statuses from 'statuses';
 
+// todo: maybe remove it and download special library
 export const apiErrorHandler = (error, req, res, next) => {
   // todo: check 422 - unauthorize
   console.log('---------', error, '-------------');
@@ -21,11 +22,12 @@ export const apiErrorHandler = (error, req, res, next) => {
   }
 
   // client errors
-  body.message = error.message;
+  // body.message = error.message;
 
   if (error.code) body.code = error.code;
   if (error.name) body.name = error.name;
   if (error.type) body.type = error.type;
+  if (error.details) body.details = error.details[0].message;
 
   res.status(status).json(body);
 };

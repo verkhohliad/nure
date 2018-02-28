@@ -47,11 +47,11 @@ app.use(morgan(function (tokens, req, res) {
 
 app.use('/', express.static('./dist'));
 
-app.use('/uploads', express.static('/uploads'));
+// app.use('/uploads', express.static('/uploads'));
 
 app.use('/api/', api);
 
-app.use(apiErrorHandler);
+app.use(apiErrorHandler); // maybe use not custom handler error - just library
 
 const server = http.createServer(app);
 
