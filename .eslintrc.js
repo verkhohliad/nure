@@ -73,5 +73,6 @@ module.exports = {
     'no-underscore-dangle': 'off',
     'prefer-const': 'off',
     'arrow-parens': 'off'
+    'no-confusing-arrow': 'off',
   }
 }
