@@ -7,4 +7,7 @@ export default {
   [GETTERS.GET_OLYMPIAD_MODAL]: state => {
     return state.olympiadModal;
   },
+  [GETTERS.GET_IMAGE_MODAL]: state => {
+    return state.imageModal;
+  },
 }

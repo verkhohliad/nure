@@ -20,8 +20,8 @@
 <template>
   <transition
     name="custom-classes-transition"
-    enter-active-class="animated tada"
-    leave-active-class="animated bounceOutRight">
+    enter-active-class="animated fadeIn"
+    leave-active-class="animated fadeOut">
     <v-container class="TheOlympiad" grid-list-md text-xs-center>
       <v-layout row wrap class="TheOlympiad_content">
         <v-flex d-flex xs12 sm12 md12 child-flex>

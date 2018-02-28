@@ -1250,7 +1250,7 @@ const specializations = [
     specialty: 'Економіка',
     name: 'Економічна кібернетика',
     faculty: 'ІТМ',
-    marks: 'У - 0.3; М - 0.3; ІМ/ІУ - 0.3; А - 0.1;',
+    marks: 'У - 0.3; М - 0.3; ІМ/Ф - 0.3; А - 0.1;',
     minMark: 164.75,
     volume: 250,
     period: '3 р. 10 м.',
@@ -1536,7 +1536,7 @@ const specializations = [
     specialty: 'Телекомунікації та радіотехніка',
     name: 'Радіотехніка',
     faculty: 'ІРТЗІ',
-    marks: 'У - 0.3; М - 0.3; ІМ/ІУ - 0.3; А - 0.1; П - 0.05;',
+    marks: 'У - 0.3; М - 0.3; ІМ/Ф - 0.3; А - 0.1; П - 0.05;',
     minMark: 132.2,
     volume: 545,
     period: '3 р. 10 м.',
@@ -1624,12 +1624,26 @@ const specializations = [
     specialty: 'Видавництво та поліграфія',
     name: 'Видавничо-поліграфічна справа',
     faculty: 'КН',
-    marks: 'У - 0.2; М - 0.45; ІМ/Ф - 0.2; А - 0.1; П - 0.05;',
+    marks: 'У - 0.2; М - 0.45; Ф/ІМ/Х - 0.2; А - 0.1; П - 0.05;',
     minMark: 152.25,
     volume: 205,
     period: '3 р. 10 м.',
     cost: '9900 грн.',
   },
+];
+
+const admissionComponents = [
+  { id: 1, name: 'Спеціальності, за якими проводиться прийом на 1 курс до ХНУРЕ', value: 'specialities' },
+  { id: 2, name: 'Приймальна комісія', value: 'selectionCommittee' },
+  { id: 3, name: 'Правила прийому', value: 'admissionRules' },
+  { id: 4, name: 'Порядок подання документів', value: 'documentsSubmission' },
+  { id: 5, name: 'Робота зі школярами', value: 'schoolWork' },
+  { id: 6, name: 'Робота з технікумами', value: 'colledgeWork' },
+  { id: 7, name: 'Центр довузівської підготовки' },
+  { id: 8, name: 'Заходи' },
+  { id: 9, name: 'Для іноземних громадян' },
+  { id: 10, name: 'Для майбутніх магістрів' },
+  { id: 11, name: 'Друга вища освіта' }
 ];
 
 export const announcementsMock = () => {
@@ -1673,3 +1687,7 @@ export const specializationsMock = () => {
     }
   }).filter(x => x);
 };
+
+export const admissionComponentsMock = () => {
+  return admissionComponents
+}

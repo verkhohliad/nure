@@ -28,8 +28,8 @@
 <template>
   <transition
     name="custom-classes-transition"
-    enter-active-class="animated fadeInLeftBig"
-    leave-active-class="animated fadeOutRightBig">
+    enter-active-class="animated fadeIn"
+    leave-active-class="animated fadeOut">
     <div class="specialities">
       <v-tabs fixed centered>
         <v-toolbar class="blue-background specialities-toolbar" dark>
@@ -92,8 +92,8 @@
           <li>А - Астрономія;</li>
           <li>Х - Хімія;</li>
           <li>IМ - Іноземна мова;</li>
-          <li>ІУ - Історія України;</li>
-          <li>A - Атестат про середню освіту;</li>
+          <li>Б - Біологія;</li>
+          <li>Г - Географія;</li>
           <li>П - Пiдкурси ХНУРЕ.</li>
         </ul>
         <h1>ФОРМИ І ТЕРМІНИ НАВЧАННЯ:</h1>

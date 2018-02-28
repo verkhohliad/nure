@@ -13,8 +13,8 @@
 <template>
   <transition
     name="custom-classes-transition"
-    enter-active-class="animated fadeInLeftBig"
-    leave-active-class="animated fadeOutRightBig">
+    enter-active-class="animated fadeIn"
+    leave-active-class="animated fadeOut">
     <v-container class="TheMain" grid-list-md text-xs-center>
       <v-layout row wrap>
         <v-flex d-flex xs12 sm9 md9 child-flex>

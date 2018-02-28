@@ -31,4 +31,5 @@ export const GETTERS = keyMirror({
   // MODALS
   GET_MODALS: null,
   GET_OLYMPIAD_MODAL: null,
+  GET_IMAGE_MODAL: null
 });

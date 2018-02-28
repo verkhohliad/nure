@@ -3,7 +3,7 @@
 
   import MainSlider from '../../componentsOLD/MainSlider'
   import logo from '../../assets/img/nure-logo.png'
-  import parallaxImg from '../../assets/img/bg2.jpeg'
+  import parallaxImg from '../../assets/img/test1.jpg'
   import { GETTERS } from '../../common'
 
   export default {

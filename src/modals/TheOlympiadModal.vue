@@ -37,6 +37,9 @@
             v => !!v || 'Обов\'язкове поле',
             v => utils.validatePlaceOfStudy(v) || 'Поле повинно бути не менше 5 символів',
           ],
+          subjectRules: [
+            () => (this.$refs.ukrainian || this.$refs.maths || this.$refs.biology) || 'Оберіть хоча б один предмет'
+          ]
         },
       }
     },
@@ -151,7 +154,7 @@
                     </v-list-tile-action>
 
                     <v-list-tile-content @click="subjects.ukrainian = !subjects.ukrainian">
-                      <v-list-tile-title>Українська мова</v-list-tile-title>
+                      <v-list-tile-title>Українська мова та література</v-list-tile-title>
                     </v-list-tile-content>
                   </v-list-tile>
                   <v-list-tile href="javascript:;">

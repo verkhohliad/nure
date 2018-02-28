@@ -18,7 +18,7 @@ export const SCROLL_BAR_SETTINGS = {
 };
 
 export const GOOGLE = {
-  KEY: 'AIzaSyBvWE_sIwKbWkiuJQOf8gSk9qzpO96fhfY',
+  KEY: 'AIzaSyCwBDbz6QVV4VoQzzPIxusfb7xCZpUDPro',
   POSITION_LINK: 'https://www.google.com.ua/maps/place/' +
   '%D0%A5%D0%B0%D1%80%D1%8C%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9+%D0' +
   '%BD%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9+' +
