@@ -18,7 +18,7 @@
     },
     methods: {
       switchImageModal() {
-        this.$store.dispatch(ACTIONS.SWITCH_IMAGE_MODAL, { image: selectionCommiiteeWay });
+        this.$store.dispatch(ACTIONS.SWITCH_IMAGE_MODAL, selectionCommiiteeWay);
       }
     },
   }

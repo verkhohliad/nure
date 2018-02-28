@@ -8,7 +8,7 @@ export default {
 
     state.imageModal = {
       show: payload.show,
-      image: payload.image.image
+      image: payload.image
     };
   },
 }
