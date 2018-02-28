@@ -9,7 +9,10 @@ import getters from './getters'
 const modals = {
   state: {
     olympiadModal: false,
-    imageModal: false
+    imageModal: {
+      show: false,
+      image: ''
+    }
   },
   mutations: {
     ...mutations,

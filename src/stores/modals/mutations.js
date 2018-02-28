@@ -5,6 +5,10 @@ export default {
     state.olympiadModal = payload;
   },
   [MUTATIONS.SET_IMAGE_MODAL]: (state, payload) => {
-    state.imageModal = payload;
+
+    state.imageModal = {
+      show: payload.show,
+      image: payload.image.image
+    };
   },
 }

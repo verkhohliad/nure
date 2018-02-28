@@ -17,9 +17,9 @@
       }
     },
     methods: {
-      ...mapActions({
-        switchImageModal: ACTIONS.SWITCH_IMAGE_MODAL
-      })
+      switchImageModal() {
+        this.$store.dispatch(ACTIONS.SWITCH_IMAGE_MODAL, { image: selectionCommiiteeWay });
+      }
     },
   }
 </script>
@@ -117,8 +117,6 @@
         <GoogleMap/>
 
       </v-flex>
-
-      <ImageModal :image="selectionCommiiteeWay"/>
     </v-container>
   </transition>
 </template>

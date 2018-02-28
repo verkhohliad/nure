@@ -1,9 +1,10 @@
 <script>
   import TheOlympiadModal from './TheOlympiadModal'
+  import ImageModal from './ImageModal'
 
   export default {
     name: 'TheModals',
-    components: { TheOlympiadModal },
+    components: { TheOlympiadModal, ImageModal },
     data() {
       return {}
     },
@@ -11,7 +12,10 @@
 </script>
 
 <template>
-  <TheOlympiadModal/>
+  <div>
+    <TheOlympiadModal/>
+    <ImageModal />
+  </div>
 </template>
 
 <style scoped>

@@ -16,7 +16,7 @@
     },
     computed: {
       ...mapGetters({
-        imageModal: GETTERS.GET_IMAGE_MODAL,
+        modalData: GETTERS.GET_IMAGE_MODAL,
       }),
     },
     methods: {
@@ -28,12 +28,12 @@
 </script>
 
 <template>
-  <v-dialog v-model="imageModal" persistent max-width="1000px">
+  <v-dialog v-model="modalData.show" persistent max-width="1000px">
     <v-card>
       <v-btn color="primary" flat @click="switchImageModal">Закрити</v-btn>
       <v-card-text>
         <div class="">
-          <img :src="image" alt="">
+          <img :src="modalData.image" alt="">
         </div>
       </v-card-text>
     </v-card>
