@@ -37,9 +37,7 @@
             v => !!v || 'Обов\'язкове поле',
             v => utils.validatePlaceOfStudy(v) || 'Поле повинно бути не менше 5 символів',
           ],
-          subjectRules: [
-            () => (this.$refs.ukrainian || this.$refs.maths || this.$refs.biology) || 'Оберіть хоча б один предмет'
-          ]
+          subjectRules: []
         },
       }
     },
