@@ -23,6 +23,6 @@ export const MUTATIONS = keyMirror({
 
 
   // MODALS
-  SET_OLYMPIAD_MODAL: null,
-  SET_IMAGE_MODAL: null
+  OPEN_OLYMPIAD_MODAL: null,
+  CLOSE_OLYMPIAD_MODAL: null,
 });

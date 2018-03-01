@@ -1,7 +1,7 @@
 <script>
-  import { mapGetters } from 'vuex';
-  import components from '../../componentsOLD/admission/index';
   import Vue from 'vue';
+
+  import components from '../../componentsOLD/admission/index';
   import AdmissionRules from '../../componentsOLD/admission/AdmissionRules';
   import SelectionCommittee from '../../componentsOLD/admission/SelectionCommittee';
   import Specialities from '../../componentsOLD/admission/Specialties';
@@ -19,7 +19,7 @@
       DocumentsSubmission,
       SchoolWork,
       ColledgeWork,
-      SideBar
+      SideBar,
     },
     name: 'TheAdmission',
     data() {
@@ -62,8 +62,8 @@
     enter-active-class="animated fadeIn"
     leave-active-class="animated fadeOut">
     <v-container class="TheAdmission">
-      <SideBar :items="items" :show="showSideBar" v-on:hideSideBar="showSideBar=!showSideBar"
-               v-on:displayComponent="displayComponent"
+      <SideBar :items="items" :show="showSideBar" @hideSideBar="showSideBar=!showSideBar"
+               @displayComponent="displayComponent"
                :componentToDisplay="componentToDisplay"/>
       <div class="show-button" v-if="!showSideBar">
         <v-toolbar-side-icon @click="showSideBar=!showSideBar"></v-toolbar-side-icon>

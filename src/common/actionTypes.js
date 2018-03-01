@@ -23,6 +23,4 @@ export const ACTIONS = keyMirror({
 
 
   // MODALS
-  SWITCH_OLYMPIAD_MODAL: null,
-  SWITCH_IMAGE_MODAL: null
 });

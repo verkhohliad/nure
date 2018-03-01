@@ -31,6 +31,7 @@
     "vue-perfect-scrollbar": "^0.1.0",
     "vue-router": "^3.0.1",
     "vue-youtube-embed": "^2.1.3",
+    "vue-zoom": "^1.0.6",
     "vue2-google-maps": "^0.8.4",
     "vuetify": "^0.17.6",
     "vuex": "^3.0.1"
@@ -49,6 +50,7 @@
     "babel-plugin-transform-vue-jsx": "^3.5.0",
     "babel-preset-env": "^1.3.2",
     "babel-preset-stage-2": "^6.22.0",
+    "babel-preset-es2015": "^6.24.1",
     "babel-register": "^6.22.0",
     "chalk": "^2.0.1",
     "chromedriver": "^2.27.2",

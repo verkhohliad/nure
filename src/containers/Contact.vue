@@ -82,8 +82,8 @@
         </div>
       </v-flex>
       <v-flex class="flex-wrap" d-flex xs6 sm6 md6 child-flex>
-        <div class="selection-commiitee-way" @click="dialog=true">
-          <img :src="selectionCommiiteeWay" alt="">
+        <div class="selection-committee-way" @click="dialog=true">
+          <img :src="selectionCommitteeWay" alt="">
         </div>
 
         <div class="footer-map" v-if="location">
@@ -97,8 +97,8 @@
       <v-dialog v-model="dialog" max-width="1000px">
         <v-card>
           <v-card-text>
-            <div class="selection-commiitee-way">
-              <img :src="selectionCommiiteeWay" alt="">
+            <div class="selection-committee-way">
+              <img :src="selectionCommitteeWay" alt="">
             </div>
           </v-card-text>
           <v-card-actions>
@@ -111,13 +111,13 @@
 </template>
 
 <script>
-  import selectionCommiiteeWay from '../assets/img/selectionCommiiteeWay.jpg';
+  import selectionCommitteeWay from '../assets/img/selectionCommitteeWay.jpg';
 
   export default {
     name: 'Contact',
     data() {
       return {
-        selectionCommiiteeWay,
+        selectionCommitteeWay,
         dialog: false
       }
     },

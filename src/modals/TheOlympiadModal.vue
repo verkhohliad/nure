@@ -1,25 +1,29 @@
 <script>
-  import { mapGetters, mapActions } from 'vuex'
+  import { mapGetters, mapMutations } from 'vuex'
 
-  import { ACTIONS, GETTERS } from '../common'
+  import { MUTATIONS, GETTERS } from '../common'
   import * as utils from '../utils'
+
+  const initialState = {
+    surname: '',
+    name: '',
+    patronymic: '',
+    placeOfStudy: '',
+    phone: '',
+    email: '',
+    subjects: {
+      ukrainian: false,
+      maths: false,
+      biology: false,
+    },
+    valid: false,
+  };
 
   export default {
     name: 'TheOlympiadModal',
     data() {
       return {
-        surname: '',
-        name: '',
-        patronymic: '',
-        placeOfStudy: '',
-        phone: '',
-        email: '',
-        subjects: {
-          ukrainian: false,
-          maths: false,
-          biology: false,
-        },
-        valid: false,
+        ...initialState,
         rules: {
           userNameRules: [
             v => !!v || 'Обов\'язкове поле',
@@ -37,7 +41,6 @@
             v => !!v || 'Обов\'язкове поле',
             v => utils.validatePlaceOfStudy(v) || 'Поле повинно бути не менше 5 символів',
           ],
-          subjectRules: []
         },
       }
     },
@@ -51,20 +54,9 @@
     },
     methods: {
       setInitialState() {
-        this.name = '';
-        this.surname = '';
-        this.patronymic = '';
-        this.email = '';
-        this.phone = '';
-        this.placeOfStudy = '';
-        this.subjects = {
-          ukrainian: false,
-          maths: false,
-          biology: false,
-        };
-        this.valid = false;
+        Object.assign(this, initialState);
       },
-      submit() {
+      onSubmit() {
         if (this.$refs.form.validate() && utils.getSelectedSubjects(this.subjects).length > 0) {
           const userOlympicData = {
             name: utils.getValidString(this.name),
@@ -80,10 +72,10 @@
       },
       hideOlympicModal() {
         this.setInitialState();
-        this.switchOlympiadModal()
+        this.closeOlympiadModal()
       },
-      ...mapActions({
-        switchOlympiadModal: ACTIONS.SWITCH_OLYMPIAD_MODAL,
+      ...mapMutations({
+        closeOlympiadModal: MUTATIONS.CLOSE_OLYMPIAD_MODAL,
       }),
     },
   }
@@ -91,7 +83,7 @@
 
 <template>
   <v-layout row justify-center>
-    <v-dialog v-model="olympiadModal" persistent width="80%">
+    <v-dialog v-model="olympiadModal.show" persistent width="80%">
       <v-card>
 
         <v-card-title>
@@ -182,7 +174,7 @@
         <v-card-actions>
           <v-layout wrap>
             <v-flex xs12 sm6 md6 style="text-align: right">
-              <v-btn color="success" :disabled="!valid" @click="submit">Зареєструватись в олімпіаді</v-btn>
+              <v-btn color="success" :disabled="!valid" @click="onSubmit">Зареєструватись в олімпіаді</v-btn>
             </v-flex>
             <v-flex xs12 sm6 md6 style="text-align: center">
               <v-btn color="error" @click="hideOlympicModal">Закрити</v-btn>

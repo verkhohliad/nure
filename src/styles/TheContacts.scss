@@ -1,9 +1,11 @@
 .TheContacts {
   background: #fff;
-  .selection-commiitee-way {
+  .selection-committee-way {
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    width: 500px;
+    height: 450px;
     img {
       width: 80%;
       height: 450px;

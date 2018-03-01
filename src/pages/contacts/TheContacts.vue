@@ -1,24 +1,15 @@
 <script>
-  import { mapActions } from 'vuex'
-
-  import { ACTIONS } from '../../common';
+  import vZoom from 'vue-zoom'
 
   import GoogleMap from '../../components/GoogleMap';
-  import ImageModal from '../../modals/ImageModal';
-
-  import selectionCommiiteeWay from '../../assets/img/selectionCommiiteeWay.jpg';
+  import selectionCommitteeWay from '../../assets/img/selectionCommitteeWay.jpg';
 
   export default {
     name: 'TheContacts',
-    components: { GoogleMap, ImageModal },
+    components: { GoogleMap, vZoom },
     data() {
       return {
-        selectionCommiiteeWay,
-      }
-    },
-    methods: {
-      switchImageModal() {
-        this.$store.dispatch(ACTIONS.SWITCH_IMAGE_MODAL, selectionCommiiteeWay);
+        selectionCommitteeWay,
       }
     },
   }
@@ -111,11 +102,8 @@
         </div>
       </v-flex>
       <v-flex class="flex-wrap" d-flex xs6 sm6 md6 child-flex>
-        <div class="selection-commiitee-way" @click="switchImageModal">
-          <img :src="selectionCommiiteeWay" alt="">
-        </div>
+        <v-zoom class="selection-committee-way" :width="400" :img="selectionCommitteeWay"></v-zoom>
         <GoogleMap/>
-
       </v-flex>
     </v-container>
   </transition>

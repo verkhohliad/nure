@@ -29,7 +29,5 @@ export const GETTERS = keyMirror({
   GET_SECOND_EDUCATION_EXTRAMURAL_SPECIALIZATIONS: null,
 
   // MODALS
-  GET_MODALS: null,
   GET_OLYMPIAD_MODAL: null,
-  GET_IMAGE_MODAL: null
 });

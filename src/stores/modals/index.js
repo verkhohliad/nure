@@ -1,27 +1,8 @@
-import mutations from './mutations'
-import actions from './actions'
-import getters from './getters'
+import olympiadModal from './olympiadModal'
 
-/**
- * state of project modals (temporary version)
- * @type {{state: {scope: Array, isAdmin: boolean}, mutations: {}, actions: {}, getters: {}}}
- */
 const modals = {
-  state: {
-    olympiadModal: false,
-    imageModal: {
-      show: false,
-      image: ''
-    }
-  },
-  mutations: {
-    ...mutations,
-  },
-  actions: {
-    ...actions,
-  },
-  getters: {
-    ...getters,
+  modules: {
+    olympiadModal,
   },
 };
 
