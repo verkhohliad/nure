@@ -1,4 +1,4 @@
-  // https://eslint.org/docs/user-guide/configuring
+// https://eslint.org/docs/user-guide/configuring
 
 module.exports = {
   root: true,
@@ -50,29 +50,20 @@ module.exports = {
     'no-new': 'off',
     'semi': 'off',
     //'comma-dangle': 'off',
-    'import/prefer-default-export': 'off',
-    'arrow-body-style': 'off',
-    'arrow-parens': 'off',
-    'no-console': 'off',
     'no-return-await': 'off',
-    'consistent-return': 'off'
     'comma-dangle': 'off',
     'no-trailing-space': 'off',
     'no-console': 'off',
     'import/no-extraneous-dependencies': 'off',
     'import/export': 'off',
     'import/prefer-default-export': 'off',
-    'no-param-reassign': 'off',
     'no-else-return': 'off',
-    'consistent-return': 'off'
-    'consistent-return': 'off',
-    'max-len': 'off',
     'consistent-return': 'off',
     'arrow-body-style': 'off',
     'max-len': 'off',
     'no-underscore-dangle': 'off',
     'prefer-const': 'off',
-    'arrow-parens': 'off'
+    'arrow-parens': 'off',
     'no-confusing-arrow': 'off',
   }
 }
