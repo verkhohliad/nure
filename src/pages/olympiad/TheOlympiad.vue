@@ -1,7 +1,7 @@
 <script>
-  import { mapActions } from 'vuex'
+  import { mapMutations } from 'vuex'
 
-  import { ACTIONS } from '../../common'
+  import { MUTATIONS } from '../../common'
 
 
   export default {
@@ -10,8 +10,8 @@
       return {}
     },
     methods: {
-      ...mapActions({
-        switchOlympiadModal: ACTIONS.SWITCH_OLYMPIAD_MODAL,
+      ...mapMutations({
+        openOlympiadModal: MUTATIONS.OPEN_OLYMPIAD_MODAL,
       }),
     },
   }
@@ -67,7 +67,7 @@
               <li>173 Авіоніка</li>
               <li>186 Видавництво і поліграфія.</li>
             </ul>
-            <v-btn @click="switchOlympiadModal" class="flex_margin_auto" color="info">Взяти участь в олімпіаді</v-btn>
+            <v-btn @click="openOlympiadModal()" class="flex_margin_auto" color="info">Взяти участь в олімпіаді</v-btn>
           </section>
         </v-flex>
       </v-layout>

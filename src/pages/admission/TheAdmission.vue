@@ -1,15 +1,13 @@
 <script>
-  import Vue from 'vue';
-
-  import components from '../../componentsOLD/admission/index';
-  import AdmissionRules from '../../componentsOLD/admission/AdmissionRules';
-  import SelectionCommittee from '../../componentsOLD/admission/SelectionCommittee';
-  import Specialities from '../../componentsOLD/admission/Specialties';
-  import DocumentsSubmission from '../../componentsOLD/admission/DocumentsSubmission';
-  import SchoolWork from '../../componentsOLD/admission/SchoolWork';
-  import ColledgeWork from '../../componentsOLD/admission/ColledgeWork';
-  import SideBar from '../../components/SideBar';
-  import { getAdmissionComponents } from '../../api/admission';
+  import AdmissionRules from './AdmissionRules';
+  import SelectionCommittee from './AdmissionSelectionCommittee';
+  import Specialities from './AdmissionSpecialties';
+  import DocumentsSubmission from './AdmissionDocumentsSubmission';
+  import SchoolWork from './AdmissionSchoolWork';
+  import ColledgeWork from './AdmissionColledgeWork';
+  import SideBar from './AdmissionSideBar';
+  import { getAdmissionTabs } from '../../utils';
+  // import { ROUTES } from '../../common'
 
   export default {
     components: {
@@ -24,35 +22,28 @@
     name: 'TheAdmission',
     data() {
       return {
-        items: getAdmissionComponents(),
+        tabs: getAdmissionTabs(),
         showSideBar: true,
         componentToDisplay: '',
-        components,
-        active: null,
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
       }
-    },
-    beforeCreate() {
-
     },
     created() {
-      if (this.$route.query.component) {
-        this.componentToDisplay = this.$route.query.component || '';
-      }
+      // do not need now, because whatever loading is redirecting on main page now.
+      // if (this.$route.query.component) {
+      //  this.componentToDisplay = this.$route.query.component || '';
+      // }
     },
-    computed: {},
     watch: {
-      $route: {
-        handler(nextRoute = {}) {
-          this.componentToDisplay = nextRoute.query.component;
-        }
-      }
+      // $route(nextRoute = {}) {
+      //  this.componentToDisplay = nextRoute.query.component;
+      // },
     },
     methods: {
       displayComponent(data) {
-        this.$router.push({ path: 'admission', query: { component: data.value } });
+        this.componentToDisplay = data.value;
+        // this.$router.push({ path: ROUTES.ADMISSION, query: { component: data.value } });
       },
-    }
+    },
   }
 </script>
 
@@ -62,18 +53,22 @@
     enter-active-class="animated fadeIn"
     leave-active-class="animated fadeOut">
     <v-container class="TheAdmission">
-      <SideBar :items="items" :show="showSideBar" @hideSideBar="showSideBar=!showSideBar"
-               @displayComponent="displayComponent"
-               :componentToDisplay="componentToDisplay"/>
+      <SideBar :tabs="tabs"
+               :show="showSideBar"
+               :componentToDisplay="componentToDisplay"
+               @hideSideBar="showSideBar = !showSideBar"
+               @displayComponent="displayComponent"/>
+
       <div class="show-button" v-if="!showSideBar">
         <v-toolbar-side-icon @click="showSideBar=!showSideBar"></v-toolbar-side-icon>
       </div>
+
       <div class="content">
         <div v-if="!componentToDisplay">
           <h1>Вступ до університету радіоелектроніки</h1>
         </div>
         <transition name="slide-fade">
-          <component :is="componentToDisplay"/>
+          <div :is="componentToDisplay"/>
         </transition>
       </div>
     </v-container>

@@ -12,11 +12,6 @@ export const ROUTES = {
   LOADING: '/loading',
 };
 
-export const SCROLL_BAR_SETTINGS = {
-  maxScrollbarLength: 60,
-  wheelPropagation: true,
-};
-
 export const GOOGLE = {
   KEY: 'AIzaSyCwBDbz6QVV4VoQzzPIxusfb7xCZpUDPro',
   MAP_LOCATION_OF_UNIVERSITY: {

@@ -1,3 +1,16 @@
+<script>
+  export default {
+    components: {},
+    name: 'AdmissionDocumentsSubmission',
+    data() {
+      return {}
+    },
+    created() {},
+    computed: {},
+    methods: {},
+  }
+</script>
+
 <template>
   <section class="doc-submission">
     <h1 class="title">Порядок подання документів</h1>
@@ -107,24 +120,5 @@
   </section>
 </template>
 
-<script>
-  export default {
-    components: {},
-    name: 'DocumentsSubmission',
-    data() {
-      return {}
-    },
-    beforeCreate() {
-
-    },
-    created() {
-
-    },
-    computed: {},
-    methods: {}
-  }
-</script>
-
 <style scoped>
-
 </style>

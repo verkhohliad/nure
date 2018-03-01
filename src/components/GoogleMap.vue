@@ -14,7 +14,7 @@
 
 <template>
   <div class="google-map">
-    <gmap-map class="map-container" :center="{lat: location.lat, lng: location.lng}" :zoom="14">
+    <gmap-map class="map-container" :center="{lat: location.lat, lng: location.lng}" :zoom="15">
       <gmap-marker :position="{lat: location.lat, lng: location.lng}">
       </gmap-marker>
     </gmap-map>

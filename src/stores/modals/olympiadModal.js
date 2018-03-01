@@ -5,7 +5,7 @@ const initialState = {
 };
 
 const modals = {
-  state: initialState,
+  state: { ...initialState },
   mutations: {
     [MUTATIONS.OPEN_OLYMPIAD_MODAL]: (state, payload) => {
       Object.assign(state, {
