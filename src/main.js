@@ -1,16 +1,29 @@
 import Vue from 'vue'
 import Vuetify from 'vuetify'
 import BootstrapVue from 'bootstrap-vue'
-import axios from 'axios'
-
 import VueYouTubeEmbed from 'vue-youtube-embed'
 import * as VueGoogleMaps from 'vue2-google-maps'
+import VueNotifications from 'vue-notifications'
+import toastr from 'toastr'
 
 import router from './router'
 import App from './App'
 import store from './stores/configureStore'
 import { GOOGLE } from './common';
 
+function toast({ title, message, type, timeout, cb }) {
+  // eslint-disable-next-line
+  if (type === VueNotifications.types.warn) type = 'warning';
+  return toastr[type](message, title, { timeOut: timeout })
+}
+const options = {
+  success: toast,
+  error: toast,
+  info: toast,
+  warn: toast
+};
+
+Vue.use(VueNotifications, options);
 Vue.use(BootstrapVue);
 Vue.use(Vuetify);
 Vue.use(VueYouTubeEmbed);
@@ -21,8 +34,6 @@ Vue.use(VueGoogleMaps, {
   },
 });
 Vue.config.productionTip = false;
-
-window.axios = axios
 
 new Vue({
   el: '#app',

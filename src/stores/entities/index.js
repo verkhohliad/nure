@@ -1,4 +1,5 @@
 import { ACTIONS } from '../../common'
+import { initApi } from '../../api'
 
 import announcements from './announcements'
 import faculties from './faculties'
@@ -16,6 +17,7 @@ const entities = {
   },
   actions: {
     [ACTIONS.UPLOAD_ALL_ENTITIES]: async state => {
+      initApi();
       await state.dispatch(ACTIONS.UPLOAD_ANNOUNCEMENTS);
       await state.dispatch(ACTIONS.UPLOAD_FACULTIES);
       await state.dispatch(ACTIONS.UPLOAD_NEWS);
