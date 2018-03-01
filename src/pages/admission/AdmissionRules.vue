@@ -1,7 +1,7 @@
 <script>
   export default {
     components: {},
-    name: 'AdmissionAdmissionRules',
+    name: 'AdmissionRules',
     data() {
       return {}
     },

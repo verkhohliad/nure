@@ -1,23 +1,23 @@
 <script>
   import AdmissionRules from './AdmissionRules';
-  import SelectionCommittee from './AdmissionSelectionCommittee';
-  import Specialities from './AdmissionSpecialties';
-  import DocumentsSubmission from './AdmissionDocumentsSubmission';
-  import SchoolWork from './AdmissionSchoolWork';
-  import ColledgeWork from './AdmissionColledgeWork';
-  import SideBar from './AdmissionSideBar';
+  import AdmissionSelectionCommittee from './AdmissionSelectionCommittee';
+  import AdmissionSpecialities from './AdmissionSpecialties';
+  import AdmissionDocumentsSubmission from './AdmissionDocumentsSubmission';
+  import AdmissionSchoolWork from './AdmissionSchoolWork';
+  import AdmissionColledgeWork from './AdmissionColledgeWork';
+  import AdmissionSideBar from './AdmissionSideBar';
   import { getAdmissionTabs } from '../../utils';
   // import { ROUTES } from '../../common'
 
   export default {
     components: {
       AdmissionRules,
-      SelectionCommittee,
-      Specialities,
-      DocumentsSubmission,
-      SchoolWork,
-      ColledgeWork,
-      SideBar,
+      AdmissionSelectionCommittee,
+      AdmissionSpecialities,
+      AdmissionDocumentsSubmission,
+      AdmissionSchoolWork,
+      AdmissionColledgeWork,
+      AdmissionSideBar,
     },
     name: 'TheAdmission',
     data() {
@@ -53,7 +53,7 @@
     enter-active-class="animated fadeIn"
     leave-active-class="animated fadeOut">
     <v-container class="TheAdmission">
-      <SideBar :tabs="tabs"
+      <AdmissionSideBar :tabs="tabs"
                :show="showSideBar"
                :componentToDisplay="componentToDisplay"
                @hideSideBar="showSideBar = !showSideBar"

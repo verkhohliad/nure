@@ -4,7 +4,7 @@
   import { GETTERS, SPECIALITIES_PAGE } from '../../common'
 
   export default {
-    name: 'BachelorTabDailyTable',
+    name: 'MasterTabExtramuralTable',
     data() {
       return {
         headers: [
