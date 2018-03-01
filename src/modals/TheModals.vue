@@ -11,7 +11,9 @@
 </script>
 
 <template>
-  <TheOlympiadModal/>
+  <div>
+    <TheOlympiadModal/>
+  </div>
 </template>
 
 <style scoped>

@@ -1,3 +1,21 @@
+<script>
+  export default {
+    components: {},
+    name: 'AdmissionSelectionCommittee',
+    data() {
+      return {}
+    },
+    beforeCreate() {
+
+    },
+    created() {
+
+    },
+    computed: {},
+    methods: {},
+  }
+</script>
+
 <template>
   <section>
     <h1 class="title">Приймальна комісія</h1>
@@ -43,24 +61,5 @@
   </section>
 </template>
 
-<script>
-  export default {
-    components: {},
-    name: 'SelectionCommittee',
-    data() {
-      return {}
-    },
-    beforeCreate() {
-
-    },
-    created() {
-
-    },
-    computed: {},
-    methods: {}
-  }
-</script>
-
 <style scoped>
-
 </style>

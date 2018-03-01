@@ -30,11 +30,14 @@ export const getUserPages = (isCurrentUserAdmin) => {
     label: PAGES_NAMES.NEWS,
     component: TheNews,
     path: ROUTES.NEWS,
-  }, {
-    label: PAGES_NAMES.EXAM_RESULTS,
-    component: TheExamResults,
-    path: ROUTES.EXAM_RESULTS,
-  }, {
+  },
+  //   {
+  //   label: PAGES_NAMES.EXAM_RESULTS,
+  //   component: TheExamResults,
+  //   path: ROUTES.EXAM_RESULTS,
+  // },
+
+    {
     label: PAGES_NAMES.CONTACTS,
     component: TheContacts,
     path: ROUTES.CONTACTS,

@@ -1,3 +1,16 @@
+<script>
+  export default {
+    components: {},
+    name: 'AdmissionRules',
+    data() {
+      return {}
+    },
+    created() {},
+    computed: {},
+    methods: {},
+  }
+</script>
+
 <template>
   <section>
     <h1 class="title">Правила прийому</h1>
@@ -50,25 +63,5 @@
   </section>
 </template>
 
-<script>
-  export default {
-    components: {},
-    name: 'AdmissionRules',
-    data() {
-      return {}
-    },
-    beforeCreate() {
-
-    },
-    created() {
-
-    },
-    computed: {},
-    methods: {},
-  }
-</script>
-
 <style scoped>
-
-
 </style>

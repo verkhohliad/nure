@@ -1,7 +1,7 @@
 <script>
   import { GOOGLE } from '../../common';
   import nureLogo from '../../assets/img/nure-logo.png';
-  import ministryLogo from '../../assets/img/ministryEducationLogo2.png';
+  import ministryLogo from '../../assets/img/ministryEducationLogo3.png';
 
   export default {
     name: 'TheFooter',
