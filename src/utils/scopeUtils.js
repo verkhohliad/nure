@@ -10,39 +10,38 @@ import TheAdmin from '../pages/admin/TheAdmin'
 
 
 export const getUserPages = (isCurrentUserAdmin) => {
-  const userPages = [
+  const userPages = [{
+    label: PAGES_NAMES.MAIN,
+    component: TheMain,
+    path: ROUTES.MAIN,
+  }, {
+    label: PAGES_NAMES.SPECIALITIES,
+    component: TheSpecialities,
+    path: ROUTES.SPECIALITIES,
+  }, {
+    label: PAGES_NAMES.ADMISSION,
+    component: TheAdmission,
+    path: ROUTES.ADMISSION,
+  }, {
+    label: PAGES_NAMES.OLYMPIAD,
+    component: TheOlympiad,
+    path: ROUTES.OLYMPIAD,
+  }, {
+    label: PAGES_NAMES.NEWS,
+    component: TheNews,
+    path: ROUTES.NEWS,
+  },
+  //   {
+  //   label: PAGES_NAMES.EXAM_RESULTS,
+  //   component: TheExamResults,
+  //   path: ROUTES.EXAM_RESULTS,
+  // },
+
     {
-      label: PAGES_NAMES.MAIN,
-      component: TheMain,
-      path: ROUTES.MAIN,
-    },
-    {
-      label: PAGES_NAMES.SPECIALITIES,
-      component: TheSpecialities,
-      path: ROUTES.SPECIALITIES,
-    }, {
-      label: PAGES_NAMES.ADMISSION,
-      component: TheAdmission,
-      path: ROUTES.ADMISSION,
-    }, {
-      label: PAGES_NAMES.OLYMPIAD,
-      component: TheOlympiad,
-      path: ROUTES.OLYMPIAD,
-    }, {
-      label: PAGES_NAMES.NEWS,
-      component: TheNews,
-      path: ROUTES.NEWS,
-    },
-    // {
-    //   label: PAGES_NAMES.EXAM_RESULTS,
-    //   component: TheExamResults,
-    //   path: ROUTES.EXAM_RESULTS,
-    // },
-    {
-      label: PAGES_NAMES.CONTACTS,
-      component: TheContacts,
-      path: ROUTES.CONTACTS,
-    }];
+    label: PAGES_NAMES.CONTACTS,
+    component: TheContacts,
+    path: ROUTES.CONTACTS,
+  }];
 
   if (isCurrentUserAdmin) {
     userPages.push({

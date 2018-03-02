@@ -12,9 +12,9 @@
 </script>
 
 <template>
-  <div class="TheNews">
-    News page
-  </div>
+  <v-container class="TheNews">
+    Новини
+  </v-container>
 </template>
 
 <style scoped>

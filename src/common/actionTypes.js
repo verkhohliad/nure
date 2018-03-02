@@ -21,7 +21,6 @@ export const ACTIONS = keyMirror({
   // SPECIALIZATIONS
   UPLOAD_SPECIALIZATIONS: null,
 
-
   // MODALS
-  SWITCH_OLYMPIAD_MODAL: null,
+  OLYMPIAD_REGISTER_USER: null,
 });

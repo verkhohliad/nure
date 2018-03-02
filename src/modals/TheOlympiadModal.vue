@@ -1,25 +1,30 @@
 <script>
-  import { mapGetters, mapActions } from 'vuex'
+  import { mapGetters, mapMutations, mapActions } from 'vuex'
+  import VueNotifications from 'vue-notifications'
 
-  import { ACTIONS, GETTERS } from '../common'
+  import { MUTATIONS, GETTERS, ACTIONS } from '../common'
   import * as utils from '../utils'
+
+  const initialState = {
+    surname: '',
+    name: '',
+    patronymic: '',
+    placeOfStudy: '',
+    phone: '',
+    email: '',
+    subjects: {
+      ukrainian: false,
+      maths: false,
+      biology: false,
+    },
+    valid: false,
+  };
 
   export default {
     name: 'TheOlympiadModal',
     data() {
       return {
-        surname: '',
-        name: '',
-        patronymic: '',
-        placeOfStudy: '',
-        phone: '',
-        email: '',
-        subjects: {
-          ukrainian: false,
-          maths: false,
-          biology: false,
-        },
-        valid: false,
+        ...initialState,
         rules: {
           userNameRules: [
             v => !!v || 'Обов\'язкове поле',
@@ -40,6 +45,30 @@
         },
       }
     },
+    // todo:  change it
+    notifications: {
+      showSuccessMsg: {
+        type: VueNotifications.types.success,
+        title: 'Ви успішно зареєструвались на участь у Олімпіаді',
+        message: 'Завдання були вислани на вашу пошту',
+        timeout: 5000,
+      },
+      showInfoMsg: {
+        type: VueNotifications.types.info,
+        title: 'Hey you',
+        message: 'Here is some info for you'
+      },
+      showWarnMsg: {
+        type: VueNotifications.types.warn,
+        title: 'Wow, man',
+        message: 'That\'s the kind of warning'
+      },
+      showErrorMsg: {
+        type: VueNotifications.types.error,
+        title: 'Wow-wow',
+        message: 'That\'s the error'
+      }
+    },
     computed: {
       ...mapGetters({
         olympiadModal: GETTERS.GET_OLYMPIAD_MODAL,
@@ -50,20 +79,9 @@
     },
     methods: {
       setInitialState() {
-        this.name = '';
-        this.surname = '';
-        this.patronymic = '';
-        this.email = '';
-        this.phone = '';
-        this.placeOfStudy = '';
-        this.subjects = {
-          ukrainian: false,
-          maths: false,
-          biology: false,
-        };
-        this.valid = false;
+        Object.assign(this, initialState);
       },
-      submit() {
+      async onSubmit() {
         if (this.$refs.form.validate() && utils.getSelectedSubjects(this.subjects).length > 0) {
           const userOlympicData = {
             name: utils.getValidString(this.name),
@@ -75,22 +93,30 @@
             subjects: utils.getSelectedSubjects(this.subjects),
           };
           console.log(userOlympicData);
+          const res = await this.olympiadRegisterUser(userOlympicData);
+          if (res) {
+            this.showSuccessMsg();
+            this.hideOlympicModal();
+          }
         }
       },
       hideOlympicModal() {
         this.setInitialState();
-        this.switchOlympiadModal()
+        this.closeOlympiadModal()
       },
-      ...mapActions({
-        switchOlympiadModal: ACTIONS.SWITCH_OLYMPIAD_MODAL,
+      ...mapMutations({
+        closeOlympiadModal: MUTATIONS.CLOSE_OLYMPIAD_MODAL,
       }),
+      ...mapActions({
+        olympiadRegisterUser: ACTIONS.OLYMPIAD_REGISTER_USER,
+      })
     },
   }
 </script>
 
 <template>
   <v-layout row justify-center>
-    <v-dialog v-model="olympiadModal" persistent width="80%">
+    <v-dialog v-model="olympiadModal.show" persistent width="80%">
       <v-card>
 
         <v-card-title>
@@ -151,7 +177,7 @@
                     </v-list-tile-action>
 
                     <v-list-tile-content @click="subjects.ukrainian = !subjects.ukrainian">
-                      <v-list-tile-title>Українська мова</v-list-tile-title>
+                      <v-list-tile-title>Українська мова та література</v-list-tile-title>
                     </v-list-tile-content>
                   </v-list-tile>
                   <v-list-tile href="javascript:;">
@@ -181,7 +207,7 @@
         <v-card-actions>
           <v-layout wrap>
             <v-flex xs12 sm6 md6 style="text-align: right">
-              <v-btn color="success" :disabled="!valid" @click="submit">Зареєструватись в олімпіаді</v-btn>
+              <v-btn color="success" :disabled="!valid" @click="onSubmit">Зареєструватись в олімпіаді</v-btn>
             </v-flex>
             <v-flex xs12 sm6 md6 style="text-align: center">
               <v-btn color="error" @click="hideOlympicModal">Закрити</v-btn>

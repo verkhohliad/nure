@@ -11,9 +11,16 @@
     components: { SpecialitiesBachelorTab, SpecialitiesMasterTab, SpecialitiesSecondEducationTab },
     data() {
       return {
-        tabs: [SPECIALITIES_PAGE.TABS.BACHELOR,
-          SPECIALITIES_PAGE.TABS.MASTER,
-          SPECIALITIES_PAGE.TABS.SECOND_EDUCATION],
+        tabs: [{
+          name: SPECIALITIES_PAGE.TABS.BACHELOR,
+          component: SpecialitiesBachelorTab.name,
+        }, {
+          name: SPECIALITIES_PAGE.TABS.MASTER,
+          component: SpecialitiesMasterTab.name,
+        }, {
+          name: SPECIALITIES_PAGE.TABS.SECOND_EDUCATION,
+          component: SpecialitiesSecondEducationTab.name,
+        }],
       }
     },
     computed: {
@@ -28,8 +35,8 @@
 <template>
   <transition
     name="custom-classes-transition"
-    enter-active-class="animated fadeInLeftBig"
-    leave-active-class="animated fadeOutRightBig">
+    enter-active-class="animated fadeIn"
+    leave-active-class="animated fadeOut">
     <div class="specialities">
       <v-tabs fixed centered>
         <v-toolbar class="blue-background specialities-toolbar" dark>
@@ -52,10 +59,10 @@
         <v-tabs-bar class="cyan specialities-tabs blue-background specialities-tabs" dark>
           <v-tabs-item
             v-for="tab in tabs"
-            :key="tab"
-            :href="'#' + tab"
+            :key="tab.name"
+            :href="'#' + tab.name"
             ripple>
-            {{ tab }}
+            {{ tab.name }}
           </v-tabs-item>
           <v-tabs-slider color="yellow"></v-tabs-slider>
         </v-tabs-bar>
@@ -63,20 +70,12 @@
         <v-tabs-items>
           <v-tabs-content
             v-for="tab in tabs"
-            :key="tab"
-            :id="tab"
+            :key="tab.name"
+            :id="tab.name"
             lazy>
             <v-card flat>
               <v-card-text class="information-tab">
-                <div v-if="tab === tabs[0]">
-                  <SpecialitiesBachelorTab/>
-                </div>
-                <div v-if="tab === tabs[1]">
-                  <SpecialitiesMasterTab/>
-                </div>
-                <div v-if="tab === tabs[2]">
-                  <SpecialitiesSecondEducationTab/>
-                </div>
+                <div :is="tab.component"/>
               </v-card-text>
             </v-card>
           </v-tabs-content>
@@ -92,8 +91,8 @@
           <li>А - Астрономія;</li>
           <li>Х - Хімія;</li>
           <li>IМ - Іноземна мова;</li>
-          <li>ІУ - Історія України;</li>
-          <li>A - Атестат про середню освіту;</li>
+          <li>Б - Біологія;</li>
+          <li>Г - Географія;</li>
           <li>П - Пiдкурси ХНУРЕ.</li>
         </ul>
         <h1>ФОРМИ І ТЕРМІНИ НАВЧАННЯ:</h1>

@@ -12,13 +12,12 @@ export const ROUTES = {
   LOADING: '/loading',
 };
 
-export const SCROLL_BAR_SETTINGS = {
-  maxScrollbarLength: 60,
-  wheelPropagation: true,
-};
-
 export const GOOGLE = {
-  KEY: 'AIzaSyBvWE_sIwKbWkiuJQOf8gSk9qzpO96fhfY',
+  KEY: 'AIzaSyCwBDbz6QVV4VoQzzPIxusfb7xCZpUDPro',
+  MAP_LOCATION_OF_UNIVERSITY: {
+    lat: 50.01528769999999,
+    lng: 36.2278514,
+  },
   POSITION_LINK: 'https://www.google.com.ua/maps/place/' +
   '%D0%A5%D0%B0%D1%80%D1%8C%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9+%D0' +
   '%BD%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9+' +
@@ -36,3 +35,18 @@ export const TYPES_OF_SPECIALIZATIONS = keyMirror({
   BACHELOR_EXTRAMURAL: null,
   BACHELOR_DAILY: null,
 });
+
+/*
+export const SERVER_CONFIG = {
+  REMOTE: {
+    HOST: `${location.protocol}//${location.host}`,
+  },
+  LOCAL: {
+    HOST: `${location.protocol}//${location.host}`,
+  },
+  CURRENT: location.port === '8000' ? 'LOCAL' : 'REMOTE',
+};
+*/
+export const SERVER_CONFIG = {
+  HOST: `${location.protocol}//${location.hostname}${['8000', '8082'].indexOf(location.port) !== -1 ? ':8082' : ''}`,
+};

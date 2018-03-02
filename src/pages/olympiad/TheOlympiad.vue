@@ -1,7 +1,7 @@
 <script>
-  import { mapActions } from 'vuex'
+  import { mapMutations } from 'vuex'
 
-  import { ACTIONS } from '../../common'
+  import { MUTATIONS } from '../../common'
 
 
   export default {
@@ -10,8 +10,8 @@
       return {}
     },
     methods: {
-      ...mapActions({
-        switchOlympiadModal: ACTIONS.SWITCH_OLYMPIAD_MODAL,
+      ...mapMutations({
+        openOlympiadModal: MUTATIONS.OPEN_OLYMPIAD_MODAL,
       }),
     },
   }
@@ -20,8 +20,8 @@
 <template>
   <transition
     name="custom-classes-transition"
-    enter-active-class="animated tada"
-    leave-active-class="animated bounceOutRight">
+    enter-active-class="animated fadeIn"
+    leave-active-class="animated fadeOut">
     <v-container class="TheOlympiad" grid-list-md text-xs-center>
       <v-layout row wrap class="TheOlympiad_content">
         <v-flex d-flex xs12 sm12 md12 child-flex>
@@ -67,7 +67,7 @@
               <li>173 Авіоніка</li>
               <li>186 Видавництво і поліграфія.</li>
             </ul>
-            <v-btn @click="switchOlympiadModal" class="flex_margin_auto" color="info">Взяти участь в олімпіаді</v-btn>
+            <v-btn @click="openOlympiadModal()" class="flex_margin_auto" color="info">Взяти участь в олімпіаді</v-btn>
           </section>
         </v-flex>
       </v-layout>

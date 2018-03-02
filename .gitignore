@@ -17,3 +17,5 @@ package-lock.json
 *.ntvs*
 *.njsproj
 *.sln
+
+/server/config/server-config.js
