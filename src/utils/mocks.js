@@ -8,6 +8,11 @@ import fourthImg from '../assets/img/fourth.jpg'
 import fifthImg from '../assets/img/fifth.jpg'
 import sixthImg from '../assets/img/6th.jpg'
 
+//NEWS IMAGES
+import olympiadImg from '../assets/img/olympiad.jpg'
+import opendoorDayImg from '../assets/img/opendoorDay.jpg'
+import stipendiumImg from '../assets/img/Stipendium.jpg'
+
 const announcements = [
   {
     uid: uuid(),
@@ -56,18 +61,21 @@ const announcements = [
 const news = [
   {
     uid: uuid(),
+    image: olympiadImg,
     date: new Date(2018, 0, 12).getTime(),
     title: 'День відкритих дверей',
     description: 'ХНУРЕ запрошує на День відкритих дверей, який відбудеться 4 березня 2018 року. Початок - о 9-00. Харків, станція метро "Наукова", проспект Науки, 14.',
     url: null,
   }, {
     uid: uuid(),
+    image: opendoorDayImg,
     date: new Date(2018, 0, 13).getTime(),
     title: 'Олімпіада',
     description: 'Олімпіада ХНУРЕ буде проводитись з 1 березня.',
     url: null,
   }, {
     uid: uuid(),
+    image: stipendiumImg,
     date: new Date(2018, 0, 19).getTime(),
     title: 'Правила отримання стипендії в ХНУРЕ',
     description: 'Що найприємніше в студентському житті? Можна було б сказати, що скільки людей - стільки і відповідей. ' +

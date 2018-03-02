@@ -14,7 +14,7 @@
 </script>
 
 <template>
-  <div class="announcements">
+  <section class="announcements">
     <h1 class="section-title white--text mb-4 display-0 text-xs-center">
       Оголошення</h1>
     <v-layout class="item-container" row wrap>
@@ -27,7 +27,7 @@
         </div>
       </div>
     </v-layout>
-  </div>
+  </section>
 
 </template>
 
