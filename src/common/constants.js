@@ -35,3 +35,18 @@ export const TYPES_OF_SPECIALIZATIONS = keyMirror({
   BACHELOR_EXTRAMURAL: null,
   BACHELOR_DAILY: null,
 });
+
+/*
+export const SERVER_CONFIG = {
+  REMOTE: {
+    HOST: `${location.protocol}//${location.host}`,
+  },
+  LOCAL: {
+    HOST: `${location.protocol}//${location.host}`,
+  },
+  CURRENT: location.port === '8000' ? 'LOCAL' : 'REMOTE',
+};
+*/
+export const SERVER_CONFIG = {
+  HOST: `${location.protocol}//${location.hostname}${['8000', '8082'].indexOf(location.port) !== -1 ? ':8082' : ''}`,
+};

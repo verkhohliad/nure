@@ -1,7 +1,8 @@
 <script>
-  import { mapGetters, mapMutations } from 'vuex'
+  import { mapGetters, mapMutations, mapActions } from 'vuex'
+  import VueNotifications from 'vue-notifications'
 
-  import { MUTATIONS, GETTERS } from '../common'
+  import { MUTATIONS, GETTERS, ACTIONS } from '../common'
   import * as utils from '../utils'
 
   const initialState = {
@@ -44,6 +45,30 @@
         },
       }
     },
+    // todo:  change it
+    notifications: {
+      showSuccessMsg: {
+        type: VueNotifications.types.success,
+        title: 'Ви успішно зареєструвались на участь у Олімпіаді',
+        message: 'Завдання були вислани на вашу пошту',
+        timeout: 5000,
+      },
+      showInfoMsg: {
+        type: VueNotifications.types.info,
+        title: 'Hey you',
+        message: 'Here is some info for you'
+      },
+      showWarnMsg: {
+        type: VueNotifications.types.warn,
+        title: 'Wow, man',
+        message: 'That\'s the kind of warning'
+      },
+      showErrorMsg: {
+        type: VueNotifications.types.error,
+        title: 'Wow-wow',
+        message: 'That\'s the error'
+      }
+    },
     computed: {
       ...mapGetters({
         olympiadModal: GETTERS.GET_OLYMPIAD_MODAL,
@@ -56,7 +81,7 @@
       setInitialState() {
         Object.assign(this, initialState);
       },
-      onSubmit() {
+      async onSubmit() {
         if (this.$refs.form.validate() && utils.getSelectedSubjects(this.subjects).length > 0) {
           const userOlympicData = {
             name: utils.getValidString(this.name),
@@ -68,6 +93,11 @@
             subjects: utils.getSelectedSubjects(this.subjects),
           };
           console.log(userOlympicData);
+          const res = await this.olympiadRegisterUser(userOlympicData);
+          if (res) {
+            this.showSuccessMsg();
+            this.hideOlympicModal();
+          }
         }
       },
       hideOlympicModal() {
@@ -77,6 +107,9 @@
       ...mapMutations({
         closeOlympiadModal: MUTATIONS.CLOSE_OLYMPIAD_MODAL,
       }),
+      ...mapActions({
+        olympiadRegisterUser: ACTIONS.OLYMPIAD_REGISTER_USER,
+      })
     },
   }
 </script>
