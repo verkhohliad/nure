@@ -1,13 +1,39 @@
-.container {
+.content-parallaxImg {
+  height: 100vh !important;
+  font-family: "Century Gothic";
+  z-index: 5;
+
+  .test-name {
+    margin-top: 35vh;
+    width: 60%;
+    font-weight: bold;
+  }
+
+  .test-subheading {
+    border-top: 2px solid rgba(255, 255, 255, 0.6);
+    margin-top: 5vh;
+    padding-top: 15px;
+    font-weight: bold;
+
+  }
+
+  .scroll-down-icon {
+    color: #fff;
+    margin-top: 20vh;
+    font-size: 30px;
+    cursor: pointer;
+  }
+}
+
+.TheMain {
   display: flex;
   flex-wrap: wrap;
   max-width: 100%;
   background: #fff;
-  padding: 0 !important;
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+
+
+
+
 
   .greeting {
     padding: 59px 10%;

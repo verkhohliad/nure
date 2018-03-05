@@ -1,10 +1,16 @@
 <script>
   import MainAnnouncementsWidget from './MainAnnouncementsWidget'
   import MainNewsWidget from './MainNewsWidget'
+  import bgImg from '../../assets/img/test3.jpg'
 
   export default {
     name: 'TheMain',
     components: { MainAnnouncementsWidget, MainNewsWidget },
+    data() {
+      return {
+        bgImg
+      }
+    },
     computed: {},
     methods: {},
   }
@@ -15,7 +21,23 @@
     name="custom-classes-transition"
     enter-active-class="animated fadeIn"
     leave-active-class="animated fadeOut">
-    <v-container class="TheMain" grid-list-md text-xs-center>
+    <div class="TheMain" grid-list-md text-xs-center>
+      <section>
+        <v-parallax :src="bgImg" class="content-parallaxImg">
+          <v-layout
+            column
+            align-center
+            justify-center
+            class="white--text"
+          >
+            <h1 class="test-name white--text mb-2 display-1 text-xs-center">Офіційна сторінка приймальної комісії
+              Харківського національного університету радіоелектроніки</h1>
+            <div class="test-subheading subheading mb-3 text-xs-center">Інформація про вступ до ХНУРЕ у 2018 році</div>
+            <v-icon class="scroll-down-icon" @click="$vuetify.goTo('.scroll-down-icon', options)">fa-chevron-down</v-icon>
+          </v-layout>
+        </v-parallax>
+      </section>
+
       <section class="greeting">
         <h1 class="section-title black--text mb-4 display-0 text-xs-center">
           Шановні Абітурієнти!</h1>
@@ -64,7 +86,7 @@
       <section class="news">
         <MainNewsWidget/>
       </section>
-    </v-container>
+    </div>
   </transition>
 </template>
 

@@ -6,12 +6,13 @@
   height: 100%;
   max-height: 100%;
   max-width: 100%;
-  padding: 0;
+  //padding: $container_padding;
+  padding: 160px 10% 50px 10% !important;
   margin: 0;
   overflow: hidden;
 
   .sidebarHidden {
-    margin-left: -300px;
+    margin-left: -435px;
   }
 
   .sidebar {

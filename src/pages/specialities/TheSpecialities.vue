@@ -1,11 +1,9 @@
 <script>
   import { mapGetters } from 'vuex'
-
   import SpecialitiesBachelorTab from './SpecialitiesBachelorTab'
   import SpecialitiesMasterTab from './SpecialitiesMasterTab'
   import SpecialitiesSecondEducationTab from './SpecialitiesSecondEducationTab'
   import { GETTERS, SPECIALITIES_PAGE } from '../../common'
-
   export default {
     name: 'TheSpecialities',
     components: { SpecialitiesBachelorTab, SpecialitiesMasterTab, SpecialitiesSecondEducationTab },
@@ -37,7 +35,7 @@
     name="custom-classes-transition"
     enter-active-class="animated fadeIn"
     leave-active-class="animated fadeOut">
-    <div class="specialities">
+    <section class="specialities">
       <v-tabs fixed centered>
         <v-toolbar class="blue-background specialities-toolbar" dark>
           <v-toolbar-title class="toolbar-title">
@@ -64,7 +62,7 @@
             ripple>
             {{ tab.name }}
           </v-tabs-item>
-          <v-tabs-slider color="yellow"></v-tabs-slider>
+          <v-tabs-slider color="white"></v-tabs-slider>
         </v-tabs-bar>
 
         <v-tabs-items>
@@ -151,10 +149,10 @@
           </ol>
         </div>
       </div>
-    </div>
+    </section>
   </transition>
 </template>
 
 <style scoped>
-</style>
 
+</style>

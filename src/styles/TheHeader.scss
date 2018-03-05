@@ -1,92 +1,150 @@
 .TheHeader {
-  .content-parallaxImg {
-    height: 100vh !important;
-    font-family: "Century Gothic";
-    z-index: 5;
 
-    .transformed {
+  .solid-navbar {
+    &.transformed {
+      background: rgb(47, 48, 48);
+      padding: 10px 10%;
+      .item-link {
+        color: #fff;
+      }
+    }
+    .item-link {
+      color: rgb(47, 48, 48);
+      &:hover {
+        text-decoration: none;
+        //color: rgb(222, 224, 226);
+        opacity: 0.8;
+      }
+    }
+
+    z-index: 10;
+    transition: all 0.6s ease;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 10%;
+    // background: rgb(47, 48, 48);
+    font-weight: bold;
+    .logo {
+      display: flex;
+      flex: 1 1 25%;
+      justify-content: flex-start;
+      font-weight: bold;
+      align-items: center;
+      .item-link {
+        display: flex;
+        .logo-img {
+          height: 50px;
+          display: inline-flex;
+        }
+
+        .logo-name {
+          margin-left: 3%;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .navigation {
+      font-size: 16px;
+      display: flex;
+      flex: 1 1 100%;
+      justify-content: flex-end;
+      margin: 0;
+
+      .item {
+        display: inline-block;
+        margin: 15px;
+        color: #fff;
+
+      }
+    }
+  }
+
+  .default-navbar {
+    &.transformed {
       background: rgb(47, 48, 48);
       padding: 10px 10%;
     }
-
-    nav {
-      .item-link {
-        color: #fff;
-        &:hover {
-          text-decoration: none;
-          //color: rgb(222, 224, 226);
-          opacity: 0.8;
-        }
-      }
-
-      z-index: 10;
-      transition: all 0.6s ease;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      padding: 20px 10%;
-      background: rgba(0, 0, 0, 0.25);
-      font-weight: bold;
-      .logo {
-        display: flex;
-        flex: 1 1 25%;
-        justify-content: flex-start;
-        font-weight: bold;
-        align-items: center;
-        .item-link {
-            display: flex;
-          .logo-img {
-            height: 50px;
-            display: inline-flex;
-          }
-
-          .logo-name {
-            margin-left: 3%;
-            font-weight: bold;
-          }
-        }
-      }
-
-      .navigation {
-        font-size: 16px;
-        display: flex;
-        flex: 1 1 100%;
-        justify-content: flex-end;
-        margin: 0;
-
-        .item {
-          display: inline-block;
-          margin: 15px;
-          color: #fff;
-
-
-        }
-      }
-    }
-
-    .test-name {
-      margin-top: 35vh;
-      width: 60%;
-      font-weight: bold;
-    }
-
-    .test-subheading {
-      border-top: 2px solid rgba(255, 255, 255, 0.6);
-      margin-top: 5vh;
-      padding-top: 15px;
-      font-weight: bold;
-    }
-
-    .scroll-down-icon {
+    .item-link {
       color: #fff;
-      margin-top: 20vh;
-      font-size: 30px;
-      cursor: pointer;
+      &:hover {
+        text-decoration: none;
+        //color: rgb(222, 224, 226);
+        opacity: 0.8;
+      }
+    }
+
+    z-index: 10;
+    transition: all 0.6s ease;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: rgba(0, 0, 0, 0.25);
+    font-weight: bold;
+    .logo {
+      display: flex;
+      flex: 1 1 25%;
+      justify-content: flex-start;
+      font-weight: bold;
+      align-items: center;
+      .item-link {
+        display: flex;
+        .logo-img {
+          height: 50px;
+          display: inline-flex;
+        }
+
+        .logo-name {
+          margin-left: 3%;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .navigation {
+      font-size: 16px;
+      display: flex;
+      flex: 1 1 100%;
+      justify-content: flex-end;
+      margin: 0;
+
+      .item {
+        display: inline-block;
+        margin: 15px;
+        color: #fff;
+
+      }
     }
   }
+
+  .test-name {
+    margin-top: 35vh;
+    width: 60%;
+    font-weight: bold;
+  }
+
+  .test-subheading {
+    border-top: 2px solid rgba(255, 255, 255, 0.6);
+    margin-top: 5vh;
+    padding-top: 15px;
+    font-weight: bold;
+  }
+
+  .scroll-down-icon {
+    color: #fff;
+    margin-top: 20vh;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
   //.TheHeader-toolbar {
   //  background: rgba(3, 39, 53, 0.85) !important;
   //  z-index: 1;

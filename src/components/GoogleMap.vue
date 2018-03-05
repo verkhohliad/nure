@@ -27,7 +27,7 @@
   }
   .map-container {
     width: 100% !important;
-    height: 250px !important;
+    height: 50vh !important;
   }
 </style>
 

@@ -52,7 +52,7 @@
     name="custom-classes-transition"
     enter-active-class="animated fadeIn"
     leave-active-class="animated fadeOut">
-    <v-container class="TheAdmission">
+    <section class="TheAdmission">
       <AdmissionSideBar :tabs="tabs"
                :show="showSideBar"
                :componentToDisplay="componentToDisplay"
@@ -71,7 +71,7 @@
           <div :is="componentToDisplay"/>
         </transition>
       </div>
-    </v-container>
+    </section>
   </transition>
 </template>
 
