@@ -5,6 +5,7 @@ import VueYouTubeEmbed from 'vue-youtube-embed'
 import * as VueGoogleMaps from 'vue2-google-maps'
 import VueNotifications from 'vue-notifications'
 import toastr from 'toastr'
+import VueScrollTo from 'vue-scrollto'
 
 import router from './router'
 import App from './App'
@@ -16,6 +17,7 @@ function toast({ title, message, type, timeout, cb }) {
   if (type === VueNotifications.types.warn) type = 'warning';
   return toastr[type](message, title, { timeOut: timeout })
 }
+
 const options = {
   success: toast,
   error: toast,
@@ -30,8 +32,20 @@ Vue.use(VueYouTubeEmbed);
 Vue.use(VueGoogleMaps, {
   load: {
     key: GOOGLE.KEY,
-    libraries: 'places',
-  },
+    libraries: 'places'
+  }
+});
+Vue.use(VueScrollTo, {
+  container: 'body',
+  duration: 500,
+  easing: 'ease',
+  offset: 0,
+  cancelable: true,
+  onStart: false,
+  onDone: false,
+  onCancel: false,
+  x: false,
+  y: true
 });
 Vue.config.productionTip = false;
 
@@ -40,5 +54,5 @@ new Vue({
   router,
   store,
   template: '<App/>',
-  components: { App },
+  components: { App }
 });

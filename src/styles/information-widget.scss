@@ -42,8 +42,15 @@
       }
       img {
         width: 100%;
-        max-height: 220px;
+        max-height: 310px;
         margin-bottom: 10px;
+        overflow: hidden;
+        object-fit: cover;
+        object-position: top;
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
       }
 
       .item-content {

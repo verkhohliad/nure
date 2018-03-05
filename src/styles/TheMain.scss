@@ -1,28 +1,33 @@
-.content-parallaxImg {
-  height: 100vh !important;
-  font-family: "Century Gothic";
-  z-index: 5;
+.parallax_section {
+  width: 100%;
 
-  .test-name {
-    margin-top: 35vh;
-    width: 60%;
-    font-weight: bold;
+  .parallax_section_content {
+    height: 100vh !important;
+    font-family: "Century Gothic";
+    z-index: 5;
+
+    .project-name {
+      margin-top: 30vh;
+      width: 60%;
+      font-weight: bold;
+    }
+
+    .project-subheading {
+      border-top: 2px solid rgba(255, 255, 255, 0.6);
+      margin-top: 5vh;
+      padding-top: 15px;
+      font-weight: bold;
+
+    }
+
+    .scroll-down-icon {
+      color: #fff;
+      margin-top: 30vh;
+      font-size: 30px;
+      cursor: pointer;
+    }
   }
 
-  .test-subheading {
-    border-top: 2px solid rgba(255, 255, 255, 0.6);
-    margin-top: 5vh;
-    padding-top: 15px;
-    font-weight: bold;
-
-  }
-
-  .scroll-down-icon {
-    color: #fff;
-    margin-top: 20vh;
-    font-size: 30px;
-    cursor: pointer;
-  }
 }
 
 .TheMain {
@@ -30,10 +35,6 @@
   flex-wrap: wrap;
   max-width: 100%;
   background: #fff;
-
-
-
-
 
   .greeting {
     padding: 59px 10%;

@@ -12,6 +12,9 @@
         selectionCommitteeWay,
       }
     },
+    created() {
+      this.$scrollTo('.TheHeader', 700)
+    },
   }
 </script>
 

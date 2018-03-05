@@ -4,16 +4,26 @@
     &.transformed {
       background: rgb(47, 48, 48);
       padding: 10px 10%;
+      .active {
+        .item-link {
+          color: rgba(255, 255, 255, 0.5) !important;
+        }
+      }
       .item-link {
         color: #fff;
       }
     }
     .item-link {
       color: rgb(47, 48, 48);
+      -webkit-transition: opacity 0.15s ease-in-out;
+      -moz-transition: opacity 0.15s ease-in-out;
+      -ms-transition: opacity 0.15s ease-in-out;
+      -o-transition: opacity 0.15s ease-in-out;
+      transition: opacity 0.15s ease-in-out;
       &:hover {
         text-decoration: none;
         //color: rgb(222, 224, 226);
-        opacity: 0.8;
+        opacity: 0.7;
       }
     }
 
@@ -59,7 +69,12 @@
         display: inline-block;
         margin: 15px;
         color: #fff;
+        &.active {
+          .item-link {
+            color: rgba(47, 48, 48, 0.5);
+          }
 
+        }
       }
     }
   }
@@ -71,10 +86,14 @@
     }
     .item-link {
       color: #fff;
+      -webkit-transition: opacity 0.15s ease-in-out;
+      -moz-transition: opacity 0.15s ease-in-out;
+      -ms-transition: opacity 0.15s ease-in-out;
+      -o-transition: opacity 0.15s ease-in-out;
+      transition: opacity 0.15s ease-in-out;
       &:hover {
         text-decoration: none;
-        //color: rgb(222, 224, 226);
-        opacity: 0.8;
+        opacity: 0.7;
       }
     }
 

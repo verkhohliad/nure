@@ -2,13 +2,34 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  z-index: 2;
-  background: rgba(0, 0, 0, 0.45);
+  z-index: 20;
+  background: rgb(47, 48, 48);
+  display: flex;
+  justify-content: center;
+
+  .TheLoading_progress {
+    position: relative;
+    margin-top: 30vh;
+    background: rgb(47, 48, 48);
+    height: auto;
+    display: block;
+
+    .TheLoading_title {
+      color: #fff;
+    }
+
+    .TheLoading_logo {
+      height: 70px;
+    }
+
+    .TheLoading_spinner {
+      position: relative;
+      margin-top: 15px;
+      height: 100px !important;
+      width: 100px !important;
+      z-index: 21;
+    }
+  }
 }
 
-.TheLoading-spinner {
-  margin-top: 300px;
-  height: 100px !important;
-  width: 100px !important;
-  z-index: 2;
-}
+

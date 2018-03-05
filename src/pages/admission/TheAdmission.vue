@@ -32,6 +32,7 @@
       // if (this.$route.query.component) {
       //  this.componentToDisplay = this.$route.query.component || '';
       // }
+      this.$scrollTo('.TheHeader', 700)
     },
     watch: {
       // $route(nextRoute = {}) {
@@ -64,7 +65,7 @@
       </div>
 
       <div class="content">
-        <div v-if="!componentToDisplay">
+        <div v-if="!componentToDisplay" style="text-align: center;">
           <h1>Вступ до університету радіоелектроніки</h1>
         </div>
         <transition name="slide-fade">

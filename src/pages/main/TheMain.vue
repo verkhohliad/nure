@@ -11,8 +11,11 @@
         bgImg
       }
     },
+    created() {
+      this.$scrollTo('.TheHeader', 700)
+    },
     computed: {},
-    methods: {},
+    methods: {}
   }
 </script>
 
@@ -22,18 +25,20 @@
     enter-active-class="animated fadeIn"
     leave-active-class="animated fadeOut">
     <div class="TheMain" grid-list-md text-xs-center>
-      <section>
-        <v-parallax :src="bgImg" class="content-parallaxImg">
+      <section class="parallax_section">
+        <v-parallax :src="bgImg" class="parallax_section_content">
           <v-layout
             column
             align-center
             justify-center
             class="white--text"
           >
-            <h1 class="test-name white--text mb-2 display-1 text-xs-center">Офіційна сторінка приймальної комісії
+            <h1 class="project-name white--text mb-2 display-1 text-xs-center">Офіційна сторінка приймальної комісії
               Харківського національного університету радіоелектроніки</h1>
-            <div class="test-subheading subheading mb-3 text-xs-center">Інформація про вступ до ХНУРЕ у 2018 році</div>
-            <v-icon class="scroll-down-icon" @click="$vuetify.goTo('.scroll-down-icon', options)">fa-chevron-down</v-icon>
+            <div class="project-subheading subheading mb-3 text-xs-center">Інформація про вступ до ХНУРЕ у 2018 році</div>
+            <v-icon class="scroll-down-icon" v-scroll-to="{ el: '.greeting', offset: -70, duration: 1000 }">
+              fa-chevron-down
+            </v-icon>
           </v-layout>
         </v-parallax>
       </section>
@@ -82,9 +87,9 @@
           Бажаємо всім Абітурієнтам успішного вступу!
         </div>
       </section>
-      <MainAnnouncementsWidget/>
+      <MainAnnouncementsWidget />
       <section class="news">
-        <MainNewsWidget/>
+        <MainNewsWidget />
       </section>
     </div>
   </transition>

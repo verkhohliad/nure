@@ -125,10 +125,9 @@
             <v-icon @click="hideOlympicModal" large class="cancel-icon">fa-times</v-icon>
           </div>
         </v-card-title>
-
         <v-form v-model="valid" ref="form">
-          <v-container grid-list-md>
-            <v-layout wrap>
+
+            <v-layout wrap class="p-5">
               <v-flex xs12 sm6 md4>
                 <v-text-field :rules="rules.userNameRules"
                               v-model="surname"
@@ -201,7 +200,6 @@
                 </v-list>
               </v-flex>
             </v-layout>
-          </v-container>
         </v-form>
 
         <v-card-actions>

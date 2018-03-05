@@ -11,10 +11,10 @@
 
 <template>
   <v-navigation-drawer permanent light class="sidebar" :class="{sidebarHidden: !show}">
-    <v-toolbar flat>
+    <v-toolbar flat class="sidebar_heading">
       <v-list>
-        <v-list-tile class="sidebar-heading">
-          <v-list-tile-title class="title">
+        <v-list-tile class="sidebar_heading_tile">
+          <v-list-tile-title class="sidebar_heading_tile_title">
             Вступ
           </v-list-tile-title>
         </v-list-tile>

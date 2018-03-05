@@ -21,6 +21,9 @@
         }],
       }
     },
+    created() {
+      this.$scrollTo('.TheHeader', 700)
+    },
     computed: {
       ...mapGetters({
         specialities: GETTERS.GET_SPECIALITIES,
@@ -37,7 +40,7 @@
     leave-active-class="animated fadeOut">
     <section class="specialities">
       <v-tabs fixed centered>
-        <v-toolbar class="blue-background specialities-toolbar" dark>
+        <v-toolbar class="default_grey-background specialities-toolbar" dark>
           <v-toolbar-title class="toolbar-title">
             СПЕЦІАЛЬНОСТІ ТА СПЕЦІАЛІЗАЦІЇ ДЛЯ ВСТУПУ ДО ХНУРЕ
           </v-toolbar-title>
@@ -54,7 +57,7 @@
           -->
         </v-toolbar>
 
-        <v-tabs-bar class="cyan specialities-tabs blue-background specialities-tabs" dark>
+        <v-tabs-bar class="cyan specialities-tabs default_grey-background specialities-tabs" dark>
           <v-tabs-item
             v-for="tab in tabs"
             :key="tab.name"

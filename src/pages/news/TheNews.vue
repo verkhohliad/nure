@@ -6,6 +6,9 @@
       return {
       }
     },
+    created() {
+      this.$scrollTo('.TheHeader', 700)
+    },
     methods: {
     },
   }

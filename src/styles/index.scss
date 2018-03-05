@@ -22,6 +22,11 @@
   padding: $page_padding !important;
 }
 
+.default-button {
+  background: $default_grey_background !important;
+  color: #fff !important;
+}
+
 html, head, body {
   margin: 0;
   padding: 0;

@@ -7,12 +7,12 @@
   max-height: 100%;
   max-width: 100%;
   //padding: $container_padding;
-  padding: 160px 10% 50px 10% !important;
+  padding: 160px 0 !important;
   margin: 0;
   overflow: hidden;
 
   .sidebarHidden {
-    margin-left: -435px;
+    margin-left: -300px;
   }
 
   .sidebar {
@@ -25,17 +25,20 @@
       background: #e7e7e7;
     }
 
-    .sidebar-heading {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    .sidebar_heading {
+      .sidebar_heading_tile_title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-      .title {
-        margin-top: 4px;
-        font-size: 15px;
+        .sidebar_heading_tile_title {
+          margin-top: 4px;
+          font-size: 15px;
+        }
+
       }
-
     }
+
   }
   .show-button {
     margin-top: 8px;
