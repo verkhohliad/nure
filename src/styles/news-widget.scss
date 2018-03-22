@@ -1,0 +1,92 @@
+
+.news {
+  margin-left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  background: rgb(245, 247, 249);
+  width: 100%;
+  padding: 50px 10%;
+
+  .news-layout {
+    padding: 2vh 3% !important;
+    background: url('../assets/img/testBG.jpg');
+    height: 500px;
+    background-repeat: no-repeat;
+    min-width: 100%;
+    width: 100%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: top;
+
+    .post {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid rgb(199, 201, 203);
+      border-collapse: collapse;
+      background: rgba(38, 39, 47, 0.7);
+      justify-content: center;
+      padding: 10vh 5%;
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      -ms-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
+      cursor: pointer;
+      &:hover {
+        background: rgba(38, 39, 47, 0.9);
+      }
+
+      .date {
+        width: 70%;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        margin: 0 auto;
+       // background: rgba(47, 48, 48, 0.6);
+        border-top: 1px solid $default_white_background;
+
+
+        .link {
+          color: $default_white_background;
+          font-size: 18px;
+          &:hover {
+            text-decoration: none;
+            opacity: 0.8;
+          }
+        }
+      }
+      .title {
+        width: 100%;
+        font-size: 20px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        text-align: center;
+
+        a {
+          color: $default_white_background;
+          text-decoration: none;
+          &:hover {
+            text-decoration: none;
+            opacity: 0.8;
+          }
+        }
+      }
+
+      .description {
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        padding: 10px 5%;
+        height: 200px;
+        p {
+          font-size: 16px;
+          color: $default_white_background;
+        }
+      }
+    }
+  }
+
+}
+

@@ -35,7 +35,8 @@
           >
             <h1 class="project-name white--text mb-2 display-1 text-xs-center">Офіційна сторінка приймальної комісії
               Харківського національного університету радіоелектроніки</h1>
-            <div class="project-subheading subheading mb-3 text-xs-center">Інформація про вступ до ХНУРЕ у 2018 році</div>
+            <div class="project-subheading subheading mb-3 text-xs-center">Інформація про вступ до ХНУРЕ у 2018 році
+            </div>
             <v-icon class="scroll-down-icon" v-scroll-to="{ el: '.greeting', offset: -70, duration: 1000 }">
               fa-chevron-down
             </v-icon>
@@ -88,9 +89,7 @@
         </div>
       </section>
       <MainAnnouncementsWidget />
-      <section class="news">
-        <MainNewsWidget />
-      </section>
+      <MainNewsWidget />
     </div>
   </transition>
 </template>
