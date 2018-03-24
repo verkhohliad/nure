@@ -234,6 +234,25 @@
 }
 
 @media (max-width: 1030px) {
+  .TheHeader {
+    .default-navbar {
+      .logo {
+        flex: auto;
+        .item-link {
+          .logo-img {
+            height: 36px;
+          }
+        }
+      }
+    }
+    .logo {
+      .item-link {
+        .logo-name {
+          font-size: 13px;
+        }
+      }
+    }
+  }
   .toolbar-bar {
     .bar-logo {
       .bar-name {
@@ -253,7 +272,21 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 890px) {
+  .TheHeader {
+    .default-navbar {
+      .navigation {
+        font-size: 13px;
+      }
+      .logo {
+        .item-link {
+          .logo-img {
+            height: 30px;
+          }
+        }
+      }
+    }
+  }
   .nav-list {
     .nav-item {
       .btn {
@@ -263,7 +296,52 @@
   }
 }
 
+@media (max-width: 700px) {
+  .TheHeader {
+    .default-navbar {
+      padding: 0% 10%;
+      .navigation {
+        font-size: 17px;
+        .item{
+          display: block;
+          margin: 10px;
+        }
+      }
+      .logo {
+        .item-link {
+          display: none;
+        }
+      }
+    }
+  }
+
+}
+
 @media (max-width: 480px) {
+  .TheMain {
+    .parallax_section {
+      .parallax_section_content {
+        height: 0vh;
+        .project-name {
+          width: 100% ;
+        }
+      }
+    }
+  }
+  .TheHeader {
+    .default-navbar {
+      .navigation {
+        font-size: 9px;
+        margin: 5px;
+      }
+      .logo {
+        .item-link {
+          .logo-img {
+          }
+        }
+      }
+    }
+  }
   .header-bar {
     .bar-logo {
       display: inline-block;
@@ -313,4 +391,18 @@
       }
     }
   }
+
 }
+
+@media (max-width: 360px) {
+  .TheHeader {
+    .default-navbar {
+      .navigation {
+        font-size: 6px;
+      }
+    }
+  }
+}
+
+
+
