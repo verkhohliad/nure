@@ -296,19 +296,19 @@
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 730px) {
   .TheHeader {
     .default-navbar {
       padding: 0% 10%;
       .navigation {
         font-size: 17px;
-        .item{
+        .item {
           display: block;
           margin: 10px;
         }
       }
       .logo {
-        .item-link {
+        .logo-name {
           display: none;
         }
       }
@@ -317,13 +317,15 @@
 
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
+
   .TheMain {
     .parallax_section {
       .parallax_section_content {
         height: 0vh;
         .project-name {
-          width: 100% ;
+          width: 100%;
+          font-size: 20px !important;
         }
       }
     }
@@ -331,13 +333,9 @@
   .TheHeader {
     .default-navbar {
       .navigation {
-        font-size: 9px;
-        margin: 5px;
-      }
-      .logo {
-        .item-link {
-          .logo-img {
-          }
+        .item {
+          margin: 15px;
+          font-size: 11px;
         }
       }
     }
@@ -360,7 +358,7 @@
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 500px) {
   .header-toolbar {
     .header-bar {
       .bar-logo {
@@ -380,7 +378,22 @@
       }
     }
   }
-
+  .TheHeader {
+    .default-navbar {
+      .navigation {
+        .item {
+          font-size: 9px;
+        }
+      }
+      .logo {
+        .item-link {
+          .logo-img {
+            display: none;
+          }
+        }
+      }
+    }
+  }
   .nav-list {
     .nav-item {
       display: inline-flex;
@@ -394,11 +407,14 @@
 
 }
 
-@media (max-width: 360px) {
+@media (max-width: 380px) {
   .TheHeader {
     .default-navbar {
       .navigation {
-        font-size: 6px;
+        .item {
+          font-size: 6px;
+        }
+
       }
     }
   }
