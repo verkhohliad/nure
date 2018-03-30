@@ -9,6 +9,7 @@
   transform: translateX(20px);
   opacity: 0.5;
 }
+
 .section-title {
   //font-family: "Century Gothic";
   width: 100%;
@@ -69,4 +70,17 @@ html, head, body {
 
 a {
   text-decoration: none;
+}
+
+@media screen and (max-width: 440px) {
+  .greeting {
+    .section-title {
+      font-size: 20px;
+    }
+    .subheading {
+      p {
+        font-size: 15px;
+      }
+    }
+  }
 }

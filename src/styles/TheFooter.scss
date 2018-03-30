@@ -114,51 +114,54 @@
 
 @media screen and (max-width: 700px) {
   .TheFooter {
-
     .TheFooter-layout {
-
-      .layout-menu {
-
-        .menu-contacts {
-
-          .contacts-header {
-            font-size: 13px;
-          }
-
-          li {
-            font-size: 13px;
-
-            .footer-link {
-              .contacts-text {
-                font-size: 12px;
+      .TheFooter-content {
+        .TheFooter_menu {
+          .TheFooter-contacts {
+            li {
+              a {
+                i {
+                  width: 60px;
+                }
               }
             }
           }
         }
+        .TheFooter-column-link {
+          .TheFooter_logo {
+            .TheFooter_logo_image {
+              height: 30px;
+            }
+            .TheFooter_logo_text {
+              display: none;
+            }
+          }
+        }
       }
-
-      .layout-copyright {
-
-        .row {
+      .TheFooter-copyright {
+        .TheFooter-copyright_row {
           font-size: 10px;
-
-          a {
-            color: #fff;
-          }
-
-          .responsible {
-            margin: 0 2%;
-          }
         }
       }
     }
   }
+
 }
 
 @media screen and (max-width: 400px) {
   .TheFooter {
 
     .TheFooter-layout {
+      .TheFooter-content {
+        width: 90%;
+        .TheFooter-column-link {
+          .TheFooter_logo {
+            .TheFooter_logo_image {
+              display: none;
+            }
+          }
+        }
+      }
 
       .layout-menu {
 
@@ -173,7 +176,7 @@
 
             .footer-link {
               .contacts-text {
-                font-size: 8px;
+                font-size: 7px;
               }
             }
           }

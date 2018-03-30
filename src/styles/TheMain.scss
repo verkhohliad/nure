@@ -3,7 +3,7 @@
   background-size: cover !important;
 
   .parallax_section_content {
-    height: 100vh !important;
+    height: 100vh;
     font-family: "Century Gothic";
     z-index: 5;
 
@@ -180,6 +180,7 @@
   }
 
   @media screen and (max-width: 600px) {
+
     .container {
       .right-wrap {
         .news {
@@ -205,6 +206,7 @@
   }
 
   @media screen and (max-width: 440px) {
+
     .container {
       .left-wrap {
 
@@ -311,3 +313,5 @@
     }
   }
 }
+
+

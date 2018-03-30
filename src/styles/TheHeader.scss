@@ -234,6 +234,25 @@
 }
 
 @media (max-width: 1030px) {
+  .TheHeader {
+    .default-navbar {
+      .logo {
+        flex: auto;
+        .item-link {
+          .logo-img {
+            height: 36px;
+          }
+        }
+      }
+    }
+    .logo {
+      .item-link {
+        .logo-name {
+          font-size: 13px;
+        }
+      }
+    }
+  }
   .toolbar-bar {
     .bar-logo {
       .bar-name {
@@ -253,7 +272,21 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 890px) {
+  .TheHeader {
+    .default-navbar {
+      .navigation {
+        font-size: 13px;
+      }
+      .logo {
+        .item-link {
+          .logo-img {
+            height: 30px;
+          }
+        }
+      }
+    }
+  }
   .nav-list {
     .nav-item {
       .btn {
@@ -263,7 +296,50 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 730px) {
+  .TheHeader {
+    .default-navbar {
+      padding: 0% 10%;
+      .navigation {
+        font-size: 17px;
+        .item {
+          display: block;
+          margin: 10px;
+        }
+      }
+      .logo {
+        .logo-name {
+          display: none;
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .TheMain {
+    .parallax_section {
+      .parallax_section_content {
+        height: 0vh;
+        .project-name {
+          width: 100%;
+          font-size: 20px !important;
+        }
+      }
+    }
+  }
+  .TheHeader {
+    .default-navbar {
+      .navigation {
+        .item {
+          margin: 15px;
+          font-size: 11px;
+        }
+      }
+    }
+  }
   .header-bar {
     .bar-logo {
       display: inline-block;
@@ -282,7 +358,7 @@
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 500px) {
   .header-toolbar {
     .header-bar {
       .bar-logo {
@@ -302,7 +378,22 @@
       }
     }
   }
-
+  .TheHeader {
+    .default-navbar {
+      .navigation {
+        .item {
+          font-size: 9px;
+        }
+      }
+      .logo {
+        .item-link {
+          .logo-img {
+            display: none;
+          }
+        }
+      }
+    }
+  }
   .nav-list {
     .nav-item {
       display: inline-flex;
@@ -313,4 +404,21 @@
       }
     }
   }
+
 }
+
+@media (max-width: 380px) {
+  .TheHeader {
+    .default-navbar {
+      .navigation {
+        .item {
+          font-size: 6px;
+        }
+
+      }
+    }
+  }
+}
+
+
+
