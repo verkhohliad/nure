@@ -9,7 +9,7 @@ import fifthImg from '../assets/img/fifth.jpg'
 import sixthImg from '../assets/img/6th.jpg'
 
 //NEWS IMAGES
-import olympiadImg from '../assets/img/olympiad.jpg'
+import olympiadImg from '../assets/img/olympiad1.jpg'
 import opendoorDayImg from '../assets/img/opendoorDay.jpg'
 import stipendiumImg from '../assets/img/Stipendium.jpg'
 

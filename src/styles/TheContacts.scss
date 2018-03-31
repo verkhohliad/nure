@@ -1,5 +1,5 @@
 .TheContacts {
-  background: #fff;
+  background: $default_white;
   .selection-committee-way {
     display: flex;
     flex-direction: column;
@@ -13,26 +13,25 @@
     }
   }
 
-  .contact-content {
+  .TheContacts_content {
     width: 100%;
     padding: 2%;
     text-align: left;
 
-    ul {
-      list-style-type: none;
-    }
-
     h1 {
-      margin-bottom: 2%;
+      margin-bottom: 30px;
     }
 
-    h5 {
-      font-weight: bold;
+    .TheContacts_content_item {
+      margin-top: 15px;
+      h5 {
+        font-weight: bold;
+      }
+      a {
+        color: $default_grey;
+      }
     }
 
-    .contacts {
-
-    }
   }
 }
 

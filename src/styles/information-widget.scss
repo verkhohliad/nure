@@ -42,11 +42,9 @@
       }
       img {
         width: 100%;
-        max-height: 310px;
+        max-height: 220px;
         margin-bottom: 10px;
         overflow: hidden;
-        object-fit: cover;
-        object-position: top;
         -webkit-transition: all 0.2s ease-in-out;
         -moz-transition: all 0.2s ease-in-out;
         -o-transition: all 0.2s ease-in-out;
@@ -55,7 +53,7 @@
 
       .item-content {
         padding: 10px 5%;
-        background: $default_white_background;
+        background: $default_white;
 
         h4 {
           font-weight: bold;
