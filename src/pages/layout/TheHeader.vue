@@ -80,7 +80,7 @@
         <div class="mini-navigation">
           <i @click="switchNavBarDisplay" class="fa fa-bars navigation-display-icon"/>
           <v-list v-bind:class="[showNavBar ? 'active' : '']" class="navigation-list">
-            <v-list-tile v-for="item in items" :key="item.title" @click="switchNavBarDisplay">
+            <v-list-tile v-for="item in items.slice(0, items.length-1)" :key="item.title" @click="switchNavBarDisplay">
               <router-link  :to="item.path" class="w-100" style="text-decoration: none;">
                 {{ item.label.toUpperCase() }}
               </router-link>
