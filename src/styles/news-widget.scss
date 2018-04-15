@@ -8,7 +8,7 @@
 
   .news-layout {
     padding: 2vh 3% !important;
-    background: url('../assets/img/testBG.jpg');
+   // background: url('../assets/img/testBG.jpg');
     height: auto;
     background-repeat: no-repeat;
     min-width: 100%;
@@ -77,10 +77,11 @@
         height: 200px;
         border-bottom: 1px solid $default_white;
         p {
-          margin-top: 10px;
+          padding: 10px 5%;
           font-size: 0.9em;
           max-height: 100%;
           color: $default_white;
+          margin: 0;
         }
       }
     }

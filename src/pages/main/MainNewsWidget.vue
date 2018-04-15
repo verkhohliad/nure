@@ -26,7 +26,7 @@
 <template>
   <section class="news">
     <h1 class="section-title black--text mb-4 text-xs-center">Новини</h1>
-      <v-layout wrap class="news-layout">
+      <v-layout wrap class="news-layout" :style="{ 'background-image': 'url(' + bgImg + ')' }">
         <v-flex xs12 sm6 md4 class="post" v-for="item in news" :key="item.id">
           <h4 class="title"><a href="#">{{ item.title }}</a></h4>
           <div class="description">

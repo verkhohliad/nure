@@ -1,12 +1,15 @@
 <script>
   import MainAnnouncementsWidget from './MainAnnouncementsWidget'
   import MainNewsWidget from './MainNewsWidget'
+  import bgImg from '../../assets/img/test3.jpg'
 
   export default {
     name: 'TheMain',
     components: { MainAnnouncementsWidget, MainNewsWidget },
     data() {
-      return {}
+      return {
+        bgImg
+      }
     },
     created() {
       this.$scrollTo('.TheHeader', 700)
@@ -23,7 +26,7 @@
     leave-active-class="animated fadeOut">
     <div class="TheMain" grid-list-md text-xs-center>
       <section class="parallax_section">
-        <div class="parallax_section_content">
+        <div class="parallax_section_content" :style="{ 'background-image': 'url(' + bgImg + ')' }">
           <v-layout
             column
             align-center
