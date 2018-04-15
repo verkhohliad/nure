@@ -1,12 +1,12 @@
 import uuid from 'uuid'
 
 import { TYPES_OF_SPECIALIZATIONS } from '../common'
-import firstImg from '../assets/img/first.jpg'
+import firstImg from '../assets/img/questions.jpg'
 import secondImg from '../assets/img/exams.jpg'
 import thirdImg from '../assets/img/third.jpg'
-import fourthImg from '../assets/img/fourth.jpg'
-import fifthImg from '../assets/img/fifth.jpg'
-import sixthImg from '../assets/img/6th.jpg'
+import fourthImg from '../assets/img/rules.jpg'
+import fifthImg from '../assets/img/science.jpg'
+import sixthImg from '../assets/img/priveleges.jpg'
 
 //NEWS IMAGES
 import olympiadImg from '../assets/img/olympiad1.jpg'
