@@ -77,11 +77,10 @@
         height: 200px;
         border-bottom: 1px solid $default_white;
         p {
-          padding: 10px 5%;
+          margin-top: 1rem;
           font-size: 0.9em;
           max-height: 100%;
           color: $default_white;
-          margin: 0;
         }
       }
     }
