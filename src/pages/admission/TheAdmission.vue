@@ -40,7 +40,6 @@
     },
     methods: {
       displayComponent(data) {
-        console.log(window.innerWidth)
         this.componentToDisplay = data.value;
         if (window.innerWidth < 600) {
           this.showSideBar = false;
