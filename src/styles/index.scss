@@ -9,6 +9,23 @@
   transform: translateX(20px);
   opacity: 0.5;
 }
+.section-title {
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  padding: $page_padding !important;
+}
+
+.default-button {
+  background: $default_grey !important;
+  color: #fff !important;
+}
 
 html, head, body {
   margin: 0;
@@ -25,13 +42,8 @@ html, head, body {
 
 .container {
   display: flex;
-  max-width: 90%;
+  max-width: 100%;
   background: #fff;
-  margin: 0 auto 15px auto !important;
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
 }
 
 .App {
@@ -45,7 +57,7 @@ html, head, body {
 }
 
 .application--wrap {
-  background: #05384d;
+  background: #fff;
   width: 100%;
   height: 100%;
   max-height: 100%;
@@ -58,3 +70,15 @@ html, head, body {
 a {
   text-decoration: none;
 }
+
+//@media screen and (max-width: 700px) {
+//  .application--wrap {
+//    font-size: 0.8rem;
+//  }
+//}
+//
+//@media screen and (max-width: 550px) {
+//  .application--wrap {
+//    font-size: 0.6rem;
+//  }
+//}

@@ -28,10 +28,10 @@
       }
     },
     created() {
-      // do not need now, because whatever loading is redirecting on main page now.
-      // if (this.$route.query.component) {
-      //  this.componentToDisplay = this.$route.query.component || '';
-      // }
+      if (this.$route.query.component) {
+        this.componentToDisplay = this.$route.query.component || '';
+      }
+      this.$scrollTo('.TheHeader', 700)
     },
     watch: {
       // $route(nextRoute = {}) {
@@ -41,6 +41,9 @@
     methods: {
       displayComponent(data) {
         this.componentToDisplay = data.value;
+        if (window.innerWidth < 600) {
+          this.showSideBar = false;
+        }
         // this.$router.push({ path: ROUTES.ADMISSION, query: { component: data.value } });
       },
     },
@@ -52,26 +55,26 @@
     name="custom-classes-transition"
     enter-active-class="animated fadeIn"
     leave-active-class="animated fadeOut">
-    <v-container class="TheAdmission">
+    <section class="TheAdmission">
       <AdmissionSideBar :tabs="tabs"
-               :show="showSideBar"
-               :componentToDisplay="componentToDisplay"
-               @hideSideBar="showSideBar = !showSideBar"
-               @displayComponent="displayComponent"/>
+                        :show="showSideBar"
+                        :componentToDisplay="componentToDisplay"
+                        @hideSideBar="showSideBar = !showSideBar"
+                        @displayComponent="displayComponent"/>
 
       <div class="show-button" v-if="!showSideBar">
         <v-toolbar-side-icon @click="showSideBar=!showSideBar"></v-toolbar-side-icon>
       </div>
 
       <div class="content">
-        <div v-if="!componentToDisplay">
+        <div v-if="!componentToDisplay" style="text-align: center;">
           <h1>Вступ до університету радіоелектроніки</h1>
         </div>
         <transition name="slide-fade">
           <div :is="componentToDisplay"/>
         </transition>
       </div>
-    </v-container>
+    </section>
   </transition>
 </template>
 

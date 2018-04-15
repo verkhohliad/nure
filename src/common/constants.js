@@ -10,6 +10,7 @@ export const ROUTES = {
   CONTACTS: '/contacts',
   ADMIN: '/admin',
   LOADING: '/loading',
+  ANNOUNCEMENTS: '/announcements'
 };
 
 export const GOOGLE = {

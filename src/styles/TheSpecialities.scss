@@ -1,16 +1,32 @@
 .specialities {
+  background: #fff;
+  padding: 190px 0 50px 0;
+  font-size: 1rem;
+
+  .specialities-toolbar {
+    height: 100%;
+
+    .toolbar__content {
+      height: 100% !important;
+      .toolbar-title {
+        text-transform: uppercase;
+        white-space: pre-wrap;
+        height: 100%;
+      }
+    }
+  }
+
+
   .information-tab {
     padding: 0;
   }
 
   .specialities-toolbar {
-    border-bottom: 1px solid #384d62;
     width: 100%;
 
     .toolbar__content {
       justify-content: center;
     }
-
   }
 
   .information-tab {
@@ -19,16 +35,21 @@
 
   .specialities-tabs {
     height: 70px;
+    padding: 0 5%;
     div {
       overflow: hidden;
     }
 
-    .tabs__li {
-      flex: 0 1 100%;
-      .tabs__item {
-        margin-left: 0 !important;
+    .tabs__container {
+      padding: 0 5%;
+      .tabs__li {
+        flex: 0 1 100%;
+        .tabs__item {
+          margin-left: 0 !important;
+        }
       }
     }
+
   }
 
   .tabs__items {
@@ -48,7 +69,7 @@
   }
   .specialities-content {
     background: #fff;
-    padding: 2% 5%;
+    padding: 50px 10%;
 
     .info_specialities {
 
@@ -57,21 +78,17 @@
 
 }
 
-.blue-background {
-  background: #05384d !important;
+.default_grey-background {
+  background: $default_grey !important;
 }
 
 .specialities-content {
-
   padding: 10px;
   text-align: left;
 
   .nure-video {
     position: relative !important;
     overflow: hidden;
-    //iframe {
-    //  width: 90%;
-    //}
     margin: 25px auto;
   }
 
@@ -84,27 +101,10 @@ h5 {
   font-weight: bold;
 }
 
-@media screen and (max-width: 900px) {
-
+@media screen and (max-width: 768px) {
   .specialities {
-    .specialities-content {
-
-      h1 {
-        margin-bottom: 25px;
-        font-size: 25px;
-      }
-      .info_specialities {
-        width: 100%;
-
-        h5 {
-          font-size: 15px;
-        }
-        .info_text {
-          font-size: 13px;
-
-        }
-      }
-    }
+    font-size: 0.8rem;
   }
 }
+
 

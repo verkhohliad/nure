@@ -7,6 +7,7 @@ import TheNews from '../pages/news/TheNews'
 import TheExamResults from '../pages/examResults/TheExamResults'
 import TheContacts from '../pages/contacts/TheContacts'
 import TheAdmin from '../pages/admin/TheAdmin'
+import TheAnnouncement from '../pages/announcements/TheAnnouncement'
 
 
 export const getUserPages = (isCurrentUserAdmin) => {
@@ -31,17 +32,22 @@ export const getUserPages = (isCurrentUserAdmin) => {
     component: TheNews,
     path: ROUTES.NEWS,
   },
-  //   {
-  //   label: PAGES_NAMES.EXAM_RESULTS,
-  //   component: TheExamResults,
-  //   path: ROUTES.EXAM_RESULTS,
-  // },
+    //   {
+    //   label: PAGES_NAMES.EXAM_RESULTS,
+    //   component: TheExamResults,
+    //   path: ROUTES.EXAM_RESULTS,
+    // },
 
     {
-    label: PAGES_NAMES.CONTACTS,
-    component: TheContacts,
-    path: ROUTES.CONTACTS,
-  }];
+      label: PAGES_NAMES.CONTACTS,
+      component: TheContacts,
+      path: ROUTES.CONTACTS,
+    },
+    {
+      label: PAGES_NAMES.ANNOUNCEMENTS,
+      component: TheAnnouncement,
+      path: ROUTES.ANNOUNCEMENTS,
+    }];
 
   if (isCurrentUserAdmin) {
     userPages.push({

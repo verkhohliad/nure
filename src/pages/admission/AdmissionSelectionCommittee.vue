@@ -6,10 +6,8 @@
       return {}
     },
     beforeCreate() {
-
     },
     created() {
-
     },
     computed: {},
     methods: {},
@@ -57,7 +55,6 @@
       <li>Дацок О.М., доцент кафедри БМІ;</li>
       <li>Сичова О.В., асистент кафедри КІТАМ</li>
     </ul>
-
   </section>
 </template>
 

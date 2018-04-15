@@ -1,11 +1,9 @@
 <script>
   import { mapGetters } from 'vuex'
-
   import SpecialitiesBachelorTab from './SpecialitiesBachelorTab'
   import SpecialitiesMasterTab from './SpecialitiesMasterTab'
   import SpecialitiesSecondEducationTab from './SpecialitiesSecondEducationTab'
   import { GETTERS, SPECIALITIES_PAGE } from '../../common'
-
   export default {
     name: 'TheSpecialities',
     components: { SpecialitiesBachelorTab, SpecialitiesMasterTab, SpecialitiesSecondEducationTab },
@@ -23,6 +21,9 @@
         }],
       }
     },
+    created() {
+      this.$scrollTo('.TheHeader', 700)
+    },
     computed: {
       ...mapGetters({
         specialities: GETTERS.GET_SPECIALITIES,
@@ -37,26 +38,14 @@
     name="custom-classes-transition"
     enter-active-class="animated fadeIn"
     leave-active-class="animated fadeOut">
-    <div class="specialities">
+    <section class="specialities">
       <v-tabs fixed centered>
-        <v-toolbar class="blue-background specialities-toolbar" dark>
+        <v-toolbar class="default_grey-background specialities-toolbar" dark>
           <v-toolbar-title class="toolbar-title">
-            СПЕЦІАЛЬНОСТІ ТА СПЕЦІАЛІЗАЦІЇ ДЛЯ ВСТУПУ ДО ХНУРЕ
+           Спеціальності та спеціалізаціі для вступу до ХНУРЕ
           </v-toolbar-title>
-
-          <!--
-          <span class="toolbar-buttons">
-            <v-btn icon>
-              <v-icon>search</v-icon>
-            </v-btn>
-            <v-btn icon>
-              <v-icon>more_vert</v-icon>
-            </v-btn>
-          </span>
-          -->
         </v-toolbar>
-
-        <v-tabs-bar class="cyan specialities-tabs blue-background specialities-tabs" dark>
+        <v-tabs-bar class="cyan specialities-tabs default_grey-background specialities-tabs" dark>
           <v-tabs-item
             v-for="tab in tabs"
             :key="tab.name"
@@ -64,7 +53,7 @@
             ripple>
             {{ tab.name }}
           </v-tabs-item>
-          <v-tabs-slider color="yellow"></v-tabs-slider>
+          <v-tabs-slider color="white"></v-tabs-slider>
         </v-tabs-bar>
 
         <v-tabs-items>
@@ -88,14 +77,14 @@
           <li>У - Українська мова та література;</li>
           <li>М - Математика;</li>
           <li>Ф - Фізика;</li>
-          <li>А - Астрономія;</li>
+          <li>А - Атестат, середній бал;</li>
           <li>Х - Хімія;</li>
           <li>IМ - Іноземна мова;</li>
           <li>Б - Біологія;</li>
           <li>Г - Географія;</li>
           <li>П - Пiдкурси ХНУРЕ.</li>
         </ul>
-        <h1>ФОРМИ І ТЕРМІНИ НАВЧАННЯ:</h1>
+        <h1 class="section-title">ФОРМИ І ТЕРМІНИ НАВЧАННЯ:</h1>
         <div class="info_specialities">
           <h5>Денна</h5>
           <ul class="info_text">
@@ -151,10 +140,10 @@
           </ol>
         </div>
       </div>
-    </div>
+    </section>
   </transition>
 </template>
 
 <style scoped>
-</style>
 
+</style>

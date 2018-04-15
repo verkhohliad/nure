@@ -9,6 +9,7 @@ export const GETTERS = keyMirror({
 
   // ANNOUNCEMENTS
   GET_ANNOUNCEMENTS: null,
+  GET_ANNOUNCEMENT_BY_ID: null,
 
   // NEWS
   GET_NEWS: null,

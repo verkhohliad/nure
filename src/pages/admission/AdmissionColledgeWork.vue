@@ -36,9 +36,9 @@
         <li><a target="_blank" href="http://nure.ua/wp-content/uploads/polozh2017.pdf">Положення</a></li>
       </ul>
     </div>
-    <a target="_blank" class="pdf-save-link" href="http://doc2pdf.pdf24.org/state.php?jobId=blog_57aa08adbe6e68cdda3ad0cac5f2f415&lng=ru">
-      <v-icon>fa-file-pdf-o</v-icon>
-      зберегти цю сторінку в PDF</a>
+    <!--<a target="_blank" class="pdf-save-link" href="http://doc2pdf.pdf24.org/state.php?jobId=blog_57aa08adbe6e68cdda3ad0cac5f2f415&lng=ru">-->
+      <!--<v-icon>fa-file-pdf-o</v-icon>-->
+      <!--зберегти цю сторінку в PDF</a>-->
   </section>
 </template>
 

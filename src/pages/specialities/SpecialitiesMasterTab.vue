@@ -24,7 +24,7 @@
 
 <template>
   <v-tabs fixed centered>
-    <v-tabs-bar class="cyan specialities-tabs blue-background specialities-tabs" dark>
+    <v-tabs-bar class="cyan specialities-tabs default_grey-background specialities-tabs" dark>
       <v-tabs-item
         v-for="tab in childTabs"
         :key="tab.name"
@@ -32,7 +32,7 @@
         ripple>
         {{ tab.name }}
       </v-tabs-item>
-      <v-tabs-slider color="yellow"></v-tabs-slider>
+      <v-tabs-slider color="white"></v-tabs-slider>
     </v-tabs-bar>
 
     <v-tabs-items>

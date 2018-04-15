@@ -112,9 +112,9 @@
             </li>
           </ol>
         </div>
-        <a target="_blank" class="pdf-save-link" href="http://doc2pdf.pdf24.org/state.php?jobId=blog_1cdc85b12428eb6fb84045955f796b62&lng=ru">
-          <v-icon>fa-file-pdf-o</v-icon>
-          зберегти цю сторінку в PDF</a>
+        <!--<a target="_blank" class="pdf-save-link" href="http://doc2pdf.pdf24.org/state.php?jobId=blog_1cdc85b12428eb6fb84045955f796b62&lng=ru">-->
+          <!--<v-icon>fa-file-pdf-o</v-icon>-->
+          <!--зберегти цю сторінку в PDF</a>-->
       </li>
     </ul>
   </section>

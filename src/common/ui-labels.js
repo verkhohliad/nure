@@ -2,12 +2,13 @@
 export const PAGES_NAMES = {
   MAIN: 'Головна',
   SPECIALITIES: 'Спеціальності',
-  ADMISSION: 'Втуп',
+  ADMISSION: 'Вcтуп',
   OLYMPIAD: 'Олімпіада',
   NEWS: 'Новини',
   EXAM_RESULTS: 'Результати іспитів',
   CONTACTS: 'Контакти',
   ADMIN: 'Адмін панель',
+  ANNOUNCEMENTS: 'Оголошення'
 };
 
 export const SPECIALITIES_PAGE = {

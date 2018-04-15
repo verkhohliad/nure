@@ -1,49 +1,59 @@
-.item-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  flex-direction: row;
-  /*margin: 0 auto;*/
-  padding: 2%;
+.announcements {
+  padding: 35px 10% !important;
+  background: rgb(79, 80, 85);
+  font-size: 1.2rem;
 
-  .item {
-    overflow: hidden;
-    padding: 15px !important;
-    flex-direction: column;
+  .item-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
 
-    p {
-      font-size: 13px;
-      height: 55px;
-      margin: 0;
+    .item {
       overflow: hidden;
-      max-height: 60px;
-    }
-    img {
-      width: 100%;
-      margin-bottom: 10px;
-    }
-
-    .item-content {
-      padding: 2%;
-
-      h4 {
-        font-weight: bold;
-        font-size: 15px;
-        margin-top: 15px;
-        height: 50px;
+      flex-direction: column;
+      padding: 10px !important;
+      cursor: pointer;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+      &:hover {
+        -moz-box-shadow: 3px 3px 4px 4px #ccc;
+        -webkit-box-shadow: 3px 3px 4px 4px #ccc;
+        box-shadow: 3px 3px 4px 4px #ccc;
       }
 
-      .continued {
-        height: 20px;
-        font-size: 13px;
-        padding-bottom: 10%;
-        border-bottom: 2px solid #ededed;
+      img {
+        width: 100%;
+        max-height: 220px;
+        margin-bottom: 5px;
+        overflow: hidden;
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
       }
 
-      .read-more-button {
-        margin-top: 5%;
-        background-color: #032735 !important;
+      .item-content {
+        padding: 10px 5%;
+        background: $default_white;
+
+        h4 {
+          font-weight: bold;
+          font-size: 0.9em;
+          margin-top: 15px;
+          height: 50px;
+        }
       }
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .announcements {
+    font-size: 1rem;
+  }
+}
+
+

@@ -26,9 +26,8 @@ export const getAdmissionTabs = () => {
     { id: 5, name: 'Робота зі школярами', value: AdmissionSchoolWork.name },
     { id: 6, name: 'Робота з технікумами', value: AdmissionColledgeWork.name },
     { id: 7, name: 'Центр довузівської підготовки' },
-    { id: 8, name: 'Заходи' },
-    { id: 9, name: 'Для іноземних громадян' },
-    { id: 10, name: 'Для майбутніх магістрів' },
-    { id: 11, name: 'Друга вища освіта' },
+    { id: 8, name: 'Для іноземних громадян' },
+    { id: 9, name: 'Для майбутніх магістрів' },
+    { id: 10, name: 'Друга вища освіта' },
   ];
 };

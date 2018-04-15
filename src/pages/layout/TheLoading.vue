@@ -5,16 +5,17 @@
   import { ACTIONS, MUTATIONS, GETTERS, ROUTES } from '../../common'
   import { addRoutes } from '../../router'
 
+  import logo from '../../assets/img/nure-logo.png'
+
   export default {
     name: 'TheLoading',
     data() {
-      return {
-      }
+      return { logo }
     },
     computed: {
       ...mapGetters({
-        currentUserIsAdmin: GETTERS.GET_USER_ADMIN_ACCESS,
-      }),
+        currentUserIsAdmin: GETTERS.GET_USER_ADMIN_ACCESS
+      })
     },
     async created() {
       const userPages = getUserPages(this.currentUserIsAdmin);
@@ -30,18 +31,22 @@
     },
     methods: {
       ...mapActions({
-        uploadAllEntities: ACTIONS.UPLOAD_ALL_ENTITIES,
+        uploadAllEntities: ACTIONS.UPLOAD_ALL_ENTITIES
       }),
       ...mapMutations({
-        setUserScope: MUTATIONS.SET_USER_SCOPE,
-      }),
-    },
+        setUserScope: MUTATIONS.SET_USER_SCOPE
+      })
+    }
   }
 </script>
 
 <template>
   <div class="TheLoading">
-    <v-progress-circular class="TheLoading-spinner" indeterminate color="grey lighten-4"></v-progress-circular>
+    <div class="TheLoading_progress">
+      <img class="TheLoading_logo" :src=logo alt="">
+      <h2 class="TheLoading_title">Приймальна комісія ХНУРЕ</h2>
+      <v-progress-circular class="TheLoading_spinner" indeterminate color="grey lighten-4"></v-progress-circular>
+    </div>
   </div>
 </template>
 

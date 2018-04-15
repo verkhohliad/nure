@@ -9,6 +9,9 @@
     data() {
       return {}
     },
+    created() {
+      this.$scrollTo('.TheHeader', 700)
+    },
     methods: {
       ...mapMutations({
         openOlympiadModal: MUTATIONS.OPEN_OLYMPIAD_MODAL,
@@ -26,7 +29,7 @@
       <v-layout row wrap class="TheOlympiad_content">
         <v-flex d-flex xs12 sm12 md12 child-flex>
           <section>
-            <h3> Харківський національний університет радіоелектроніки проводить
+            <h3 class="section-title"> Харківський національний університет радіоелектроніки проводить
               Всеукраїнську олімпіаду навчального закладу для абітурієнтів на основі повної середньої освіти з
               предметів:</h3>
             <ul class="steps">
@@ -35,11 +38,28 @@
               <li>Біологія.</li>
             </ul>
 
-            <h2>Умови участі в олімпіаді:</h2>
-
+            <h3 class="section-title">
+              Результати олімпіади:
+            </h3>
+            <ul class="steps">
+              <li><a target="_blank" href="https://docs.google.com/spreadsheets/u/2/d/1wc3-0Jh-a4fCrn52dVLU9bhBbPEbtlbswNO1Jea6WI4/edit?usp=sharing">
+                Математика
+              </a></li>
+              <li>
+                <a target="_blank" href="https://docs.google.com/spreadsheets/d/1DrB5Nfn5oJLAkw7m_GXjPk0St2AzaN79TlQhfubqBeA/edit?usp=sharing">
+                  Українська мова та література
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="https://docs.google.com/spreadsheets/d/17cOGDQnG59wqCXlIZf2Bk2LVNFUGZ1l7GBBzwGWBgkA/edit?usp=sharing">
+                  Біологія
+                </a>
+              </li>
+            </ul>
+            <h3 class="section-title">Умови участі в олімпіаді:</h3>
             <ul class="steps">
               <li>Зареєструватися для участі в першому дистанційному турі олімпіади шляхом заповнення і відправки
-                форми, яка опублікована на даній сторінці, в період з 01 березня по 25 березня 2018 року.
+                форми, яка опублікована на даній сторінці, в період з 01 березня по 18 квітня 2018 року.
               </li>
               <li>Відповісти на завдання, які будуть надіслані Вам поштою, і переслати відповіді на e-mail приймальної
                 комісії olimp@nure.ua до 19 квітня 2018 року.
@@ -67,7 +87,7 @@
               <li>173 Авіоніка</li>
               <li>186 Видавництво і поліграфія.</li>
             </ul>
-            <v-btn @click="openOlympiadModal()" class="flex_margin_auto" color="info">Взяти участь в олімпіаді</v-btn>
+            <v-btn @click="openOlympiadModal()" class="flex_margin_auto default-button">Взяти участь в олімпіаді</v-btn>
           </section>
         </v-flex>
       </v-layout>

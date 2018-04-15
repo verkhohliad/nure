@@ -7,28 +7,41 @@
     name: 'MainAnnouncementsWidget',
     computed: {
       ...mapGetters({
-        announcements: GETTERS.GET_ANNOUNCEMENTS,
-      }),
+        announcements: GETTERS.GET_ANNOUNCEMENTS
+      })
     },
+    methods: {
+      openAnnouncement(item) {
+        if (item.url !== '/') {
+          this.$router.push({ path: 'admission', query: { component: item.value } })
+        }
+        else {
+          this.$router.push({ path: 'announcements', query: { id: item.uid } })
+        }
+      }
+    }
   }
 </script>
 
 <template>
-  <v-layout class="item-container" row wrap>
-    <v-flex class="item" d-flex xs12 sm4 md4 child-flex
-            v-for="announcement in announcements"
-            :key="announcement.id">
-      <img :src="announcement.img" alt="image">
-      <div class="item-content">
-        <h4>{{ announcement.title }}</h4>
-        <div>
-          <p>{{ announcement.description }}</p>
-          <p class="continued">...</p>
-          <v-btn class="read-more-button" dark>Читати більше...</v-btn>
+  <section class="announcements">
+    <h1 class="section-title white--text mb-4 text-xs-center">
+      Оголошення</h1>
+    <v-layout class="item-container" row wrap>
+      <v-flex xs12 sm6 md4 class="item"
+              @click="openAnnouncement(announcement)"
+              v-for="announcement in announcements"
+              :key="announcement.id">
+        <img :src="announcement.img" alt="image">
+        <div class="item-content">
+          <h4>
+            {{ announcement.title }}
+          </h4>
         </div>
-      </div>
-    </v-flex>
-  </v-layout>
+      </v-flex>
+    </v-layout>
+  </section>
+
 </template>
 
 <style scoped>

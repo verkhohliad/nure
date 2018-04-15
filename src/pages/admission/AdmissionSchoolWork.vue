@@ -51,9 +51,9 @@
         телефон +38 (057) 702-14-55, кімната № 144.
       </p>
     </div>
-    <a target="_blank" class="pdf-save-link" href="http://doc2pdf.pdf24.org/state.php?jobId=blog_a52386633238cae55f84cf86dc177b95&lng=ru">
-      <v-icon>fa-file-pdf-o</v-icon>
-      зберегти цю сторінку в PDF</a>
+    <!--<a target="_blank" class="pdf-save-link" href="http://doc2pdf.pdf24.org/state.php?jobId=blog_a52386633238cae55f84cf86dc177b95&lng=ru">-->
+      <!--<v-icon>fa-file-pdf-o</v-icon>-->
+      <!--зберегти цю сторінку в PDF</a>-->
   </section>
 </template>
 

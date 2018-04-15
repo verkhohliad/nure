@@ -6,6 +6,9 @@
       return {
       }
     },
+    created() {
+      this.$scrollTo('.TheHeader', 700)
+    },
     methods: {
     },
   }
@@ -13,7 +16,9 @@
 
 <template>
   <v-container class="TheNews">
-    Новини
+   <h1 class="section-title">
+     Сторінка знаходиться у розробці.
+   </h1>
   </v-container>
 </template>
 
