@@ -69,7 +69,7 @@
       <ul class="navigation">
         <li class="item"
             :class="{active: item.path === active}"
-            v-for="item in items.slice(1)"
+            v-for="item in items.slice(1, items.length-1)"
             :key="item.path"
             @click="active=item.path">
           <router-link :to="item.path" class="item-link">
