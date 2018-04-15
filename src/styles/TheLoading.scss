@@ -6,6 +6,7 @@
   background: rgb(47, 48, 48);
   display: flex;
   justify-content: center;
+  font-size: 1.2rem;
 
   .TheLoading_progress {
     position: relative;
@@ -16,19 +17,26 @@
 
     .TheLoading_title {
       color: #fff;
+      font-size: 1.2em;
     }
 
     .TheLoading_logo {
-      height: 70px;
+      height: 3.5em;
     }
 
     .TheLoading_spinner {
       position: relative;
       margin-top: 15px;
-      height: 100px !important;
-      width: 100px !important;
+      height: 5em !important;
+      width: 5em !important;
       z-index: 21;
     }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .TheLoading {
+    font-size: 1rem;
   }
 }
 

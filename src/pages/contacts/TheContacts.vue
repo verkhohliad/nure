@@ -24,7 +24,7 @@
     enter-active-class="animated fadeIn"
     leave-active-class="animated fadeOut">
     <v-container class="TheContacts">
-      <v-flex d-flex xs6 sm6 md6 child-flex>
+      <v-flex d-flex xs12 sm12 md6 child-flex>
         <div class="TheContacts_content">
           <h1>Контакти ХНУРЕ:</h1>
           <div class="TheContacts_content_item">
@@ -89,7 +89,7 @@
           </div>
         </div>
       </v-flex>
-      <v-flex class="flex-wrap" d-flex xs6 sm6 md6 child-flex>
+      <v-flex class="flex-wrap" d-flex xs12 sm12 md6 child-flex>
         <v-zoom class="selection-committee-way" :width="400" :img="selectionCommitteeWay"></v-zoom>
         <GoogleMap/>
       </v-flex>

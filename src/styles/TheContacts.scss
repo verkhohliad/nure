@@ -5,7 +5,7 @@
     flex-direction: column;
     cursor: pointer;
     width: 500px;
-    height: 450px;
+    height: 35rem;
     margin-bottom: 50px;
     img {
       width: 80%;
@@ -29,28 +29,6 @@
       }
       a {
         color: $default_grey;
-      }
-    }
-
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .container {
-    .contact-content {
-      h1 {
-        margin-bottom: 25px;
-        font-size: 25px;
-      }
-      .contacts {
-        width: 100%;
-
-        h5 {
-          font-size: 15px;
-        }
-        //.info {
-        //  font-size: 13px;
-        //}
       }
     }
   }

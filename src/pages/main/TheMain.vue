@@ -1,15 +1,12 @@
 <script>
   import MainAnnouncementsWidget from './MainAnnouncementsWidget'
   import MainNewsWidget from './MainNewsWidget'
-  import bgImg from '../../assets/img/test3.jpg'
 
   export default {
     name: 'TheMain',
     components: { MainAnnouncementsWidget, MainNewsWidget },
     data() {
-      return {
-        bgImg
-      }
+      return {}
     },
     created() {
       this.$scrollTo('.TheHeader', 700)
@@ -26,22 +23,22 @@
     leave-active-class="animated fadeOut">
     <div class="TheMain" grid-list-md text-xs-center>
       <section class="parallax_section">
-        <v-parallax :src="bgImg" class="parallax_section_content">
+        <div class="parallax_section_content">
           <v-layout
             column
             align-center
             justify-center
             class="white--text"
           >
-            <h1 class="project-name white--text mb-2 display-1 text-xs-center">Офіційна сторінка приймальної комісії
+            <h1 class="project-name white--text">Офіційна сторінка приймальної комісії
               Харківського національного університету радіоелектроніки</h1>
-            <div class="project-subheading subheading mb-3 text-xs-center">Інформація про вступ до ХНУРЕ у 2018 році
+            <div class="project-subheading">Інформація про вступ до ХНУРЕ у 2018 році
             </div>
             <v-icon class="scroll-down-icon" v-scroll-to="{ el: '.greeting', offset: -70, duration: 1000 }">
               fa-chevron-down
             </v-icon>
           </v-layout>
-        </v-parallax>
+        </div>
       </section>
 
       <section class="greeting">
@@ -88,8 +85,8 @@
           Бажаємо всім Абітурієнтам успішного вступу!
         </div>
       </section>
-      <MainAnnouncementsWidget />
-      <MainNewsWidget />
+      <MainAnnouncementsWidget/>
+      <MainNewsWidget/>
     </div>
   </transition>
 </template>

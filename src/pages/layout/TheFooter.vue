@@ -20,7 +20,7 @@
   <v-footer class="TheFooter">
     <v-layout row wrap class="TheFooter-layout">
       <div class="TheFooter-content">
-        <v-flex d-flex xs3 sm3 md3 child-flex>
+        <v-flex d-flex xs6 sm6 md3 child-flex>
           <a class="TheFooter-column-link" target="_blank" href="http://nure.ua/">
             <div class="TheFooter_logo">
               <img class="TheFooter_logo_image" :src='nureLogo' alt="">
@@ -30,7 +30,7 @@
         </v-flex>
 
 
-        <v-flex d-flex xs6 sm6 md6 child-flex>
+        <v-flex d-flex xs12 sm12 md6 child-flex>
           <div class="TheFooter_menu">
             <div class="TheFooter-contacts">
               <h6 class="TheFooter-contacts__header">Зв'яжіться з нами
@@ -61,7 +61,7 @@
           </div>
         </v-flex>
 
-        <v-flex d-flex xs3 sm3 md3 child-flex>
+        <v-flex d-flex xs6 sm6 md3 child-flex>
           <a class="TheFooter-column-link" target="_blank" href="https://mon.gov.ua/ua">
             <div class="TheFooter_logo">
               <img class="TheFooter_logo_image" :src=ministryLogo alt="">

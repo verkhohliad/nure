@@ -8,6 +8,7 @@ export const PAGES_NAMES = {
   EXAM_RESULTS: 'Результати іспитів',
   CONTACTS: 'Контакти',
   ADMIN: 'Адмін панель',
+  ANNOUNCEMENTS: 'Оголошення'
 };
 
 export const SPECIALITIES_PAGE = {

@@ -29,9 +29,10 @@
     },
     created() {
       // do not need now, because whatever loading is redirecting on main page now.
-      // if (this.$route.query.component) {
-      //  this.componentToDisplay = this.$route.query.component || '';
-      // }
+      if (this.$route.query.component) {
+        console.log(this.$route.query)
+       this.componentToDisplay = this.$route.query.component || '';
+      }
       this.$scrollTo('.TheHeader', 700)
     },
     watch: {
@@ -41,6 +42,7 @@
     },
     methods: {
       displayComponent(data) {
+        console.log(data.value)
         this.componentToDisplay = data.value;
         // this.$router.push({ path: ROUTES.ADMISSION, query: { component: data.value } });
       },

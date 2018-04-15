@@ -10,9 +10,9 @@
   opacity: 0.5;
 }
 .section-title {
-  //font-family: "Century Gothic";
   width: 100%;
   font-weight: bold;
+  font-size: 1.5em;
 }
 
 .container {
@@ -70,3 +70,15 @@ html, head, body {
 a {
   text-decoration: none;
 }
+
+//@media screen and (max-width: 700px) {
+//  .application--wrap {
+//    font-size: 0.8rem;
+//  }
+//}
+//
+//@media screen and (max-width: 550px) {
+//  .application--wrap {
+//    font-size: 0.6rem;
+//  }
+//}

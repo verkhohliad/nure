@@ -1,0 +1,21 @@
+.TheAnnouncement {
+  .TheAnnouncement-img {
+    margin-top: 1.5rem;
+    img {
+      max-height: 40rem;
+      max-width: 100%;
+    }
+  }
+  .TheAnnouncement-description {
+    width: 100%;
+    text-align: left;
+    padding: 1.5rem 2%;
+    column-width: 200px;
+    column-count: 1;
+    column-gap: 30px;
+    column-rule: 1px solid #ccc;
+    p{
+
+    }
+  }
+}

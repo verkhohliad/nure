@@ -25,11 +25,9 @@
 
 <template>
   <section class="news">
-    <h1 class="section-title black--text mb-4 display-0 text-xs-center">Новини</h1>
+    <h1 class="section-title black--text mb-4 text-xs-center">Новини</h1>
       <v-layout wrap class="news-layout">
         <v-flex xs12 sm6 md4 class="post" v-for="item in news" :key="item.id">
-          <!--<img :src=item.image alt="Зображення відсутнє." class="image">-->
-          <!--<h6>{{ formatDate(item.date) }}</h6>-->
           <h4 class="title"><a href="#">{{ item.title }}</a></h4>
           <div class="description">
             <p> {{ item.description }} </p>

@@ -12,6 +12,7 @@
       return {
         logo,
         transformHeader: false,
+        showNavBar: false,
         navStyle: 'default',
         active: null
       }
@@ -28,7 +29,9 @@
     },
     methods: {
       handleScroll() {
-        window.pageYOffset >= 80 ? this.transformHeader = true : this.transformHeader = false;
+        if(!this.showNavBar) {
+          window.pageYOffset >= 80 ? this.transformHeader = true : this.transformHeader = false;
+        }
       },
       checkRouteStyles(route) {
         if (route !== '/') {
@@ -36,6 +39,17 @@
         }
         else {
           this.navStyle = 'default';
+        }
+        this.transformHeader = false;
+        this.showNavBar = false;
+      },
+      switchNavBarDisplay() {
+        if(this.transformHeader && window.pageYOffset >= 80) {
+          this.showNavBar = !this.showNavBar;
+        }
+        else {
+          this.showNavBar = !this.showNavBar;
+          this.transformHeader = !this.transformHeader;
         }
       }
     }
@@ -59,10 +73,20 @@
             :key="item.path"
             @click="active=item.path">
           <router-link :to="item.path" class="item-link">
-            {{ item.label }}
+            {{ item.label.toUpperCase() }}
           </router-link>
         </li>
       </ul>
+        <div class="mini-navigation">
+          <i @click="switchNavBarDisplay" class="fa fa-bars navigation-display-icon"/>
+          <v-list v-bind:class="[showNavBar ? 'active' : '']" class="navigation-list">
+            <v-list-tile v-for="item in items" :key="item.title" @click="switchNavBarDisplay">
+              <router-link  :to="item.path" class="w-100" style="text-decoration: none;">
+                {{ item.label.toUpperCase() }}
+              </router-link>
+            </v-list-tile>
+          </v-list>
+        </div>
     </nav>
   </header>
 </template>

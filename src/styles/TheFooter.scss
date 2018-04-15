@@ -3,10 +3,14 @@
   background: rgb(47, 48, 48) !important;
   color: #fff !important;
   display: flex;
+  max-width: 100%;
+  width: 100%;
+  font-size: 1rem;
 
   .TheFooter-layout {
-    padding: 0 5%;
+    padding: 2rem 5%;
     margin: 0 auto;
+    max-width: 100%;
 
     .TheFooter-copyright {
       border-top: 2px solid rgba(245, 247, 249, 0.35);
@@ -18,11 +22,10 @@
 
       .TheFooter-copyright_row {
         text-align: center;
-        font-size: 12px;
+        font-size: 1em;
         a {
           color: #fff;
         }
-
         .responsible {
           margin: 0 1%;
         }
@@ -33,7 +36,8 @@
       display: flex;
       flex-direction: row;
       width: 100%;
-      padding: 0 5%;
+      max-width: 100%;
+      padding: 0;
 
       .TheFooter-column-link {
         display: flex;
@@ -45,17 +49,18 @@
           align-items: center;
           width: 100%;
           .TheFooter_logo_image {
-            height: 50px;
+            height: 3.5em;
           }
           .TheFooter_logo_text {
             margin-top: 5px;
             max-width: 70%;
+            font-size: 1em;
           }
         }
       }
 
       .TheFooter_menu {
-        font-size: 15px;
+        font-size: 1em;
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -66,43 +71,38 @@
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        //width: 40%;
 
         .TheFooter-contacts {
-
+          font-size: 1em;
           .TheFooter-contacts__header {
             padding: 1%;
             font-weight: bold;
-            //border-bottom: 1px solid white;
             margin-top: 10px;
           }
-          //font-size: 10px;
           li {
             width: 100%;
             list-style: none;
-            font-size: 14px;
             display: flex;
             padding: 6px;
             justify-content: center;
             a {
               color: #fff;
-              font-size: 12px;
-              min-width: 37%;
+              width: 100%;
               text-align: left;
               display: flex;
-              align-items: flex-end;
+              align-items: center;
+              justify-content: center;
               i {
                 width: 40px;
                 text-decoration: none;
-                margin-left: 2%;
+                font-size: 2em;
+                align-self: flex-start;
                 &:hover {
                   text-decoration: none !important;
                 }
               }
               .TheFooter-contacts__text {
-                width: 100%;
-                max-width: 100%;
-                margin-left: 3%;
+                width: 35%;
               }
             }
           }
@@ -112,68 +112,18 @@
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   .TheFooter {
-
+    font-size: 0.8rem;
     .TheFooter-layout {
-
-      .layout-menu {
-
-        .menu-contacts {
-
-          .contacts-header {
-            font-size: 13px;
-          }
-
-          li {
-            font-size: 13px;
-
-            .footer-link {
-              .contacts-text {
-                font-size: 12px;
-              }
-            }
-          }
-        }
-      }
-
-      .layout-copyright {
-
-        .row {
-          font-size: 10px;
-
-          a {
-            color: #fff;
-          }
-
-          .responsible {
-            margin: 0 2%;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .TheFooter {
-
-    .TheFooter-layout {
-
-      .layout-menu {
-
-        .menu-contacts {
-
-          .contacts-header {
-            font-size: 13px;
-          }
-
-          li {
-            font-size: 13px;
-
-            .footer-link {
-              .contacts-text {
-                font-size: 8px;
+      .TheFooter-content {
+        .TheFooter_menu {
+          .TheFooter-contacts {
+            li {
+              a {
+                .TheFooter-contacts__text {
+                  width: 70%;
+                }
               }
             }
           }
@@ -182,3 +132,69 @@
     }
   }
 }
+
+//@media screen and (max-width: 700px) {
+//  .TheFooter {
+//    .TheFooter-layout {
+//      .layout-menu {
+//        .menu-contacts {
+//          .contacts-header {
+//            font-size: 13px;
+//          }
+//          li {
+//            font-size: 13px;
+//
+//            .footer-link {
+//              .contacts-text {
+//                font-size: 12px;
+//              }
+//            }
+//          }
+//        }
+//      }
+//
+//      .layout-copyright {
+//
+//        .row {
+//          font-size: 10px;
+//
+//          a {
+//            color: #fff;
+//          }
+//
+//          .responsible {
+//            margin: 0 2%;
+//          }
+//        }
+//      }
+//    }
+//  }
+//}
+//
+//@media screen and (max-width: 400px) {
+//  .TheFooter {
+//
+//    .TheFooter-layout {
+//
+//      .layout-menu {
+//
+//        .menu-contacts {
+//
+//          .contacts-header {
+//            font-size: 13px;
+//          }
+//
+//          li {
+//            font-size: 13px;
+//
+//            .footer-link {
+//              .contacts-text {
+//                font-size: 8px;
+//              }
+//            }
+//          }
+//        }
+//      }
+//    }
+//  }
+//}

@@ -42,21 +42,9 @@
       <v-tabs fixed centered>
         <v-toolbar class="default_grey-background specialities-toolbar" dark>
           <v-toolbar-title class="toolbar-title">
-            СПЕЦІАЛЬНОСТІ ТА СПЕЦІАЛІЗАЦІЇ ДЛЯ ВСТУПУ ДО ХНУРЕ
+           Спеціальності та спеціалізаціі для вступу до ХНУРЕ
           </v-toolbar-title>
-
-          <!--
-          <span class="toolbar-buttons">
-            <v-btn icon>
-              <v-icon>search</v-icon>
-            </v-btn>
-            <v-btn icon>
-              <v-icon>more_vert</v-icon>
-            </v-btn>
-          </span>
-          -->
         </v-toolbar>
-
         <v-tabs-bar class="cyan specialities-tabs default_grey-background specialities-tabs" dark>
           <v-tabs-item
             v-for="tab in tabs"
@@ -96,7 +84,7 @@
           <li>Г - Географія;</li>
           <li>П - Пiдкурси ХНУРЕ.</li>
         </ul>
-        <h1>ФОРМИ І ТЕРМІНИ НАВЧАННЯ:</h1>
+        <h1 class="section-title">ФОРМИ І ТЕРМІНИ НАВЧАННЯ:</h1>
         <div class="info_specialities">
           <h5>Денна</h5>
           <ul class="info_text">
