@@ -1,7 +1,7 @@
 {
   "name": "nure",
   "version": "1.0.0",
-  "description": "Nure info project",
+  "description": "Introductory campaign NURE",
   "author": "nure team",
   "private": true,
   "scripts": {
@@ -24,6 +24,7 @@
     "bootstrap-vue": "1.4.0",
     "deepcopy": "0.6.3",
     "express": "4.16.2",
+    "font-awesome": "4.7.0",
     "http-errors": "1.6.2",
     "joi": "13.1.2",
     "jsonwebtoken": "8.1.1",

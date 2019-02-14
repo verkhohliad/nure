@@ -3,13 +3,13 @@
 
   import { GETTERS } from '../../common'
   import { formatDate } from '../../utils'
-  import testBg from '../../assets/img/testBG.jpg';
+  import bgImage from '../../assets/img/testBG.jpg'
 
   export default {
     name: 'MainNewsWidget',
     data() {
       return {
-        bgImg: testBg
+        bgImage
       }
     },
     computed: {
@@ -26,7 +26,7 @@
 <template>
   <section class="news">
     <h1 class="section-title black--text mb-4 text-xs-center">Новини</h1>
-      <v-layout wrap class="news-layout">
+      <v-layout wrap class="news-layout" :style="{ backgroundImage: `url('${bgImage}')` }">
         <v-flex xs12 sm6 md4 class="post" v-for="item in news" :key="item.id">
           <h4 class="title"><a href="#">{{ item.title }}</a></h4>
           <div class="description">

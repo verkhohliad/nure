@@ -19,7 +19,9 @@
     },
     watch: {
       $route(to, from) {
-        this.checkRouteStyles(to.path);
+        if (to) {
+          this.checkRouteStyles(to.path);
+        }
       }
     },
     computed: {

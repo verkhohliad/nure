@@ -3,6 +3,10 @@
 @import '../../node_modules/bootstrap-vue/dist/bootstrap-vue.css';
 @import '../../node_modules/animate.css/animate.css';
 @import '../../node_modules/toastr/build/toastr.min.css';
+
+$fa-font-path: '~font-awesome/fonts/';
+@import "~font-awesome/scss/font-awesome";
+
 @import 'vars';
 @import 'TheAdmission';
 @import 'TheContacts';
