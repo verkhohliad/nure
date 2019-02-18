@@ -1,21 +1,25 @@
 <script>
-  import { mapGetters } from 'vuex'
+  import {mapGetters} from 'vuex'
 
-  import { GETTERS } from '../../common'
+  import {GETTERS} from '../../common'
 
   export default {
     name: 'MainAnnouncementsWidget',
     computed: {
-      ...mapGetters({
-        announcements: GETTERS.GET_ANNOUNCEMENTS
-      })
+      announcements: () => {
+        let announcements = store.getters.GET_ANNOUNCEMENTS || []
+
+        if (announcements.length) {
+          announcements = announcements.filter(a => !a.disabled)
+        }
+        return announcements
+      }
     },
     methods: {
       openAnnouncement(item) {
         if (item.url !== '/') {
           this.$router.push({ path: 'admission', query: { component: item.value } })
-        }
-        else {
+        } else {
           this.$router.push({ path: 'announcements', query: { id: item.uid } })
         }
       }

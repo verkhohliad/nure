@@ -38,42 +38,42 @@
               <li>Біологія.</li>
             </ul>
 
-            <h3 class="section-title">
-              Результати олімпіади:
-            </h3>
-            <ul class="steps">
-              <li><a target="_blank" href="https://docs.google.com/spreadsheets/u/2/d/1wc3-0Jh-a4fCrn52dVLU9bhBbPEbtlbswNO1Jea6WI4/edit?usp=sharing">
-                Математика
-              </a></li>
-              <li>
-                <a target="_blank" href="https://docs.google.com/spreadsheets/d/1DrB5Nfn5oJLAkw7m_GXjPk0St2AzaN79TlQhfubqBeA/edit?usp=sharing">
-                  Українська мова та література
-                </a>
-              </li>
-              <li>
-                <a target="_blank" href="https://docs.google.com/spreadsheets/d/17cOGDQnG59wqCXlIZf2Bk2LVNFUGZ1l7GBBzwGWBgkA/edit?usp=sharing">
-                  Біологія
-                </a>
-              </li>
-            </ul>
+            <!--<h3 class="section-title">-->
+              <!--Результати олімпіади:-->
+            <!--</h3>-->
+            <!--<ul class="steps">-->
+              <!--<li><a target="_blank" href="https://docs.google.com/spreadsheets/u/2/d/1wc3-0Jh-a4fCrn52dVLU9bhBbPEbtlbswNO1Jea6WI4/edit?usp=sharing">-->
+                <!--Математика-->
+              <!--</a></li>-->
+              <!--<li>-->
+                <!--<a target="_blank" href="https://docs.google.com/spreadsheets/d/1DrB5Nfn5oJLAkw7m_GXjPk0St2AzaN79TlQhfubqBeA/edit?usp=sharing">-->
+                  <!--Українська мова та література-->
+                <!--</a>-->
+              <!--</li>-->
+              <!--<li>-->
+                <!--<a target="_blank" href="https://docs.google.com/spreadsheets/d/17cOGDQnG59wqCXlIZf2Bk2LVNFUGZ1l7GBBzwGWBgkA/edit?usp=sharing">-->
+                  <!--Біологія-->
+                <!--</a>-->
+              <!--</li>-->
+            <!--</ul>-->
             <h3 class="section-title">Умови участі в олімпіаді:</h3>
             <ul class="steps">
-              <li>Зареєструватися для участі в першому дистанційному турі олімпіади шляхом заповнення і відправки
-                форми, яка опублікована на даній сторінці, в період з 01 березня по 18 квітня 2018 року.
+              <li>Зареєструватися для участі в першому дистанційному турі олімпіади шляхом заповнення і відправки форми,
+                яка опублікована на даній сторінці, в період з 01 березня по 19 квітня 2019 року.
               </li>
-              <li>Відповісти на завдання, які будуть надіслані Вам поштою, і переслати відповіді на e-mail приймальної
-                комісії olimp@nure.ua до 19 квітня 2018 року.
+              <li>Відповісти на завдання, які будуть надіслані Вам поштою,
+                і переслати відповіді на e-mail приймальної комісії
+                <a class="responsible" href="mailto:olimp@nure.ua">olimp@nure.ua</a> до 19 квітня 2019 року.
               </li>
-              <li>Отримати запрошення на другий очний тур Олімпіади, який буде проходити 22 квітня 2018 року.</li>
-              <li>Прибути до університету об 11-00 22 квітня 2018 року, виконати завдання Олімпіади і отримати
-                додаткові бали до сертифікату ЗНО з певного предмету при вступі до ХНУРЕ.
+              <li>Отримати запрошення на другий очний тур Олімпіади, який буде проходити 21 квітня 2019 року.</li>
+              <li>Прибути до університету об 11-00 21 квітня 2019 року, виконати завдання Олімпіади і отримати додаткові бали
+                до сертифікату ЗНО з певного предмету при вступі до ХНУРЕ.
               </li>
               <li>При собі мати паспорт.</li>
             </ul>
             <p>
-              Учасники II-го (очного) туру Олімпіади отримують додаткові бали
-              (максимально - 20) до сертифікату ЗНО по одному з предметів під час
-              вступу на наступні спеціальності університету:
+              Учасники II-го (очного) туру Олімпіади отримують додаткові бали (максимально - 20)
+              до сертифікату ЗНО по одному з предметів під час вступу на наступні спеціальності університету:
             </p>
 
             <ul class="steps">
@@ -87,7 +87,7 @@
               <li>173 Авіоніка</li>
               <li>186 Видавництво і поліграфія.</li>
             </ul>
-            <v-btn @click="openOlympiadModal()" class="flex_margin_auto default-button">Взяти участь в олімпіаді</v-btn>
+            <!--<v-btn @click="openOlympiadModal()" class="flex_margin_auto default-button">Взяти участь в олімпіаді</v-btn>-->
           </section>
         </v-flex>
       </v-layout>
