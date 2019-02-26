@@ -45,11 +45,11 @@ export const createOlympiadUser = async (req, res, next) => {
   });
 
   const mailOptions = {
-    from: '"Nure Olumpiad" <olimp@nure.ua>',
+    from: '"Nure Olympiad" <olimp@nure.ua>',
     to: body.email,
     subject: 'Olympiad registration ✔',
     // html: '<h1>Congratulations, You have been registered for the Olympiad!</h1><hr/>',
-    html: '<h1>Вітаємо, Ви успішно зареєструвались у олімпіаді. Бажаємо успіхів!</h1><hr/>',
+    html: '<h1>Вітаємо, Ви успішно зареєструвались в олімпіаді. Бажаємо успіхів!</h1><hr/>',
     attachments
   };
 
