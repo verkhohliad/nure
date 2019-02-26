@@ -153,7 +153,7 @@
                               required></v-text-field>
               </v-flex>
               <v-flex xs12>
-                <v-text-field placeholder="+38096......"
+                <v-text-field placeholder="+380........"
                               :rules="rules.phoneRules"
                               v-model="phone"
                               label="Номер телефону"
