@@ -4,14 +4,16 @@
   import { GETTERS } from '../../common'
   import { formatDate } from '../../utils'
   import bgImage from '../../assets/img/testBG.jpg'
-  import video from '../../assets/video/olympiad.mp4'
+  import video from '../../assets/video/olympiad1.mp4'
+  import thumbnail from '../../assets/video/olympiadThumbnail.png'
 
   export default {
     name: 'MainNewsWidget',
     data() {
       return {
         bgImage,
-        video
+        video,
+        thumbnail
       }
     },
     computed: {
@@ -30,8 +32,8 @@
     <h1 class="section-title black--text mb-4 text-xs-center">Новини</h1>
       <v-layout wrap class="news-layout">
         <v-flex>
-          <video controls>
-            <source src='../../assets/video/olympiad.mp4' type="video/mp4">
+          <video controls :poster=thumbnail>
+            <source :src=video type="video/mp4">
             Your browser does not support the video.
           </video>
           <!--<h4 class="title"><a href="#">{{ item.title }}</a></h4>-->
