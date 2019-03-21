@@ -18,4 +18,4 @@ package-lock.json
 *.njsproj
 *.sln
 
-/server/config/server-config.js
+/server/config/_server-config.js

@@ -1,12 +1,15 @@
 <script>
   import MainAnnouncementsWidget from './MainAnnouncementsWidget'
   import MainNewsWidget from './MainNewsWidget'
+  import MainBG from '../../assets/img/test3.jpg'
 
   export default {
     name: 'TheMain',
     components: { MainAnnouncementsWidget, MainNewsWidget },
     data() {
-      return {}
+      return {
+        bgImage: MainBG
+      }
     },
     created() {
       this.$scrollTo('.TheHeader', 700)
@@ -23,7 +26,7 @@
     leave-active-class="animated fadeOut">
     <div class="TheMain" grid-list-md text-xs-center>
       <section class="parallax_section">
-        <div class="parallax_section_content">
+        <div class="parallax_section_content" :style="{ backgroundImage: `url('${bgImage}')` }">
           <v-layout
             column
             align-center
@@ -32,7 +35,7 @@
           >
             <h1 class="project-name white--text">Офіційна сторінка приймальної комісії
               Харківського національного університету радіоелектроніки</h1>
-            <div class="project-subheading">Інформація про вступ до ХНУРЕ у 2018 році
+            <div class="project-subheading">Інформація про вступ до ХНУРЕ у 2019 році
             </div>
             <v-icon class="scroll-down-icon" v-scroll-to="{ el: '.greeting', offset: -70, duration: 1000 }">
               fa-chevron-down
@@ -50,7 +53,7 @@
             радіоелектроніки.
             Ви зможете знайти найактуальнішу і повну інформацію щодо вступної кампанії до Харківського національного
             університету
-            радіоелектроніки в 2018 році.
+            радіоелектроніки в 2019 році.
           </p>
           <p>
             Сторінка приймальної комісії ХНУРЕ дозволить Вам отримати інформацію про навчальну структуру закладу

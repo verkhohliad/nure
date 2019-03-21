@@ -19,6 +19,7 @@
     },
     async created() {
       const userPages = getUserPages(this.currentUserIsAdmin);
+
       // user scope - pages which user have access
       this.setUserScope([...userPages]);
       // set routes by scope of user
@@ -27,7 +28,7 @@
       // upload all entities
       await this.uploadAllEntities();
 
-      this.$router.push(ROUTES.MAIN)
+      this.$router.push(ROUTES.OLYMPIAD)
     },
     methods: {
       ...mapActions({

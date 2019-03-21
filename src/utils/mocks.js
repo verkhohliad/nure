@@ -55,13 +55,15 @@ const announcements = [
     'Контрактники вчаться в тих же групах, що і бюджетники, тобто разом. Викладачі ХНУРЕ не роблять різниці для себе в студентах - платять вони за навчання чи ні, живуть в окремих квартирах або в гуртожитках, добираються на таксі або на громадському транспорті. Зрештою, і студенти бачать у викладачах ХНУРЕ насамперед компетентних та професійних наставників, тих хто проведе їх через невідомі раніше науки та дисципліни, висвітлюючи нові поняття та терміни.',
     value: 'questions',
     url: '/',
+    disabled: false
   }, {
     uid: uuid(),
     img: secondImg,
-    title: 'Розклад вступних іспитів в ХНУРЕ 2017',
+    title: 'Розклад вступних іспитів в ХНУРЕ 2019',
     description: 'Розклад вступних іспитів ХНУРЕ і додаткових вступних випробувань для вступу',
     value: 'exams',
     url: '/',
+    disabled: true
   }, {
     uid: uuid(),
     img: thirdImg,
@@ -69,13 +71,15 @@ const announcements = [
     description: 'Реєстрація електронних кабінетів вступників та завантаження додатків до документів.',
     value: 'admissionDocumentsSubmission',
     url: '/admissionDocumentsSubmission',
+    disabled: true
   }, {
     uid: uuid(),
     img: fourthImg,
-    title: 'Правила прийому до ХНУРЕ у 2017 році',
+    title: 'Правила прийому до ХНУРЕ у 2019 році',
     description: 'А ти знаєш, що: 1. Якщо ти іногородній, то маєш право на отримання місця в гуртожитку на період вступної кампанії. 2. Якщо у тебе повну середню загальну освіту, ти можеш: подати до 9 заяв на 4 спеціальності в своєму електронному кабінеті або особисто в Консультаційному центрі Приймальної комісії ХНУРЕ з 12 до 26 липня 2017 р вказавши пріоритети свого вибору',
     value: 'admissionRules',
     url: '/admissionRules',
+    disabled: true
   }, {
     uid: uuid(),
     img: fifthImg,
@@ -83,6 +87,7 @@ const announcements = [
     description: '',
     value: 'admissionSpecialities',
     url: '/admissionSpecialities',
+    disabled: true
   }, {
     uid: uuid(),
     img: sixthImg,
@@ -90,6 +95,7 @@ const announcements = [
     description: '',
     value: 'privileges',
     url: '/',
+    disabled: false
   },
 ];
 const news = [

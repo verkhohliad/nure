@@ -6,7 +6,9 @@ let db;
 export function connectToDb() {
   return new Promise((resolve, reject) => {
     MongoClient.connect(SERVER_CONFIG.MONGO_URL, (err, client) => {
-      if (err) reject(err);
+      if (err || !client) {
+        return reject(err);
+      }
 
       db = client.db(SERVER_CONFIG.DB_NAME);
       resolve(db);
