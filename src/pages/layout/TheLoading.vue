@@ -28,7 +28,7 @@
       // upload all entities
       await this.uploadAllEntities();
 
-      this.$router.push(ROUTES.MAIN)
+      this.$router.push(ROUTES.OLYMPIAD)
     },
     methods: {
       ...mapActions({
