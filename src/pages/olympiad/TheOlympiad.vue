@@ -87,7 +87,8 @@
               <li>173 Авіоніка</li>
               <li>186 Видавництво і поліграфія.</li>
             </ul>
-            <v-btn @click="openOlympiadModal()" class="flex_margin_auto default-button">Взяти участь в олімпіаді</v-btn>
+              <h2 class="text-center">Реєстрацію завершено</h2>
+            <!--<v-btn @click="openOlympiadModal()" class="flex_margin_auto default-button">Взяти участь в олімпіаді</v-btn>-->
           </section>
         </v-flex>
       </v-layout>

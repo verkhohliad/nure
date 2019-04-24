@@ -26,42 +26,47 @@ export const deleteOlympiadUser = async (req, res, next) => {
 };
 
 export const createOlympiadUser = async (req, res, next) => {
-  let [err1, body] = await to(Joi.validate(req.body, OlympiadUserSchema));
-  if (err1) return next(httpError(422, err1));
-
-  const [err5, result] = await to(OlympiadUsers.update({ email: body.email }, body, { upsert: true }));
-  if (err5) return next(err5);
-
-  const attachments = [{
-    filename: 'instruction.doc',
-    path: path.join(__dirname, '../../files/olympiad/instruction.doc'),
-  }];
-
-  body.subjects.forEach(subject => {
-    attachments.push({
-      filename: `${subject}.doc`,
-      path: path.join(__dirname, `../../files/olympiad/${subject}.doc`)
-    });
-  });
-
-  const mailOptions = {
-    from: '"Nure Olympiad" <olimp@nure.ua>',
-    to: body.email,
-    subject: 'Olympiad registration ✔',
-    // html: '<h1>Congratulations, You have been registered for the Olympiad!</h1><hr/>',
-    html: '<h1>Вітаємо, Ви успішно зареєструвались в олімпіаді. Бажаємо успіхів!</h1><hr/>',
-    attachments
-  };
-
-  mailer.sendMail(mailOptions, (error, info) => error ? console.log('Mail did not send: ', error) : console.log('Mail send: ', info));
-
-  const [err3, user] = await to(OlympiadUsers.findOne({ email: body.email }));
-  if (err3) return next(err3);
-
-  res.json({
-    success: true,
-    result: user,
+  return res.json({
+    success: false,
+    result: 'Olympiad registration is finished.'
   })
+
+  // let [err1, body] = await to(Joi.validate(req.body, OlympiadUserSchema));
+  // if (err1) return next(httpError(422, err1));
+  //
+  // const [err5, result] = await to(OlympiadUsers.update({ email: body.email }, body, { upsert: true }));
+  // if (err5) return next(err5);
+  //
+  // const attachments = [{
+  //   filename: 'instruction.doc',
+  //   path: path.join(__dirname, '../../files/olympiad/instruction.doc'),
+  // }];
+  //
+  // body.subjects.forEach(subject => {
+  //   attachments.push({
+  //     filename: `${subject}.doc`,
+  //     path: path.join(__dirname, `../../files/olympiad/${subject}.doc`)
+  //   });
+  // });
+  //
+  // const mailOptions = {
+  //   from: '"Nure Olympiad" <olimp@nure.ua>',
+  //   to: body.email,
+  //   subject: 'Olympiad registration ✔',
+  //   // html: '<h1>Congratulations, You have been registered for the Olympiad!</h1><hr/>',
+  //   html: '<h1>Вітаємо, Ви успішно зареєструвались в олімпіаді. Бажаємо успіхів!</h1><hr/>',
+  //   attachments
+  // };
+  //
+  // mailer.sendMail(mailOptions, (error, info) => error ? console.log('Mail did not send: ', error) : console.log('Mail send: ', info));
+  //
+  // const [err3, user] = await to(OlympiadUsers.findOne({ email: body.email }));
+  // if (err3) return next(err3);
+  //
+  // res.json({
+  //   success: true,
+  //   result: user,
+  // })
 };
 
 export const updateOlympiadUser = async (req, res, next) => {
