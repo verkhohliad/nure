@@ -29,6 +29,13 @@
       <v-layout row wrap class="TheOlympiad_content">
         <v-flex d-flex xs12 sm12 md12 child-flex>
           <section>
+            <h2>З результатами II туру Всеукраїнської олімпіади ХНУРЕ можна ознайомитись за посиланнями:</h2>
+            <ul>
+              <li><a target="_blank" href="https://docs.google.com/spreadsheets/d/1wc3-0Jh-a4fCrn52dVLU9bhBbPEbtlbswNO1Jea6WI4/edit?usp=gmail&ouid=105780797421689063705">Математика</a></li>
+              <li><a target="_blank" href="https://docs.google.com/spreadsheets/d/1DrB5Nfn5oJLAkw7m_GXjPk0St2AzaN79TlQhfubqBeA/edit?usp=gmail&ouid=105780797421689063705">Українська мова та література</a></li>
+              <li><a target="_blank" href="https://docs.google.com/spreadsheets/d/17cOGDQnG59wqCXlIZf2Bk2LVNFUGZ1l7GBBzwGWBgkA/edit?usp=gmail&ouid=105780797421689063705">Біологія</a></li>
+            </ul>
+
             <h3 class="section-title"> Харківський національний університет радіоелектроніки проводить
               Всеукраїнську олімпіаду навчального закладу для абітурієнтів на основі повної середньої освіти з
               предметів:</h3>
