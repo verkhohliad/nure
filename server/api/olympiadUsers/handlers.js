@@ -26,6 +26,12 @@ export const deleteOlympiadUser = async (req, res, next) => {
 };
 
 export const createOlympiadUser = async (req, res, next) => {
+  // return res.json({
+  //   success: false,
+  //   result: 'Olympiad registration is finished.'
+  // })
+
+
   let [err1, body] = await to(Joi.validate(req.body, OlympiadUserSchema));
   if (err1) return next(httpError(422, err1));
 
