@@ -1,7 +1,8 @@
 import keyMirror from 'keymirror'
 
 export const SERVER_CONFIG = {
-  MONGO_URL: 'mongodb://localhost:27017',
+  // MONGO_URL: 'mongodb://localhost:27017',
+  MONGO_URL: 'mongodb+srv://<login>:<password>@cluster0-aqnky.mongodb.net/test?retryWrites=true&w=majority',
   DB_NAME: 'nure',
   JWT_SECRET: 'ihorek',
   SALT_ROUNDS: 7,
