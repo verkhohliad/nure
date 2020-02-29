@@ -12,7 +12,8 @@
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "pm2": "./node_modules/.bin/pm2 start npm -- run server"
   },
   "dependencies": {
     "animate.css": "3.6.1",
@@ -34,7 +35,9 @@
     "node-sass": "4.13.1",
     "nodemailer": "4.4.2",
     "nodemailer-smtp-transport": "2.7.4",
+    "nodemon": "2.0.2",
     "perfect-scrollbar": "1.3.0",
+    "pm2": "4.2.3",
     "sass-loader": "6.0.6",
     "style-loader": "0.19.1",
     "toastr": "2.1.4",
