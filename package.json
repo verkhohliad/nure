@@ -13,7 +13,7 @@
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
     "build": "node build/build.js",
-    "pm2": "./node_modules/.bin/pm2 start npm -- run server"
+    "pm2": "./node_modules/.bin/pm2 start npm --no-automation --name nure_server -- run server"
   },
   "dependencies": {
     "animate.css": "3.6.1",
