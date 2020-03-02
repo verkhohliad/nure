@@ -45,7 +45,7 @@ export const createOlympiadUser = async (req, res, next) => {
 
   body.subjects.forEach(subject => {
     attachments.push({
-      filename: `${subject}.doc`,
+      filename: `${subject}.pdf`,
       path: path.join(__dirname, `../../files/olympiad/${subject}.pdf`)
     });
   });
