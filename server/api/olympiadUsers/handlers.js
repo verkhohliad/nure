@@ -39,7 +39,7 @@ export const createOlympiadUser = async (req, res, next) => {
   if (err5) return next(err5);
 
   const attachments = [{
-    filename: 'instruction.doc',
+    filename: 'instruction.pdf',
     path: path.join(__dirname, '../../files/olympiad/instruction.pdf'),
   }];
 
