@@ -42,24 +42,24 @@
               <li>Біологія.</li>
             </ul>
 
-            <!--<h3 class="section-title">-->
-              <!--Результати олімпіади:-->
-            <!--</h3>-->
-            <!--<ul class="steps">-->
-              <!--<li><a target="_blank" href="https://docs.google.com/spreadsheets/u/2/d/1wc3-0Jh-a4fCrn52dVLU9bhBbPEbtlbswNO1Jea6WI4/edit?usp=sharing">-->
-                <!--Математика-->
-              <!--</a></li>-->
-              <!--<li>-->
-                <!--<a target="_blank" href="https://docs.google.com/spreadsheets/d/1DrB5Nfn5oJLAkw7m_GXjPk0St2AzaN79TlQhfubqBeA/edit?usp=sharing">-->
-                  <!--Українська мова та література-->
-                <!--</a>-->
-              <!--</li>-->
-              <!--<li>-->
-                <!--<a target="_blank" href="https://docs.google.com/spreadsheets/d/17cOGDQnG59wqCXlIZf2Bk2LVNFUGZ1l7GBBzwGWBgkA/edit?usp=sharing">-->
-                  <!--Біологія-->
-                <!--</a>-->
-              <!--</li>-->
-            <!--</ul>-->
+            <h3 class="section-title">
+              Результати І туру олімпіади:
+            </h3>
+            <ul class="steps">
+              <li><a target="_blank" href="https://docs.google.com/spreadsheets/d/1TUKysJde9g30RcXlr9PSMg7DYqEQYs9vMEe3UlLO0aY/edit?usp=sharing">
+                Математика
+              </a></li>
+              <li>
+                <a target="_blank" href="https://docs.google.com/spreadsheets/d/1ozDR3Hd7Z_uBhNOxDJNoFq3f7a8VLsHDllHD4lFkEKA/edit?usp=sharing">
+                  Українська мова та література
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="https://docs.google.com/spreadsheets/d/1_QU76muI4RIsFDUZlKFyhhh23XUTpw_2Ef3qjyEJTdc/edit?usp=sharing">
+                  Біологія
+                </a>
+              </li>
+            </ul>
             <h3 class="section-title">Умови участі в олімпіаді:</h3>
             <ul class="steps">
               <li>Зареєструватися для участі в першому дистанційному турі олімпіади шляхом заповнення і відправки форми,
