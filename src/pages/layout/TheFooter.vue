@@ -75,7 +75,7 @@
         <v-layout row wrap>
           <div class="TheFooter-copyright">
             <v-flex d-flex xs12 sm12 md3 child-flex>
-              <span class="TheFooter-copyright_row">© 2020 Офіційна сторінка приймальної комісії ХНУРЕ</span>
+              <span class="TheFooter-copyright_row">© 2021 Офіційна сторінка приймальної комісії ХНУРЕ</span>
             </v-flex>
             <v-flex d-flex xs12 sm12 md6 child-flex>
               <span class="TheFooter-copyright_row">Відповідальний:<a class="responsible" target="_blank"
