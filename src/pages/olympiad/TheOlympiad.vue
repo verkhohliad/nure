@@ -54,27 +54,26 @@
             <ul class="steps">
               <li>Українська мова і література;</li>
               <li>Математика;</li>
-              <li>Біологія.</li>
             </ul>
 
-            <h3 class="section-title">
-              Результати І туру олімпіади:
-            </h3>
-            <ul class="steps">
-              <li><a target="_blank" href="https://docs.google.com/spreadsheets/d/1TUKysJde9g30RcXlr9PSMg7DYqEQYs9vMEe3UlLO0aY/edit?usp=sharing">
-                Математика
-              </a></li>
-              <li>
-                <a target="_blank" href="https://docs.google.com/spreadsheets/d/1ozDR3Hd7Z_uBhNOxDJNoFq3f7a8VLsHDllHD4lFkEKA/edit?usp=sharing">
-                  Українська мова та література
-                </a>
-              </li>
-              <li>
-                <a target="_blank" href="https://docs.google.com/spreadsheets/d/1_QU76muI4RIsFDUZlKFyhhh23XUTpw_2Ef3qjyEJTdc/edit?usp=sharing">
-                  Біологія
-                </a>
-              </li>
-            </ul>
+<!--            <h3 class="section-title">-->
+<!--              Результати І туру олімпіади:-->
+<!--            </h3>-->
+<!--            <ul class="steps">-->
+<!--              <li><a target="_blank" href="https://docs.google.com/spreadsheets/d/1TUKysJde9g30RcXlr9PSMg7DYqEQYs9vMEe3UlLO0aY/edit?usp=sharing">-->
+<!--                Математика-->
+<!--              </a></li>-->
+<!--              <li>-->
+<!--                <a target="_blank" href="https://docs.google.com/spreadsheets/d/1ozDR3Hd7Z_uBhNOxDJNoFq3f7a8VLsHDllHD4lFkEKA/edit?usp=sharing">-->
+<!--                  Українська мова та література-->
+<!--                </a>-->
+<!--              </li>-->
+<!--              <li>-->
+<!--                <a target="_blank" href="https://docs.google.com/spreadsheets/d/1_QU76muI4RIsFDUZlKFyhhh23XUTpw_2Ef3qjyEJTdc/edit?usp=sharing">-->
+<!--                  Біологія-->
+<!--                </a>-->
+<!--              </li>-->
+<!--            </ul>-->
             <h3 class="section-title">Умови участі в олімпіаді:</h3>
             <ul class="steps">
               <li>Зареєструватися для участі в першому дистанційному турі олімпіади шляхом заповнення і відправки форми,
@@ -107,9 +106,9 @@
               <li>173 Авіоніка</li>
               <li>186 Видавництво і поліграфія.</li>
             </ul>
-              <h2 class="text-center lock-title">Реєстрацію завершено. Чекайте запрошення на другий тур, яке надійде електронною поштою.</h2>
-              <h5 class="lock-description">Відповіді на перший (дистанційний) тур Олімпіади приймаються до 9 травня включно.</h5>
-            <!--<v-btn @click="openOlympiadModal()" class="flex_margin_auto default-button">Взяти участь в олімпіаді</v-btn>-->
+<!--              <h2 class="text-center lock-title">Реєстрацію завершено. Чекайте запрошення на другий тур, яке надійде електронною поштою.</h2>-->
+<!--              <h5 class="lock-description">Відповіді на перший (дистанційний) тур Олімпіади приймаються до 9 травня включно.</h5>-->
+            <v-btn @click="openOlympiadModal()" class="flex_margin_auto default-button">Взяти участь в олімпіаді</v-btn>
           </section>
         </v-flex>
       </v-layout>
