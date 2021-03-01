@@ -15,7 +15,6 @@
     subjects: {
       ukrainian: false,
       maths: false,
-      biology: false,
     },
     valid: false,
   };
@@ -186,15 +185,6 @@
 
                     <v-list-tile-content @click="subjects.maths = !subjects.maths">
                       <v-list-tile-title>Математика</v-list-tile-title>
-                    </v-list-tile-content>
-                  </v-list-tile>
-                  <v-list-tile href="javascript:;">
-                    <v-list-tile-action>
-                      <v-checkbox v-model="subjects.biology"></v-checkbox>
-                    </v-list-tile-action>
-
-                    <v-list-tile-content @click="subjects.biology = !subjects.biology">
-                      <v-list-tile-title>Біологія</v-list-tile-title>
                     </v-list-tile-content>
                   </v-list-tile>
                 </v-list>
