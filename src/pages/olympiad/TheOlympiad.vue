@@ -106,9 +106,11 @@
               <li>173 Авіоніка</li>
               <li>186 Видавництво і поліграфія.</li>
             </ul>
+
+            <h2 class="text-center lock-title">Реєстрацію завершено.</h2>
 <!--              <h2 class="text-center lock-title">Реєстрацію завершено. Чекайте запрошення на другий тур, яке надійде електронною поштою.</h2>-->
 <!--              <h5 class="lock-description">Відповіді на перший (дистанційний) тур Олімпіади приймаються до 9 травня включно.</h5>-->
-            <v-btn @click="openOlympiadModal()" class="flex_margin_auto default-button">Взяти участь в олімпіаді</v-btn>
+<!--            <v-btn @click="openOlympiadModal()" class="flex_margin_auto default-button">Взяти участь в олімпіаді</v-btn>-->
           </section>
         </v-flex>
       </v-layout>
